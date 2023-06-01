@@ -1,0 +1,34 @@
+@use "../global" as global; 
+
+.policy {
+    @include global.mw1010;
+    &__block {
+        @include global.mb80; 
+        p {
+            @include global.mb16; 
+        }
+        h3 {
+            @include global.pb16;
+            border-bottom:1px solid global.$point-main;
+            @include global.mb24;
+        }
+        a {
+            font-family: global.$font-yg;
+            text-decoration: underline;
+        }
+    }
+    &__block2 {
+        @include global.mb80; 
+        p {
+            @include global.mb16; 
+        }
+        h3 {
+            @include global.fs-l; 
+            @include global.mb24;
+        }
+        a {
+            font-family: global.$font-yg;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,146 @@
+@use "../global" as global; 
+
+.hymn {
+    @include global.mb80; 
+    &__title {
+        br {
+            display: none;
+            @include global.sp {
+                display: block;
+            }
+        }
+    }
+    &__contents {
+        width: 100%;
+        height:100%;
+        background-position: cover;
+        background-size: cover;
+    }
+    &__cover {
+        position: relative;
+        z-index:100 ;
+        padding: 80px 0px;
+        @include global.mw1216; 
+        background-color:#ffffffe6;
+        margin-bottom: -40px;
+        @include global.pc    {
+            padding:120px 16px;
+         }    
+        @include global.sp {
+           padding: 40px 16px;
+        }
+    }
+    &__cover2 {
+        position: relative;
+        padding: 80px 320px 80px;
+        background-color:global.$bg_main;
+        @include global.pc {
+            padding: 40px 104px;
+        } 
+        @include global.tab {
+            padding: 40px 80px;
+        } 
+        @include global.sp {
+            padding: 56px 16px 48px;
+        }   
+    }
+}
+
+// 讃美歌ページ、建築ページ
+.hymn__block1,.hymn__block2 {
+    padding: 0px 80px;
+    @include global.mb80;
+    &__img {
+        margin: auto;
+        max-width: 800px;
+        height: 400px;
+        background-position: center;
+        background-size: cover;
+        @include global.mb40;
+        @include global.sp {
+            height: 184px;
+        }    
+    }
+    @include global.tab {
+        padding: 0px
+    }    
+    &__text {
+        margin: auto;
+        @include global.tab {
+            width: 100%;
+        }      
+        h3 {
+            text-align: center; 
+        }
+        p {
+            text-align:center;
+            font-family: global.$font-ym;
+            @include global.sp {
+                text-align: start;
+            }   
+        }
+        br {
+            display: none;
+            @include global.tab {
+                display: block;
+            }   
+        }    
+    }
+}
+.hymn__block2 {
+    position: relative;
+    padding: 40px 144px;
+    background-color: #fff;
+    @include global.pc {
+        padding: 40px 120px;
+    }
+    @include global.tab {
+        padding: 40px 80px;
+    }
+    @include global.sp {
+        padding: 24px 60px;
+    }  
+}
+
+.hymn__block1__img {
+    iframe {
+        width: 100%;
+        height: 100%; 
+    }
+}
+.triangle_top {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+}
+.triangle_bottom {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+}
+.hymn_lace-dcr_left {
+    position: absolute;
+    top: 0px;
+    left: 0px; 
+    img {
+        width: 80px;
+        height: 80px;
+        @include global.sp {
+            width: 48px;
+            height: 48px;
+        }  
+    }
+}
+.hymn_lace-dcr_right {
+    position: absolute;
+    bottom: 0px;
+    right: 0px; 
+    img {
+        width: 80px;
+        height: 80px;
+        @include global.sp {
+            width: 48px;
+            height: 48px;
+        }  
+    }
+}

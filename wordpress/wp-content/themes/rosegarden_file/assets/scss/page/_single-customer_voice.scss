@@ -1,0 +1,56 @@
+@use "../global" as global; 
+
+.cv {
+    @include global.mw1010;
+    margin: auto;
+    @include global.tab {
+        margin:0px;
+    }    
+}
+.cv-details {
+    @include global.mb40;
+    &__title {
+        @include global.mb24;
+    }
+    &__thumbnail {
+        @include global.mb40;
+        width: 100%;
+        height: 596px;
+        background-position: center;
+        background-size: cover;
+        img {
+            width: 100%;
+        }
+        @include global.pc {
+            height: 480px;
+        }
+        @include global.tab {
+            height: 400px;
+        }
+        @include global.sp {
+            height: 200px;
+        }       
+    }
+    &__category {
+        &__style { 
+            @include global.mb16;
+            display: flex;
+            align-items: center;
+        }
+        &__season {
+            display: flex;
+            align-items: center;
+        }
+    }   
+} 
+.other_cv__title {
+    @include global.mw1216; 
+    @include global.mb40; 
+    h3 {
+        @include global.sp {
+            text-align: center;
+        }    
+    }
+}
+
+

@@ -1,0 +1,103 @@
+@use "../global" as global; 
+
+.pastor_intro{
+&__wrap {
+}
+&__block { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    @include global.tab {
+        display: block;
+        margin: auto;
+        max-width: 768px;
+    }   
+    &__imgblock {
+        position: relative;
+        z-index: 100;
+        padding: 80px;
+        @include global.tab {
+            padding:48px 0px;
+            width: 340px;
+        }
+        @include global.sp {
+            width: 268px;
+            padding:48px 0px 24px;
+        }     
+        background-color: global.$bg_main;
+        &__img {
+            padding: 80px 0px 80px 80px;
+            margin-right: -104px;
+            position: relative;
+            width: 390px;
+            height: 368px;
+            background-position: center;
+            background-size: cover; 
+            @include global.mb16;
+            @include global.pc {
+                width: 320px;
+                height: 320px;
+            }
+            @include global.tab {
+                padding:0px;  
+                width: 300px;
+                height: 300px;
+            }
+            @include global.sp{
+                width: 240px;
+                height: 240px;
+                margin-bottom: 24px;
+            }       
+        }
+        &__text {
+            border-left:1px solid global.$point-main ;
+            padding-left: 24px;
+            p {
+                font-family: global.$font-ym; 
+            }
+            @include global.tab {
+               margin-left: 16px;
+            } 
+        }
+    }
+    &__textblock {
+        padding:0px 0px 0px 127px;
+        p {
+            font-family: global.$font-ym; 
+        }  
+        @include global.pc {
+            padding:0px 0px 0px 104px;
+            margin-right: 40px;
+        }
+        @include global.tab {
+            padding:24px;
+            margin-right: 0px;
+        }
+        @include global.sp {
+            padding:48px 16px;
+            margin-right: 0px;
+        }  
+    }
+}
+}
+.scq_dcr01 {
+    z-index: -100;
+    position: absolute;
+    width: 231px;
+    height: 231px;
+    background-color: global.$bg_sub;
+    top: 48px;
+    right: -64px;
+    @include global.tab {
+        width: 207px;
+    height: 207px;
+        top: 4%;
+    right: -6%;
+    }
+    @include global.tab {
+        top: 6%;
+    right:-8%;
+    }  
+}

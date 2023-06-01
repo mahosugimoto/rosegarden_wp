@@ -1,0 +1,174 @@
+@use "../global" as global; 
+
+.lace-dcr_top {
+    width: 100%;
+    border-top: 1px solid #fff;
+    padding-top: 2px;
+    position: absolute;
+    top:4px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    &__img {
+        margin: auto;
+        width: 103px;
+        @include global.sp {
+            width: 80px;
+        } 
+        img {
+            width: 100%;
+        }
+    }
+}
+.lace-dcr_bottom {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    position: absolute;
+    bottom:4px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    &__img {
+        margin: auto;
+        width: 103px;
+        @include global.sp {
+            width: 80px;
+        } 
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// 画像の上の文字装飾
+
+.image-dcr,.image-dcr4 {
+    width: 400px;
+    height: 200px;
+    @include global.sp {
+        width: 200px; 
+        height: 200px;
+ } 
+    p {
+        width: 100%;
+        height: 100%;
+        top:-80px;
+        left: -80px;
+        position: absolute;
+        font-size: 100px;
+        @include global.font-vs;
+        color: transparent;
+        background: repeating-linear-gradient( 180deg,#CFB584 0%, #CFB58433 50%, #ffffffb3 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include global.sp {
+            font-size: 72px;
+            top:-64px;
+            left: -40px;
+        } 
+    }
+}
+.image-dcr2,.image-dcr6 {
+    p {
+        width: 100%;
+        height: 100%; 
+        font-size: 100px;
+        @include global.font-vs;
+        color: transparent;
+        background: repeating-linear-gradient( 180deg,#CFB584 0%, #CFB58433 100%);
+	        -webkit-background-clip: text;
+        @include global.sp {
+            font-size: 80px;
+        } 
+}
+}
+
+// 数字の装飾
+.image-dcr3 {
+    width: 400px;
+    height: 200px;
+    @include global.sp {
+        width: 200px; 
+        height: 200px;
+ } 
+    p {
+        font-size: 120px;
+        @include global.font-ps;
+        color: transparent;
+        background: repeating-linear-gradient( 180deg,#CFB584 0%, #CFB58433 100%);
+	        -webkit-background-clip: text;
+        @include global.sp {
+            font-size: 80px;
+     } 
+}
+}
+//guideのブロック装飾
+.image-dcr4 {
+    p {
+        width: 100%;
+        height: 100%;
+        top:-80px;
+        left: -40px;
+        position: absolute;
+        font-size: 100px;
+        @include global.font-vs;
+        color: transparent;
+        background: repeating-linear-gradient( 180deg,#CFB584 0%, #CFB58433 50%, #ffffffb3 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include global.pc {
+            font-size: 88px;
+            left: -16px;
+        } 
+        @include global.tab {
+            font-size: 72px;
+            top:-40px;
+            left: -24px;
+        } 
+        @include global.sp {
+            font-size: 72px;
+            width: 200px;
+            height: 100px;
+        } 
+    } 
+} 
+
+// おすすめブロックの背景数字装飾
+.image-dcr5 {
+    width: 380px;
+    height: 300px;
+    @include global.tab {
+        width: 250px;
+        height: 200px;
+ } 
+    p {
+        font-size: 300px;
+        @include global.font-ps;
+        color: transparent;
+        background-color: #D0B5811a;
+        // background: repeating-linear-gradient( 180deg,#CFB584 0%, #CFB58433 100%);
+	        -webkit-background-clip: text;
+        @include global.tab {
+            font-size: 200px;
+     } 
+}
+}
+
+.image-dcr6 {
+   
+}
+
+
+
+// icon
+// arrow
+.arrow_icon {
+    width: 20px;
+    height: 20px; 
+    img {
+     width: 100%; 
+    }
+}

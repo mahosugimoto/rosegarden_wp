@@ -1,0 +1,244 @@
+@use "../global" as global; 
+
+.guide {
+    @include global.mw1216;
+    @include global.mb80;
+    &__anchor-link {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        margin: auto;
+        @include global.mb80;
+        @include global.sp {
+            width: 322px; 
+        } 
+    }
+    &__title {
+        @include global.mb32;
+    }
+    &__map {
+        
+        @include global.mb80;
+        &__img {
+            @include global.mw1010;
+            position: relative;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__main {
+        width: 100%;
+        @include global.mw1010;
+        display: flex;
+        align-items: center;
+        @include global.tab {
+           display: block;
+           padding: 0px;
+           @include global.mb80;
+        }
+        &:nth-of-type(even) {
+            flex-direction: row-reverse; 
+        }
+        &__img {
+            position: relative;
+            width: 505px;
+            height: 505px;
+            background-position: center;
+            background-size: cover;
+            @include global.tab {
+                width: 100%;
+                height: 344px; 
+                @include global.mb16; 
+            }
+            @include global.sp {
+                height: 235px; 
+            }  
+        }
+        &__text {
+            width: 50%;
+            padding: 0px 32px;
+            text-align: start;
+            @include global.tab {
+                width: 100%;
+            } 
+            h3 {
+                flex-wrap: wrap;
+                @include global.mb32;
+                @include global.tab {
+                    text-align: center;
+                }   
+            }
+            p {
+                flex-wrap: wrap;
+            }
+        } 
+    }
+    &__other {
+        display: flex;
+        justify-content: space-between;
+        @include global.mw850;
+        @include global.tab {
+            display: block;
+        } 
+        &__box {
+            margin-right: 16px;
+            &:last-child {
+                margin-right: 0px; 
+                } 
+            @include global.tab {
+                display: flex;
+                align-items: center;
+                margin-right: 0px;
+                @include global.mb32; 
+                @include global.tab {
+                    &:last-child {
+                    margin-bottom: 0px; 
+                    }
+                }  
+            }    
+            &__img {
+                width: 230px;
+                height: 230px;
+                background-position: center;
+                background-size: cover;
+                @include global.mb8;
+                @include global.tab {
+                    width: 50%;
+                    height: 160px;
+                } 
+                @include global.sp {
+                    width: 50%;
+                    height: 140px;
+                    margin-bottom: 0px;
+                }   
+            }
+            &__text {
+                width: 230px;
+                @include global.tab {
+                    width: 50%;
+                    padding: 16px;
+                }   
+                h3 {
+                    @include global.fs-l;
+                    @include global.mb8; 
+                }
+                p {
+                    @include global.fs-xs; 
+                }  
+                br {
+                    display: none;
+                    @include global.sp {
+                        display: block;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+.guide__other_title {
+    text-align: center;
+    @include global.mb40;
+}
+
+.arrowmap__entrance,.arrowmap__chapel,.arrowmap__terrace,.arrowmap__koinona,.arrowmap__piazzal,.arrowmap__cloister {
+    position: absolute;
+    align-items: center;
+    img {
+        
+    }
+}
+
+.arrowmap__entrance {
+    top: 57%;
+    left: 50%;
+    padding:41px 44px 5px 42px;
+    transform: translate(-50%, -50%);
+    @include global.pc {
+        padding: 17px 26px 5px 42px;
+    }
+    @include global.tab{
+        padding: 5px 26px 0px 13px;
+    }
+    @include global.sp{
+        padding:0px 26px 0px 9px;
+    }         
+
+}
+.arrowmap__chapel {
+    top: 60%;
+    left: 19%;
+    padding: 28px 68px 32px 61px;
+    transform: translate(-50%, -50%);
+    @include global.pc {
+        padding: 8px 37px 32px 61px;
+    }
+    @include global.tab {
+        padding: 6px 6px 14px 61px;
+    } 
+    @include global.sp {
+        padding: 6px 6px 7px 41px;
+    }     
+}
+.arrowmap__terrace {
+    top: 89%;
+    left: 19%;
+    padding: 29px 60px 32px 61px;
+    transform: translate(-50%, -50%);
+    @include global.pc {
+        padding:29px 30px 12px 61px;
+    } 
+    @include global.tab {
+        padding:9px 10px 12px 61px;
+    }
+    @include global.sp {
+        padding:9px 10px 2px 41px;
+    }        
+}
+.arrowmap__koinona{
+    top: 74%;
+    left: 72%;
+    padding: 77px 68px 29px 68px;
+    transform: translate(-50%, -50%);
+    @include global.pc {
+        padding: 27px 28px 44px 68px;
+    } 
+    @include global.tab{
+        padding: 2px 28px 34px 43px;
+    }
+    @include global.sp{
+        padding: 2px 28px 23px 19px;
+    }       
+}
+.arrowmap__piazzal {
+    top: 79%;
+    left: 49%;
+    padding: 48px 108px 41px 97px;
+    transform: translate(-50%, -50%);
+    @include global.pc {
+        padding: 8px 28px 51px 97px;
+    }  
+    @include global.tab{
+        padding:8px 28px 21px 67px;
+    }
+    @include global.sp{
+        padding:4px 15px 10px 59px;
+    }        
+}
+.arrowmap__cloister {
+    top: 66%;
+    left: 51%;
+    padding: 5px 38px 2px 108px;
+    transform: translate(-50%, -50%);
+
+    @include global.pc {
+        padding: 0px 38px 2px 56px;
+    }
+    @include global.tab{
+        padding: 0px 38px 0px 56px;
+    }
+    @include global.sp{
+        padding: 0px 16px 0px 30px;
+    }           
+}

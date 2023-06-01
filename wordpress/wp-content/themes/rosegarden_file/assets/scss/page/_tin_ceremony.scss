@@ -1,0 +1,600 @@
+@use "../global" as global; 
+
+// 錫婚式　矢印
+
+.tin_ceremony {
+    &__point {
+        @include global.mb80;  
+    }
+    &__gallery {
+        @include global.mw1216;
+        &__title {
+            @include global.mb40; 
+            text-align: center;
+            h2 {
+                color: global.$point-main;
+            }
+        }
+    }
+    &__contact {
+        &__title {
+            @include global.mb32;  
+            h2 {
+                text-align: center;
+                @include global.sp {
+                    font-size: 16px;
+                } 
+            }
+            p {
+                @include global.sp {
+                    font-size: 14px;
+                }  
+            }
+
+        }
+    }
+}
+
+.arrow_down_tin_ceremony01 {
+    position: absolute;
+    top: 11%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 10%;
+    } 
+    @include global.tab {
+        top: 12%;
+    }  
+    @include global.sp {
+        top: 11%;
+    } 
+}
+.arrow_down_tin_ceremony02 {
+    position: absolute;
+    top: 26%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 25%;
+    } 
+    @include global.tab {
+        top: 26%;
+    }  
+    @include global.sp {
+        top: 26%;
+    } 
+}
+.arrow_down_tin_ceremony03 {
+    position: absolute;
+    top: 40%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 39%;
+    } 
+    @include global.tab {
+        top: 41%;
+    }  
+    @include global.sp {
+        top: 39%;
+    } 
+}
+.arrow_down_tin_ceremony04 {
+    position: absolute;
+    top: 55%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 54%;
+    } 
+    @include global.tab {
+        top: 56%;
+    }  
+    @include global.sp {
+        top: 54%;
+    } 
+}
+
+.arrow_down_tin_ceremony05 {
+    position: absolute;
+    top: 70%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 69%;
+    } 
+    @include global.tab {
+        top: 70%;
+    }  
+    @include global.sp {
+        top: 69%;
+    } 
+}
+.arrow_down_tin_ceremony06 {
+    position: absolute;
+    top: 84%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 84%;
+    } 
+    @include global.tab {
+        top: 85%;
+    }  
+    @include global.sp {
+        top: 84%;
+    } 
+}
+
+.tin_ceremony__option {
+    &__title {
+        h2 {
+            color: global.$point-main;
+            text-align: center;
+        }
+    }
+}
+
+
+.tin_ceremony__option-wrap {
+    margin: 0px 80px;
+    position: relative;
+    padding: 80px 32px;
+    @include global.mb80;
+    @include global.pc {
+        display: block;
+        padding: 64px 32px;
+        margin: 0px;
+    }
+    @include global.tab {
+        display: block;
+        padding: 24px 16px 20px;
+        margin: 0px 40px; 
+    }
+    @include global.sp {
+        display: block;
+        padding: 24px 16px 20px;
+        margin: 0px;
+    }
+}
+
+
+// ポイントブロック
+.recommend_point02 {
+    position: relative;
+    padding: 80px 0px;
+    background-color: global.$bg_main;
+    @include global.sp {
+        padding-top: 48px;
+    } 
+    &__title {
+        h2 {
+            text-align: center;
+            color: global.$point-main;
+        }
+        @include global.mb40; 
+    }
+    &__block {
+        @include global.mw1216;
+        display: flex;
+        justify-content: center;
+        @include global.tab {
+            display: block;
+        }
+    }
+    &__box {
+        padding: 0px 24px;
+        border-right: 1px solid global.$point-main;
+        &:last-child {
+        border-right: 0px;
+        @include global.tab {
+            border-bottom: 0px;
+            padding-bottom: 0px;
+        }
+        }
+        width: calc(100% / 3);
+        h3 {
+            @include global.fs-2l;  
+            text-align: center;
+            @include global.mb24; 
+            font-weight: 600;
+        }
+        p {
+            text-align: center;
+            @include global.mb8;
+           
+            &:last-child {
+                margin-bottom: 0px;
+            }  
+        }
+        @include global.tab {
+            width: 100%;
+            border-right: 0px;
+            border-bottom: 1px solid global.$point-main;
+            padding: 48px 0px;
+        }
+        &:first-child {
+            @include global.tab {
+              padding-top: 0px; 
+            } 
+        }
+    }
+}
+.big_number {
+    text-align: center;
+    color: global.$point-main;
+    font-size: 80px;
+    font-family: global.$font-cz;
+    @include global.pc {
+        font-size: 64px;
+    }
+    @include global.tab {
+        font-size:56px;
+    }
+    @include global.sp{
+        font-size:48px;
+    }
+    opacity: 0.5;
+}
+
+.lace_triangle__top {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    img {
+        width: 150px;
+        @include global.tab{
+            width: 100px;
+        }
+        @include global.sp{
+            width: 72px;
+        }
+    }
+}
+.lace_triangle__bottom {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    img {
+        width: 150px;
+        @include global.tab{
+            width: 100px;
+        }
+        @include global.sp{
+            width: 72px;
+        }
+    }
+}
+
+
+// 錫婚式プラン
+
+// プラン
+.tin-plan {
+    @include global.mb80;
+    position: relative;
+    padding:80px 0px;
+    background-color: global.$bg-main;
+    @include global.sp {
+        padding:40px 0px;
+    }  
+    &__title {
+        text-align: center;
+        @include global.mb24;
+        h3 {
+            color: global.$point-main;
+            @include global.mb16;
+        }
+        p {
+
+        }
+    }
+    &__wrap {
+        
+    }
+    &__block {
+        @include global.mw1216;
+        @include global.pc {
+            flex-wrap: wrap;
+        }   
+    }
+    &__box {
+        @include global.mb80;
+        margin-right: 24px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        padding: 40px 104px;
+        background-color: #fff;
+        width: 100%;
+        @include global.pc {
+            margin-right: 0px;
+            width: 100%;
+            @include global.mb24; 
+        }
+        @include global.tab {
+            padding:40px;
+        }    
+        @include global.sp {
+            padding:24px;
+            margin-bottom: 40px;
+        }  
+        &__title {
+            text-align: center;
+            border-bottom: 1px solid global.$point-main;
+            @include global.mb24;
+            padding: 0px 16px 8px;
+            @include global.sp {
+                padding: 0px 0px 8px;
+            }  
+            h2 {
+                @include global.fs-2l;
+                @include global.mb8; 
+                @include global.sp {
+                    text-align: start;
+                }   
+            }
+            h3 {
+                @include global.fs-3xl;
+                color:global.$price-color;
+                @include global.sp {
+                    text-align: start;
+                }    
+            }
+            span {
+                @include global.fs-m;
+                font-family: global.$font-ym;
+                color:#D3A754
+            }
+        }
+        &__contents {
+            @include global.mb24;
+            p {
+                font-family: global.$font-ym;
+            }
+        }
+        &__set-title {
+            p {
+                font-family: global.$font-yg; 
+            }
+            padding: 6px 16px;
+            border-right: 1px solid global.$point-main;
+            border-bottom: 1px solid global.$point-main;
+            display: inline-block;
+            @include global.mb16;
+            @include global.sp {
+                padding: 4px 10px;
+            }  
+        }
+        &__set-list {
+            display: flex;
+            flex-wrap: wrap;
+            @include global.sp {
+                display: block;
+            }  
+            li {
+                width: calc((100% - 16px) / 3);
+                margin-right: 8px;
+                @include global.sp {
+                    width: 100%;
+                }  
+                &:nth-child(3n) {
+                    margin-right: 0px; 
+                }
+               
+                @include global.mb16;
+                &:nth-last-of-type(-n+3) {
+                    margin-bottom: 0px;
+                }
+                @include global.sp {
+                    &:nth-last-of-type(-n+3) {
+                        margin-bottom: 8px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0px; 
+                    }  
+                }  
+                @include global.fs-m;
+                font-family: global.$font-ym;
+                line-height: 1.5;
+                position: relative; 
+                padding-left: 20px; 
+                &::before {
+                    position: absolute; 
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%; 
+                    background-color: global.$point-main;
+                    margin-right: 16px;
+                    vertical-align: middle;
+                    left: 0; 
+                    top: 6px;
+                    @include global.sp {
+                        width: 6px;
+                        height: 6px;
+                    }   
+                }
+            }
+        }
+        &__set-list02 {
+            display: flex;
+            flex-wrap: wrap;
+            @include global.sp {
+                display: block;
+                padding: 0px 24px;
+            }
+            li {
+                width: calc((100% - 16px) / 2);
+                @include global.sp {
+                    width: 100%;
+                }
+                margin-right: 8px;
+                &:nth-child(2n) {
+                    margin-right: 0px; 
+                }
+                @include global.mb16;
+                @include global.fs-m;
+                font-family: global.$font-ym;
+                line-height: 1.5;
+                position: relative; 
+                padding-left: 20px; 
+                &::before {
+                    position: absolute; 
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%; 
+                    background-color: global.$point-main;
+                    margin-right: 16px;
+                    vertical-align: middle;
+                    left: 0; 
+                    top: 6px;
+                    @include global.sp {
+                        width: 6px;
+                        height: 6px;
+                    }   
+                }
+            }
+        }
+        &__set-list03 {
+            @include global.sp {
+                display: block;
+            }
+            li {
+                width: 100%;
+                @include global.mb16;
+                @include global.fs-m;
+                font-family: global.$font-ym;
+                line-height: 1.5;
+                position: relative; 
+                padding-left: 20px; 
+                &::before {
+                    position: absolute; 
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%; 
+                    background-color: global.$point-main;
+                    margin-right: 16px;
+                    vertical-align: middle;
+                    left: 0; 
+                    top: 6px;
+                    @include global.sp {
+                        width: 6px;
+                        height: 6px;
+                    }   
+                }
+            }
+        }
+        
+    }
+    &__option {
+        @include global.mw800; 
+       
+        &__title {
+            @include global.mb24;
+            h2 {
+                color: global.$point-main; 
+               padding-top: 8px;
+               padding-bottom: 8px;
+                background-color: #fff;
+                text-align: center;
+                @include global.fs-xl;
+            }
+        }
+        &__contents {
+            p {
+                font-family: global.$font-ym;
+            }
+        }
+        @include global.mb40; 
+    }
+}
+
+// お持ち帰りいただけるもの
+
+.takeout_item_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.takeout_item {
+    width: calc((100% - 72px) / 4);
+    &__img {
+        width: 100%;
+        height: 160px;
+        background-position: center;
+        background-size: cover;
+        @include global.mb8; 
+        margin-right: 24px;
+        &:last-child {
+            margin-right: 0px; 
+        }
+        @include global.tab {
+            height: 140px;
+        }
+        @include global.sp {
+            height: 100px;
+        }
+    } 
+    @include global.pc {
+        width: calc((100% - 32px) / 2); 
+        margin-right: 8px;
+        @include global.mb24;  
+        &:nth-child(2n) {
+            margin-right: 0px; 
+        }
+    }
+    @include global.tab {
+        width: calc((100% - 16px) / 2); 
+        margin-right: 8px;
+        
+        &:last-child {
+            margin-right: 0px; 
+        }
+    }     
+    p {
+        font-family: global.$font-ym;
+    }
+    
+}
+
+// オプション　テキスト　横並び
+.option_text-wrap {
+    display: flex;
+    align-items: center;
+    @include global.tab {
+        display: block;
+    }
+    &__s {
+        display: flex;
+        align-items: center;
+        margin-right: 120px;
+        @include global.pc {
+            margin-right: 80px;
+        }
+        @include global.tab {
+            margin-right: 64px;
+        }
+        p {
+            white-space: nowrap;
+        }
+    }
+}

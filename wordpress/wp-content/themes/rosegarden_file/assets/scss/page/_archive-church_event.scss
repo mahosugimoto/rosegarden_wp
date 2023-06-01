@@ -1,0 +1,93 @@
+@use "../global" as global;
+
+
+.church_event {
+    position: relative;
+    @include global.sp {
+        padding:40px 16px 8px ;
+    } 
+   &__list {
+    background-color: global.$bg-main;
+
+    padding: 80px 102px;
+    @include global.mb32;
+    @include global.pc {
+        padding: 80px;
+    } 
+    @include global.tab {
+        padding: 80px 0px;
+    }  
+    @include global.sp {
+        padding: 0px;
+    }
+    &__title {
+        margin: auto;
+    }
+   } 
+}
+.liststyle_church_event2 {
+    @include global.mb40;
+    &__block {
+        display: flex; 
+        padding: 24px;
+        background-color: #fff;
+        @include global.mb24;
+        @include global.sp {
+            padding: 16px;
+        }
+        &__img {
+            width: 100%;
+            max-width: 262px;
+            min-width: 262px;
+            height: 262px;
+            background-position: center;
+            background-size: cover;
+            @include global.tab {
+                max-width: 160px;
+                min-width: 160px;
+                height:160px;
+            } 
+            @include global.sp {
+                max-width: 98px;
+                min-width: 98px;
+                height:98px;
+            } 
+        }
+        &__text {
+            padding-left:24px;
+            @include global.sp {
+                padding-left:16px;
+            } 
+            p {
+                @include global.fs-s;
+                margin-right: 8px;
+            }
+            h3 {
+                @include global.fs-2l;
+                text-decoration: underline;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                @include global.mb24; 
+               
+            }
+        }
+        &:hover {
+            @include global.main-hover;
+        }
+    }
+   
+    &__ctg {
+        display: flex;
+        align-items: center;
+        @include global.mb16;
+        @include global.sp {
+            display: block;
+        } 
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+    }
+}

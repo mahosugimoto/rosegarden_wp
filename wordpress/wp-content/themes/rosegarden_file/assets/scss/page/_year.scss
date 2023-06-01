@@ -1,0 +1,195 @@
+@use "../global" as global; 
+
+.year {
+    margin: auto;
+    padding-top: 24px;
+}
+.year-wrap {
+    margin: 0px 80px;
+    position: relative;
+    padding: 80px 32px;
+    border: 2px solid global.$sub-color;
+    @include global.mb80;
+    @include global.pc {
+        display: block;
+        padding: 64px 32px;
+        margin-right:40px;
+        margin-left:40px;
+    }
+    @include global.tab {
+        display: block;
+        padding: 40px 16px;
+        margin-right:24px;
+        margin-left:24px;
+    }
+    @include global.sp {
+        display: block;
+        padding: 40px 16px;
+        margin-right:16px;
+        margin-left:16px;
+    }
+}
+.year-flexbox {
+    display: flex;
+    justify-content: start;
+    @include global.mb40;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+    @include global.tab {
+        display: block;
+        margin-bottom: 0px;
+    }
+}
+.year-block {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    @include global.tab {
+        width: 100%;
+        justify-content: space-between;
+        @include global.mb40;
+        
+        margin-right: 0px;
+    } 
+    &__wrap {
+       
+    }
+    &__img {
+        position: relative;
+        img {
+            max-width: 225px;
+            min-width: 200px;
+            min-height: 225px;
+            max-height: 225px;
+        @include global.pc {
+            max-width: 160px;
+            min-width: 160px;
+            min-height: 160px;
+            max-height: 160px;
+        }
+        @include global.tab {
+            max-width: 140px;
+            min-width: 120px;
+            min-height: 140px;
+            max-height: 140px;
+        }
+        @include global.sp {
+            max-width: 120px;
+            min-width: 120px;
+            min-height: 120px;
+            max-height: 120px;
+        }
+    }
+    }
+    &__text {
+        text-align: start;
+        padding: 24px;
+        @include global.pc {
+            padding: 16px; 
+        }
+        @include global.tab {
+            width: calc(100% - 140px);
+            padding: 0px;
+            margin-left: 16px;
+        }
+        @include global.sp {
+            padding: 0px;
+            margin-left: 0px;
+        }
+        &__top {
+            @include global.mb16;
+            h3 {
+                @include global.mb16;
+                @include global.sp {
+                   font-size: 16px;
+                }
+
+            }
+            p {
+                @include global.sp {
+                    font-size: 12px;
+                 } 
+            }
+            span {
+                @include global.fs-m;
+                font-family: global.$font-ym;
+            }
+        }
+        &__btn {
+            display: flex;
+            justify-content: end;
+        }  
+    }
+}
+.year_icon {
+    position: absolute;
+    top:-18px;
+    left: 0px;
+    width: 84px;
+    height: 84px;
+    background-position: center;
+    background-size: cover;
+    @include global.tab {
+        top:-10px; 
+        width: 64px;
+        height: 64px;
+     }  
+    @include global.sp {
+        top:-10px; 
+        width: 46px;
+        height: 46px;
+     }  
+}
+.tape {
+    position: absolute;
+    width: 338px;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    @include global.tab {
+        width: 240px;
+        top: -24px;
+    }
+    @include global.sp {
+        width: 151px;
+        height: 38px;
+        top: -14px;
+    }
+    img {
+        width: 100%;
+    }
+}
+.year-info {
+    text-align: center;
+    @include global.tab {
+        padding: 0px 16px;
+    } 
+    h2 {
+        @include global.fs-2l;
+        @include global.mb24; 
+    }
+    &__address {
+        @include global.sp {
+            padding: 0px 64px;
+        }  
+        span {
+           @include global.fs-l;
+        }
+        h3 {
+            @include global.mb8;
+        }
+        p {
+            letter-spacing: 0.1em;
+            @include global.sp {
+                text-align: end;
+            }  
+        }
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+    } 
+}

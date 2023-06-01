@@ -1,0 +1,242 @@
+/*=================
+     
+    font.scss
+
+=======================*/
+
+@use "breakpoint" as bp; 
+
+/* font family */
+
+*,header,footer{
+    // font-family: 'Yu Mincho', serif;
+	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+	color:#333333;
+}
+
+/* font family 一部使用*/
+$font-yg:"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+$font-ym:"游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+$font-cz:'Cinzel', serif;
+@mixin font-vs{
+	font-family: "voluta-script-pro", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin font-ps {
+	font-family: 'Pinyon Script', cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* font size */
+h1 {
+	font-size: 32px;
+	line-height: 1.5;
+	@media #{bp.$size768}{
+		font-size: 20px;
+	}
+}
+h2 {
+	font-size: 32px;
+	line-height: 1.5;
+	@media #{bp.$size768}{
+		font-size: 20px;
+	}
+}
+h3 {
+	font-size: 24px;
+	line-height: 1.5;
+	letter-spacing: 10%;
+	@media #{bp.$size768}{
+		font-size: 18px;
+	}
+}
+p {	
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+	line-height: 1.8;
+	@media #{bp.$size768}{
+		font-size: 13px;
+	}
+}
+/* font size */
+@mixin fs-xxs{
+	font-size: 10px;
+	line-height: 150%;
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+	@media #{bp.$size768}{
+		font-size: 8px;
+	}
+}
+@mixin fs-xs{
+	font-size: 12px;
+	line-height: 150%;
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+	@media #{bp.$size768}{
+		font-size: 10px;
+	}
+}
+@mixin fs-s{
+	font-size: 14px;
+	line-height: 150%;
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+	@media #{bp.$size768}{
+		font-size: 12px;
+	}
+}
+@mixin fs-m{
+	font-size: 16px;
+	line-height: 180%;
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+	@media #{bp.$size768}{
+		font-size: 13px;
+	}
+}
+@mixin fs-l{
+	font-size: 18px;
+	@media #{bp.$size768}{
+		font-size: 14px;
+	}
+}
+@mixin fs-2l{
+	font-size: 20px;
+	@media #{bp.$size768}{
+		font-size: 16px;
+	}
+}
+@mixin fs-xl{
+	font-size: 24px;
+	@media #{bp.$size768}{
+		font-size: 18px;
+	}
+}
+@mixin fs-2xl{
+	font-size: 28px;
+	@media #{bp.$size768}{
+		font-size: 20px;
+	}
+}
+
+@mixin fs-3xl{
+	font-size: 32px;
+	@media #{bp.$size768}{
+		font-size: 24px;
+	}
+}
+@mixin fs-4xl{
+	font-size: 40px;
+	@media #{bp.$size768}{
+		font-size: 28px;
+	}
+}
+@mixin fs-5xl{
+	font-size: 42px;
+	@media #{bp.$size768}{
+		font-size: 32px;
+	}
+}
+
+/* 見出しごとのフォントサイズ */
+@mixin heading-main{
+	font-size: 32px;
+	@media #{bp.$size768}{
+		font-size: 20px;
+	}
+}
+@mixin heading-sub{
+	font-size: 24px;
+	@media #{bp.$size768}{
+		font-size: 18px;
+	}
+}
+
+
+/* bold font */
+@mixin fs-xsb{
+	font-size: 12px;
+	font-weight: bold;
+	@media #{bp.$size768}{
+		font-size: 8px;
+	}
+}
+@mixin fs-sb{
+	font-size: 14px;
+	font-weight: bold;
+	@media #{bp.$size768}{
+		font-size: 10px;
+	}
+}
+@mixin fs-mb{
+	font-size: 16px;
+	font-weight: bold;
+	@media #{bp.$size768}{
+		font-size: 12px;
+	}
+}
+@mixin fs-lb{
+	font-size: 18px;
+	font-weight: bold;
+	@media #{bp.$size768}{
+		font-size: 16px;
+	}
+}
+@mixin fs-xlb{
+	font-size: 24px;
+	font-weight: bold;
+	@media #{bp.$size768}{
+		font-size: 18px;
+	}
+}
+
+@mixin fs-2xlb{
+	font-size: 32px;
+	font-weight: bold;
+	@media #{bp.$size768}{
+		font-size: 20px;
+	}
+}
+
+@mixin fs-3xlb{
+	font-size: 40px;
+	font-weight: bold;
+	@media #{bp.$size768}{
+		font-size: 24px;
+	}
+}
+
+@mixin fs-4xlb{
+	font-size: 48px;
+	font-weight: bold;
+	@media #{bp.$size768}{
+		font-size: 40px;
+	}
+}
+
+@mixin fs-5xlb{
+	font-size: 56px;
+	font-weight: bold;
+	@media #{bp.$size768}{
+		font-size: 48px;
+	}
+}
+
+/* shadow */
+@mixin shadow{
+	box-shadow: 0px 4px 4px 0px rgb(0,0,0,0.25);
+}
+
+@mixin light-shadow{
+	box-shadow: 0px 4px 16px 0px rgb(143,148,157, 0.6);
+}
+
+@mixin text-shadow{
+	text-shadow: 0px 0px 8px rgba(0,0,0,0.64);
+}
+
+@mixin light-text-shadow{
+	text-shadow: 0px 0px 4px rgba(0,0,0,0.64);
+}
+
+@mixin active-shadow{
+	box-shadow: 0px 8px 20px 0px rgb(17,165,152, 0.6);
+}

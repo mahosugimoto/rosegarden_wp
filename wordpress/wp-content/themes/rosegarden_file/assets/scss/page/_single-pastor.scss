@@ -1,0 +1,22 @@
+@use "../global" as global; 
+
+.pastor_blog_wrap {
+ }
+
+.pastor_blog {
+    max-width: 808px;
+    margin-left: 112px;
+    &__btn {
+        display: flex;
+        justify-content: center;
+    }
+    @include global.tab {
+        margin-left: 0px; 
+        margin: 0px 40px;
+    }
+    @include global.sp {
+        margin: 0px 16px;
+    }
+}
+
+

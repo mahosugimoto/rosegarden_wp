@@ -1,0 +1,181 @@
+@use "../global" as global;
+
+
+.pastor_blog {
+    @include global.mw850;
+    margin: auto;
+    position: relative;
+    background-color: global.$bg-main;
+    @include global.tab{
+        padding-left: 0px;
+        padding-right: 0px;
+    } 
+    @include global.sp {
+        padding:40px 16px 8px ;
+    } 
+   &__list {
+    padding: 40px 24px;
+    @include global.mb32;
+    @include global.tab {
+        padding: 24px;
+    }
+    &__title {
+        margin: auto;
+    }
+   } 
+}
+.liststyle_pastor_blog2 {
+    @include global.mb40;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+    &__block {
+        padding: 24px;
+        background-color: #fff;
+        @include global.mb24;
+        @include global.sp {
+            padding: 16px;
+        }
+        &__text {
+            padding-left:24px;
+            @include global.sp {
+                padding-left:16px;
+            } 
+            p {
+                @include global.fs-s;
+                margin-right: 8px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+            h3 {
+                @include global.fs-2l;
+                @include global.mb24;
+                text-decoration: underline;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+            &__content {
+             
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+        }
+        &:hover {
+            @include global.main-hover;
+        }
+    }
+    &__ctg {
+        @include global.mb24;
+        @include global.sp {
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+}
+
+//教会ブログ持ち出し分
+
+.moz-quote-pre {
+    @include global.fs-m; 
+}
+
+
+
+.info {
+    position: relative;
+    padding: 80px; 
+    background-color: global.$bg-main;
+    background-position: center;
+    background-size: cover;
+    @include global.pc {
+        padding: 80px;
+    }
+    @include global.tab {
+        padding: 64px;
+    }
+    @include global.sp {
+        padding: 40px 24px;
+    }
+   &__list {
+    padding: 40px 102px;
+    background-color: #fff;
+    @include global.mb32;
+    @include global.pc {
+        padding: 40px 64px;
+    }
+    @include global.tab {
+        padding: 40px;
+    }  
+    &__title {
+        margin: auto;
+    }
+    @include global.sp {
+        padding: 32px 21px;
+    } 
+   } 
+}
+
+
+
+.liststyle_info2 {
+   
+    &__block {
+        display: flex; 
+        &__img {
+            width: 100%;
+            max-width: 183px;
+            min-width: 183px;
+            height: 114px;
+            background-position: center;
+            background-size: cover;
+            @include global.mb24;
+            @include global.sp {
+                max-width: 116px;
+                min-width: 116px;
+                height: 96px;
+            } 
+        }
+        &__text {
+            padding-left:24px;
+            @include global.sp {
+                padding-left:16px;
+            } 
+            p {
+                @include global.fs-s;
+                margin-right: 8px;
+            }
+            h3 {
+                @include global.fs-2l;
+                text-decoration: underline;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+        }
+        &:hover {
+            @include global.main-hover;
+        }
+    }
+    &__ctg {
+        display: flex;
+        align-items: center;
+        @include global.mb8;
+        @include global.sp {
+            display: block;
+        } 
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+

@@ -1,0 +1,50 @@
+@use "../global" as global; 
+
+.breadcrumb,.breadcrumb_sp {
+    width: 100%;
+    background-color: global.$bg_main;
+    @include global.mb80;
+    @include global.sp {
+        display: none;
+    }  
+    &__contents {
+        padding: 16px 124px;
+        display: flex;
+        overflow-x: scroll;
+        word-break: keep-all;
+        white-space: nowrap;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+        @include global.tab {
+            padding: 16px 80px;
+        }
+        @include global.sp {
+            padding: 16px;
+        }  
+        p {
+            padding-right: 8px;
+            font-size: 12px;
+        }
+        span { 
+            text-decoration: underline;
+            color:#33333366; 
+            font-family: global.$font-yg;
+        }
+    }
+}
+.breadcrumb_sp {
+    display: none;
+    margin-top: 96px;
+    margin-bottom: 0px;
+    background-color: global.$pan-color;
+    @include global.sp {
+        display: block;
+    }
+    &__contents {
+        padding: 8px 16px; 
+        p {
+            font-size: 12px;
+        }
+    }
+}

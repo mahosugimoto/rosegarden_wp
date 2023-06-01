@@ -128,7 +128,7 @@ $img = get_post_meta($post->ID, 'image_sp', true);
     <div class="gallery__photo">
         <?php
         $args = array(
-            'posts_per_page' => 12,
+            'posts_per_page' => 18,
             'post_status' => 'publish',
             'post_type' => 'gallery',
         );

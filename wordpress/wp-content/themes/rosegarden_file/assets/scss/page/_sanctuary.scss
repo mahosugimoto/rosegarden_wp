@@ -1,0 +1,487 @@
+@use "../global" as global; 
+
+.sanctuary{
+    width: 100%;
+    @include global.mw1216;
+    &__anchor-link {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        margin: auto;
+        @include global.mb80;
+        @include global.sp {
+            width: 322px; 
+        } 
+    }
+    &__title {
+        @include global.mb32;
+    }
+    &__top {
+        @include global.mb80;
+        &__img {
+            width: 100%;
+            height: 429px;
+            background-position: center;
+            background-size: cover;
+            @include global.mb32;
+            @include global.sp {
+                height: 180px; 
+            }  
+        }
+        &__text {
+            text-align: center;
+            h2 {
+                @include global.mb32;
+            }
+        }
+    }
+    &__heart {
+        margin:auto;
+        @include global.mb32;
+        @include global.pc {
+            padding-right: 40px;
+            padding-left: 40px;
+         }
+         @include global.tab {
+            padding-right: 00px;
+            padding-left: 00px;
+         }    
+        &__block {
+            @include global.mw1010;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 32px;
+            border-bottom: 1px solid global.$point-main;
+            @include global.tab {
+                display: block;
+                padding: 32px 0px 24px 0px;
+                @include global.mb48;
+             } 
+            &__title {
+                position: relative;
+                width: 200px;
+                margin-right: 80px;
+                background-position: center;
+                background-size: cover;
+                @include global.tab {
+                    margin-right: 0px;
+                    margin: auto;
+                    @include global.mb80;
+                 } 
+                h3 {
+                    text-align: center;
+                    margin: 0px auto;
+                    white-space: nowrap;
+                    @include global.fs-2l; 
+                }
+            }
+            &__text {
+                width: 100%;
+                p {
+                    font-family: global.$font-ym;
+                    @include global.tab {
+                        font-family: global.$font-yg;  
+                     } 
+                }
+            }
+        }
+        &__title {
+            display: flex;
+            justify-content: center; 
+            img {
+                width: 80px;
+            }
+        }
+    }
+    &__main {
+        width: 100%;
+        @include global.mw1010;
+        display: flex;
+        align-items: center;
+        @include global.tab {
+           display: block;
+           padding: 0px;
+           @include global.mb40;
+        } 
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
+        &__img {
+            width: 505px;
+            height: 505px;
+            background-position: center;
+            background-size: cover;
+            @include global.tab {
+                width: 100%;
+                height: 344px; 
+                @include global.mb16; 
+            }
+            @include global.sp {
+                height: 235px; 
+            }  
+        }
+        &__text {
+            width: 50%;
+            @include global.tab {
+                width: 100%;
+            } 
+            p {
+                flex-wrap: wrap;
+                text-align: start;
+                padding: 0px 32px;
+                font-family: global.$font-ym;
+                @include global.tab {
+                    padding: 0px 24px;
+                } 
+            }
+        } 
+    }
+    &__banner {
+        width: 380px; 
+        margin: auto;
+        @include global.mb80;
+        @include global.sp {
+            width: 256px;
+        } 
+        img {
+            width: 100%;
+        }
+        &:hover {
+            @include global.main-hover;
+        }
+    }
+    &__event {
+        @include global.mw1216;
+        position: relative;
+        background-color: global.$bg_main;
+        padding: 80px 64px;
+        @include global.tab {
+            padding:40px;
+        }
+        @include global.sp {
+            padding:48px 16px;
+            margin-left: 0px;
+            margin-right: 0px;
+        } 
+        &__title {
+            position: absolute;
+            top:-32px;
+            left:0px;
+            @include global.tab {
+                top:-72px;
+                left: 24px;
+            } 
+        }
+        &__block {
+            @include global.mb48;
+            position: relative;
+            background-color: #fff;
+            padding: 24px 40px;
+            @include global.tab {
+                padding: 40px;
+            }
+            @include global.sp {
+                padding: 24px;
+            }
+            h2 {
+                text-align: center;
+                @include global.mb24;
+                @include global.fs-2xl;
+            }
+            &__flex {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                @include global.tab {
+                    display: block;
+                }   
+                &__img {
+                    width: 200px;
+                    min-width: 200px;
+                    height: 200px;
+                    background-position: center;
+                    background-size: cover; 
+                    @include global.tab {
+                        width: 100%;
+                        @include global.mb32;
+                    }    
+                }
+                p { 
+                    margin-left: 24px;
+                    @include global.tab {
+                        margin-left: 0px;
+                    }    
+                }
+            }
+        }
+        &__block2 {
+            @include global.mb24;
+            position: relative;
+            background-color: #fff;
+            padding: 24px 40px;
+            h2 {
+                text-align: center;
+                @include global.mb24;
+                @include global.fs-2xl;
+            }
+            h3 {
+                @include global.mb8;
+                @include global.fs-l;
+            }
+            p {
+                font-family: global.$font-ym; 
+            }
+            &__flex {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                &__img {
+                    img {
+                        width: 200px;
+                    }
+                }
+                p {
+                    margin-left: 24px;
+                }
+            }
+        &__calender {
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+            @include global.mb24;
+            @include global.tab {
+                display: block;
+                margin: 34px;
+            }
+            @include global.tab {
+                display: block;
+                margin: 0px 34px 16px 34px;
+            }    
+            img {
+                width: 100%;
+                padding: 24px 24px 0px;
+                max-width: 380px;
+                @include global.pc {
+                    max-width: 280px;
+                }
+                @include global.tab {
+                    padding: 0px;
+                    width: 100%;
+                    max-width: 340px;
+                    margin: 4px;
+                }
+                &:nth-child(1) {
+                    @include global.tab {
+                        margin-top: 0px;
+                    }
+                }
+                &:last-child {
+                    @include global.tab {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+        }
+    }
+}
+.se_blue::before {
+    display: inline-block;
+        content: "";
+        width: 40px;
+        height: 24px;
+        background-color: #0F3F69;
+        vertical-align: text-top;
+        margin-right: 8px;
+}
+.se_pink::before {
+    display: inline-block;
+    content: "";
+    width: 40px;
+    height: 24px;
+    background-color: #FF6C73;
+    vertical-align: text-top;
+    margin-right: 8px;
+}
+
+.se_14px {
+    @include global.fs-s;
+    font-family: global.$font-ym;
+}
+.sanctuary {
+    @include global.mb80; 
+}
+
+.rbn_dcr {
+    position: absolute;
+    top:0px;
+    left: 0px;
+    img {
+        width: 100%
+    }
+}
+
+//ポイントのブロック
+.recommended_point {
+    @include global.mw1010;
+    @include global.mb80;
+    @include global.tab {
+        padding-left: 0px; 
+        padding-right: 0px; 
+    }
+    &__anchor-link {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        margin: auto;
+        @include global.mb80;
+        @include global.sp {
+            width: 322px; 
+        } 
+    }
+    &__title {
+        @include global.mb32;
+    }
+    &__point {
+        text-align: center;
+        @include global.mb40;
+        br {
+            display: none;
+            @include global.sp {
+                display: block;
+            } 
+        } 
+        h2 {
+            color:global.$point-main;
+        }
+
+    }
+    &__main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        @include global.mb80;
+        @include global.pc {
+         }  
+        @include global.tab {
+           display: block;
+           padding: 0px;
+           @include global.mb80;
+        }
+        &:nth-of-type(even) {
+            flex-direction: row-reverse; 
+        }
+        &__img {
+            position: relative;
+            margin: auto;
+            width: 396px;
+            height: 595px;
+            background-position: center;
+            background-size: cover;
+            @include global.pc {
+                height: 400px; 
+            }
+            @include global.tab {
+                width: 100%;
+                max-width:240px ;
+                height: 400px; 
+                @include global.mb16; 
+            }
+            @include global.sp {
+                max-width:207px ;
+                height: 320px; 
+            }  
+        }
+        &__text {
+            position: relative;
+            width: 437px;
+            margin-left:80px;
+            margin-right: 80px;
+            text-align: start;
+            @include global.pc {
+                margin-left:40px;
+                margin-right: 40px;
+            }
+            @include global.tab {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+            }
+            h3 {
+                flex-wrap: wrap;
+                @include global.mb32;
+            }
+            p {
+                flex-wrap: wrap;
+            }
+        }
+        &:last-child {
+            margin-bottom:0px;
+        } 
+    }
+    &__dcr1 {
+        position: absolute;
+        top:-50%;
+        right:-20%;
+        @include global.tab {
+            right:2%;
+        }
+        @include global.sp {
+            right:0%;
+            top:-30%;
+        }
+    }
+    &__dcr2 {
+        position: absolute;
+        top:-60%;
+        left:-30%;
+        @include global.pc {
+            top:-50%;
+        }
+        @include global.tab {
+            top:-36%; 
+            left: 40%;
+        }
+        @include global.sp {
+            top:-30%; 
+            left: 24%;
+        }
+    }
+    &__dcr3 {
+        position: absolute;
+        top:10%;
+        right:-20%;
+        @include global.tab {
+            top: -30%;
+            right:0%; 
+        }
+        @include global.sp {
+            right:4%;  
+        }
+    }    
+}
+.rp_big-number {
+    font-family: global.$font-cz;
+    @include global.fs-4xl;
+    color: global.$point-main;
+}
+// ハートの装飾
+.heart_cover {
+    width: 180px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    @include global.tab {
+        width: 100%;
+    }
+    @include global.sp {
+        left: 70%; 
+    }
+    img {
+        width: 120px;
+    }
+}

@@ -1,0 +1,95 @@
+@use "../global" as global; 
+
+.ceremony,.after-ceremony {
+    @include global.mw1216;
+    &__anchor-link {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        margin: auto;
+        @include global.mb80;
+        @include global.sp {
+            width: 322px; 
+        } 
+    }
+    &__title {
+        @include global.mb32;
+    }
+    &__top {
+        @include global.mb80;
+        &__img {
+            width: 100%;
+            height: 429px;
+            background-position: center;
+            background-size: cover;
+            @include global.mb32;
+            @include global.sp {
+                height: 180px; 
+            }  
+        }
+        &__text {
+            text-align: center;
+            h2 {
+                @include global.mb32;
+            }
+            p {
+                @include global.fs-l;
+                @include global.tab {
+                    text-align: start;
+                 }  
+            }
+            br {
+                @include global.tab {
+                    display: none;
+                } 
+            }
+        }
+    }
+    &__main {
+        width: 100%;
+        @include global.mw1010;
+        display: flex;
+        align-items: center;
+        @include global.tab {
+           display: block;
+           padding: 0px;
+           @include global.mb40;
+        } 
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+        }
+        &__img {
+            width: 505px;
+            height: 505px;
+            background-position: center;
+            background-size: cover;
+            @include global.tab {
+                width: 100%;
+                height: 344px; 
+                @include global.mb16; 
+            }
+            @include global.sp {
+                height: 235px; 
+            }  
+        }
+        &__text {
+            width: 50%;
+            @include global.tab {
+                width: 100%;
+            } 
+            p {
+                flex-wrap: wrap;
+                text-align: start;
+                padding: 0px 32px;
+                font-family: global.$font-ym;
+                @include global.tab {
+                    padding: 0px 24px;
+                } 
+            }
+
+        } 
+    }
+}
+.ceremony {
+    @include global.mb80; 
+}

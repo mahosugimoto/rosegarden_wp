@@ -1,0 +1,123 @@
+@use "../global" as global; 
+
+.guest {
+    @include global.mw1216; 
+        @include global.tab {
+            padding: 0px;
+        } 
+    &__anchor-link {
+        display: flex;
+        justify-content: space-between;
+        max-width: 720px;
+        margin: auto;
+        @include global.mb40;
+        @include global.tab {
+            width: 338px; 
+            flex-wrap: wrap;
+        } 
+    }
+}
+
+.guest-contents_cover {
+    position: relative;
+    background-color: global.$bg-main;
+    padding: 80px 103px;
+    @include global.mb80;
+    @include global.tab {
+        padding: 80px 40px;
+    } 
+    @include global.sp {
+        padding: 48px 16px;
+    } 
+}
+.guest-contents {
+    display: flex;
+    padding: 40px 66px;
+    @include global.mb40;
+    background-color: #fff;
+    @include global.tab {
+        display: block;
+        padding: 40px 24px;
+    } 
+    &__icon {
+        text-align: center;
+        margin-right: 80px;
+        @include global.tab {
+            margin-right: 0px;
+            @include global.mb32; 
+        } 
+        img {
+            width: 68px;
+            @include global.mb8;
+            @include global.sp {
+                width: 48px;
+            } 
+            @include global.sp {
+                width: 32px;
+            } 
+        }
+        h2 {
+            @include global.fs-xl;
+            width: 180px;
+            @include global.tab {
+                text-align: center;
+                width: 100%;
+            } 
+        }
+    }
+    &__text {
+        &__textbox {
+            @include global.mb40;
+            &:last-child {
+                margin-bottom: 0px;
+            } 
+            h3 {
+                @include global.fs-2l;
+                @include global.mb16;
+                display: inline-flex;
+                align-items: center;
+                &::before {
+                    content: "";
+                    border-top: 1px solid global.$point-main;
+                    width: 24px;
+                    height: 0;
+                    margin-right: 10px;
+                } 
+            }
+            p {
+                @include global.fs-s;  
+            }
+        }
+    }
+}
+.guest-info {
+    text-align: center;
+    @include global.tab {
+        padding: 0px 16px;
+    } 
+    h2 {
+        @include global.fs-2l;
+        @include global.mb24; 
+    }
+    &__address {
+        @include global.sp {
+            padding: 0px 64px;
+        }  
+        span {
+           @include global.fs-l;
+        }
+        h3 {
+            @include global.mb8;
+        }
+        p {
+            letter-spacing: 0.1em;
+            @include global.sp {
+                text-align: end;
+            }  
+        }
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+    } 
+}

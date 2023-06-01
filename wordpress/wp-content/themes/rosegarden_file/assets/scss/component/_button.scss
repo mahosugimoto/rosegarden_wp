@@ -1,0 +1,409 @@
+@use "../global" as global; 
+
+.reservation-btn,.contact-btn{
+    width: 286px;
+    height:69px;
+    text-align: center;
+    background: linear-gradient(90deg,#9C7C4E,#BE965B, #BE965B,#9C7C4E);
+    position: relative;
+    h3 {
+        @include global.fs-2xl;
+        letter-spacing: 0.1em;
+        color:#fff ;
+        font-family: global.$font-cz;
+    }
+    p {
+        @include global.fs-xxs;
+        color:#fff ;
+    }
+    &::before {
+        content: url(../img/dcr/btn-dcr_left.png);
+        transform: scale(0.7);
+        position: absolute;
+        top: -14px;
+        left: -14px;
+    }
+    &::after {
+        content: url(../img/dcr/btn-dcr_right.png);
+        transform: scale(0.7);
+        position: absolute;
+        bottom: -14px;
+        right: -14px;
+    }
+    &:hover {
+        @include global.main-hover;
+    } 
+}
+.contact-btn {
+    background: linear-gradient(#ACACAC,#5F5F5F);
+}
+.reservation-btn {
+    @include global.mb16;
+}
+// インスタグラムのボタン
+.home-sns {
+    display: flex;
+    text-align: center;
+    align-self: flex-end;
+    p {
+        color: global.$sub-color;
+        font-family: global.$font-cz;
+        font-size: 16px;
+        margin-right: 16px;
+        &:hover {
+            @include global.main-hover;
+        }
+    }
+}
+.instagram_icon {
+    width: 32px;
+    height: 32px;
+    &:hover {
+        @include global.main-hover;
+    }
+        img {
+            width: 100%;
+        }
+}
+
+// アイコン付きページ遷移ボタン
+
+.page-btn_icon,.page-btn,.page-btn_pre,.page-btn_next,.page-btn_list,.sanctuary_btn,.page-btn_pastor,.brown_btn {
+    display: flex;
+    text-align: center;
+    padding: 16px 64px;
+    border: 1px solid global.$point-main;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+&::after {
+    background:#FDF7EC;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+}
+   img {
+        width: 24px;
+        margin-right: 16px;
+   } 
+   p {
+        white-space: nowrap;
+        font-family: global.$font-ym;
+   }
+   &:hover {
+    color: #fff;
+    &::after {
+        transform: scale(1, 1);
+    }
+   }
+}
+// 教会紹介TOP 牧師紹介のボタン
+.page-btn_pastor {
+        padding: 16px 40px;
+        @include global.tab {
+            width: 100%;
+        }   
+        p {
+            @include global.tab {
+                width: 100%;
+            }   
+        }
+}
+.page-btn {
+    padding: 16px 64px;
+    @include global.sp {
+        padding: 16px 24px;
+    }   
+}
+// 前のページ、次のページの間の一覧に戻るボタン
+.page-btn_list {
+    margin-right: 24px;
+    padding:16px 32px;
+    @include global.tab {
+        margin-right: 16px;
+        padding:16 24px;
+    }  
+    @include global.sp {
+        margin-right: 8px;
+        padding:16px 12px;
+    }  
+}
+
+// 前のページボタン
+.page-btn_pre  {
+    margin-right: 24px;
+    align-items: center;
+    padding: 16px 32px;
+    @include global.tab {
+        margin-right: 16px;
+        padding:16 24px;
+    }  
+    @include global.sp {
+        margin-right: 8px;
+        padding:16px 12px;
+    }  
+    img {
+        width: 10px;
+   }
+}
+// 次のページボタン
+.page-btn_next  {
+    align-items: center;
+    padding: 16px 32px;
+    @include global.tab {
+        padding:16px 24px;
+    }  
+    @include global.sp {
+        padding:16px 12px;
+    }  
+    img {
+        width: 10px;
+        margin-right: 0px;
+        margin-left: 16px;
+   }
+}
+
+// 前、一覧、次が並んだ時
+.btn_flex {
+    display: flex;
+    justify-content: space-between;
+}
+// アンカーリンク
+
+.anchor-link {
+    margin-right: 8px;
+    @include global.mb16;
+    display: flex;
+    align-items: center;
+    &:hover {
+        @include global.main-hover;
+    }
+p {
+    text-decoration: underline;
+    white-space: nowrap;
+}
+img {
+    width: 32px;
+    margin-right: 8px;
+    @include global.sp {
+        width: 24px;
+    }
+}
+}
+
+// 恋人の聖地ボタン　
+.sanctuary_btn {
+    align-items: center;
+    padding:4px 60px;
+    img {
+        width: 110px;
+    }
+    @include global.sp {
+        // margin-right: 8px;
+        padding:0px 34px;
+    }
+}
+
+// 詳細はこちらからボタン
+.detail-btn {
+    display: flex;
+    align-items:  center;
+    &:hover {
+        @include global.main-hover;
+    }
+   p {
+        font-family: global.$font-ym;
+        margin-right: 4px;
+   }
+   img {
+    width: 14px;
+    height: 14px;
+   }
+}
+
+// 茶色ベタ塗りボタン
+.brown_btn {
+    width:fit-content;
+    display: flex;
+    justify-content: center;
+    background-color: global.$point-main;
+    align-items: center;
+    padding:20px 32px ;
+    &::after {
+        background:#99762F80;
+    }
+    &:hover {
+        &::after {
+            transform: scale(1, 1);
+        }
+        background:#99762F80;
+    }
+   
+    @include global.sp {
+        padding:20px 16px ;
+    } 
+    img {
+        margin-right: 16px;
+        width: 16px;
+        @include global.sp {
+            margin-right: 8px;
+            width: 13px;
+        } 
+    }
+p {
+    white-space: nowrap;
+    color: #fff;
+    font-family: global.$font-ym; 
+}
+}
+.ctg_btn {
+    @include global.mb24;  
+    display: flex;
+    align-items: center;
+    @include global.tab {
+        display: block ;
+    }  
+    &__all {
+        padding-right: 40px;
+        border-right: 1px solid global.$point-main;
+        margin: 0px 40px 0px 0px;
+        @include global.tab {
+            padding-right: 0px;
+            padding-bottom: 0px;
+            display: flex;
+            justify-content: center;
+            border-right: 0px;
+            margin: 0px 0px 8px 0px;
+            border-bottom: 1px solid global.$point-main;
+        }   
+    }
+    &__all-btn {
+        padding: 20px 94px;
+        background-color: global.$bg_sub;
+        margin-bottom: 8px;
+        p {
+            line-height: 0.1em;
+            color: #fff;
+            white-space: nowrap;
+        }
+        &:hover {
+            @include global.main-hover;
+        } 
+        @include global.tab {
+            padding: 16px 64px; 
+        }
+        &.active  {
+            background-color: #fff;
+            p {
+                color:global.$bg_sub;
+            } 
+        }
+    } 
+    &__child-wrap {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__child-btn {
+        padding: 20px 32px;
+        border: 1px solid global.$point-main;
+        margin: 0px 8px 8px 0px;
+        &:hover {
+            @include global.main-hover;
+        } 
+        p {
+            white-space: nowrap;
+            line-height: 120%;
+            color: #333; 
+        }
+        @include global.tab {
+            padding: 16px;
+        }
+        &.active  {
+            border:1px solid global.$sub-color;
+            background-color: global.$bg_sub;
+            color: #fff;
+            p {
+                color: #fff;
+            } 
+        }
+    }
+}
+
+// ページネーション
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+}
+
+.pagination-list {
+ 
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+  
+}
+
+.pagination-list li {
+    display: inline;
+    margin: 0 5px;
+  
+}
+
+.pagination-link {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.pagination-link:hover {
+    background-color: #ccc;
+}
+
+.pagination-wrap {
+    margin: auto;
+}
+.screen-reader-text {
+    padding: 24px;
+}
+.screen-reader-text__pre {
+    padding: 24px;
+}
+.screen-reader-text__next {
+    padding: 24px;
+}
+.pagination-number {
+    margin: auto; 
+}
+
+.pagination-container {
+   display: flex;
+   justify-content: center;
+}
+.page-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 48px;
+   height: 48px;
+    border: 1px solid global.$point-main;
+    margin-right:8px ;
+    &:last-child {
+        margin-right:0px ;
+    }
+    a {
+    }
+}

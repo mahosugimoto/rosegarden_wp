@@ -1,0 +1,41 @@
+$size360:   "only screen and (max-width:360px)";
+$size400:   "only screen and (max-width:400px)";
+$size560:   "only screen and (max-width:560px)";
+$size640:   "only screen and (max-width:640px)";
+$size768:   "only screen and (max-width:768px)";
+$size840:   "only screen and (max-width:840px)";
+$size960:   "only screen and (max-width:960px)";
+$size1000:  "only screen and (max-width:1000px)";
+$size1024:  "only screen and (max-width:1024px)";
+$size1080:  "only screen and (max-width:1080px)";
+$size1100:  "only screen and (max-width:1100px)";
+$size1140:  "only screen and (max-width:1140px)";
+$size1200:  "only screen and (max-width:1200px)";
+$size1366:  "only screen and (max-width:1366px)";
+$size1400:  "only screen and (max-width:1400px)";
+$size1440:  "only screen and (max-width:1440px)";
+$size1600:  "only screen and (max-width:1600px)";
+
+// ブレイクポイントを指定
+$pc: 1080px;
+$tab: 768px;
+$sp: 480px;
+
+@mixin pc {
+  @media screen and (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+

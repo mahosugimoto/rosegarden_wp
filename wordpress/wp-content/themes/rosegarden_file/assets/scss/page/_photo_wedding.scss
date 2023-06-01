@@ -1,0 +1,271 @@
+@use "../global" as global;
+
+.photo_wedding {
+    @include global.mb80; 
+    &__title {
+        @include global.mb160;
+        h2 {
+            text-align: center;
+            color: global.$point-main;
+        }
+        br {
+            display: none;
+            @include global.tab {
+               display: block;
+            }   
+        }
+        @include global.tab {
+            @include global.mb80;
+        }  
+    }
+    &__point {
+        text-align: center;
+        @include global.mb40;
+        br {
+            display: none;
+            @include global.sp {
+                display: block;
+            } 
+        } 
+        h2 {
+            color:global.$point-main;
+        }
+    }
+    &__main {
+        width: 100%;
+        display: flex;
+        align-items: end;
+        @include global.tab {
+           display: block;
+           padding: 0px;
+           margin: auto;
+           @include global.mb80;
+        }
+        &:nth-of-type(even) {
+            flex-direction: row-reverse; 
+        }
+        &__img {
+            position: relative;
+            width: 60%;
+            height: 366px;
+            background-position: center;
+            background-size: cover;
+            @include global.pc {
+                width: 50%;
+                background-position: 20% 30%;
+             }
+            @include global.tab {
+                width: calc(100% - 32px);
+                height: 344px;  
+                margin: auto;
+            }
+            @include global.sp {
+                height: 235px; 
+            }  
+        }
+        &__text {
+            width: 50%;
+            padding: 104px 112px;
+           margin-top: -80px;
+           margin-left: -80px;
+            background-color: global.$bg_main;
+            text-align: start;
+            @include global.pc {
+                padding:64px;
+                margin-left: 0px;
+             }
+            @include global.tab {
+                width: 100%;
+                padding: 40px;
+                margin-top: -24px;
+            }
+            h3 {
+                flex-wrap: wrap;
+                @include global.mb32;
+                @include global.tab {
+                    text-align: center;
+                }  
+            }
+            p {
+                flex-wrap: wrap;
+            }
+        }
+        &__text02 {
+            width: 50%;
+            padding: 80px 112px 127px;
+           margin-right: -80px;
+           background-color: global.$bg_sub;
+            text-align: start;
+            @include global.pc {
+                padding:64px;
+                margin-right: 0px;
+             }
+            @include global.tab {
+                width: 100%;
+                padding: 40px;
+                margin-top: -24px;
+            }
+            h3 {
+                color: #fff;
+                flex-wrap: wrap;
+                @include global.mb32;
+                @include global.tab {
+                    text-align: center;
+                }  
+            }
+            p {
+                color: #fff;
+                flex-wrap: wrap;
+            }
+        }  
+    }
+    &__dcr {
+        position: absolute;
+        top: -80px;
+        left: -80px;
+        @include global.sp {
+            top: -64px;
+            left: -8px;
+        }   
+    }
+    &__schedule {
+        @include global.mb80;
+        &__btn {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+// スケジュール　矢印
+
+
+.arrow_down_photo_wedding01 {
+    position: absolute;
+    top: 16%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 16%;
+    } 
+    @include global.tab {
+        top: 16%;
+    }  
+    @include global.sp {
+        top: 16%;
+    } 
+}
+.arrow_down_photo_wedding02 {
+    position: absolute;
+    top: 45%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 45%;
+    } 
+    @include global.tab {
+        top: 46%;
+    }  
+    @include global.sp {
+        top: 45%;
+    } 
+}
+.arrow_down_photo_wedding03 {
+    position: absolute;
+    top: 73%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 73%;
+    } 
+    @include global.tab {
+        top:76%;
+    }  
+    @include global.sp {
+        top: 75%;
+    } 
+}
+
+.photo_wedding-info {
+    @include global.mb80;
+    text-align: center;
+    @include global.tab {
+        padding: 0px 16px;
+    } 
+    h2 {
+        @include global.fs-2l;
+        @include global.mb24; 
+    }
+    &__address {
+        @include global.sp {
+            padding: 0px 64px;
+        }  
+        span {
+           @include global.fs-l;
+        }
+        h3 {
+            @include global.mb8;
+        }
+        p {
+            letter-spacing: 0.1em;
+            @include global.sp {
+                text-align: end;
+            }  
+        }
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+    } 
+}
+// ギャラリー　
+
+
+.photo_wedding__gallery {
+    @include global.mw1216;
+    @include global.sp {
+        padding-left: 16px;
+        padding-right: 16px;
+    }   
+    &__title {
+        @include global.mb40;
+        h2 {
+            color: global.$point-main;
+        }
+    }
+    &__photo {
+        @include global.mb80;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__item {
+            margin-bottom: 24px;
+            width: calc((100% - 48px) / 4);
+            height: 286px;
+            background-position: center;
+            background-size: cover; 
+            float: left;
+            @include global.pc {
+                width: calc(100% / 3); 
+                height: 280px;
+                margin-bottom: 0px;
+            } 
+            @include global.tab {
+                width: calc(100% / 3); 
+                height: 160px;
+                margin-bottom: 0px;
+            }
+            @include global.sp {
+                width: calc(100% / 2); 
+                height: 171px;        
+            }  
+        }
+    }
+}

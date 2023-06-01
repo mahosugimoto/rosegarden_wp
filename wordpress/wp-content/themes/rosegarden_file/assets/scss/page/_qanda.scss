@@ -1,0 +1,234 @@
+@use "../global" as global; 
+
+.qanda{
+    @include global.mw1216; 
+        @include global.tab {
+            padding: 0px;
+        } 
+    &__anchor-link {
+        display: flex;
+        justify-content: space-between;
+        max-width: 720px;
+        margin: auto;
+        @include global.mb40;
+        @include global.sp {
+            width: 338px; 
+            flex-wrap: wrap;
+        } 
+    }
+}
+
+.qanda_block {
+    position: relative;
+    padding: 80px 103px;
+    margin: 0px 112px;
+    background-color: global.$bg_main;
+    @include global.pc {
+        padding: 80px 40px;
+        margin: 0px 80px;
+    }
+    @include global.tab {
+        padding: 48px 24px;
+        margin: 0px 48px;
+    }
+    @include global.tab {
+        padding: 48px 16px;
+        margin: 0px;
+    }     
+    &__title {
+        @include global.mb24; 
+        h3 {
+            @include global.fs-2xl;
+            text-align: center;
+        }
+    }
+}
+.qanda_block > li {
+    padding:40px 104px; 
+    list-style: none;
+    background-color:#fff;
+    @include global.mb16; 
+    &:last-child {
+        margin-bottom:0px; 
+    }
+    @include global.pc {
+        padding: 40px 80px;
+    }
+    @include global.tab {
+        padding: 40px 24px;
+    }
+    @include global.sp {
+        padding: 8px 24px;
+    }    
+  }
+  
+  .qanda-label  {
+    @include global.mb16; 
+    border-bottom: 1px solid global.$point_main;
+    &__flex {
+        margin-right: 16px;
+       display: flex;
+       align-items: start;
+       @include global.sp {
+        margin-right: 12px;
+    }   
+       &__text {
+        margin-right:32px;
+        h3 {
+            @include global.fs-2l;
+            font-weight: 600;
+            @include global.mb16;
+             
+        }
+       }
+    }
+    &__flex02 {
+        display: flex;
+        align-items: start;
+        &__text {
+         h3 {
+             @include global.mb16;
+             @include global.fs-2l;
+             @include global.sp {
+                font-weight: 200;
+            }    
+         }
+         p {
+            @include global.mb16;
+         }
+        }
+    }   
+    cursor: pointer;
+    position: relative;
+  }
+//   .qanda-content {
+    // display: none;
+    // &:first-of-type {
+        // display: block;
+    // }
+//   }
+  /* .qanda-labelを親要素としてアイコン位置を絶対値で指定 */
+  .qanda-icon-wrap {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 38px;
+    height: 38px;
+    @include global.sp {
+        margin-right: 12px;
+        width: 24px;
+        height: 24px;
+    }   
+  }
+  /* .icon-wrapの中でプラスを中央に位置させるために.iconを親要素に設定 */
+  .qanda-icon {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    
+  }
+  /* プラスアイコン */
+  /* ２本の線を.icon-wrapの中央に並行に重ねる */
+  .qanda-icon:before,
+  .qanda-icon:after {
+    position: absolute;
+    content: "";
+    display: block;
+    transition: all 0.4s; 
+    background-color: global.$point_main;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 2px;
+    transform: translate(-50%, -50%);
+  }
+  /* そのうち1本を縦にする */
+  .qanda-icon:before {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  
+  /* プラスアイコンクリック後、マイナスにする */
+  .qanda-icon.open:before {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  .Q {
+    font-family: global.$font-ym;
+    margin-right: 80px;
+    color:global.$point_main; 
+    @include global.fs-3xl; 
+    line-height: 1.0;
+    @include global.sp {
+        margin-right: 12px;
+        font-size: 16px;
+        margin-top: 4px;
+    }   
+  }
+  .A {
+    font-family: global.$font-ym;
+    margin-right: 80px;
+    color:global.$sub-color;
+    @include global.fs-3xl;
+    line-height: 1.0; 
+    @include global.sp {
+        margin-right: 12px;
+        font-size: 16px;
+        margin-top: 4px;
+    }   
+  }
+  .qanda-info {
+    @include global.mw1216;
+    text-align: center;
+    @include global.tab {
+        padding: 0px 16px;
+    } 
+    h2 {
+        @include global.fs-2l;
+        @include global.mb24;
+        @include global.sp {
+            font-size: 14px;
+        }   
+    }
+    p {
+        
+    }
+    br {
+        display: none;
+        @include global.sp {
+          display: block; 
+        }   
+    }
+    &__address {
+        @include global.sp {
+            padding: 0px 64px;
+        }  
+        span {
+           @include global.fs-l;
+           @include global.sp {
+            font-size: 12px;
+        }  
+        }
+        h3 {
+            @include global.mb8;
+            font-size: 30px;
+            @include global.sp {
+                font-size: 20px;
+            }  
+        }
+        p {
+            letter-spacing: 0.1em;
+            @include global.sp {
+                text-align: end;
+            }  
+        }
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        
+    } 
+}
+

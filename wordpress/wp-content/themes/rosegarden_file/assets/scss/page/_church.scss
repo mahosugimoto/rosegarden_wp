@@ -1,0 +1,183 @@
+@use "../global" as global; 
+.church {
+    &__top {
+        @include global.mw1216;  
+        @include global.mb80; 
+        &__text {
+            text-align: center;
+            h2 {
+                @include global.mb32;
+            }
+            p {
+                @include global.fs-l;
+                @include global.tab {
+                    text-align: start;
+                 }  
+            }
+            br {
+                @include global.tab {
+                    display: none;
+                } 
+            }
+        }
+    }
+    &_event {
+        @include global.tab {
+            background-color: global.$bg_main;
+        }  
+        @include global.mb80;
+        &__list {
+            &__title {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    &__ctg {
+        @include global.mw1216; 
+        display: flex;
+        justify-content: center;
+    }
+}
+.church-info {
+    @include global.mb80;  
+    text-align: center;
+    @include global.tab {
+        padding: 0px 16px;
+    } 
+    h2 {
+        @include global.fs-2l;
+        @include global.mb24; 
+    }
+    &__address {
+        @include global.sp {
+        }  
+        span {
+           @include global.fs-l;
+        }
+        h2 {
+            @include global.mb24;
+        }
+        h3 {
+            @include global.mb8;
+        }
+        p {
+            letter-spacing: 0.1em;
+            @include global.sp {
+                text-align: end;
+            }  
+        }
+    }
+}
+.church__pastor {
+    @include global.mb80; 
+    &__contents {
+    @include global.mw1216; 
+    padding:48px 103px;
+    background-color: global.$bg-main;
+    @include global.pc    {
+        padding: 40px;
+        margin: 0px 40px;
+     }    
+    @include global.sp {
+       padding: 24px;
+       margin: 0px;
+    } 
+    }  
+}
+.blockstyle05 { 
+    display: flex;
+    justify-content: center;
+    max-width: 1010px;
+    margin: auto;
+    @include global.tab {
+        display: block;
+        margin: auto;
+    }   
+    &__imgblock {
+        &__img {
+            position: relative;
+            width: 286px;
+            height: 400px;
+            background-position: center;
+            background-size: cover; 
+            @include global.mb24;
+            @include global.pc {
+                width: 240px;
+                height: 380px;
+            }
+            @include global.tab {
+                width: 100%;
+                height:px;
+            }
+            @include global.sp {
+                width: 100%;
+                height:174px;
+                // background-position: 20% 80%;
+            }          
+        }
+        &__text {
+            border-left:1px solid global.$point-main ;
+            padding-left: 24px;
+            @include global.mb32; 
+            p {
+                font-family: global.$font-ym; 
+                @include global.mb8;  
+            }
+        }
+        &__btn {
+            display: flex;
+            justify-content: start;
+            @include global.pc {
+                display: block;
+            }   
+        }
+    }
+    &__textblock {
+        padding:28px 0px 28px 48px;
+        h3 {
+             @include global.mb8;
+        }
+        @include global.pc {
+            padding:0px 0px 0px 24px;
+        }    
+        @include global.tab {
+            padding-left: 0px;
+        }      
+    }
+}
+.church__pastor__btn01 {
+    margin-right: 40px;
+    @include global.pc {
+        margin-right: 0px;
+        @include global.mb16;
+        display: flex;
+        justify-content: center; 
+    }  
+    @include global.tab {
+        width: 280px; 
+        margin:16px auto;
+        margin-top: 0px;
+    }
+    @include global.tab {
+        width: 236px; 
+    }   
+}
+.church__pastor__btn02 {
+    @include global.pc {
+       display: flex;
+       justify-content: center; 
+    } 
+    @include global.tab {
+        width: 280px; 
+        margin:16px auto;
+        margin-top: 0px;
+    } 
+    @include global.tab {
+        width: 236px; 
+    }   
+}
+
+.church_event_edit {
+  
+}

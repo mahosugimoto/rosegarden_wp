@@ -1,0 +1,447 @@
+@use "../global" as global;
+
+.schedule {
+    &__notes {
+        text-align: center;
+        p {
+            font-family: global.$font-ym;
+        }
+        @include global.mb40;
+    }
+    &__anchor-link {
+        @include global.mb80;
+       display: flex;
+       justify-content: center;
+        &__btn01 {
+            border: 1px solid global.$point-main;
+            padding:16px 32px;
+            @include global.tab {
+                padding:16 24px;
+            }  
+            @include global.sp {
+                padding:16px 12px;
+            }  
+            p {
+                color: global.$point-main;
+                font-family: global.$font-ym;
+              
+            }
+            &.active {
+                background-color: global.$point-main;
+                p {
+                    color: #fff;
+                }
+            }
+        }
+        &__btn02 {
+            border: 1px solid global.$point-main;
+            background-color: #fff;
+            padding:16px 32px;
+            @include global.tab {
+                padding:16 24px;
+            }  
+            @include global.sp {
+                padding:16px 12px;
+            }  
+            p {
+                font-family: global.$font-ym;
+            }
+           
+        }
+    }
+    &__contents {
+        &__cover {
+            width: 100%;
+            height: 400px;
+            background-position: center;
+            background-size: cover;
+            @include global.pc {
+                height: 320px;
+            } 
+            @include global.tab {
+                height: 280px;
+            }  
+            @include global.sp {
+                height: 264px;
+            }   
+        }
+        &__main {
+            padding: 80px 80px 40px;
+            background-color: #fff;
+            @include global.mw1216;
+            margin: auto;
+            margin-top: -192px;
+            @include global.pc {
+                padding: 64px 64px 32px;
+                margin-top: -80px;
+            } 
+            @include global.tab {
+                padding: 40px 40px 20px;
+                margin-top: -40px;
+            }  
+            @include global.sp {
+                padding: 40px 16px 24px;
+                margin-top: -24px;
+            }   
+            h2 {
+                color:global.$point-main;
+                text-align: center;
+                @include global.mb40;
+            }
+            &__btn {
+                display: flex;
+                justify-content: center;
+            }
+            &__flex {
+                display: flex;
+                justify-content: space-between;
+                &__red-arrow {
+                    position: relative;
+                    min-width: 24px;
+                    height: auto;
+                    background-color: global.$bg_sub;
+                    margin-right: 80px;
+                    @include global.pc {
+                        margin-right: 40px;
+                    }
+                    @include global.tab {
+                        margin-right: 24px;
+                    }
+                    @include global.tab {
+                        margin-right: 16px;
+                    }    
+                }
+                &__block {
+                    padding: 40px 0px; 
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid global.$point-main;
+                    &:first-child {
+                        padding-top: 0px; 
+                    }
+                    @include global.tab {
+                        display: block;
+                        padding-bottom: 40px;
+                     }
+                     @include global.sp {
+                        padding-bottom: 16px;
+                        padding-top: 24px;
+                     }   
+                     &__text {
+                        h3 {
+                           
+                        }
+                     }
+                }
+            }
+        }
+    }
+    &_block {
+        &__text {
+            h3 {
+                @include global.fs-l;
+                color:global.$point-main;
+                font-family: global.$font-cz;
+                @include global.mb8;  
+            }
+            p {
+
+            }
+        }
+    }
+}
+
+.schedule_block__imgbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 16px;
+    @include global.tab {
+        margin-right: 0px;
+        margin-bottom:24px ;
+    }
+    @include global.sp {
+        margin-bottom:8px ;
+    }    
+    &__text {
+        width: 240px;
+        margin-right: 16px;
+        h3 {
+
+        }
+        p {
+            font-family: global.$font-ym;
+            line-height: 150%; 
+        }
+        span {
+            font-family: global.$font-yg;
+            @include global.fs-xs;
+           
+        }
+        @include global.pc {
+            width: 200px;
+        }   
+
+        @include global.sp {
+            width: auto;
+        }   
+
+    }
+    &__img {
+        max-width:183px ;
+        min-width:160px ;
+        width: 100%;
+        height: 120px;
+        background-position: center;
+        background-size: cover;
+        @include global.pc {
+            min-width:160px ;
+        } 
+        @include global.tab {
+            min-width: 120px;
+            max-width: 200px;
+        }  
+        @include global.sp {
+            min-width:160px ;
+            max-width: 160px;
+            height: 100px;
+        }    
+    }
+}
+
+// 時間矢印
+
+.arrow_down01 {
+    position: absolute;
+    top: 10%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 12%;
+    } 
+    @include global.tab {
+        top: 13%;
+    }  
+    @include global.sp {
+        top: 12%;
+    } 
+}
+.arrow_down02 {
+    position: absolute;
+    top: 26%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 30%;
+    } 
+    @include global.tab {
+        top: 28%;
+    }  
+    @include global.sp {
+        top: 28%;
+    } 
+}
+.arrow_down03 {
+    position: absolute;
+    top: 40%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 40%;
+    } 
+    @include global.tab {
+        top: 42%;
+    }  
+    @include global.sp {
+        top: 42%;
+    } 
+}
+.arrow_down04 {
+    position: absolute;
+    top: 62%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 62%;
+    } 
+    @include global.tab {
+        top: 61%;
+    }  
+    @include global.sp {
+        top: 63%;
+    } 
+}
+
+.arrow_down05 {
+    position: absolute;
+    top: 77%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 77%;
+    } 
+    @include global.tab {
+        top: 76%;
+    }  
+    @include global.sp {
+        top: 78%;
+    } 
+}
+.arrow_down06 {
+    position: absolute;
+    top: 89%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 90%;
+    } 
+    @include global.tab {
+        top: 90%;
+    }  
+    @include global.sp {
+        top: 90%;
+    } 
+}
+
+// STEP数字のあしらい
+.step {
+    color:global.$point-main;
+    font-family: global.$font-cz;
+    letter-spacing: 0.1em;
+    span {
+        @include global.fs-3xl;
+        color:global.$point-main;
+        font-family: global.$font-cz; 
+        margin-left: 8px;
+    }
+}
+
+
+.schedule_a {
+    display: none;
+}
+
+// 当日のスケジュール　矢印
+
+.arrow_down07 {
+    position: absolute;
+    top: 10%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 10%;
+    } 
+    @include global.tab {
+        top: 12%;
+    }  
+    @include global.sp {
+        top: 12%;
+    } 
+}
+.arrow_down08 {
+    position: absolute;
+    top: 24%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 24%;
+    } 
+    @include global.tab {
+        top: 26%;
+    }  
+    @include global.sp {
+        top: 26%;
+    } 
+}
+.arrow_down09 {
+    position: absolute;
+    top: 38%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 38%;
+    } 
+    @include global.tab {
+        top: 40%;
+    }  
+    @include global.sp {
+        top: 39%;
+    } 
+}
+.arrow_down10 {
+    position: absolute;
+    top: 53%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 53%;
+    } 
+    @include global.tab {
+        top: 55%;
+    }  
+    @include global.sp {
+        top: 54%;
+    } 
+}
+
+.arrow_down11 {
+    position: absolute;
+    top: 68%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 68%;
+    } 
+    @include global.tab {
+        top: 70%;
+    }  
+    @include global.sp {
+        top: 68%;
+    } 
+}
+.arrow_down12 {
+    position: absolute;
+    top: 86%;
+    img {
+        width:24px ;
+        height: auto;
+    }
+    @include global.pc {
+        top: 86%;
+    } 
+    @include global.tab {
+        top: 86%;
+    }  
+    @include global.sp {
+        top: 86%;
+    } 
+}
+
+.schedule_a.show {
+    display: block;
+}
+.schedule_a {
+    display: none;
+}

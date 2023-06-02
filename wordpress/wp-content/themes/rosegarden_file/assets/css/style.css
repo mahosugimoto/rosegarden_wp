@@ -269,7 +269,7 @@ p {
   /*ボタン内側の基点となるためrelativeを指定。
   追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
   position: relative;
-  z-index: 9999;
+  z-index: 9998;
   background: #EBE8E3;
   cursor: pointer;
   width: 100px;
@@ -511,7 +511,7 @@ p {
 .header {
   transition: transform 0.6s ease;
   position: fixed;
-  z-index: 800;
+  z-index: 9999;
   top: 0px;
   left: 0px;
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
@@ -774,6 +774,7 @@ p {
 }
 .header_allmenu__cta {
   margin-bottom: 40px;
+  width: auto;
   align-items: center;
   justify-content: start;
   display: flex;
@@ -796,10 +797,14 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 .header_allmenu__cta__contents a {
-  flex: 1;
+  width: 125px;
+}
+@media screen and (max-width: 480px) {
+  .header_allmenu__cta__contents a {
+    width: 114px;
+  }
 }
 .header_allmenu__cta__contents__left {
   height: 64px;
@@ -937,6 +942,11 @@ p {
   opacity: 0.5;
   transition: 0.5s;
 }
+@media screen and (max-width: 1080px) {
+  .header_allmenu__cta__contents {
+    width: auto;
+  }
+}
 
 .sowa-weddings {
   padding: 56px 135px;
@@ -1012,7 +1022,7 @@ p {
   background-color: #EBE8E3;
   display: flex;
   position: fixed;
-  z-index: 990;
+  z-index: 1000;
   border-radius: 4px;
   bottom: 16px;
   right: 16px;
@@ -3327,38 +3337,11 @@ footer {
   }
 }
 .guest__anchor-link {
-  margin: auto;
-  max-width: 1216px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 720px;
   margin: auto;
   margin-bottom: 40px;
-}
-@media only screen and (max-width:1080px) {
-  .guest__anchor-link {
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-}
-@media only screen and (max-width:768px) {
-  .guest__anchor-link {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media only screen and (max-width:400px) {
-  .guest__anchor-link {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .guest__anchor-link {
-    justify-content: start;
-  }
-}
-.guest__anchor-link a {
-  margin-right: 16px;
 }
 @media only screen and (max-width:768px) {
   .guest__anchor-link {
@@ -3367,6 +3350,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .guest__anchor-link {
+    width: 338px;
     flex-wrap: wrap;
   }
 }
@@ -5131,12 +5115,8 @@ footer {
 }
 .voice__contents a {
   width: calc((100% - 48px) / 3);
-  margin-right: 24px;
   margin-bottom: 8px;
   margin-bottom: 40px;
-}
-.voice__contents a:nth-child(3n) {
-  margin-right: 0px;
 }
 @media only screen and (max-width:768px) {
   .voice__contents a {
@@ -5145,14 +5125,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .voice__contents a {
-    width: calc((100% - 16px) / 2);
-    margin-right: 16px;
-  }
-  .voice__contents a:nth-child(3n) {
-    margin-right: 16px;
-  }
-  .voice__contents a:nth-child(2n) {
-    margin-right: 0px;
+    width: calc((100% - 48px) / 2);
   }
 }
 @media screen and (max-width: 480px) {
@@ -5165,6 +5138,7 @@ footer {
 .cv_block2 {
   height: 100%;
   background-color: #fff;
+  margin: 0px 8px 0px 4px;
   margin-bottom: 8px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -5770,22 +5744,22 @@ footer {
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 
-.pastor_blog02 {
+.pastor_blog {
   max-width: 808px;
   margin-left: 112px;
 }
-.pastor_blog02__btn {
+.pastor_blog__btn {
   display: flex;
   justify-content: center;
 }
 @media screen and (max-width: 768px) {
-  .pastor_blog02 {
+  .pastor_blog {
     margin-left: 0px;
     margin: 0px 40px;
   }
 }
 @media screen and (max-width: 480px) {
-  .pastor_blog02 {
+  .pastor_blog {
     margin: 0px 16px;
   }
 }
@@ -6654,6 +6628,11 @@ footer {
     padding-right: 0px;
   }
 }
+@media screen and (max-width: 480px) {
+  .pastor_blog {
+    padding: 40px 16px 8px;
+  }
+}
 .pastor_blog__list {
   padding: 40px 24px;
   margin-bottom: 32px;
@@ -6776,27 +6755,29 @@ footer {
 
 .info {
   position: relative;
-  padding: 80px 104px;
+  padding: 80px;
   background-color: #EBE8E3;
   background-position: center;
   background-size: cover;
 }
 @media screen and (max-width: 1080px) {
   .info {
-    padding: 64px;
+    padding: 80px;
   }
 }
 @media screen and (max-width: 768px) {
   .info {
-    padding: 32px;
+    padding: 64px;
   }
 }
 @media screen and (max-width: 480px) {
   .info {
-    padding: 40px 16px;
+    padding: 40px 24px;
   }
 }
 .info__list {
+  padding: 40px 102px;
+  background-color: #fff;
   margin-bottom: 32px;
 }
 @media only screen and (max-width:768px) {
@@ -6804,21 +6785,27 @@ footer {
     margin-bottom: 16px;
   }
 }
+@media screen and (max-width: 1080px) {
+  .info__list {
+    padding: 40px 64px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info__list {
+    padding: 40px;
+  }
+}
 .info__list__title {
   margin: auto;
 }
+@media screen and (max-width: 480px) {
+  .info__list {
+    padding: 32px 21px;
+  }
+}
 
 .liststyle_info2__block {
-  padding: 24px;
-  background-color: #fff;
-  margin-bottom: 24px;
   display: flex;
-}
-@media screen and (max-width: 480px) {
-  .liststyle_info2__block {
-    padding: 16px;
-    margin-bottom: 8px;
-  }
 }
 .liststyle_info2__block__img {
   width: 100%;
@@ -6827,6 +6814,12 @@ footer {
   height: 114px;
   background-position: center;
   background-size: cover;
+  margin-bottom: 24px;
+}
+@media only screen and (max-width:768px) {
+  .liststyle_info2__block__img {
+    margin-bottom: 12px;
+  }
 }
 @media screen and (max-width: 480px) {
   .liststyle_info2__block__img {
@@ -7164,44 +7157,6 @@ footer {
   }
 }
 
-.pastor_blog_wide {
-  margin: auto;
-  max-width: 1216px;
-  padding: 40px 103px;
-  margin: auto;
-  position: relative;
-  background-color: #EBE8E3;
-}
-@media only screen and (max-width:1080px) {
-  .pastor_blog_wide {
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-}
-@media only screen and (max-width:768px) {
-  .pastor_blog_wide {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media only screen and (max-width:400px) {
-  .pastor_blog_wide {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .pastor_blog_wide {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .pastor_blog_wide {
-    padding: 0px;
-  }
-}
-
 .hymn {
   margin-bottom: 80px;
 }
@@ -7442,28 +7397,10 @@ footer {
 }
 .qanda__anchor-link {
   display: flex;
-  margin: auto;
-  max-width: 1216px;
+  justify-content: space-between;
+  max-width: 720px;
   margin: auto;
   margin-bottom: 40px;
-}
-@media only screen and (max-width:1080px) {
-  .qanda__anchor-link {
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-}
-@media only screen and (max-width:768px) {
-  .qanda__anchor-link {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media only screen and (max-width:400px) {
-  .qanda__anchor-link {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 }
 @media only screen and (max-width:768px) {
   .qanda__anchor-link {
@@ -7472,12 +7409,11 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .qanda__anchor-link {
+    width: 338px;
     flex-wrap: wrap;
   }
 }
-.qanda__anchor-link a {
-  margin-right: 16px;
-}
+
 .qanda_block {
   position: relative;
   padding: 80px 103px;
@@ -8280,14 +8216,8 @@ footer {
 }
 
 .schedule__notes {
-  margin: 0px 16px;
   text-align: center;
   margin-bottom: 40px;
-}
-@media screen and (max-width: 480px) {
-  .schedule__notes {
-    text-align: start;
-  }
 }
 .schedule__notes p {
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
@@ -11663,7 +11593,7 @@ footer {
 .dress__contact__block p:last-child {
   margin-bottom: 0px;
 }
-.dress__contact__block span {
+.dress__contact__block a {
   text-decoration: underline;
 }
 
@@ -11995,6 +11925,10 @@ footer {
 .resort__contact__block p:last-child {
   margin-bottom: 0px;
 }
+.resort__contact__block a {
+  text-decoration: underline;
+}
+
 .resort-info {
   margin-bottom: 80px;
   text-align: center;
@@ -12941,6 +12875,10 @@ footer {
 .resort__contact__block p:last-child {
   margin-bottom: 0px;
 }
+.resort__contact__block a {
+  text-decoration: underline;
+}
+
 .resort_photo_dcr {
   display: flex;
   justify-content: center;
@@ -13223,24 +13161,8 @@ footer {
   justify-content: space-between;
 }
 
-.btn_flex2 {
-  max-width: 372px;
-  display: flex;
-  margin: auto;
-  justify-content: space-between;
-}
-@media screen and (max-width: 768px) {
-  .btn_flex2 {
-    max-width: 313px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .btn_flex2 {
-    max-width: 240px;
-  }
-}
-
 .anchor-link {
+  margin-right: 8px;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -13482,7 +13404,6 @@ footer {
 }
 
 .page-item {
-  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13494,19 +13415,6 @@ footer {
 .page-item:last-child {
   margin-right: 0px;
 }
-.page-item img {
-  width: 16px;
-}
-
-.page-item.prev img, .page-item.next img {
-  width: 9px;
-}
-
-.page-item.number.navi-active {
-  background-color: #99762F;
-  color: #fff;
-}
-
 .lace-dcr_top {
   width: 100%;
   border-top: 1px solid #fff;

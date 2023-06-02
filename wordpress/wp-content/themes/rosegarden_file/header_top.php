@@ -55,10 +55,10 @@
         $(document).ready(function() {
             // ボタンを最初は非表示にする
             $('.button').hide();
+            $('.openbtn').hide(); 
             $(window).scroll(function() {
                 // スクロール位置を取得
                 var scrollPos = $(window).scrollTop();
-
                 // スクロール位置が特定の閾値を超えたらボタンを表示
                 if (scrollPos > 500) {
                     $('.openbtn').fadeIn();

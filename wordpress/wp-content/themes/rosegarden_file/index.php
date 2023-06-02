@@ -127,18 +127,21 @@ Template Name: トップ
 
 
     <!-- banner -->
-
+    <?php 
+    $topAdvs = topAdvertisements();
+    ?>
+    <?php if (!empty($topAdvs)):?>
     <div class="top_banner">
         <div class="top_banner-wrap">
-        </div>
-
-        <div class="top_banner-wrap">
-            <div class="top_banner-wrap__img" style="background-image: url(/wp-content/themes/rosegarden_file/assets/img/banner/top_banner02.png);">
-            </div>
-            <div class="top_banner-wrap__img" style="background-image: url(/wp-content/themes/rosegarden_file/assets/img/banner/top_banner03.png);">
+            <?php foreach ($topAdvs as $adv): if (!empty($adv['image'])): ?>
+                <a href="<?php echo $adv['external_link'];?>" title="<?php echo $adv['title'];?>">
+                <div class="top_banner-wrap__img" style="background-image: url(<?php echo $adv['image'];?>);"></div>
+                </a>
+            <?php endif; endforeach;?>
             </div>
         </div>
     </div>
+    <?php endif;?>
 
 
     <!-- bridal fair 埋め込み-->

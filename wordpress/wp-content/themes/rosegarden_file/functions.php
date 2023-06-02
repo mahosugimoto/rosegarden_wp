@@ -275,4 +275,30 @@ remove_filter('the_content', 'wpautop');
   }
   add_action( 'widgets_init', 'custom_widget_area' );
 
+  /**
+   * Get top advertisement
+   */
+  if(!function_exists('topAdvertisements')) {
+    function topAdvertisements()
+    {
+      $advs = SCF::get('top-advertisement');
+      if (empty($advs)) {
+        return null;
+      }
+
+      $result = array_map(function($adv) {
+        if (!empty($adv['image'])) {
+          $image = wp_get_attachment_image_src($adv['image'], 'full');
+          if (!empty($image)) {
+            $adv['image'] = $image[0];
+          }
+        }
+
+        return $adv;
+      }, $advs);
+
+      return $result;
+    }
+  }
+
 ?>

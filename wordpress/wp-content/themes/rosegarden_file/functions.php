@@ -301,4 +301,37 @@ remove_filter('the_content', 'wpautop');
     }
   }
 
+  /**
+   * Get other banner
+   */
+  if(!function_exists('otherBanners')) {
+    function otherBanners()
+    {
+      $banners = SCF::get('other-banner');
+      if (empty($banners)) {
+        return null;
+      }
+
+      if (count($banners) == 1) {
+        $bn = $banners[0];
+        if (empty($bn['title']) && empty($bn['image']) && empty($bn['sub_title']) && empty($bn['external_link'])) {
+          return null;
+        }
+      }
+
+      $result = array_map(function($bn) {
+        if (!empty($bn['image'])) {
+          $image = wp_get_attachment_image_src($bn['image'], 'full');
+          if (!empty($image)) {
+            $bn['image'] = $image[0];
+          }
+        }
+
+        return $bn;
+      }, $banners);
+      
+      return $result;
+    }
+  }
+
 ?>

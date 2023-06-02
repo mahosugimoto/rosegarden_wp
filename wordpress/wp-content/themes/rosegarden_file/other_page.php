@@ -1,54 +1,33 @@
+<?php 
+$otherBanners = otherBanners();
+if (!empty($otherBanners)):
+?>
 <div class="other_page">
     <p>こちらのページもチェック</p>
     <div class="m16"></div>
     <div class="other_page__wrap">
-        <a href="#">
+        <?php foreach($otherBanners as $banner): ?>
+        <a href="<?php echo $banner['external_link'];?>" target="_blank">
             <div class="other_page__block">
-                <div class="other_page__block__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/other_page01.png)">
+                <?php if(!empty($banner['image'])): ?>
+                <div class="other_page__block__img" style="background-image:url(<?php echo $banner['image'];?>)">
                 </div>
+                <?php endif;?>
                 <div class="other_page__block__title">
                     <div class="page-title_08">
                         <div class="page-title_08__eng">
-                            <p>WEDDING<br>PARTY</p>
+                            <p><?php echo $banner['title'];?></p>
                         </div>
+                        <?php if(!empty($banner['sub_title'])): ?>
                         <div class="page-title_08__jp">
-                            <p>よくあるご質問</p>
+                            <p><?php echo $banner['sub_title']; ?></p>
                         </div>
+                        <?php endif;?>
                     </div>
                 </div>
             </div>
         </a>
-        <a href="#">
-            <div class="other_page__block">
-                <div class="other_page__block__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/top_qa.jpg)">
-                </div>
-                <div class="other_page__block__title">
-                    <div class="page-title_08">
-                        <div class="page-title_08__eng">
-                            <p>Q&A</p>
-                        </div>
-                        <div class="page-title_08__jp">
-                            <p>よくあるご質問</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="other_page__block">
-                <div class="other_page__block__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/other_page03.png)">
-                </div>
-                <div class="other_page__block__title">
-                    <div class="page-title_08">
-                        <div class="page-title_08__eng">
-                            <p>CEREMONY</p>
-                        </div>
-                        <div class="page-title_08__jp">
-                            <p>挙式</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
+        <?php endforeach;?>
     </div>
 </div>
+<?php endif;?>

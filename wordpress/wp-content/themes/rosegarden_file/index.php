@@ -5,6 +5,7 @@ Template Name: トップ
 */
 ?>
 <!-- fv -->
+<?php include('cta.php'); ?>
 
 <!-- jquery -->
 <script src="<?= get_template_directory_uri(); ?>/assets/js/jquery-3.6.0.min.js"></script>

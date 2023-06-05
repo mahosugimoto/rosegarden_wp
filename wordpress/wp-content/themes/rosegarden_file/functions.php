@@ -164,57 +164,6 @@ register_taxonomy(
   }
 
 
-  // ギャラリー
-
-  register_post_type(
-    'top_banner',
-    array(
-      'label' => 'トップバナー', 
-      'public' => true, 
-      'has_archive' => true,
-      'show_in_rest' => true,
-      'menu_icon' => 'dashicons-testimonial', 
-      'menu_position' => 5, 
-      'supports' => array( 
-        'title',  
-        'editor',
-        'thumbnail',
-        'revisions',
-      ),
-    )
-  );
-
-
-
-
-$args = array(
-	'label' => 'バナー',//投稿タイプの名前
-	'labels' => array(
-		'singular_name' => 'バナー',//投稿タイプの名前
-		'menu_name' => 'バナー',//メニュー（画面の左）に表示するラベル
-		'add_new_item' => '新規投稿を追加',//新規作成ページの左上に表示されるタイトル
-		'add_new' => '新規追加',//メニュー（画面の左）の「新規」の位置に表示するラベル
-		'new_item' => '新規投稿',//一覧ページの右上にある新規作成ボタンのラベル
-		'edit_item'=>'投稿を編集',//編集ページの左上にあるタイトル
-		'view_item' => '投稿を表示',//編集ページの「○○を表示」ボタンのラベル
-		'not_found' => '投稿は見つかりませんでした',//カスタム投稿を追加していない状態で、カスタム投稿一覧ページを開いたときに表示されるメッセージ
-		'not_found_in_trash' => 'ゴミ箱に投稿はありません。',//カスタム投稿をゴミ箱に入れていない状態で、カスタム投稿のゴミ箱ページを開いたときに表示されるメッセージ
-		'search_items' => '投稿を検索',//一覧ページの検索ボタンのラベル
-	),
-
-	'public' => true,//ユーザーが管理画面で入力するか設定
-	'publicly_queryable' => true,//カスタム投稿タイプの機能でページを生成するかどうかを指定
-	'show_ui' => true,//管理画面にこのカスタム投稿タイプのページを表示するか設定
-	'show_in_menu' => true,//管理画面にメニュー出すか設定
-	'query_var' => true,
-	'has_archive' => true,//「true」に指定すると投稿した記事の一覧ページ（投稿タイプのトップページ）を作成することができる
-	'hierarchical' => false,//カスタム投稿に固定ページのような親子関係（階層）を持たせるか設定
-	'menu_position' => 5,//カスタム投稿のメニューを追加する位置を整数で指定
-	'rewrite' => true,//リライト設定
-);
-register_post_type("banner",$args);
-
-
 // ビジュアルエディタ用スタイル適用
 function my_theme_setup() {
   // add_theme_support() で editor-styles を指定
@@ -274,5 +223,64 @@ remove_filter('the_content', 'wpautop');
       ) );
   }
   add_action( 'widgets_init', 'custom_widget_area' );
+
+  /**
+   * Get top advertisement
+   */
+  if(!function_exists('topAdvertisements')) {
+    function topAdvertisements()
+    {
+      $advs = SCF::get('top-advertisement');
+      if (empty($advs)) {
+        return null;
+      }
+
+      $result = array_map(function($adv) {
+        if (!empty($adv['image'])) {
+          $image = wp_get_attachment_image_src($adv['image'], 'full');
+          if (!empty($image)) {
+            $adv['image'] = $image[0];
+          }
+        }
+
+        return $adv;
+      }, $advs);
+
+      return $result;
+    }
+  }
+
+  /**
+   * Get other banner
+   */
+  if(!function_exists('otherBanners')) {
+    function otherBanners()
+    {
+      $banners = SCF::get('other-banner');
+      if (empty($banners)) {
+        return null;
+      }
+
+      if (count($banners) == 1) {
+        $bn = $banners[0];
+        if (empty($bn['title']) && empty($bn['image']) && empty($bn['sub_title']) && empty($bn['external_link'])) {
+          return null;
+        }
+      }
+
+      $result = array_map(function($bn) {
+        if (!empty($bn['image'])) {
+          $image = wp_get_attachment_image_src($bn['image'], 'full');
+          if (!empty($image)) {
+            $bn['image'] = $image[0];
+          }
+        }
+
+        return $bn;
+      }, $banners);
+      
+      return $result;
+    }
+  }
 
 ?>

@@ -51,7 +51,6 @@ get_header();
     </div>
 </div>
 
-
 <!-- church_event-->
 <div class="church_event">
     <div class="church_event__list">
@@ -63,10 +62,14 @@ get_header();
 
         <div class="liststyle_church_event2">
             <?php
+            $posts_per_page = 10;
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $post_type = 'church_event';
             $args = array(
-                'posts_per_page' => 10,
+                'posts_per_page' => $posts_per_page,
+                'paged' => $paged,
                 'post_status' => 'publish',
-                'post_type' => 'church_event',
+                'post_type' => $post_type,
             );
 
             $myposts = get_posts($args);
@@ -83,7 +86,10 @@ get_header();
                                 foreach ($post_categories as $category_slug) {
                                     $term = get_term_by('slug', $category_slug, $taxonomy_name);
                                     if ($term) {
+                                        // $cate_link = get_category_link($term);
+                                        // echo '<a href="'. esc_url($cate_link) .'">';
                                         echo '<p class="ctg_style02">' . $term->name . '</p>';
+                                        // echo '</a>';
                                     }
                                 }
                                 ?>
@@ -99,35 +105,16 @@ get_header();
             ?>
         </div>
         <!-- ページネーション -->
-        <div class="btn_flex2">
-            <button class="page-btn_pre">
-                <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/arrow_prev.png" alt="">
-                <p>前のページ</p>
-            </button>
-            <button class="page-btn_next">
-                <p>次のページ</p>
-                <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/arrow_next.png" alt="">
-            </button>
-        </div>
-        <nav class="pagination-container">
-            <ul class="pagination">
-                <li class="page-item prev"><a href="#" class="page-link">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/dcr/arrow_prev.png" alt="">
-                    </a></li>
-                <li class="page-item number"><a href="#" class="page-link">1</a></li>
-                <li class="page-item number navi-active"><a href="#" class="page-link">2</a></li>
-                <li class="page-item number"><a href="#" class="page-link">3</a></li>
-                <li class="page-item number"><a href="#" class="page-link">4</a></li>
-                <li class="page-item number"><a href="#" class="page-link">5</a></li>
-                <li class="page-item number"><a href="#" class="page-link">6</a></li>
-                <li class="page-item number"><a href="#" class="page-link">7</a></li>
-                <li class="page-item number"><a href="#" class="page-link">8</a></li>
-                <li class="page-item number"><a href="#" class="page-link">9</a></li>
-                <li class="page-item number"><a href="#" class="page-link">10</a></li>
-                <li class="page-item next" aria-disabled="true"><a href="#" class="page-link">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/dcr/arrow_next.png" alt=""></a></li>
-            </ul>
-        </nav>
+        <?php 
+        $total_post = wp_count_posts($post_type)->publish;
+        $num_pages = ceil($total_post / $posts_per_page);
+        
+        $args = array(
+            'total' => $num_pages,
+            'found_posts' => $total_post
+        );
+        echo custom_pagination($args); 
+        ?>
         <div class="lace-dcr_bottom">
             <div class="lace-dcr_bottom__img">
                 <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/lace02.png" alt="">

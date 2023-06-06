@@ -6,36 +6,7 @@ get_header();
 ?><?php include('header_icon.php'); ?>
 <?php include('cta.php'); ?>
 
-<!-- パンクズ_sp -->
-<div class="breadcrumb_sp">
-    <div class="breadcrumb_sp__contents">
-        <p><a href="<?php echo home_url( '/' ); ?>"><span>トップ</span></a></p>
-        <p>></p>
-        <p><?= get_the_title()?></p>
-    </div>
-</div>
-
-<!-- タイトル -->
-<div class="page-title_03">
-    <div class="page-title_03__eng">
-        <p><?php echo SCF::get('title_en'); ?></p>
-    </div>
-    <div class="page-title_03__jp">
-        <p><?= get_the_title()?></p>
-    </div>
-    <div class="page-title_03__contents">
-        <p><?php echo SCF::get('fv_text'); ?></p>
-    </div>
-</div>
-
-<!-- パンクズ_pc -->
-<div class="breadcrumb">
-    <div class="breadcrumb__contents">
-        <p><a href="<?php echo home_url( '/' ); ?>"><span>トップ</span></a></p>
-        <p>></p>
-        <p><?= get_the_title()?></p>
-    </div>
-</div>
+<?php require_once('breadcrumb.php');?>
 
 <!-- お知らせコンテンツ -->
 <div class="information">
@@ -61,8 +32,14 @@ get_header();
                 ?>
                    <a href="<?= the_permalink(); ?>">
                     <div class="liststyle_info2__block">
-                        <div class="liststyle_info2__block__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/archive-info_sample01.jpg)">
+                        <?php 
+                        if(has_post_thumbnail()): 
+                            $thumbnail = get_the_post_thumbnail_url($post->ID, 'full');
+                        ?>
+                        <div class="liststyle_info2__block__img" style="background-image:url(<?php echo $thumbnail;?>)">
                         </div>
+                        <?php endif;?>
+                        
                         <div class="liststyle_info2__block__text">
                             <div class="liststyle_info2__ctg">
                             <p class=""><?= get_the_date() ?></p>

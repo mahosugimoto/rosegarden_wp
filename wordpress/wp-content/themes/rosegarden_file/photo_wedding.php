@@ -27,23 +27,7 @@ get_header();
     </div>
 </div>
 
-<!-- パンクズ_pc -->
-<div class="breadcrumb">
-    <div class="breadcrumb__contents">
-        <p><a href="<?php echo home_url( '/' ); ?>"><span>トップ</span></a></p>
-        <p>></p>
-        <p><?= get_the_title()?></p>
-    </div>
-</div>
-
-<!-- パンクズ_sp -->
-<div class="breadcrumb_sp">
-    <div class="breadcrumb_sp__contents">
-        <p><a href="<?php echo home_url( '/' ); ?>"><span>トップ</span></a></p>
-        <p>></p>
-        <p><?= get_the_title()?></p>
-    </div>
-</div>
+<?php require_once('breadcrumb_other.php');?>
 
 
 <?php 

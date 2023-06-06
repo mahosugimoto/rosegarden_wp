@@ -393,7 +393,7 @@ Template Name: トップ
                 $args = array(
                     'posts_per_page' => 3,
                     'post_status' => 'publish',
-                    'post_type' => 'info',
+                    'post_type' => 'information',
                 );
                 $myposts = get_posts($args);
                 foreach ($myposts as $post) : setup_postdata($post);
@@ -406,7 +406,7 @@ Template Name: トップ
                                 <div class="liststyle_info__ctg">
                                     <p class=""><?= get_the_date() ?></p>
                                     <?php
-                                    $taxonomy_name = "info-cat";
+                                    $taxonomy_name = "information-cat";
                                     $this_terms = get_the_terms($post->ID, $taxonomy_name);
                                     if ($this_terms && !is_wp_error($this_terms)) {
                                         foreach ($this_terms as $key => $term) {

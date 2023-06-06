@@ -53,7 +53,7 @@ get_header();
                 $args = array(
                     'posts_per_page' => 10,
                     'post_status' => 'publish',
-                    'post_type' => 'info',
+                    'post_type' => 'information',
                 );
                 $myposts = get_posts($args);
                 foreach ($myposts as $post) : setup_postdata($post);
@@ -61,13 +61,13 @@ get_header();
                 ?>
                    <a href="<?= the_permalink(); ?>">
                     <div class="liststyle_info2__block">
-                        <div class="liststyle_info2__block__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/archive-info_sample01.jpg)">
+                        <div class="liststyle_info2__block__img" style="background-image:url(<?php the_post_thumbnail_url(); ?>)">
                         </div>
                         <div class="liststyle_info2__block__text">
                             <div class="liststyle_info2__ctg">
                             <p class=""><?= get_the_date() ?></p>
                             <?php
-                                    $taxonomy_name = "info-cat";
+                                    $taxonomy_name = "information-cat";
                                     $this_terms = get_the_terms($post->ID, $taxonomy_name);
                                     if ($this_terms && !is_wp_error($this_terms)) {
                                         foreach ($this_terms as $key => $term) {

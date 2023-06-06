@@ -29,10 +29,9 @@ get_header();
                 );
                 $myposts = get_posts($args);
                 foreach ($myposts as $post) : setup_postdata($post);
-                    $post_categories = wp_get_post_terms($post->ID, $taxonomy_name, array('fields' => 'slugs'));
                 ?>
                     <a href="<?= the_permalink(); ?>">
-                        <div class="liststyle_pastor_blog2__block" data-categories="<?= implode(' ', $post_categories); ?>">
+                        <div class="liststyle_pastor_blog2__block">
                             <div class="liststyle_pastor_blog2__block__text">
                                 <div class="liststyle_pastor_blog2__ctg">
                                     <p><?= get_the_date() ?></p>

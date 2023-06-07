@@ -10,7 +10,7 @@
         <div class=info-details>
             <div class=info-details__category>
                 <?php
-                $taxonomy_name = "info-cat";
+                $taxonomy_name = "information-cat";
                 $this_terms = get_the_terms($post->ID, $taxonomy_name);
                 if ($this_terms && !is_wp_error($this_terms)) {
                     foreach ($this_terms as $key => $term) {

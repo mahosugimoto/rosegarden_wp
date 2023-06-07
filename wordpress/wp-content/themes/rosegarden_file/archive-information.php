@@ -21,37 +21,36 @@ get_header();
 
             <div class="liststyle_info2">
             <?php
+                $taxonomy_name = "information-cat";
+                $posts_per_page = 10;
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                $post_type = 'information';
                 $args = array(
-                    'posts_per_page' => 10,
+                    'posts_per_page' => $posts_per_page,
+                    'paged' => $paged,
                     'post_status' => 'publish',
-                    'post_type' => 'information',
+                    'post_type' => $post_type,
                 );
                 $myposts = get_posts($args);
                 foreach ($myposts as $post) : setup_postdata($post);
-                    $post_categories = wp_get_post_terms($post->ID, 'category', array('fields' => 'slugs'));
+                    $post_categories = wp_get_post_terms($post->ID, $taxonomy_name, array('fields' => 'slugs'));
                 ?>
                    <a href="<?= the_permalink(); ?>">
                     <div class="liststyle_info2__block">
-                        <?php 
-                        if(has_post_thumbnail()): 
-                            $thumbnail = get_the_post_thumbnail_url($post->ID, 'full');
-                        ?>
-                        <div class="liststyle_info2__block__img" style="background-image:url(<?php echo $thumbnail;?>)">
+                        <div class="liststyle_info2__block__img" style="background-image:url(<?php the_post_thumbnail_url(); ?>)">
                         </div>
-                        <?php endif;?>
                         
                         <div class="liststyle_info2__block__text">
                             <div class="liststyle_info2__ctg">
                             <p class=""><?= get_the_date() ?></p>
-                            <?php
-                                    $taxonomy_name = "information-cat";
-                                    $this_terms = get_the_terms($post->ID, $taxonomy_name);
-                                    if ($this_terms && !is_wp_error($this_terms)) {
-                                        foreach ($this_terms as $key => $term) {
-                                            echo '<p class="ctg_style02">' . $term->name . '</p>';
-                                        }
+                                <?php
+                                $this_terms = get_the_terms($post->ID, $taxonomy_name);
+                                if ($this_terms && !is_wp_error($this_terms)) {
+                                    foreach ($this_terms as $key => $term) {
+                                        echo '<p class="ctg_style02">' . $term->name . '</p>';
                                     }
-                                    ?>
+                                }
+                                ?>
                             </div>
                             <h3><?= get_the_title(); ?></h3>
                         </div>
@@ -62,36 +61,17 @@ get_header();
                 wp_reset_postdata();
                 ?>
             </div>
-                    <!-- ページネーション -->
-        <div class="btn_flex2">
-            <button class="page-btn_pre">
-                <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/arrow_prev.png" alt="">
-                <p>前のページ</p>
-            </button>
-            <button class="page-btn_next">
-                <p>次のページ</p>
-                <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/arrow_next.png" alt="">
-            </button>
-        </div>
-        <nav class="pagination-container">
-            <ul class="pagination">
-                <li class="page-item prev"><a href="#" class="page-link">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/dcr/arrow_prev.png" alt="">
-                    </a></li>
-                <li class="page-item number"><a href="#" class="page-link">1</a></li>
-                <li class="page-item number navi-active"><a href="#" class="page-link">2</a></li>
-                <li class="page-item number"><a href="#" class="page-link">3</a></li>
-                <li class="page-item number"><a href="#" class="page-link">4</a></li>
-                <li class="page-item number"><a href="#" class="page-link">5</a></li>
-                <li class="page-item number"><a href="#" class="page-link">6</a></li>
-                <li class="page-item number"><a href="#" class="page-link">7</a></li>
-                <li class="page-item number"><a href="#" class="page-link">8</a></li>
-                <li class="page-item number"><a href="#" class="page-link">9</a></li>
-                <li class="page-item number"><a href="#" class="page-link">10</a></li>
-                <li class="page-item next" aria-disabled="true"><a href="#" class="page-link">
-                        <img src="<?= get_template_directory_uri(); ?>/assets/img/dcr/arrow_next.png" alt=""></a></li>
-            </ul>
-        </nav>
+            <!-- ページネーション -->
+            <?php 
+            $total_post = wp_count_posts($post_type)->publish;
+            $num_pages = ceil($total_post / $posts_per_page);
+            
+            $args = array(
+                'total' => $num_pages,
+                'found_posts' => $total_post
+            );
+            echo custom_pagination($args); 
+            ?>
             <div class="lace-dcr_bottom">
                 <div class="lace-dcr_bottom__img">
                     <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/lace02.png" alt="">
@@ -100,7 +80,6 @@ get_header();
         </div>
     </div>
 
-    s
 
     <div class="m80"></div>
 

@@ -44,8 +44,7 @@
 
     .wap {
         width: 100%;
-        margin: auto;
-       
+        margin: auto; 
     }
 </style>
 <script>

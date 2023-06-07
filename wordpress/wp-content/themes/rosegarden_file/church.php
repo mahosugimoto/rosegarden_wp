@@ -263,6 +263,7 @@ get_header();
                 </div>
                 <div class="liststyle_church_event2">
                 <?php
+                $taxonomy_name = 'church_event-cat';
             $args = array(
                 'posts_per_page' => 3,
                 'post_status' => 'publish',

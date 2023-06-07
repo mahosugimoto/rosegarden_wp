@@ -1,7 +1,24 @@
 <?php get_header() ?>
 <?php include('header_icon.php'); ?>
 
-<?php require_once('breadcrumb.php');?>
+<!-- パンクズ_sp -->
+<?php custom_breadcrumbs('sp');?>
+
+<!-- タイトル -->
+<div class="page-title_03">
+    <div class="page-title_03__eng">
+        <p><?php echo SCF::get('title_en', 295); ?></p>
+    </div>
+    <div class="page-title_03__jp">
+        <p><?= get_the_title() ?></p>
+    </div>
+    <div class="page-title_03__contents">
+        <p><?php echo SCF::get('fv_text', 295); ?></p>
+    </div>
+</div>
+
+<!-- パンクズ_pc -->
+<?php custom_breadcrumbs('pc');?>
 
 <!-- wp_カスタムhtml-->
 
@@ -61,10 +78,15 @@
 
         <!-- 記事詳細__本文 -->
         <div class="article-details">
-            <div class=article-details__contents>
+            <div class="article-details__contents">
                 <?= get_the_content(); ?>
-                <div class="article-details__contents__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/cv_sample02.png)">
+                <?php 
+                if(has_post_thumbnail()): 
+                    $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                ?>
+                <div class="article-details__contents__img" style="background-image: url(<?php echo $thumbnail;?>);">
                 </div>
+                <?php endif;?>
             </div>
         </div>
     </div>

@@ -33,6 +33,18 @@
     <!-- ピンチによる拡大・縮小ができる -->
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4LT0LGN6G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-M4LT0LGN6G');
+        gtag('config', 'UA-22267949-16');
+    </script>-->
 </head>
 <style>
     body {
@@ -40,7 +52,9 @@
         margin: auto;
         max-width: 1440px;
     }
-
+    html {
+        margin-top: 0px;
+    }
     .wap {
         width: 100%;
         margin: auto;

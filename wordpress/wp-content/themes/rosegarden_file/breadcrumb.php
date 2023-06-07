@@ -1,11 +1,18 @@
-<div class="breadcrumb">
-    <div class="breadcrumb__contents"> 
-        <p><a href="<?php
-echo home_url( '/' );
-?>"><span>トップ</span></a></p>
-        <p>></p>
-        <p><a href="#"><span>教会イベント</span></a></p>
-        <p>></p>
-        <p><a href="#">【予約受付終了】クリスマスイヴ礼拝・コンサート開催のご案内</a></p>
+<!-- パンクズ_sp -->
+<?php custom_breadcrumbs('sp');?>
+
+<!-- タイトル -->
+<div class="page-title_03">
+    <div class="page-title_03__eng">
+        <p><?php echo SCF::get('title_en'); ?></p>
+    </div>
+    <div class="page-title_03__jp">
+        <p><?= get_the_title() ?></p>
+    </div>
+    <div class="page-title_03__contents">
+        <p><?php echo SCF::get('fv_text'); ?></p>
     </div>
 </div>
+
+<!-- パンクズ_pc -->
+<?php custom_breadcrumbs('pc');?>

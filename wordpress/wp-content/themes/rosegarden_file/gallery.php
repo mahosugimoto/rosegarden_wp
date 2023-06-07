@@ -26,23 +26,7 @@ $img = get_post_meta($post->ID, 'image_pc', true);
     </div>
 </div>
 
-<!-- パンクズ_pc -->
-<div class="breadcrumb">
-    <div class="breadcrumb__contents">
-        <p><a href="<?php echo home_url('/'); ?>"><span>トップ</span></a></p>
-        <p>></p>
-        <p><?= get_the_title() ?></p>
-    </div>
-</div>
-
-<!-- パンクズ_sp -->
-<div class="breadcrumb_sp">
-    <div class="breadcrumb_sp__contents">
-        <p><a href="<?php echo home_url('/'); ?>"><span>トップ</span></a></p>
-        <p>></p>
-        <p><?= get_the_title() ?></p>
-    </div>
-</div>
+<?php require_once('breadcrumb_other.php');?>
 
 
 <?php
@@ -128,7 +112,7 @@ $img = get_post_meta($post->ID, 'image_sp', true);
     <div class="gallery__photo">
         <?php
         $args = array(
-            'posts_per_page' => 18,
+            'posts_per_page' => -1,
             'post_status' => 'publish',
             'post_type' => 'gallery',
         );

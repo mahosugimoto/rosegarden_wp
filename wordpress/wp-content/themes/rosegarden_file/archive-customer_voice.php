@@ -59,23 +59,7 @@ $img = get_post_meta($post->ID, 'image_pc', true);
     </div>
 </div>
 
-<!-- パンクズ_pc -->
-<div class="breadcrumb">
-    <div class="breadcrumb__contents">
-        <p><a href="<?php echo home_url('/'); ?>"><span>トップ</span></a></p>
-        <p>></p>
-        <p><?= get_the_title() ?></p>
-    </div>
-</div>
-
-<!-- パンクズ_sp -->
-<div class="breadcrumb_sp">
-    <div class="breadcrumb_sp__contents">
-        <p><a href="<?php echo home_url('/'); ?>"><span>トップ</span></a></p>
-        <p>></p>
-        <p><?= get_the_title() ?></p>
-    </div>
-</div>
+<?php require_once('breadcrumb_other.php');?>
 
 <?php
 // SCF::get_post_meta($post->ID, '設定した名前', 画像サイズ)
@@ -122,10 +106,14 @@ $img = get_post_meta($post->ID, 'image_sp', true);
 <div class="voice">
     <div class=voice__contents>
         <?php
+        $posts_per_page = 10;
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $post_type = 'customer_voice';
         $args = array(
-            'posts_per_page' => 10,
+            'posts_per_page' => $posts_per_page,
+            'paged' => $paged,
             'post_status' => 'publish',
-            'post_type' => 'customer_voice',
+            'post_type' => $post_type,
         );
         $myposts = get_posts($args);
         foreach ($myposts as $post) : setup_postdata($post);
@@ -174,35 +162,16 @@ $img = get_post_meta($post->ID, 'image_sp', true);
 </div>
 
 <!-- ページネーション -->
-<div class="btn_flex2">
-    <button class="page-btn_pre">
-        <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/arrow_prev.png" alt="">
-        <p>前のページ</p>
-    </button>
-    <button class="page-btn_next">
-        <p>次のページ</p>
-        <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/arrow_next.png" alt="">
-    </button>
-</div>
-<nav class="pagination-container">
-    <ul class="pagination">
-        <li class="page-item prev"><a href="#" class="page-link">
-                <img src="<?= get_template_directory_uri(); ?>/assets/img/dcr/arrow_prev.png" alt="">
-            </a></li>
-        <li class="page-item number"><a href="#" class="page-link">1</a></li>
-        <li class="page-item number navi-active"><a href="#" class="page-link">2</a></li>
-        <li class="page-item number"><a href="#" class="page-link">3</a></li>
-        <li class="page-item number"><a href="#" class="page-link">4</a></li>
-        <li class="page-item number"><a href="#" class="page-link">5</a></li>
-        <li class="page-item number"><a href="#" class="page-link">6</a></li>
-        <li class="page-item number"><a href="#" class="page-link">7</a></li>
-        <li class="page-item number"><a href="#" class="page-link">8</a></li>
-        <li class="page-item number"><a href="#" class="page-link">9</a></li>
-        <li class="page-item number"><a href="#" class="page-link">10</a></li>
-        <li class="page-item next" aria-disabled="true"><a href="#" class="page-link">
-                <img src="<?= get_template_directory_uri(); ?>/assets/img/dcr/arrow_next.png" alt=""></a></li>
-    </ul>
-</nav>
+<?php 
+$total_post = wp_count_posts($post_type)->publish;
+$num_pages = ceil($total_post / $posts_per_page);
+
+$args = array(
+    'total' => $num_pages,
+    'found_posts' => $total_post
+);
+echo custom_pagination($args); 
+?>
 
 <div class="m80"></div>
 <?php include('other_page.php'); ?>

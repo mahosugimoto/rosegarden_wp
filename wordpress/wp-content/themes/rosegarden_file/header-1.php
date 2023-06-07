@@ -2,8 +2,9 @@
 <html lang="ja">
 
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <?php wp_head(); ?>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
     <meta property="og:type" content="website">
     <meta property="og:title" content="">
     <!-- font -->

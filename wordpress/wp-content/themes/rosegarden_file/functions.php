@@ -39,7 +39,7 @@ function create_post_type()
 
 
     register_post_type(
-        'info',
+        'information',
         array(
             'label' => 'お知らせ',
             'public' => true,
@@ -57,8 +57,8 @@ function create_post_type()
     );
 
     register_taxonomy(
-        'info-cat',
-        'info',
+        'information-cat',
+        'information',
         array(
             'label' => 'お知らせカテゴリー',
             'hierarchical' => true,

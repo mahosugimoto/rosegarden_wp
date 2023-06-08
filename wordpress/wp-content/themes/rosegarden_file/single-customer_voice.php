@@ -30,8 +30,6 @@
     <!-- お客様の声コンテンツ -->
     <div class="cv">
         <div class="cv-details">
-            <div class="cv-details__thumbnail" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/cv_sample01.jpg) ;">
-            </div>
             <div class="cv-details__title">
                 <h2><?= get_the_title() ?></h2>
             </div>

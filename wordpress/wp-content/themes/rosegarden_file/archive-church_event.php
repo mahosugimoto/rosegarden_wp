@@ -4,66 +4,58 @@ Template Name: 教会イベント
 */
 get_header();
 ?><?php include('header_icon.php'); ?>
-<script>
-    $(document).ready(function() {
-        $('.ctg_btn__child-btn').click(function() {
-            // すべてのボタンからactiveクラスを削除
-            $('.ctg_btn__child-btn').removeClass('active');
-            // クリックされたボタンにactiveクラスを追加
-            $(this).addClass('active');
 
-            // クリックされたボタンのデータカテゴリを取得
-            var category = $(this).data('category');
-
-            // 投稿をフィルタリング
-            $('.liststyle_church_event2__block').each(function() {
-                var postCategories = $(this).data('categories');
-                if (category === 'all' || postCategories.includes(category)) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
-            });
-        });
-    });
-</script>
-
+<?php $eventPostId = 46; ?>
 <!-- パンクズ_sp -->
 <?php custom_breadcrumbs('sp'); ?>
 
 <!-- タイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
-        <p><?php echo SCF::get('title_en', 46); ?></p>
+        <p><?php echo SCF::get('title_en', $eventPostId); ?></p>
     </div>
     <div class="page-title_03__jp">
-        <p><?= get_the_title(46) ?></p>
+        <p><?= get_the_title($eventPostId) ?></p>
     </div>
     <div class="page-title_03__contents">
-        <p><?php echo SCF::get('fv_text', 46); ?></p>
+        <p><?php echo SCF::get('fv_text', $eventPostId); ?></p>
     </div>
 </div>
 
 <!-- パンクズ_pc -->
 <?php custom_breadcrumbs('pc'); ?>
 
+<?php
+$current_category = get_queried_object();
+$category_slug = '';
+$category_id = '';
+
+if ($current_category instanceof WP_Term) {
+    $category_slug = $current_category->slug;
+    $category_id = $current_category->term_id;
+}
+?>
+
 <!-- test -->
 <div class="church__ctg">
     <div class="ctg_btn">
         <div class="ctg_btn__all">
-            <button class="ctg_btn__child-btn active" data-category="all">
-                <p>ALL</p>
-            </button>
+            <a href="<?php echo the_permalink($eventPostId);?>">
+                <button class="ctg_btn__child-btn <?php echo (empty($category_id)) ? 'active' : '';?>" data-category="all">
+                    <p>ALL</p>
+                </button>
+            </a>
         </div>
         <div class="ctg_btn__child-wrap">
             <?php
             $taxonomy_name = "church_event-cat";
             $terms = get_terms($taxonomy_name);
-            foreach ($terms as $term) {
-                $term_link = get_term_link($term);
-                echo '<button class="ctg_btn__child-btn" data-category="' . esc_attr($term->slug) . '">' . $term->name . '</button>';
-            }
+            foreach ($terms as $term) :
             ?>
+            <a href="<?php echo get_term_link($term, $taxonomy_name)?>">
+            <button class="ctg_btn__child-btn <?php echo ($category_id == $term->term_id) ? 'active' : '';?>" data-category="<?php echo esc_attr($term->slug);?>"><?php echo $term->name;?></button>
+            </a>
+            <?php endforeach;?>
         </div>
     </div>
 </div>
@@ -81,6 +73,9 @@ get_header();
             <?php
             $posts_per_page = 10;
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            if (!empty($category_slug)) {
+                $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+            }
             $post_type = 'church_event';
             $args = array(
                 'posts_per_page' => $posts_per_page,
@@ -88,6 +83,16 @@ get_header();
                 'post_status' => 'publish',
                 'post_type' => $post_type,
             );
+
+            if (!empty($category_slug)) {
+                $args['tax_query'] = array(
+                    array(
+                        'taxonomy' => $taxonomy_name,
+                        'field' => 'slug',
+                        'terms' => $category_slug,
+                    ),
+                );
+            }
 
             $myposts = get_posts($args);
             foreach ($myposts as $post) : setup_postdata($post);

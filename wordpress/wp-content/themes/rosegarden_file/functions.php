@@ -33,6 +33,7 @@ function create_post_type()
             'hierarchical' => true,
             'public' => true,
             'show_in_rest' => true,
+            'show_admin_column' => true
         )
     );
 
@@ -64,6 +65,7 @@ function create_post_type()
             'hierarchical' => true,
             'public' => true,
             'show_in_rest' => true,
+            'show_admin_column' => true
         )
     );
 
@@ -115,6 +117,7 @@ function create_post_type()
             'hierarchical' => true,
             'public' => true,
             'show_in_rest' => true,
+            'show_admin_column' => true
         )
     );
     register_taxonomy(
@@ -126,6 +129,7 @@ function create_post_type()
             'public' => true,
             'show_in_rest' => true,
             'update_count_callback' => '_update_post_term_count',
+            'show_admin_column' => true
         )
     );
 
@@ -159,6 +163,7 @@ function create_post_type()
             'hierarchical' => true,
             'public' => true,
             'show_in_rest' => true,
+            'show_admin_column' => true
         )
     );
 }
@@ -460,14 +465,19 @@ if (!function_exists('custom_pagination')) {
             $total   = isset($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
         }
         
-        $current = get_query_var('paged') ? (int) get_query_var('paged') : 1;
-
         // Append the format placeholder to the base URL.
         $pagenum_link = trailingslashit($url_parts[0]) . '%_%';
 
         // URL base depends on permalink settings.
         $format  = $wp_rewrite->using_index_permalinks() && !strpos($pagenum_link, 'index.php') ? 'index.php/' : '';
-        $format .= $wp_rewrite->using_permalinks() ? user_trailingslashit($wp_rewrite->pagination_base . '/%#%', 'paged') : '?paged=%#%';
+
+        if (is_tax()) {
+            $format .= $wp_rewrite->using_permalinks() ? user_trailingslashit('?'. $wp_rewrite->pagination_base . '=%#%', 'paged') : '?paged=%#%';
+            $current = get_query_var('page') ? (int) get_query_var('page') : 1;
+        } else {
+            $format .= $wp_rewrite->using_permalinks() ? user_trailingslashit($wp_rewrite->pagination_base . '/%#%', 'paged') : '?paged=%#%';
+            $current = get_query_var('paged') ? (int) get_query_var('paged') : 1;
+        }
 
         $defaults = array(
             'base'               => $pagenum_link, // http://example.com/all_posts.php%_% : %_% is replaced by format (below).

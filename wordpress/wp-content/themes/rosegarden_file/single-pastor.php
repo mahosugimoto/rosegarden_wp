@@ -7,7 +7,24 @@ Template Name: 牧師のブログ詳細
 <?php get_header()?>
 <?php include('header_icon.php'); ?>
 
-<?php require_once('breadcrumb.php');?>
+<!-- パンクズ_sp -->
+<?php custom_breadcrumbs('sp');?>
+
+<!-- タイトル -->
+<div class="page-title_03">
+    <div class="page-title_03__eng">
+        <p><?php echo SCF::get('title_en', 50); ?></p>
+    </div>
+    <div class="page-title_03__jp">
+        <p><?= get_the_title() ?></p>
+    </div>
+    <div class="page-title_03__contents">
+        <p><?php echo SCF::get('fv_text', 50); ?></p>
+    </div>
+</div>
+
+<!-- パンクズ_pc -->
+<?php custom_breadcrumbs('pc');?>
 
 <!-- イベントタイトル-->
 

@@ -6,7 +6,24 @@ get_header();
 ?><?php include('header_icon.php'); ?>
 <?php include('cta.php'); ?>
 
-<?php require_once('breadcrumb.php');?>
+<!-- パンクズ_sp -->
+<?php custom_breadcrumbs('sp');?>
+
+<!-- タイトル -->
+<div class="page-title_03">
+    <div class="page-title_03__eng">
+        <p><?php echo SCF::get('title_en', 7783); ?></p>
+    </div>
+    <div class="page-title_03__jp">
+        <p><?= get_the_title(7783) ?></p>
+    </div>
+    <div class="page-title_03__contents">
+        <p><?php echo SCF::get('fv_text', 7783); ?></p>
+    </div>
+</div>
+
+<!-- パンクズ_pc -->
+<?php custom_breadcrumbs('pc');?>
 
 <!-- お知らせコンテンツ -->
 <div class="information">

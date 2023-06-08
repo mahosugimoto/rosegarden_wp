@@ -5,6 +5,7 @@ Template Name: トップ
 */
 ?>
 <!-- fv -->
+<?php include('cta.php'); ?>
 
 <!-- jquery -->
 <script src="<?= get_template_directory_uri(); ?>/assets/js/jquery-3.6.0.min.js"></script>
@@ -162,6 +163,7 @@ Template Name: トップ
         <div class=cv_slider-wrap>
             <div class="cv_slider">
                 <?php
+                $taxonomy_name = "customer_voice-cat";
                 $args = array(
                     'posts_per_page' => 10,
                     'post_status' => 'publish',
@@ -181,7 +183,6 @@ Template Name: トップ
                                     <div class="cv_category__style">
                                         <p>スタイル：</p>
                                         <?php
-                                        $taxonomy_name = "customer_voice-cat";
                                         $this_terms = get_the_terms($post->ID, $taxonomy_name);
                                         if ($this_terms && !is_wp_error($this_terms)) {
                                             foreach ($this_terms as $key => $term) {
@@ -392,14 +393,15 @@ Template Name: トップ
             </div>
             <div class="liststyle_info">
                 <?php
+                $taxonomy_name = "information-cat";
                 $args = array(
                     'posts_per_page' => 3,
                     'post_status' => 'publish',
-                    'post_type' => 'info',
+                    'post_type' => 'information',
                 );
                 $myposts = get_posts($args);
                 foreach ($myposts as $post) : setup_postdata($post);
-                    $post_categories = wp_get_post_terms($post->ID, 'category', array('fields' => 'slugs'));
+                    $post_categories = wp_get_post_terms($post->ID, $taxonomy_name, array('fields' => 'slugs'));
                 ?>
                     <a href="<?= the_permalink(); ?>">
                         <div class="liststyle_info__block">
@@ -408,7 +410,6 @@ Template Name: トップ
                                 <div class="liststyle_info__ctg">
                                     <p class=""><?= get_the_date() ?></p>
                                     <?php
-                                    $taxonomy_name = "info-cat";
                                     $this_terms = get_the_terms($post->ID, $taxonomy_name);
                                     if ($this_terms && !is_wp_error($this_terms)) {
                                         foreach ($this_terms as $key => $term) {

@@ -1,7 +1,24 @@
 <?php get_header() ?>
 <?php include('header_icon.php'); ?>
 
-<?php require_once('breadcrumb.php');?>
+<!-- パンクズ_sp -->
+<?php custom_breadcrumbs('sp');?>
+
+<!-- タイトル -->
+<div class="page-title_03">
+    <div class="page-title_03__eng">
+        <p><?php echo SCF::get('title_en', 7783); ?></p>
+    </div>
+    <div class="page-title_03__jp">
+        <p><?= get_the_title() ?></p>
+    </div>
+    <div class="page-title_03__contents">
+        <p><?php echo SCF::get('fv_text', 7783); ?></p>
+    </div>
+</div>
+
+<!-- パンクズ_pc -->
+<?php custom_breadcrumbs('pc');?>
 
 <?php while (have_posts()) : the_post(); ?>
 
@@ -10,7 +27,7 @@
         <div class=info-details>
             <div class=info-details__category>
                 <?php
-                $taxonomy_name = "info-cat";
+                $taxonomy_name = "information-cat";
                 $this_terms = get_the_terms($post->ID, $taxonomy_name);
                 if ($this_terms && !is_wp_error($this_terms)) {
                     foreach ($this_terms as $key => $term) {
@@ -29,7 +46,7 @@
             if(has_post_thumbnail()): 
                 $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'full');
             ?>
-            <div class=info-details__thumbnail style="background-image: url(<?php echo $thumbnail;?>);">
+            <div class="info-details__thumbnail" style="background-image: url(<?php echo $thumbnail;?>);">
             </div>
             <?php endif;?>
         </div>

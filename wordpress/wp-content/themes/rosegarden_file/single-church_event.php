@@ -45,3 +45,6 @@
 <?php endwhile; ?>
 <div class="m80"></div>
 <?php get_footer() ?>
+
+
+<!-- マージチェック -->

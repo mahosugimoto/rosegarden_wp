@@ -16,7 +16,7 @@ Template Name: 牧師のブログ詳細
         <p><?php echo SCF::get('title_en', 50); ?></p>
     </div>
     <div class="page-title_03__jp">
-        <p><?= get_the_title() ?></p>
+        <p><?= get_the_title(50) ?></p>
     </div>
     <div class="page-title_03__contents">
         <p><?php echo SCF::get('fv_text', 50); ?></p>

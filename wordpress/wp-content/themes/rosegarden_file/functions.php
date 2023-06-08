@@ -409,16 +409,20 @@ if (!function_exists('custom_breadcrumbs')) {
                 echo $before . get_the_title() . $after;
             } elseif (is_page() && $post->post_parent) {
                 $parent_id = $post->post_parent;
-                $breadcrumbs = array();
-                while ($parent_id) {
-                    $page = get_post($parent_id);
-                    $breadcrumbs[] = $before . '<a href="' . get_permalink($page->ID) . '"><span>' . get_the_title($page->ID) . '</span></a>' . $after;
-                    $parent_id = $page->post_parent;
+                $ignoreIds = [8323];
+                if (!in_array($parent_id, $ignoreIds)) {
+                    $breadcrumbs = array();
+                    while ($parent_id) {
+                        $page = get_post($parent_id);
+                        $breadcrumbs[] = $before . '<a href="' . get_permalink($page->ID) . '"><span>' . get_the_title($page->ID) . '</span></a>' . $after;
+                        $parent_id = $page->post_parent;
+                    }
+                    $breadcrumbs = array_reverse($breadcrumbs);
+                    foreach ($breadcrumbs as $crumb) {
+                        echo $crumb . ' ' . $delimiter . ' ';
+                    }
                 }
-                $breadcrumbs = array_reverse($breadcrumbs);
-                foreach ($breadcrumbs as $crumb) {
-                    echo $crumb . ' ' . $delimiter . ' ';
-                }
+                
                 echo $before . get_the_title() . $after;
             } elseif (is_search()) {
                 echo $before . 'Search results for "' . get_search_query() . '"' . $after;

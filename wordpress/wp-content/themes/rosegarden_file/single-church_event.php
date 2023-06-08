@@ -11,7 +11,7 @@
         <p><?php echo SCF::get('title_en', 46); ?></p>
     </div>
     <div class="page-title_03__jp">
-        <p><?= get_the_title() ?></p>
+        <p><?= get_the_title(46) ?></p>
     </div>
     <div class="page-title_03__contents">
         <p><?php echo SCF::get('fv_text', 46); ?></p>

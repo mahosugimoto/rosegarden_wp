@@ -14,7 +14,7 @@ get_header();
         <p><?php echo SCF::get('title_en', 50); ?></p>
     </div>
     <div class="page-title_03__jp">
-        <p><?= get_the_title() ?></p>
+        <p><?= get_the_title(50) ?></p>
     </div>
     <div class="page-title_03__contents">
         <p><?php echo SCF::get('fv_text', 50); ?></p>
@@ -35,9 +35,18 @@ get_header();
                 </div>
             </div>
             <div class="liststyle_pastor_blog2">
-            <?php if (have_posts()): 
-                while (have_posts()): 
-                    the_post();
+            <?php 
+            $posts_per_page = 10;
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $post_type = 'pastor';
+            $args = array(
+                'posts_per_page' => $posts_per_page,
+                'paged' => $paged,
+                'post_status' => 'publish',
+                'post_type' => $post_type,
+            );
+            $myposts = get_posts($args);
+            foreach ($myposts as $post) : setup_postdata($post);
             ?>
                 <a href="<?= the_permalink(); ?>">
                     <div class="liststyle_pastor_blog2__block">
@@ -50,7 +59,7 @@ get_header();
                         </div>
                     </div>
                 </a>
-            <?php endwhile; ?>
+            <?php endforeach; ?>
                 <div class="liststyle_pastor_blog2__btn">
                 </div>
                 <div class="lace-dcr_bottom">
@@ -58,11 +67,20 @@ get_header();
                         <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/lace02.png" alt="">
                     </div>
                 </div>
-            <?php endif; ?>
             </div>
         </div>
     </div>
-    <?php if (have_posts()): echo custom_pagination(); endif;?>
+    <!-- ページネーション -->
+    <?php 
+    $total_post = wp_count_posts($post_type)->publish;
+    $num_pages = ceil($total_post / $posts_per_page);
+    
+    $args = array(
+        'total' => $num_pages,
+        'found_posts' => $total_post
+    );
+    echo custom_pagination($args); 
+    ?>
     <div class="m80"></div>
 </div>
 <?php get_footer(); ?>

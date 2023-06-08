@@ -407,3 +407,18 @@ p {
     a {
     }
 }
+
+.page-item.number.navi-active {
+    background-color: global.$point-main;
+    color:#fff;
+}
+
+.btn_flex2 {
+    display: flex;
+    justify-content: center;
+}
+.page-link {
+    img {
+        width: 8px;
+    }
+}

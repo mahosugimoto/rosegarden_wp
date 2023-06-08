@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <title><?php wp_title() ?></title>
     <meta name="description" content="">
     <meta name="keywords" content="" />
     <meta property="og:type" content="website">

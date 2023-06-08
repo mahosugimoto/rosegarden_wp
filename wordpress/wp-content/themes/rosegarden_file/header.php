@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+    <title><?php wp_title() ?></title>
     <meta charset="<?php bloginfo('charset'); ?>">
     <?php wp_head(); ?>
     <meta property="og:type" content="website">
@@ -33,7 +34,7 @@
     <!-- ピンチによる拡大・縮小ができる -->
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4LT0LGN6G"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -52,13 +53,15 @@
         margin: auto;
         max-width: 1440px;
     }
+
     html {
         margin-top: 0px;
     }
+
     .wap {
         width: 100%;
         margin: auto;
-       
+
     }
 </style>
 <script>
@@ -363,3 +366,6 @@
     </div>
 
     <body>
+
+
+  

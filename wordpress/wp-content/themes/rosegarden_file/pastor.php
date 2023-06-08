@@ -41,8 +41,8 @@ get_header();
 </div>
 
 <!-- 牧師ブログ一覧 -->
-<div class="pastor_blog_wide">
-    <div class="pastor_blog__list">
+<div class="pastor_blog3">
+    <div class="pastor_blog3__list">
         <div class="lace-dcr_top">
             <div class="lace-dcr_top__img">
                 <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/lace.png" alt="">
@@ -79,7 +79,7 @@ get_header();
             wp_reset_postdata();
             ?>
         </div>
-        <div class="liststyle_pastor_blog2__btn">
+        <div class="liststyle_pastor_blog__btn">
         </div>
         <div class="lace-dcr_bottom">
             <div class="lace-dcr_bottom__img">

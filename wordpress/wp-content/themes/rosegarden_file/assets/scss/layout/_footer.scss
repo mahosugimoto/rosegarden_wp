@@ -27,9 +27,15 @@ footer {
         }
         h2 {
             @include global.mb8;
+            @include global.tab {
+                text-align: center;
+            }   
         }
         p {
             letter-spacing: 0.1em;
+            @include global.tab {
+                text-align: center;
+            }   
             @include global.sp {
                 text-align: end;
             }  
@@ -43,11 +49,18 @@ footer {
         } 
 }
 
+
+
 .footer-contents {
+    @include global.footer {
+        display: block;
+       } 
     &-wrap {
     display: flex;
-    
     align-items: start;
+    @include global.footer {
+        display: block;
+    } 
     @include global.tab {
         display: block;
     }
@@ -60,12 +73,12 @@ footer {
         display: block;
         padding: 40px;
     } 
-    @include global.tab {
-    }
-    @include global.sp {
-    } 
     &__btn {
         width: 286px;
+        @include global.footer {
+         margin: auto;
+         margin-bottom: 40px;
+        } 
         @include global.tab {
             margin: auto;
             margin-bottom: 16px;
@@ -77,9 +90,12 @@ footer {
         flex-wrap: nowrap;
         box-sizing: border-box;
         padding-left: 64px;
+        @include global.footer {
+            margin-bottom: 40px;
+            padding-left: 0px;
+           } 
         @include global.pc {
             padding-left: 32px;
-            @include global.mb80;
         } 
         @include global.tab {
             padding-left: 0px;
@@ -125,15 +141,18 @@ footer {
             font-family: global.$font-yg;
             letter-spacing: 0.1em;
         }
+        
     }
     }
     &__sns {
-        @include global.pc {
-           display: flex;
-           justify-content: center;
-        }  
+        @include global.footer {
+            display: flex;
+            justify-content: center;
+        } 
     }
+  
 }
+
 .footer-map {
     display: flex;
     @include global.tab {
@@ -182,7 +201,6 @@ footer {
             z-index: 1;
         }
     }
-
 }
 .footer-copyright {
     text-align: center;

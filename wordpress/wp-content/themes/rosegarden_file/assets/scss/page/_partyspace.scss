@@ -4,6 +4,7 @@
     &__contents {
         @include global.mb160;
         &__title {
+            position: relative;
             @include global.mb40;
             display: flex;
             justify-content:center ;
@@ -265,5 +266,41 @@
             width: 338px; 
             flex-wrap: wrap;
         } 
+    }
+}
+.title_space {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    p {
+        text-align: center;
+        background-color: global.$bg_sub;
+        padding: 4px 16px;
+        color: #fff;
+        font-size: 14px;
+        @include global.sp {    
+            padding: 2px 8px; 
+            font-size: 12px;  
+        }  
+    }
+}
+.title_ribbon_left {
+    img {
+        width: 24px;
+        margin-top: 14px;
+        @include global.sp {    
+            width: 18px;
+            margin-top: 8px; 
+        }   
+    }
+}
+.title_ribbon_right {
+    img {
+        width: 24px;
+        margin-top: 14px;
+        @include global.sp {    
+            width: 18px;
+            margin-top: 8px; 
+        }  
     }
 }

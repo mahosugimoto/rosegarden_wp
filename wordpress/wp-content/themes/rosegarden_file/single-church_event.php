@@ -67,8 +67,17 @@
                 </a>
             </div>
         </div>
+        <div class="m80"></div>
+        <div class="church_event__btn">
+            <button class="page-btn" onclick="location.href='<?php echo get_page_link(46); ?>'">
+                <p>一覧に戻る</p>
+            </button>
+        </div>
     </div>
-
+    </div>
 <?php endwhile; ?>
 <div class="m80"></div>
 <?php get_footer() ?>
+
+
+<!-- マージチェック -->

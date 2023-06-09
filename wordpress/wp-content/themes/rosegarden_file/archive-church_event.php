@@ -128,7 +128,11 @@ if ($current_category instanceof WP_Term) {
         </div>
         <!-- ページネーション -->
         <?php 
-        $total_post = wp_count_posts($post_type)->publish;
+        if (empty($category_slug)) {
+            $total_post = wp_count_posts($post_type)->publish;
+        } else {
+            $total_post = get_term($category_id)->count;
+        }
         $num_pages = ceil($total_post / $posts_per_page);
         
         $args = array(

@@ -2,8 +2,14 @@
 <html lang="ja">
 
 <head>
+
     <meta charset="<?php bloginfo('charset'); ?>">
     <?php wp_head(); ?>
+    <meta charset="utf-8">
+    <title><?php wp_title() ?></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="">
     <!-- font -->
@@ -33,8 +39,23 @@
     <!-- ピンチによる拡大・縮小ができる -->
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4LT0LGN6G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-M4LT0LGN6G');
+        gtag('config', 'UA-22267949-16');
+    </script>-->
 </head>
 <style>
+    html {
+        margin-top: 0px;
+    }
     body {
         width: 100%;
         max-width: 1440px;

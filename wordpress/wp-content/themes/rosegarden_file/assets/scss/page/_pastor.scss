@@ -101,3 +101,31 @@
     right:-8%;
     }  
 }
+
+.pastor_blog3 {
+    @include global.mw1216;
+    margin: auto;
+    position: relative;
+    background-color: global.$bg-main;
+    @include global.pc{
+        padding-left: 0px;
+        padding-right: 0px;
+    } 
+   &__list {
+    position: relative;
+    padding: 80px 103px;
+    @include global.mb32;
+    @include global.pc {
+        padding: 40px;
+    }
+    @include global.tab {
+        padding: 40px 24px;
+    }
+    @include global.sp {
+        padding: 40px 16px;
+    }
+    &__title {
+        margin: auto;
+    }
+   } 
+}

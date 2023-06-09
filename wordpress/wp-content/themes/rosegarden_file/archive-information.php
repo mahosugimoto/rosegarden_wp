@@ -151,7 +151,6 @@ if ($current_category instanceof WP_Term) {
         </div>
     </div>
 
-    
 
     <div class="m80"></div>
 

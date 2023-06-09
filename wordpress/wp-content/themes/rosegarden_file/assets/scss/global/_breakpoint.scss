@@ -20,6 +20,13 @@ $size1600:  "only screen and (max-width:1600px)";
 $pc: 1080px;
 $tab: 768px;
 $sp: 480px;
+$footer: 1140px;
+
+@mixin footer {
+  @media screen and (max-width: ($footer)) {
+    @content;
+  }
+}
 
 @mixin pc {
   @media screen and (max-width: ($pc)) {

@@ -94,7 +94,7 @@ function create_post_type()
     register_post_type(
         'customer_voice',
         array(
-            'label' => 'カスタマーボイス',
+            'label' => 'お客様の声',
             'public' => true,
             'has_archive' => true,
             'show_in_rest' => true,
@@ -113,7 +113,7 @@ function create_post_type()
         'customer_voice-cat',
         'customer_voice',
         array(
-            'label' => 'カスタマーボイスカテゴリー',
+            'label' => 'お客様の声カテゴリー',
             'hierarchical' => true,
             'public' => true,
             'show_in_rest' => true,
@@ -124,7 +124,7 @@ function create_post_type()
         'customer_voice-tag',
         'customer_voice',
         array(
-            'label' => 'カスタマーボイスタグ',
+            'label' => 'お客様の声タグ',
             'hierarchical' => false,
             'public' => true,
             'show_in_rest' => true,

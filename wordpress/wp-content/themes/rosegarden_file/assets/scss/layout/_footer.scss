@@ -43,10 +43,7 @@ footer {
     }
 }
 .new-line {
-    display: none;
-        @include global.sp {
-            display: block;
-        } 
+    
 }
 
 

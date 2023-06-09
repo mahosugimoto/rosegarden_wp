@@ -7,10 +7,15 @@
     background-color: global.$bg_main;
     display: flex;
     position: fixed;
-    z-index: 1000;
+    z-index: 990;
     @include global.main-radius;
     bottom: 16px;
     right: 16px; 
+    @include global.sp {
+        right: auto;
+        left: 50%;
+        transform: translate(-50%,0);
+      }   
     &__contents {
         a {
             width: 165px;

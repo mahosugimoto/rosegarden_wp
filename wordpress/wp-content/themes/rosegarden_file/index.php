@@ -146,19 +146,17 @@ $topAdvs = topAdvertisements();
 <?php endif; ?>
 
 
-<!-- bridal fair -->
-<div class="iframe-wrapper">
-  <iframe src="https://rosegarden-ch.official-wedding.net/fair/parts/release2/recommend" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- ブライダルフェア -->
+<div class="iframe-wrapper1">
+  <iframe src="https://rosegarden-ch.official-wedding.net/fair/parts/release2/recommend_and_calendar_side_by_side" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<!-- plan 埋め込み-->
-
-<div class="top_plan">
-
+<!-- プラン-->
+<div class="iframe-wrapper2">
+  <iframe src="https://rosegarden-ch.official-wedding.net/plan/parts/recommend" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <!-- customer voice -->
-
 <div class="top_cv">
     <div class="page-title_02">
         <div class="page-title_02__eng">

@@ -408,15 +408,25 @@
 
 // 全開メニュー
 .header_allmenu {
-    padding: 40px;
+    padding: 0px 215px;
     background-color: global.$bg_main;
     width: 100%;
     height: auto;
+    @include global.footer {
+        padding: 0px 64px;
+    }
+    @include global.tab {
+        padding: 0px 24px;
+    }   
     @include global.sp {
-        padding: 100px 16px;
+        padding: 100px 16px 40px;
     }  
     &__logo {
-        margin: 0px 80px; 
+        margin: 40px -80px;
+        @include global.footer {
+           margin: 40px 0px;
+           text-align: center;
+         }  
         @include global.tab {
            display: flex;
            justify-content: center;
@@ -434,7 +444,6 @@
         @include global.mb40;
         margin-right: 40px;
         ul {
-            
         li {
             @include global.fs-2l ;
             @include global.mb32;
@@ -449,19 +458,35 @@
         }  
     }
     &__contents02 {
-        @include global.tab {
-           
-        }  
+        &__btn {
+            @include global.mb40;
+            @include global.tab {
+                display: block;
+                width: 286px;
+                margin: auto;
+                margin-bottom: 24px;
+            }
+            @include global.sp {
+                margin-bottom: 16px; 
+            }    
+        }
     }
     &__menu-s {
         display: flex;
         justify-content: start;
         flex-wrap: wrap;
-        p {
-           
+        width: max-content;
+        @include global.pc {
+            width: auto; 
         }
+        @include global.tab{
+            width: max-content; 
+        }
+        @include global.sp{
+            width: auto;
+        }       
         a {
-            
+            @include global.fs-m; 
             font-family: global.$font-yg;
         }
         span {
@@ -496,19 +521,16 @@
             }
             p {
                 color: #fff;
-                @include global.fs-l;
+                font-size: 14px;
                 font-family: global.$font-ym;
             }
         }
     }
     &__wrap {
-        margin: 40px 135px;
+        margin: 40px 0px 0px;
         display: flex;
         justify-content: start;
         border-bottom: 1px solid global.$sub-color;
-        @include global.pc {
-            margin: 40px; 
-        } 
         @include global.tab {
             margin: 0px;
             display: block; 
@@ -518,7 +540,11 @@
         @include global.tab {
           display: flex;
           justify-content: center; 
-        }  
+          margin-bottom: 20px;
+        }
+        @include global.sp {
+            margin-bottom: 12px;
+          }    
     }
     &__cta {
         @include global.mb40;
@@ -531,6 +557,7 @@
         right: 16px;
         @include global.tab {
             display: flex;
+            justify-content: center;
             align-items: center;
         } 
         &__contents {
@@ -583,7 +610,7 @@
                 height: 56px;
              } 
             img {
-                width: 20px;
+                width: 21px;
                 padding-right:4px;
                 @include global.sp {
                     width: 28px;
@@ -617,7 +644,7 @@
                 font-family:global.$font-ym;
              }
              img {
-                width: 20px;
+                width: 24px;
                 padding-right:4px;
                 @include global.sp {
                     width: 32px;
@@ -647,14 +674,18 @@
 }
 
 .sowa-weddings {
-    padding: 56px 135px;
-    @include global.pc {
-        padding: 40px; 
-    }
+    margin: 56px 0px;
     @include global.tab {
-        padding: 24px 0px; 
-    }  
-    p {
+        margin: 24px 0px;
+    } 
+    @include global.tab {
+        margin: 24px 0px 0px;
+    } 
+    a {
+        @include global.fs-m; 
+    }
+    h3 {
+        @include global.fs-l;  
         font-family:global.$font-ym;
         @include global.mb40; 
     }
@@ -662,14 +693,13 @@
 .header_margin {
         width: 100%;
         height: 96px;
-
 }
 
 .church_arrow{
     position: absolute;
-    width: 9px;
-    height: 9px;
-    bottom: 4px;
+    width: 10px;
+    height: 10px;
+    bottom: 12px;
     right: 4px;
      img {
         width: 100%;
@@ -697,4 +727,27 @@
 }
 .slash {
     padding: 0px 8px;
+}
+
+.header-top__address {
+    @include global.sp {
+        padding: 0px 48px;
+    }  
+    span {
+       @include global.fs-l;
+    }
+    h2 {
+        @include global.mb8;
+        @include global.tab {
+            text-align: center;
+        }   
+    }
+    p {
+        @include global.tab {
+            text-align: center;
+        }   
+        @include global.sp {
+            text-align: end;
+        }  
+    }
 }

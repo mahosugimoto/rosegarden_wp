@@ -265,16 +265,31 @@ p {
 }
 }
 .ctg_btn {
+    @include global.mw1100;
     @include global.mb24;  
     display: flex;
-    align-items: center;
     @include global.tab {
         display: block ;
+        padding: 0px;
     }  
     &__all {
         padding-right: 40px;
+        height: 60px;
         border-right: 1px solid global.$point-main;
         margin: 0px 40px 0px 0px;
+        width: fit-content;
+        a {
+            margin-right: 0px;
+            padding: 26px 38px 20px 48px;
+            background-color: global.$bg_sub;
+            margin-bottom: 9px;
+            @include global.tab {
+                margin-right: 0px;
+                width: 154px;
+                padding: 0px 24px 0px 48px;
+                margin-bottom: 9px;
+            }
+        }
         @include global.tab {
             padding-right: 0px;
             padding-bottom: 0px;
@@ -283,6 +298,8 @@ p {
             border-right: 0px;
             margin: 0px 0px 8px 0px;
             border-bottom: 1px solid global.$point-main;
+            margin: auto;
+            margin-bottom: 10px;
         }   
     }
     &__all-btn {
@@ -312,14 +329,19 @@ p {
         justify-content: start;
         align-items: center;
         flex-wrap: wrap;
+        a {
+    
+        }
     }
     &__child-btn {
         padding: 20px 32px;
         border: 1px solid global.$point-main;
         margin: 0px 8px 8px 0px;
+
         &:hover {
             @include global.main-hover;
         } 
+        
         p {
             white-space: nowrap;
             line-height: 120%;
@@ -327,6 +349,9 @@ p {
         }
         @include global.tab {
             padding: 16px;
+        }
+        @include global.tab {
+            margin: 0px 4px 4px 0px;
         }
         &.active  {
             border:1px solid global.$sub-color;

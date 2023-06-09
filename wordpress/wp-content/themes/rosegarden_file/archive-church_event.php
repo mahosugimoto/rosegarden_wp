@@ -105,8 +105,8 @@ if ($current_category instanceof WP_Term) {
                         <div class="liststyle_church_event2__block__text">
                             <div class="liststyle_church_event2__ctg">
                                 <?php
-                                foreach ($post_categories as $category_slug) {
-                                    $term = get_term_by('slug', $category_slug, $taxonomy_name);
+                                foreach ($post_categories as $slug) {
+                                    $term = get_term_by('slug', $slug, $taxonomy_name);
                                     if ($term) {
                                         // $cate_link = get_category_link($term);
                                         // echo '<a href="'. esc_url($cate_link) .'">';

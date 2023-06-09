@@ -140,6 +140,25 @@ $img = get_post_meta($post->ID, 'image_sp', true);
 
 <div class="m80"></div>
 
+<!-- Instagram feed -->
+<!-- 動画ギャラリー -->
+<div class="gallery__movie">
+    <div class="gallery__movie__title">
+        <div class="page-title_02">
+            <div class="page-title_02__eng">
+                <p>INSTAGRAM</p>
+            </div>
+            <div class="page-title_02__jp">
+                <p>動画ギャラリー</p>
+            </div>
+        </div>
+    </div>
+    <a name="movie"></a>
+    <div class="gallery__movie__contents">
+        <?php echo do_shortcode('[instagram-feed feed=1]')?>
+    </div>
+</div>
+
 
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>

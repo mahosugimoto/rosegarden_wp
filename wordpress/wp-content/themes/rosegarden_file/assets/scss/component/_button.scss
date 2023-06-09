@@ -281,7 +281,6 @@ p {
         a {
             margin-right: 0px;
             padding: 26px 38px 20px 48px;
-            background-color: global.$bg_sub;
             margin-bottom: 9px;
             @include global.tab {
                 margin-right: 0px;
@@ -297,7 +296,7 @@ p {
             justify-content: center;
             border-right: 0px;
             margin: 0px 0px 8px 0px;
-            border-bottom: 1px solid global.$point-main;
+            border-bottom: 1px solid global.$sub-color;
             margin: auto;
             margin-bottom: 10px;
         }   
@@ -330,12 +329,37 @@ p {
         align-items: center;
         flex-wrap: wrap;
         a {
-    
+        }
+    }
+    &__child-btn_first {
+        padding: 20px 94px;
+        border: 1px solid global.$sub-color;
+        margin: 0px 8px 8px 0px;
+        &:hover {
+            @include global.main-hover;
+        }
+        p {
+            white-space: nowrap;
+            line-height: 120%;
+            color: global.$sub-color; 
+        }
+        @include global.tab {
+            padding: 16px 64px;
+        }
+        @include global.tab {
+            margin: 0px 4px 4px 0px;
+        }
+        &.active  {
+            border:1px solid global.$sub-color;
+            background-color: global.$bg_main;
+            p {
+                color:global.$sub-color;
+            } 
         }
     }
     &__child-btn {
         padding: 20px 32px;
-        border: 1px solid global.$point-main;
+        border: 1px solid global.$sub;
         margin: 0px 8px 8px 0px;
 
         &:hover {
@@ -355,10 +379,9 @@ p {
         }
         &.active  {
             border:1px solid global.$sub-color;
-            background-color: global.$bg_sub;
-            color: #fff;
+            background-color: global.$bg_main;
             p {
-                color: #fff;
+                color:global.$bg_sub;
             } 
         }
     }

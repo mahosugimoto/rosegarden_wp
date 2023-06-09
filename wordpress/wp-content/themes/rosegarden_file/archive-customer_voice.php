@@ -76,7 +76,7 @@ $img = get_post_meta($voicePostID, 'image_sp', true);
     <div class="ctg_btn">
         <div class="ctg_btn__all">
             <a href="<?php echo the_permalink($voicePostID);?>">
-                <button class="ctg_btn__child-btn <?php echo (empty($category_id)) ? 'active' : '';?>" data-category="all">
+                <button class="ctg_btn__child-btn_first <?php echo (empty($category_id)) ? 'active' : '';?>" data-category="all">
                     <p>ALL</p>
                 </button>
             </a>

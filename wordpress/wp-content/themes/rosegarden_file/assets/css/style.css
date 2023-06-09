@@ -13614,7 +13614,6 @@ footer {
 .ctg_btn__all a {
   margin-right: 0px;
   padding: 26px 38px 20px 48px;
-  background-color: #B24A54;
   margin-bottom: 9px;
 }
 @media screen and (max-width: 768px) {
@@ -13669,9 +13668,40 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
+.ctg_btn__child-btn_first {
+  padding: 20px 94px;
+  border: 1px solid #B24A54;
+  margin: 0px 8px 8px 0px;
+}
+.ctg_btn__child-btn_first:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.ctg_btn__child-btn_first p {
+  white-space: nowrap;
+  line-height: 120%;
+  color: #B24A54;
+}
+@media screen and (max-width: 768px) {
+  .ctg_btn__child-btn_first {
+    padding: 16px 64px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ctg_btn__child-btn_first {
+    margin: 0px 4px 4px 0px;
+  }
+}
+.ctg_btn__child-btn_first.active {
+  border: 1px solid #B24A54;
+  background-color: #EBE8E3;
+}
+.ctg_btn__child-btn_first.active p {
+  color: #B24A54;
+}
 .ctg_btn__child-btn {
   padding: 20px 32px;
-  border: 1px solid #99762F;
+  border: 1px solid #B24A54;
   margin: 0px 8px 8px 0px;
 }
 .ctg_btn__child-btn:hover {
@@ -13695,11 +13725,10 @@ footer {
 }
 .ctg_btn__child-btn.active {
   border: 1px solid #B24A54;
-  background-color: #B24A54;
-  color: #fff;
+  background-color: #EBE8E3;
 }
 .ctg_btn__child-btn.active p {
-  color: #fff;
+  color: #B24A54;
 }
 
 .pagination {

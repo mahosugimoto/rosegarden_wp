@@ -6,6 +6,7 @@ Template Name: 牧師のブログ詳細
 
 <?php get_header()?>
 <?php include('header_icon.php'); ?>
+<?php $pastoBlogId = 48;?>
 
 <!-- パンクズ_sp -->
 <?php custom_breadcrumbs('sp');?>
@@ -13,13 +14,13 @@ Template Name: 牧師のブログ詳細
 <!-- タイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
-        <p><?php echo SCF::get('title_en', 50); ?></p>
+        <p><?php echo SCF::get('title_en', $pastoBlogId); ?></p>
     </div>
     <div class="page-title_03__jp">
-        <p><?= get_the_title(50) ?></p>
+        <p><?= get_the_title($pastoBlogId) ?></p>
     </div>
     <div class="page-title_03__contents">
-        <p><?php echo SCF::get('fv_text', 50); ?></p>
+        <p><?php echo SCF::get('fv_text', $pastoBlogId); ?></p>
     </div>
 </div>
 

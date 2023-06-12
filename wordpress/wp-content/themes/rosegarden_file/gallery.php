@@ -174,9 +174,14 @@ if ($current_category instanceof WP_Term) {
                     <p>INSTAGRAM</p>
                 </div>
                 <div class="page-title_02__jp">
-                    <p>動画ギャラリー</p>
+                    <p>インスタグラム</p>
+                </div>
+                <div class="m24"></div>
+                <div class="page-title_02__contents">
+                    <p>最新の写真をご覧になりたい方は公式Instagramもご覧ください。<br>※写真をクリックでInstagramが開きます。</p>
                 </div>
             </div>
+
         </div>
         <a name="movie"></a>
         <div class="gallery__instagram">

@@ -1,4 +1,4 @@
-</body>  
+</body>
 <footer>
     <div class="footer">
         <div class="footer-top">
@@ -13,11 +13,15 @@
         <div class="footer-contents">
             <div class="footer-contents-wrap">
                 <div class="footer-contents__btn">
-                    <button class="reservation-btn" onclick="loction.href='https://rosegarden-ch.official-wedding.net/kengaku'">
+                    <button class="reservation-btn" onclick="location.href='https://rosegarden-ch.official-wedding.net/fair/list'">
+                        <h3>BRIDAL FAIR</h3>
+                        <p>フェア一覧</p>
+                    </button>
+                    <button class="reservation-btn" onclick="location.href='https://rosegarden-ch.official-wedding.net/kengaku'">
                         <h3>RESERVATION</h3>
                         <p>見学予約</p>
                     </button>
-                    <button class="contact-btn" onclick="loction.href='https://rosegarden-ch.official-wedding.net/otoiawase'">
+                    <button class="contact-btn" onclick="location.href='https://rosegarden-ch.official-wedding.net/otoiawase'">
                         <h3>CONTACT</h3>
                         <p>お問い合わせ</p>
                     </button>
@@ -52,14 +56,14 @@
                 </div>
             </div>
             <div class="footer-contents__sns">
-                    <div class="home-sns">
-                        <p><a href="<?php
-                                    echo home_url('/');
-                                    ?>">HOME</a></p>
-                        <div class="instagram_icon">
-                        <a href="https://www.instagram.com/rosegarden_christ_church"><img src="/wp-content/themes/rosegarden_file/assets/img/icon/instagram.png" alt=""></a>
-                        </div>
+                <div class="home-sns">
+                    <p><a href="<?php
+                                echo home_url('/');
+                                ?>">HOME</a></p>
+                    <div class="instagram_icon">
+                        <a href="https://www.instagram.com/rosegarden_christ_church" target="_blank"><img src="/wp-content/themes/rosegarden_file/assets/img/icon/instagram.png" alt=""></a>
                     </div>
+                </div>
             </div>
         </div>
         <div class="footer-map">

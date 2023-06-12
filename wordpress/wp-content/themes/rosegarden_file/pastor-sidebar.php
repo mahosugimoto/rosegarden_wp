@@ -5,7 +5,7 @@
         <?php endif; ?>
 
         <div class="widget widget_archive">
-            <h2 class="widget-title">Archives</h2>
+            <h2 class="widget-title">ARCHIVES</h2>
             <h4 class="sub-widget-title">過去記事一覧</h4>
             <?php
             $args = array(

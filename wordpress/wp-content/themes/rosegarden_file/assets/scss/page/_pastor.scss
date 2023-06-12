@@ -129,7 +129,81 @@
     }
    } 
 }
-
 .pastor_blog02 {
     @include global.mw1010; 
 }
+.pastor_flex {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    @include global.tab {
+        display: block;
+    }
+}
+.pastor_blogrmation {
+    width: 100%;
+    max-width: 850px;
+}
+.pastor_sidebar {
+    width: 100%;
+    max-width:276px ;
+    padding-left: 24px;
+    border-left: 1px solid global.$point-main;
+    margin-left: 80px;
+    @include global.tab {
+        margin: auto;
+        margin-top: 80px;
+        padding-left: 0px; 
+        border: 0px;
+    }
+    @include global.sp {
+        margin-top: 40px;
+    }
+    &__block {
+        padding: 0px 0px 40px;
+        @include global.mb40;
+        border-bottom: 1px solid global.$point-main;
+        &:last-child {
+            margin-bottom: 0px;
+            border-bottom: 0px;
+        }
+        @include global.tab {
+            padding: 0px 24px 0px;
+        }
+        @include global.tab {
+            padding: 0px 16px 0px;
+        }    
+    }
+}
+.widget-widget_archive {
+    a {
+        @include global.fs-s; 
+        font-family: global.$font-yg; 
+    }
+    ul {
+        li {
+            @include global.fs-s; 
+            font-family: global.$font-yg; 
+        }
+    }
+}
+.pastor-widget-area {
+    ul {
+    li {
+        @include global.fs-s; 
+        margin-bottom: 8px;
+        a {
+            font-family: global.$font-yg; 
+        }
+    }
+}
+}
+.widget-title {
+    @include global.fs-l; 
+    font-family: global.$font-cz;
+}
+.sub-widget-title {
+    @include global.fs-xxs;
+    @include global.mb16;
+}
+

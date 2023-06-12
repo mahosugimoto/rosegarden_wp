@@ -4847,6 +4847,46 @@ footer {
   background-color: #EBE8E3;
   width: 100%;
 }
+.top_other_page__dcr-left {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+@media screen and (max-width: 480px) {
+  .top_other_page__dcr-left {
+    top: 0px;
+    left: 0px;
+  }
+}
+.top_other_page__dcr-left img {
+  width: 64px;
+  height: auto;
+}
+@media screen and (max-width: 480px) {
+  .top_other_page__dcr-left img {
+    width: 46px;
+  }
+}
+.top_other_page__dcr-right {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+@media screen and (max-width: 480px) {
+  .top_other_page__dcr-right {
+    bottom: 0px;
+    right: 0px;
+  }
+}
+.top_other_page__dcr-right img {
+  width: 64px;
+  height: auto;
+}
+@media screen and (max-width: 480px) {
+  .top_other_page__dcr-right img {
+    width: 46px;
+  }
+}
 .top_other_page p {
   text-align: center;
   margin-bottom: 16px;
@@ -4859,7 +4899,7 @@ footer {
 .top_other_page__wrap {
   margin: auto;
   margin: auto;
-  max-width: 800px;
+  max-width: 1010px;
   display: flex;
   margin-bottom: 32px;
   justify-content: center;
@@ -4971,6 +5011,119 @@ footer {
   opacity: 0.5;
   transition: 0.5s;
 }
+.top_other_page__wrap2 {
+  margin: auto;
+  margin: auto;
+  max-width: 800px;
+  display: flex;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+@media only screen and (max-width:1080px) {
+  .top_other_page__wrap2 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .top_other_page__wrap2 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .top_other_page__wrap2 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .top_other_page__wrap2 {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .top_other_page__wrap2 {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top_other_page__wrap2 {
+    margin-bottom: 0px;
+    display: block;
+  }
+}
+.top_other_page__wrap2 a {
+  width: 100%;
+  display: inline-block;
+  margin-right: 25px;
+}
+.top_other_page__wrap2 a:last-child {
+  margin-right: 0px;
+}
+@media screen and (max-width: 768px) {
+  .top_other_page__wrap2 a {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .top_other_page__wrap2 a:last-child {
+    margin-right: 0px;
+  }
+}
+.top_other_page__block2 {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  max-width: 800px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1080px) {
+  .top_other_page__block2 {
+    height: 140px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top_other_page__block2 {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top_other_page__block2 {
+    height: 100px;
+  }
+}
+.top_other_page__block2__title {
+  width: 50%;
+  min-width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1080px) {
+  .top_other_page__block2__title {
+    min-width: auto;
+  }
+}
+.top_other_page__block2__title br {
+  display: none;
+}
+@media screen and (max-width: 1080px) {
+  .top_other_page__block2__title br {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top_other_page__block2__title br {
+    display: none;
+  }
+}
+.top_other_page__block2:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
 
 .other_box_link a {
   display: block;
@@ -5019,7 +5172,7 @@ footer {
 .top_info__list {
   padding: 40px 102px;
   margin: auto;
-  max-width: 800px;
+  max-width: 1010px;
   background-color: #fff;
   margin-bottom: 32px;
 }
@@ -5998,6 +6151,9 @@ footer {
     padding-left: 0px;
   }
 }
+.blockstyle04__textblock span {
+  text-decoration: underline;
+}
 
 .top-message__contents {
   margin: auto;
@@ -6896,6 +7052,7 @@ footer {
 .pastor_blog {
   margin: auto;
   max-width: 850px;
+  margin-bottom: 40px;
   margin: auto;
   position: relative;
   background-color: #EBE8E3;
@@ -6918,7 +7075,12 @@ footer {
     padding-right: 16px;
   }
 }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width:768px) {
+  .pastor_blog {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1080px) {
   .pastor_blog {
     padding-left: 0px;
     padding-right: 0px;
@@ -7553,6 +7715,132 @@ footer {
   .pastor_blog02 {
     padding-left: 16px;
     padding-right: 16px;
+  }
+}
+
+.pastor_flex {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+@media screen and (max-width: 768px) {
+  .pastor_flex {
+    display: block;
+  }
+}
+
+.pastor_blogrmation {
+  width: 100%;
+  max-width: 850px;
+}
+
+.pastor_sidebar {
+  width: 100%;
+  max-width: 276px;
+  padding-left: 24px;
+  border-left: 1px solid #99762F;
+  margin-left: 80px;
+}
+@media screen and (max-width: 768px) {
+  .pastor_sidebar {
+    margin: auto;
+    margin-top: 80px;
+    padding-left: 0px;
+    border: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pastor_sidebar {
+    margin-top: 40px;
+  }
+}
+.pastor_sidebar__block {
+  padding: 0px 0px 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #99762F;
+}
+@media only screen and (max-width:768px) {
+  .pastor_sidebar__block {
+    margin-bottom: 20px;
+  }
+}
+.pastor_sidebar__block:last-child {
+  margin-bottom: 0px;
+  border-bottom: 0px;
+}
+@media screen and (max-width: 768px) {
+  .pastor_sidebar__block {
+    padding: 0px 24px 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pastor_sidebar__block {
+    padding: 0px 16px 0px;
+  }
+}
+
+.widget-widget_archive a {
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+@media only screen and (max-width:768px) {
+  .widget-widget_archive a {
+    font-size: 12px;
+  }
+}
+.widget-widget_archive ul li {
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+@media only screen and (max-width:768px) {
+  .widget-widget_archive ul li {
+    font-size: 12px;
+  }
+}
+
+.pastor-widget-area ul li {
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  margin-bottom: 8px;
+}
+@media only screen and (max-width:768px) {
+  .pastor-widget-area ul li {
+    font-size: 12px;
+  }
+}
+.pastor-widget-area ul li a {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.widget-title {
+  font-size: 18px;
+  font-family: "Cinzel", serif;
+}
+@media only screen and (max-width:768px) {
+  .widget-title {
+    font-size: 14px;
+  }
+}
+
+.sub-widget-title {
+  font-size: 10px;
+  line-height: 150%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width:768px) {
+  .sub-widget-title {
+    font-size: 8px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .sub-widget-title {
+    margin-bottom: 8px;
   }
 }
 
@@ -11995,12 +12283,12 @@ footer {
   .dress__contact__contents__left {
     width: 100%;
     margin-right: 0px;
-    margin-bottom: 48px;
+    margin-bottom: 80px;
   }
 }
 @media only screen and (max-width: 1080px) and (max-width:768px) {
   .dress__contact__contents__left {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
 }
 .dress__contact__contents__right {

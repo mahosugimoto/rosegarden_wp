@@ -444,12 +444,13 @@ $topAdvs = topAdvertisements();
     <div class="m40"></div>
     <div class="top_info__other">
         <!-- 他のページの写し -->
-        <div class="top_other_page__wrap">
+        <div class="top_other_page__wrap2">
             <a href="#">
-                <div class="top_other_page__block">
-                    <div class="top_other_page__block__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/top_qa.jpg)">
+                <div class="top_other_page__block2">
+                    <div class="top_other_page__dcr-left">
+                        <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/qa_btn-dcr_left.png)" alt="">
                     </div>
-                    <div class="top_other_page__block__title">
+                    <div class="top_other_page__block2__title">
                         <div class="page-title_08">
                             <div class="page-title_08__eng">
                                 <p>Q&A</p>
@@ -458,6 +459,9 @@ $topAdvs = topAdvertisements();
                                 <p>よくあるご質問</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="top_other_page__dcr-right">
+                        <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/qa_btn-dcr_right.png)" alt="">
                     </div>
                 </div>
             </a>

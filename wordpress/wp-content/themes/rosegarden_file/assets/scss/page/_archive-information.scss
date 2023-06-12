@@ -3,10 +3,11 @@
 
 .pastor_blog {
     @include global.mw850;
+    @include global.mb40;
     margin: auto;
     position: relative;
     background-color: global.$bg-main;
-    @include global.tab{
+    @include global.pc{
         padding-left: 0px;
         padding-right: 0px;
     } 

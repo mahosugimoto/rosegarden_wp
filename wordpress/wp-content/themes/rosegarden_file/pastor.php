@@ -90,7 +90,7 @@ get_header();
 </div>
 <div class="m40"></div>
 <div class="liststyle_info__btn">
-    <button class="page-btn_icon" onclick="location.href='<?php echo get_page_link(48); ?>'">
+    <button class="page-btn_icon" onclick="location.href='<?php echo get_post_type_archive_link('pastor'); ?>'">
         <img src="/wp-content/themes/rosegarden_file/assets/img/icon/list_icon.png" alt="">
         <p>牧師ブログ一覧へ</p>
     </button>

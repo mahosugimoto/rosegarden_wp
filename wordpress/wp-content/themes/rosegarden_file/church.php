@@ -13,6 +13,7 @@ get_header();
  $img = get_post_meta($post->ID, 'image_pc', true);
 ?>
 <div class="page-background" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php echo wp_get_attachment_url($img) ?>)">
+<img src="<p><?php echo SCF::get('image_pc'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
             <p><?php echo SCF::get('title_en'); ?></p>
@@ -34,7 +35,7 @@ get_header();
 ?>
 <!-- SP BG -->
 <div class="page-background_sp" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php echo wp_get_attachment_url($img) ?>)">
-    <img src="<?php the_field('image_pc'); ?>" alt="">
+<img src="<p><?php echo SCF::get('image_sp'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
             <p><?php echo SCF::get('title_en'); ?></p>
@@ -290,7 +291,8 @@ get_header();
                                 ?>
                             </div>
                             <h3><?= get_the_title() ?></h3>
-                            <p><?php echo SCF::get('church_event_selected'); ?></p>
+                            <p><?php echo SCF::get('church_event_title'); ?></p>
+                            <p><?php echo SCF::get('church_event_text'); ?></p>
                         </div>
                     </div>
                 </a>

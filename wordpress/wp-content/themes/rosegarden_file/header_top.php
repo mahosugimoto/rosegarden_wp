@@ -39,7 +39,7 @@
     <!-- ピンチによる拡大・縮小ができる -->
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4LT0LGN6G"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -56,6 +56,7 @@
     html {
         margin-top: 0px;
     }
+
     body {
         width: 100%;
         max-width: 1440px;
@@ -63,31 +64,43 @@
     }
 </style>
 <script>
-    $(function() {
-        $(".openbtn").click(function() { //ボタンがクリックされたら
-            $(this).toggleClass('active'); //ボタン自身に activeクラスを付与し
-            $("#g-nav").toggleClass('panelactive'); //ナビゲーションにpanelactiveクラスを付与
-        });
-        $("#g-nav a").click(function() { //ナビゲーションのリンクがクリックされたら
-            $(".openbtn").removeClass('active'); //ボタンの activeクラスを除去し
-            $("#g-nav").removeClass('panelactive'); //ナビゲーションのpanelactiveクラスも除去
-        });
-        $(document).ready(function() {
-            // ボタンを最初は非表示にする
-            $('.button').hide();
-            $('.openbtn').hide(); 
-            $(window).scroll(function() {
-                // スクロール位置を取得
-                var scrollPos = $(window).scrollTop();
-                // スクロール位置が特定の閾値を超えたらボタンを表示
-                if (scrollPos > 500) {
-                    $('.openbtn').fadeIn();
-                } else {
-                    $('.openbtn').fadeOut();
-                }
-            });
+            $(function() {
+    $(document).ready(function() {
+        // ボタンを最初は非表示にする
+        $('.button').hide();
+
+        // ウィンドウの幅に応じてボタンの表示を制御
+        function toggleOpenBtn() {
+            var windowWidth = $(window).width();
+
+            if (windowWidth <= 768) {
+                $('.openbtn').show();
+            } else {
+                $('.openbtn').hide();
+            }
+        }
+
+        // 初期表示時にボタンの表示を切り替える
+        toggleOpenBtn();
+
+        // ウィンドウの幅が変わったときにボタンの表示を切り替える
+        $(window).resize(function() {
+            toggleOpenBtn();
         });
 
+        // スクロール位置が特定の閾値を超えたらボタンを表示
+        var isAnimating = false; // アニメーションの状態を管理するフラグ
+        var threshold = 500; // 閾値
+        $(window).scroll(function() {
+            var scrollPos = $(window).scrollTop();
+
+            if (scrollPos > threshold && !isAnimating) {
+                $('.openbtn').fadeIn();
+            } else if (scrollPos <= threshold && !isAnimating && $(window).width() > 768) {
+                $('.openbtn').fadeOut();
+            }
+        });
+    });
         $(document).ready(function() {
             $(window).scroll(function() {
                 var scrollPos = $(window).scrollTop();
@@ -101,6 +114,17 @@
             });
         });
     });
+    $(function() {
+        $(".openbtn").click(function() { //ボタンがクリックされたら
+            $(this).toggleClass('active'); //ボタン自身に activeクラスを付与し
+            $("#g-nav").toggleClass('panelactive'); //ナビゲーションにpanelactiveクラスを付与
+        });
+
+        $("#g-nav a").click(function() { //ナビゲーションのリンクがクリックされたら
+            $(".openbtn").removeClass('active'); //ボタンの activeクラスを除去し
+            $("#g-nav").removeClass('panelactive'); //ナビゲーションのpanelactiveクラスも除去
+        });
+    });
 </script>
 <header>
     <!-- menu -->
@@ -112,8 +136,7 @@
         </div>
     </div>
 
-        <!-- 開閉時menu-->
-        <nav id="g-nav">
+    <nav id="g-nav">
         <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
             <div id="g-nav-block">
                 <div class="header_allmenu">
@@ -174,20 +197,19 @@
                             </div>
                         </nav>
                         <div class="header_allmenu__contents02">
-                            <div class="footer-contents__btn">
-                                <button class="reservation-btn" onclick="location.href='rosegarden-ch.official-wedding.net/kengaku'">
+                            <div class="header_allmenu__contents02__btn">
+                                <button class="reservation-btn" onclick="location.href='https://rosegarden-ch.official-wedding.net/kengaku'">
                                     <h3>RESERVATION</h3>
                                     <p>見学予約</p>
                                 </button>
-                                <button class="contact-btn" onclick="location.href='rosegarden-ch.official-wedding.net/otoiawase'">
+                                <button class="contact-btn" onclick="location.href='https://rosegarden-ch.official-wedding.net/otoiawase'">
                                     <h3>CONTACT</h3>
                                     <p>お問い合わせ</p>
                                 </button>
                             </div>
-                            <div class="m40"></div>
-                            <div class="footer-top__address">
+                            <div class="header-top__address">
                                 <h2><span>TEL.</span><a href="tel:011-522-0151">011-522-0151</a></h2>
-                                <p>営業時間: 平日 11:00 〜 19:00 <br class="new-line">/ 土日祝 9:00 〜 19:00</p>
+                                <p>営業時間：平日 11：00 〜 19：00 <br class="new-line">/ 土日祝 9：00 〜 19：00</p>
                             </div>
                             <div class="m40"></div>
                             <div class="header_allmenu__cta">
@@ -204,7 +226,7 @@
                                             <p>資料請求</p>
                                         </div>
                                     </a>
-                                    <a href="https://rosegarden-ch.official-wedding.net/kengaku">
+                                    <a href="https://rosegarden-ch.official-wedding.net/fair/list">
                                         <div class="header_allmenu__cta__contents__right">
                                             <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/fair.png" alt="">
                                             <p>フェア一覧<br>・見学予約</p>
@@ -242,7 +264,7 @@
                     </div>
                     <!-- sowa weddings -->
                     <div class="sowa-weddings">
-                        <p>SOWA WEDDINGS</p>
+                        <h3>SOWA WEDDINGS</h3>
                         <div class="header_allmenu__menu-s">
                             <?php
                             $menu_items = wp_get_nav_menu_items('sowa_weddings_menu');

@@ -63,8 +63,8 @@ if ($current_category instanceof WP_Term) {
 <!-- お知らせコンテンツ -->
 <div class="information">
     <!-- information -->
-    <div class="info">
-        <div class="info__list">
+    <div class="info_archive">
+        <div class="info_archive__list">
             <div class="lace-dcr_top">
                 <div class="lace-dcr_bottom__img">
                     <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/lace.png" alt="">

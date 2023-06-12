@@ -5,7 +5,7 @@ Template Name: ギャラリーテンプレート
 get_header();
 ?><?php include('header_icon.php'); ?>
 <?php include('cta.php'); ?>
-<?php $galleryPostId = 8189;?>
+<?php $galleryPostId = 8189; ?>
 
 <!-- FV BGあり -->
 <!-- PC BG -->
@@ -14,6 +14,7 @@ get_header();
 $img = get_post_meta($galleryPostId, 'image_pc', true);
 ?>
 <div class="page-background" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php echo wp_get_attachment_url($img) ?>)">
+    <img src="<p><?php echo SCF::get('image_pc'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
             <p><?php echo SCF::get('title_en', $galleryPostId); ?></p>
@@ -27,16 +28,16 @@ $img = get_post_meta($galleryPostId, 'image_pc', true);
     </div>
 </div>
 
-<?php require_once('breadcrumb_other.php');?>
+<?php require_once('breadcrumb_other.php'); ?>
 
 
 <?php
 // SCF::get_post_meta($post->ID, '設定した名前', 画像サイズ)
-$img = get_post_meta($galleryPostId, 'image_sp', true);
+$img = get_post_meta($post->ID, 'image_pc', true);
 ?>
 <!-- SP BG -->
 <div class="page-background_sp" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php echo wp_get_attachment_url($img) ?>)">
-    <img src="<?php the_field('image_pc', $galleryPostId); ?>" alt="">
+    <img src="<p><?php echo SCF::get('image_sp'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
             <p><?php echo SCF::get('title_en', $galleryPostId); ?></p>
@@ -67,8 +68,8 @@ if ($current_category instanceof WP_Term) {
     <div class="church__ctg">
         <div class="ctg_btn">
             <div class="ctg_btn__all">
-                <a href="<?php echo the_permalink($galleryPostId);?>">
-                    <button class="ctg_btn__child-btn <?php echo (empty($category_id)) ? 'active' : '';?>" data-category="all">
+                <a href="<?php echo the_permalink($galleryPostId); ?>">
+                    <button class="ctg_btn__child-btn <?php echo (empty($category_id)) ? 'active' : ''; ?>" data-category="all">
                         <p>ALL</p>
                     </button>
                 </a>
@@ -79,10 +80,10 @@ if ($current_category instanceof WP_Term) {
                 $terms = get_terms($taxonomy_name);
                 foreach ($terms as $term) :
                 ?>
-                <a href="<?php echo get_term_link($term, $taxonomy_name)?>">
-                <button class="ctg_btn__child-btn <?php echo ($category_id == $term->term_id) ? 'active' : '';?>" data-category="<?php echo esc_attr($term->slug);?>"><?php echo $term->name;?></button>
-                </a>
-                <?php endforeach;?>
+                    <a href="<?php echo get_term_link($term, $taxonomy_name) ?>">
+                        <button class="ctg_btn__child-btn <?php echo ($category_id == $term->term_id) ? 'active' : ''; ?>" data-category="<?php echo esc_attr($term->slug); ?>"><?php echo $term->name; ?></button>
+                    </a>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -133,21 +134,21 @@ if ($current_category instanceof WP_Term) {
 
         <!-- ページネーション -->
         <div style="width: 100%;">
-        <?php 
-        if (empty($category_slug)) {
-            $total_post = wp_count_posts($post_type)->publish;
-        } else {
-            $total_post = get_term($category_id)->count;
-        }
-        
-        $num_pages = ceil($total_post / $posts_per_page);
-        
-        $args = array(
-            'total' => $num_pages,
-            'found_posts' => $total_post
-        );
-        echo custom_pagination($args); 
-        ?>
+            <?php
+            if (empty($category_slug)) {
+                $total_post = wp_count_posts($post_type)->publish;
+            } else {
+                $total_post = get_term($category_id)->count;
+            }
+
+            $num_pages = ceil($total_post / $posts_per_page);
+
+            $args = array(
+                'total' => $num_pages,
+                'found_posts' => $total_post
+            );
+            echo custom_pagination($args);
+            ?>
         </div>
     </div>
 </div>
@@ -165,24 +166,24 @@ if ($current_category instanceof WP_Term) {
 
 <!-- Instagram feed -->
 <!-- 動画ギャラリー -->
-<div class="gallery__movie">
-    <div class="gallery__movie__title">
-        <div class="page-title_02">
-            <div class="page-title_02__eng">
-                <p>INSTAGRAM</p>
-            </div>
-            <div class="page-title_02__jp">
-                <p>動画ギャラリー</p>
+<div class="gallery">
+    <div class="gallery__movie">
+        <div class="gallery__movie__title">
+            <div class="page-title_02">
+                <div class="page-title_02__eng">
+                    <p>INSTAGRAM</p>
+                </div>
+                <div class="page-title_02__jp">
+                    <p>動画ギャラリー</p>
+                </div>
             </div>
         </div>
-    </div>
-    <a name="movie"></a>
-    <div class="gallery__movie__contents">
-        <?php echo do_shortcode('[instagram-feed feed=1]')?>
+        <a name="movie"></a>
+        <div class="gallery__instagram">
+            <?php echo do_shortcode('[instagram-feed feed=1]') ?>
+        </div>
     </div>
 </div>
 
-
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>
-

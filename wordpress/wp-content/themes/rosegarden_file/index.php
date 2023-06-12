@@ -16,9 +16,10 @@ Template Name: トップ
             dots: true,
             accessibility: true,
             autoplay: true,
-            autoplaySpeed: 3000,
-            speed: 2000,
+            autoplaySpeed: 1000,
+            speed: 1000,
             fade: true,
+            arrows: false,
         });
         $(".cv_slider").slick({
             dots: true,

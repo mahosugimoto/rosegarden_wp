@@ -99,55 +99,50 @@
         padding: 80px;
     }
     @include global.tab {
-        padding: 64px;
-    }
-    @include global.sp {
         padding: 40px 24px;
     }
-   &__list {
-    padding: 40px 102px;
-    background-color: #fff;
-    @include global.mb32;
-    @include global.pc {
-        padding: 40px 64px;
+    @include global.sp {
+        padding: 40px 16px;
     }
-    @include global.tab {
-        padding: 40px;
-    }  
+   &__list {
+    @include global.mb32;
     &__title {
         margin: auto;
     }
     @include global.sp {
-        padding: 32px 21px;
     } 
    } 
 }
 
 
 
-.liststyle_info2 {
-   
+.liststyle_info2 { 
+    @include global.mb40;
     &__block {
         display: flex; 
+        padding: 24px;
+        margin-bottom:24px;
+        background-color: #fff;
+        @include global.sp {
+            padding: 16px;
+            margin-bottom:8px; 
+        } 
         &__img {
+            margin-right: 24px;
             width: 100%;
             max-width: 183px;
             min-width: 183px;
             height: 114px;
             background-position: center;
             background-size: cover;
-            @include global.mb24;
             @include global.sp {
                 max-width: 116px;
                 min-width: 116px;
                 height: 96px;
+                margin-right: 16px;
             } 
         }
         &__text {
-            padding-left:24px;
-            @include global.sp {
-                padding-left:16px;
-            } 
             p {
                 @include global.fs-s;
                 margin-right: 8px;
@@ -170,7 +165,7 @@
         align-items: center;
         @include global.mb8;
         @include global.sp {
-            display: block;
+           
         } 
     }
     &__btn {
@@ -179,3 +174,34 @@
     }
 }
 
+.info_archive {
+    position: relative;
+    padding: 80px; 
+    background-color: global.$bg-main;
+    background-position: center;
+    background-size: cover;
+    @include global.pc {
+        padding: 80px;
+    }
+    @include global.tab {
+        padding: 64px;
+    }
+    @include global.sp {
+        padding: 40px 24px;
+    }
+   &__list {
+    @include global.mb32;
+    @include global.pc {
+        padding: 40px 64px;
+    }
+    @include global.tab {
+    
+    }  
+    &__title {
+        margin: auto;
+    }
+    @include global.sp {
+
+    } 
+   } 
+}

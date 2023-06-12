@@ -8,7 +8,10 @@
         justify-content: start;
         flex-wrap: wrap;
         @include global.pc {
-        }  
+        }
+        @include global.tab {
+            justify-content: space-between; 
+        }   
         @include global.sp {
             padding-left: 40px;
             padding-right: 40px;
@@ -18,7 +21,8 @@
     margin-bottom: 8px;      
     @include global.mb40;
     @include global.tab {
-        width: calc((100% - 48px) / 2);
+
+        width: calc(100% / 2);
     }
     @include global.sp {
         width: 100%;

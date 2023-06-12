@@ -77,6 +77,7 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    margin: auto;
 &::after {
     background:#FDF7EC;
     position: absolute;
@@ -152,6 +153,9 @@
     }  
     img {
         width: 10px;
+        @include global.sp {
+            width: 7px;
+        }  
    }
 }
 // 次のページボタン
@@ -168,13 +172,16 @@
         width: 10px;
         margin-right: 0px;
         margin-left: 16px;
+        @include global.sp {
+            width: 7px;
+        }  
    }
 }
 
 // 前、一覧、次が並んだ時
 .btn_flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 // アンカーリンク
 
@@ -266,26 +273,22 @@ p {
 }
 .ctg_btn {
     @include global.mw1100;
-    @include global.mb24;  
+    @include global.mb80;  
     display: flex;
     @include global.tab {
         display: block ;
         padding: 0px;
     }  
     &__all {
-        padding-right: 40px;
-        height: 60px;
         border-right: 1px solid global.$point-main;
         margin: 0px 40px 0px 0px;
         width: fit-content;
+        padding-right:40px ;
         a {
-            margin-right: 0px;
-            padding: 26px 38px 20px 48px;
             margin-bottom: 9px;
             @include global.tab {
+                padding: 0px;
                 margin-right: 0px;
-                width: 154px;
-                padding: 0px 24px 0px 48px;
                 margin-bottom: 9px;
             }
         }
@@ -335,13 +338,14 @@ p {
         padding: 20px 94px;
         border: 1px solid global.$sub-color;
         margin: 0px 8px 8px 0px;
+        background-color: #fff;
         &:hover {
             @include global.main-hover;
         }
         p {
             white-space: nowrap;
             line-height: 120%;
-            color: global.$sub-color; 
+            font-family: global.$font-yg;
         }
         @include global.tab {
             padding: 16px 64px;
@@ -350,7 +354,7 @@ p {
             margin: 0px 4px 4px 0px;
         }
         &.active  {
-            border:1px solid global.$sub-color;
+            border:1px solid global.$main-color;
             background-color: global.$bg_main;
             p {
                 color:global.$sub-color;
@@ -359,17 +363,20 @@ p {
     }
     &__child-btn {
         padding: 20px 32px;
-        border: 1px solid global.$sub;
+        border: 1px solid global.$sub-color;
         margin: 0px 8px 8px 0px;
-
+        white-space: nowrap;
+        font-family: global.$font-yg;
+        font-size: 14px;
         &:hover {
             @include global.main-hover;
         } 
-        
         p {
             white-space: nowrap;
             line-height: 120%;
-            color: #333; 
+            @include global.tab {
+                font-size: 14px;
+            } 
         }
         @include global.tab {
             padding: 16px;
@@ -378,10 +385,12 @@ p {
             margin: 0px 4px 4px 0px;
         }
         &.active  {
-            border:1px solid global.$sub-color;
+            border:1px solid global.$main-color;
             background-color: global.$bg_main;
+            color:global.$sub-color;
+            font-family: global.$font-yg;
             p {
-                color:global.$bg_sub;
+                color:global.$sub-color;
             } 
         }
     }
@@ -455,7 +464,9 @@ p {
     a {
     }
 }
-
+.page-item.number {
+    background-color: #fff;
+}
 .page-item.number.navi-active {
     background-color: global.$point-main;
     color:#fff;

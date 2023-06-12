@@ -55,6 +55,8 @@
         <div class="church_event_edit">
             <div class="article-details">
                 <div class="article-details__contents">
+                <h3><?php echo SCF::get('church_event_title'); ?></h3>
+                    <p><?php echo SCF::get('church_event_text'); ?></p>
                     <?= get_the_content(); ?>
                 </div>
             </div>
@@ -66,12 +68,6 @@
                 </button>
                 </a>
             </div>
-        </div>
-        <div class="m80"></div>
-        <div class="church_event__btn">
-            <button class="page-btn" onclick="location.href='<?php echo get_page_link(46); ?>'">
-                <p>一覧に戻る</p>
-            </button>
         </div>
     </div>
     </div>

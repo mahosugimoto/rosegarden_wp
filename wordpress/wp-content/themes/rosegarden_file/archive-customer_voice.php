@@ -26,6 +26,7 @@ $voicePostID = 295;
 $img = get_post_meta($voicePostID, 'image_pc', true);
 ?>
 <div class="page-background" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php echo wp_get_attachment_url($img) ?>)">
+<img src="<p><?php echo SCF::get('image_pc'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
             <p><?php echo SCF::get('title_en', $voicePostID); ?></p>
@@ -57,7 +58,7 @@ $img = get_post_meta($voicePostID, 'image_sp', true);
 ?>
 <!-- SP BG -->
 <div class="page-background_sp" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php echo wp_get_attachment_url($img) ?>)">
-    <img src="<?php the_field('image_pc', $voicePostID); ?>" alt="">
+<img src="<p><?php echo SCF::get('image_sp'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
             <p><?php echo SCF::get('title_en', $voicePostID); ?></p>
@@ -99,7 +100,7 @@ $img = get_post_meta($voicePostID, 'image_sp', true);
 <div class="voice">
     <div class=voice__contents>
         <?php
-        $posts_per_page = 10;
+        $posts_per_page = 9;
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         if (!empty($category_slug)) {
             $paged = (get_query_var('page')) ? get_query_var('page') : 1;

@@ -117,7 +117,8 @@ if ($current_category instanceof WP_Term) {
                                 ?>
                             </div>
                             <h3><?= get_the_title() ?></h3>
-                            <p><?php echo SCF::get('church_event_selected'); ?></p>
+                            <p><?php echo SCF::get('church_event_title'); ?></p>
+                            <p><?php echo SCF::get('church_event_text'); ?></p>
                         </div>
                     </div>
                 </a>

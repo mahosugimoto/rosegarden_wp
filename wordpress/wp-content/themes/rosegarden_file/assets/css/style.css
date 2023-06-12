@@ -2311,6 +2311,90 @@ footer {
   }
 }
 
+.info_post {
+  margin: auto;
+  max-width: 1100px;
+}
+@media only screen and (max-width:1080px) {
+  .info_post {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .info_post {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .info_post {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.info_post-details {
+  margin-bottom: 32px;
+}
+@media only screen and (max-width:768px) {
+  .info_post-details {
+    margin-bottom: 16px;
+  }
+}
+.info_post-details__category {
+  margin-bottom: 32px;
+}
+@media only screen and (max-width:768px) {
+  .info_post-details__category {
+    margin-bottom: 16px;
+  }
+}
+.info_post-details__category p {
+  padding: 8px 32px;
+  border: 1px solid #B24A54;
+  display: inline-block;
+}
+@media screen and (max-width: 480px) {
+  .info_post-details__category p {
+    padding: 4px 16px;
+  }
+}
+.info_post-details__date {
+  margin-bottom: 16px;
+}
+@media only screen and (max-width:768px) {
+  .info_post-details__date {
+    margin-bottom: 8px;
+  }
+}
+.info_post-details__title {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #333;
+}
+@media only screen and (max-width:768px) {
+  .info_post-details__title {
+    margin-bottom: 12px;
+  }
+}
+.info_post-details__thumbnail {
+  width: 100%;
+  height: 596px;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .info_post-details__thumbnail {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .info_post-details__thumbnail {
+    height: 200px;
+  }
+}
+
 .church_event {
   margin: auto;
   max-width: 1100px;
@@ -4003,7 +4087,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .fv_slider-wrap {
-    margin-top: 96px;
+    margin-top: 50px;
     padding: 0px 24px 0px 0px;
     background-color: #EBE8E3;
   }
@@ -5314,6 +5398,11 @@ footer {
     padding-right: 16px;
   }
 }
+@media screen and (max-width: 768px) {
+  .voice__contents {
+    justify-content: space-between;
+  }
+}
 @media screen and (max-width: 480px) {
   .voice__contents {
     padding-left: 40px;
@@ -5332,7 +5421,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .voice__contents a {
-    width: calc((100% - 48px) / 2);
+    width: 50%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -6974,17 +7063,15 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .info {
-    padding: 64px;
+    padding: 40px 24px;
   }
 }
 @media screen and (max-width: 480px) {
   .info {
-    padding: 40px 24px;
+    padding: 40px 16px;
   }
 }
 .info__list {
-  padding: 40px 102px;
-  background-color: #fff;
   margin-bottom: 32px;
 }
 @media only screen and (max-width:768px) {
@@ -6992,55 +7079,44 @@ footer {
     margin-bottom: 16px;
   }
 }
-@media screen and (max-width: 1080px) {
-  .info__list {
-    padding: 40px 64px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .info__list {
-    padding: 40px;
-  }
-}
 .info__list__title {
   margin: auto;
 }
-@media screen and (max-width: 480px) {
-  .info__list {
-    padding: 32px 21px;
+.liststyle_info2 {
+  margin-bottom: 40px;
+}
+@media only screen and (max-width:768px) {
+  .liststyle_info2 {
+    margin-bottom: 20px;
   }
 }
-
 .liststyle_info2__block {
   display: flex;
+  padding: 24px;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+@media screen and (max-width: 480px) {
+  .liststyle_info2__block {
+    padding: 16px;
+    margin-bottom: 8px;
+  }
 }
 .liststyle_info2__block__img {
+  margin-right: 24px;
   width: 100%;
   max-width: 183px;
   min-width: 183px;
   height: 114px;
   background-position: center;
   background-size: cover;
-  margin-bottom: 24px;
-}
-@media only screen and (max-width:768px) {
-  .liststyle_info2__block__img {
-    margin-bottom: 12px;
-  }
 }
 @media screen and (max-width: 480px) {
   .liststyle_info2__block__img {
     max-width: 116px;
     min-width: 116px;
     height: 96px;
-  }
-}
-.liststyle_info2__block__text {
-  padding-left: 24px;
-}
-@media screen and (max-width: 480px) {
-  .liststyle_info2__block__text {
-    padding-left: 16px;
+    margin-right: 16px;
   }
 }
 .liststyle_info2__block__text p {
@@ -7081,16 +7157,49 @@ footer {
     margin-bottom: 4px;
   }
 }
-@media screen and (max-width: 480px) {
-  .liststyle_info2__ctg {
-    display: block;
-  }
-}
 .liststyle_info2__btn {
   display: flex;
   justify-content: center;
 }
 
+.info_archive {
+  position: relative;
+  padding: 80px;
+  background-color: #EBE8E3;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 1080px) {
+  .info_archive {
+    padding: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info_archive {
+    padding: 64px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .info_archive {
+    padding: 40px 24px;
+  }
+}
+.info_archive__list {
+  margin-bottom: 32px;
+}
+@media only screen and (max-width:768px) {
+  .info_archive__list {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .info_archive__list {
+    padding: 40px 64px;
+  }
+}
+.info_archive__list__title {
+  margin: auto;
+}
 .church_event {
   position: relative;
 }
@@ -7422,6 +7531,29 @@ footer {
 }
 .pastor_blog3__list__title {
   margin: auto;
+}
+
+.pastor_blog02 {
+  margin: auto;
+  max-width: 1010px;
+}
+@media only screen and (max-width:1080px) {
+  .pastor_blog02 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .pastor_blog02 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .pastor_blog02 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .hymn {
@@ -8081,6 +8213,7 @@ footer {
 }
 .gallery__movie {
   margin-bottom: 80px;
+  height: 100%;
 }
 @media only screen and (max-width:768px) {
   .gallery__movie {
@@ -8134,6 +8267,10 @@ footer {
   .gallery__anchor-link {
     margin-bottom: 20px;
   }
+}
+
+#sb_instagram {
+  height: auto;
 }
 
 .church__top {
@@ -10945,17 +11082,19 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 8px;
 }
 .title_space p {
   text-align: center;
-  background-color: #B24A54;
   padding: 4px 16px;
-  color: #fff;
+  color: #B24A54;
+  border-bottom: 1px solid #B24A54;
+  border-top: 1px solid #B24A54;
   font-size: 14px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .title_space p {
-    padding: 2px 8px;
+    padding: 0px 8px;
     font-size: 12px;
   }
 }
@@ -10979,6 +11118,29 @@ footer {
   .title_ribbon_right img {
     width: 18px;
     margin-top: 8px;
+  }
+}
+
+.partyspace__other__notes {
+  margin: auto;
+  max-width: 1216px;
+}
+@media only screen and (max-width:1080px) {
+  .partyspace__other__notes {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .partyspace__other__notes {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .partyspace__other__notes {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -13355,6 +13517,7 @@ footer {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  margin: auto;
 }
 .page-btn_icon::after, .page-btn::after, .page-btn_pre::after, .page-btn_next::after, .page-btn_list::after, .sanctuary_btn::after, .page-btn_pastor::after, .brown_btn::after {
   background: #FDF7EC;
@@ -13444,6 +13607,11 @@ footer {
 .page-btn_pre img {
   width: 10px;
 }
+@media screen and (max-width: 480px) {
+  .page-btn_pre img {
+    width: 7px;
+  }
+}
 
 .page-btn_next {
   align-items: center;
@@ -13464,10 +13632,15 @@ footer {
   margin-right: 0px;
   margin-left: 16px;
 }
+@media screen and (max-width: 480px) {
+  .page-btn_next img {
+    width: 7px;
+  }
+}
 
 .btn_flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .anchor-link {
@@ -13571,7 +13744,7 @@ footer {
 .ctg_btn {
   margin: auto;
   max-width: 1100px;
-  margin-bottom: 24px;
+  margin-bottom: 80px;
   display: flex;
 }
 @media only screen and (max-width:1080px) {
@@ -13594,7 +13767,7 @@ footer {
 }
 @media only screen and (max-width:768px) {
   .ctg_btn {
-    margin-bottom: 12px;
+    margin-bottom: 40px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -13604,23 +13777,19 @@ footer {
   }
 }
 .ctg_btn__all {
-  padding-right: 40px;
-  height: 60px;
   border-right: 1px solid #99762F;
   margin: 0px 40px 0px 0px;
   width: -moz-fit-content;
   width: fit-content;
+  padding-right: 40px;
 }
 .ctg_btn__all a {
-  margin-right: 0px;
-  padding: 26px 38px 20px 48px;
   margin-bottom: 9px;
 }
 @media screen and (max-width: 768px) {
   .ctg_btn__all a {
+    padding: 0px;
     margin-right: 0px;
-    width: 154px;
-    padding: 0px 24px 0px 48px;
     margin-bottom: 9px;
   }
 }
@@ -13632,7 +13801,7 @@ footer {
     justify-content: center;
     border-right: 0px;
     margin: 0px 0px 8px 0px;
-    border-bottom: 1px solid #99762F;
+    border-bottom: 1px solid #B24A54;
     margin: auto;
     margin-bottom: 10px;
   }
@@ -13672,6 +13841,7 @@ footer {
   padding: 20px 94px;
   border: 1px solid #B24A54;
   margin: 0px 8px 8px 0px;
+  background-color: #fff;
 }
 .ctg_btn__child-btn_first:hover {
   opacity: 0.5;
@@ -13680,7 +13850,7 @@ footer {
 .ctg_btn__child-btn_first p {
   white-space: nowrap;
   line-height: 120%;
-  color: #B24A54;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 @media screen and (max-width: 768px) {
   .ctg_btn__child-btn_first {
@@ -13693,7 +13863,7 @@ footer {
   }
 }
 .ctg_btn__child-btn_first.active {
-  border: 1px solid #B24A54;
+  border: 1px solid #EBE8E3;
   background-color: #EBE8E3;
 }
 .ctg_btn__child-btn_first.active p {
@@ -13703,6 +13873,9 @@ footer {
   padding: 20px 32px;
   border: 1px solid #B24A54;
   margin: 0px 8px 8px 0px;
+  white-space: nowrap;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 14px;
 }
 .ctg_btn__child-btn:hover {
   opacity: 0.5;
@@ -13711,7 +13884,11 @@ footer {
 .ctg_btn__child-btn p {
   white-space: nowrap;
   line-height: 120%;
-  color: #333;
+}
+@media screen and (max-width: 768px) {
+  .ctg_btn__child-btn p {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 768px) {
   .ctg_btn__child-btn {
@@ -13724,8 +13901,10 @@ footer {
   }
 }
 .ctg_btn__child-btn.active {
-  border: 1px solid #B24A54;
+  border: 1px solid #EBE8E3;
   background-color: #EBE8E3;
+  color: #B24A54;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 .ctg_btn__child-btn.active p {
   color: #B24A54;
@@ -13797,6 +13976,10 @@ footer {
 .page-item:last-child {
   margin-right: 0px;
 }
+.page-item.number {
+  background-color: #fff;
+}
+
 .page-item.number.navi-active {
   background-color: #99762F;
   color: #fff;

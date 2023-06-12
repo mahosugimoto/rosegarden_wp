@@ -34,6 +34,7 @@
     }
     &__movie {
         @include global.mb80;
+        height: 100%;
         &__title {
         }
         &__contents {
@@ -74,4 +75,10 @@
         display: flex;
         justify-content: end;
     }
+}
+.gallery__instagram {
+ 
+}
+#sb_instagram {
+    height: auto;
 }

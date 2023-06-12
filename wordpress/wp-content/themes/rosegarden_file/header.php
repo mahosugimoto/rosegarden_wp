@@ -149,20 +149,19 @@
                             </div>
                         </nav>
                         <div class="header_allmenu__contents02">
-                            <div class="footer-contents__btn">
-                                <button class="reservation-btn">
+                            <div class="header_allmenu__contents02__btn">
+                                <button class="reservation-btn" onclick="location.href='https://rosegarden-ch.official-wedding.net/kengaku'">
                                     <h3>RESERVATION</h3>
-                                    <p>フェア予約/見学予約</p>
+                                    <p>見学予約</p>
                                 </button>
-                                <button class="contact-btn">
+                                <button class="contact-btn" onclick="location.href='https://rosegarden-ch.official-wedding.net/otoiawase'">
                                     <h3>CONTACT</h3>
-                                    <p>資料請求/お問い合わせ</p>
+                                    <p>お問い合わせ</p>
                                 </button>
                             </div>
-                            <div class="m40"></div>
-                            <div class="footer-top__address">
+                            <div class="header-top__address">
                                 <h2><span>TEL.</span><a href="tel:011-522-0151">011-522-0151</a></h2>
-                                <p>営業時間: 平日 11:00 〜 19:00 <br class="new-line">/ 土日祝 9:00 〜 19:00</p>
+                                <p>営業時間：平日 11：00 〜 19：00 <br class="new-line">/ 土日祝 9：00 〜 19：00</p>
                             </div>
                             <div class="m40"></div>
                             <div class="header_allmenu__cta">
@@ -173,13 +172,13 @@
                                             <p>電話問合せ<br>011-522-0151</p>
                                         </div>
                                     </a>
-                                    <a href="#">
+                                    <a href="https://rosegarden-ch.official-wedding.net/siryo">
                                         <div class="header_allmenu__cta__contents__middle">
                                             <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/paper.png" alt="">
                                             <p>資料請求</p>
                                         </div>
                                     </a>
-                                    <a href="<?php echo get_page_link(288); ?>">
+                                    <a href="https://rosegarden-ch.official-wedding.net/fair/list">
                                         <div class="header_allmenu__cta__contents__right">
                                             <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/fair.png" alt="">
                                             <p>フェア一覧<br>・見学予約</p>
@@ -188,7 +187,7 @@
                                 </div>
                             </div>
                             <a href="<?php echo get_page_link(15); ?>">
-                                <div class="header_allmenu__church" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/header_church.jpg);">
+                                <div class="header_allmenu__church" style="background-image:linear-gradient(rgba(51,51,51,0.3),rgba(51,51,51,0.3)), url(/wp-content/themes/rosegarden_file/assets/img/header_church.png);">
                                     <div class="header_allmenu__church__flex">
                                         <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/cross_icon.png" alt="">
                                         <p>教会について</p>
@@ -202,9 +201,7 @@
                                 <div class="header__sns">
                                     <a href="https://www.instagram.com/rosegarden_christ_church">
                                         <div class="home-sns">
-                                            <p><a href="<?php
-                                                        echo home_url('/');
-                                                        ?>">HOME</a></p>
+                
                                             <div class="instagram_icon">
                                                 <a href="https://www.instagram.com/rosegarden_christ_church/">
                                                     <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/instagram.png" alt="">
@@ -219,7 +216,7 @@
                     </div>
                     <!-- sowa weddings -->
                     <div class="sowa-weddings">
-                        <p>SOWA WEDDINGS</p>
+                        <h3>SOWA WEDDINGS</h3>
                         <div class="header_allmenu__menu-s">
                             <?php
                             $menu_items = wp_get_nav_menu_items('sowa_weddings_menu');
@@ -366,6 +363,3 @@
     </div>
 
     <body>
-
-
-  

@@ -13,13 +13,13 @@
         <div class="footer-contents">
             <div class="footer-contents-wrap">
                 <div class="footer-contents__btn">
-                    <button class="reservation-btn">
+                    <button class="reservation-btn" onclick="loction.href='https://rosegarden-ch.official-wedding.net/kengaku'">
                         <h3>RESERVATION</h3>
-                        <p>フェア予約/見学予約</p>
+                        <p>見学予約</p>
                     </button>
-                    <button class="contact-btn">
+                    <button class="contact-btn" onclick="loction.href='https://rosegarden-ch.official-wedding.net/otoiawase'">
                         <h3>CONTACT</h3>
-                        <p>資料請求/お問い合わせ</p>
+                        <p>お問い合わせ</p>
                     </button>
                 </div>
                 <div class="footer-contents__menu">

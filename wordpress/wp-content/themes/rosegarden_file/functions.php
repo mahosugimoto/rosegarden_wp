@@ -1,4 +1,6 @@
 <?php
+define('PASTOR_SLUG', 'pastor/blog');
+define('PASTOR_POST_TYPE_NAME', 'pastor');
 
 add_theme_support('post-thumbnails');
 add_action('init', 'create_post_type');
@@ -72,7 +74,7 @@ function create_post_type()
 
     // 牧師のブログ
     register_post_type(
-        'pastor',
+        PASTOR_POST_TYPE_NAME,
         array(
             'label' => '牧師ブログ',
             'public' => true,
@@ -86,6 +88,7 @@ function create_post_type()
                 'thumbnail',
                 'revisions',
             ),
+            'rewrite' => array('slug' => PASTOR_SLUG),
         )
     );
 
@@ -281,6 +284,16 @@ function custom_widget_area()
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ));
+
+    register_sidebar(array(
+        'name'          => __('牧師のご紹介', 'text_domain'),
+        'id'            => 'pastor-widget-area',
+        'description'   => __('牧師のご紹介の説明文', 'text_domain'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
 }
 add_action('widgets_init', 'custom_widget_area');
 
@@ -363,6 +376,10 @@ if (!function_exists('custom_breadcrumbs')) {
             $homeLink = get_home_url();
             echo $before . '<a href="' . $homeLink . '"><span>' . $home . '</span></a> ' . $after . $delimiter . ' ';
 
+            // For pastor
+            $year = get_query_var('year', '');
+            $month = get_query_var('monthnum', '');
+
             if (is_category()) {
                 $category = get_category(get_query_var('cat'), false);
                 if ($category->parent != 0) {
@@ -379,11 +396,31 @@ if (!function_exists('custom_breadcrumbs')) {
             } elseif (is_search()) {
                 echo $before . 'Search results for "' . get_search_query() . '"' . $after;
             } elseif (is_day()) {
-                echo $before . '<a href="' . get_year_link(get_the_time('Y')) . '"><span>' . get_the_time('Y') . '</span></a> ' . $after . $delimiter . ' ';
-                echo $before . '<a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '"><span>' . get_the_time('F') . '</span></a> ' . $after . $delimiter . ' ';
+                if (get_post_type() == PASTOR_POST_TYPE_NAME) {
+                    $post_type_archive_link = get_post_type_archive_link(PASTOR_POST_TYPE_NAME);
+                    $month = ($month < 10) ? '0' . $month : $month;
+
+                    $yearLink = trailingslashit($post_type_archive_link) . $year;
+                    $monthLink = trailingslashit($post_type_archive_link) . $year . '/' . $month;
+                } else {
+                    $yearLink = get_year_link(get_the_time('Y'));
+                    $monthLink = get_month_link(get_the_time('Y'), get_the_time('m'));
+                }
+
+                echo $before . '<a href="' . $yearLink . '"><span>' . get_the_time('Y') . '</span></a> ' . $after . $delimiter . ' ';
+                echo $before . '<a href="' . $monthLink . '"><span>' . get_the_time('F') . '</span></a> ' . $after . $delimiter . ' ';
                 echo $before . get_the_time('d') . $after;
             } elseif (is_month()) {
-                echo $before . '<a href="' . get_year_link(get_the_time('Y')) . '"><span>' . get_the_time('Y') . '</span></a> ' . $after . $delimiter . ' ';
+                if (get_post_type() == PASTOR_POST_TYPE_NAME) {
+                    $post_type_archive_link = get_post_type_archive_link(PASTOR_POST_TYPE_NAME);
+                    $month = ($month < 10) ? '0' . $month : $month;
+
+                    $yearLink = trailingslashit($post_type_archive_link) . $year;
+                } else {
+                    $yearLink = get_year_link(get_the_time('Y'));
+                }
+
+                echo $before . '<a href="' . $yearLink . '"><span>' . get_the_time('Y') . '</span></a> ' . $after . $delimiter . ' ';
                 echo $before . get_the_time('F') . $after;
             } elseif (is_year()) {
                 echo $before . get_the_time('Y') . $after;
@@ -658,3 +695,38 @@ if (!function_exists('custom_pagination')) {
         return $r;
     }
 }
+
+/**
+ * get parameter for pastor page
+ */
+if (!function_exists('pastor_args')) {
+    function pastor_args()
+    {
+        // $posts_per_page = 10;
+        // $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $post_type = 'pastor';
+        $args = array(
+            // 'posts_per_page' => $posts_per_page,
+            // 'paged' => $paged,
+            'post_status' => 'publish',
+            'post_type' => $post_type,
+        );
+
+        $year = get_query_var('year');
+        $month = get_query_var('monthnum');
+        $day = get_query_var('day');
+
+        if (!empty($year)) {
+            $args['date_query']['year'] = $year;
+        }
+        if (!empty($month)) {
+            $args['date_query']['month'] = $month;
+        }
+        if (!empty($day)) {
+            $args['date_query']['day'] = $day;
+        }
+
+        return $args;
+    }
+}
+

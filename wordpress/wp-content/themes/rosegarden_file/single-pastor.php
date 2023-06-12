@@ -47,6 +47,7 @@ $next_post = get_next_post();
             <h2><?= get_the_title()?></h2>
         </div>
     </div>
+    <?php get_template_part('pastor', 'sidebar');?>
 </div>
     <div class="article-details">
         <div class=article-details__contents>

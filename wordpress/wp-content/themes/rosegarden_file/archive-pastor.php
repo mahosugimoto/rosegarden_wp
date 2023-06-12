@@ -36,15 +36,13 @@ get_header();
             </div>
             <div class="liststyle_pastor_blog2">
             <?php 
+            $args = $commonArgs = pastor_args();
             $posts_per_page = 10;
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $post_type = 'pastor';
-            $args = array(
-                'posts_per_page' => $posts_per_page,
-                'paged' => $paged,
-                'post_status' => 'publish',
-                'post_type' => $post_type,
-            );
+            $args['posts_per_page'] = $posts_per_page;
+            $args['paged'] = $paged;
+            
             $myposts = get_posts($args);
             foreach ($myposts as $post) : setup_postdata($post);
             ?>
@@ -72,7 +70,12 @@ get_header();
     </div>
     <!-- ページネーション -->
     <?php 
-    $total_post = wp_count_posts($post_type)->publish;
+    wp_reset_postdata();
+    $commonArgs['posts_per_page'] = -1;
+    $query = new WP_Query($commonArgs);
+
+    // Get the count of posts that match the query
+    $total_post = $query->found_posts;
     $num_pages = ceil($total_post / $posts_per_page);
     
     $args = array(
@@ -81,6 +84,8 @@ get_header();
     );
     echo custom_pagination($args); 
     ?>
+
+    <?php get_template_part('pastor', 'sidebar');?>
     <div class="m80"></div>
 </div>
 <?php get_footer(); ?>

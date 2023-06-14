@@ -584,6 +584,38 @@
 // 他のページ
 
 .top_other_page{
+    &__dcr-left {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        @include global.sp {
+            top: 0px;
+            left: 0px;
+        }  
+        img {
+            width: 64px;
+            height: auto;
+            @include global.sp {
+                width: 46px;
+            }  
+        }
+    }
+    &__dcr-right {
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        @include global.sp {
+            bottom: 0px;
+            right: 0px;
+        } 
+        img {
+            width: 64px;   
+            height: auto;
+            @include global.sp {
+                width: 46px;
+            }  
+        }
+    }
     padding: 35px 0px 80px;
     p {
         text-align: center;
@@ -593,7 +625,7 @@
     width: 100%;
     &__wrap {
         margin: auto;
-        @include global.mw800;
+        @include global.mw1010;
         display: flex;
         @include global.mb32;
         @include global.pc {
@@ -665,6 +697,78 @@
             @include global.main-hover; 
         }
     }
+    &__wrap2 {
+        margin: auto;
+        @include global.mw800;
+        display: flex;
+        @include global.mb32;
+        @include global.pc {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        justify-content: center;
+        @include global.tab {
+            margin-bottom: 0px;
+            display: block;
+        }
+        @include global.sp {
+        }  
+        a {
+            width: 100%;
+            display: inline-block;
+            margin-right: 25px;
+            &:last-child {
+                margin-right: 0px;  
+            }
+            @include global.tab {
+                width: 100%;
+                margin-bottom: 8px;
+                &:last-child {
+                    margin-right: 0px;  
+                }
+            } 
+        }
+    }
+    &__block2 {
+        position: relative;
+        background-color: #fff;
+        width: 100%;
+        max-width: 800px;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        @include global.pc {
+            height: 140px;
+        }
+        @include global.tab {
+            height: 120px;
+        }
+        @include global.sp {
+            height: 100px;
+        }       
+        &__title {
+            width: 50%;
+            min-width: 240px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include global.pc {
+                min-width: auto;
+            }   
+            br {
+                display: none;
+                @include global.pc {
+                    display: block;
+                }       
+                @include global.tab {
+                    display: none;
+                }     
+            }
+        }
+        &:hover {
+            @include global.main-hover; 
+        }
+    }
 }
 
 .other_box_link {
@@ -695,8 +799,7 @@
 
 // information
 
-.top_info {
-   
+.top_info { 
     background-position: center;
     background-size: cover;
     padding: 80px 0px 48px;
@@ -711,7 +814,7 @@
     }
    &__list {
     padding: 40px 102px;
-    @include global.mw800;
+    @include global.mw1010;
     background-color: #fff;
     @include global.mb32;
     &__title {

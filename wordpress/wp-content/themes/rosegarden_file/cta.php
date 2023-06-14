@@ -12,10 +12,10 @@
             <p>資料請求</p>
         </div>
     </a>
-    <a href="https://rosegarden-ch.official-wedding.net/kengaku">
+    <a href="https://rosegarden-ch.official-wedding.net/fair/list">
         <div class="cta__contents__right">
             <img src="/wp-content/themes/rosegarden_file/assets/img/icon/church_icon_wh.png" alt="">
-            <p>フェア一覧<br>・見学予約</p>
+            <p>フェア一覧</p>
         </div>
     </a>
 </div>

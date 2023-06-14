@@ -215,6 +215,9 @@
         }    
         @include global.tab {
             padding-left: 0px;
+        }
+        span {
+            text-decoration: underline;
         }      
     }
 }

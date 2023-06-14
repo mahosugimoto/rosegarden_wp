@@ -52,6 +52,7 @@
     html {
         margin-top: 0px;
     }
+
     body {
         width: 100%;
         margin: auto;
@@ -86,8 +87,8 @@
         </div>
     </div>
 
-        <!-- 開閉時menu-->
-        <nav id="g-nav">
+    <!-- 開閉時menu-->
+    <nav id="g-nav">
         <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
             <div id="g-nav-block">
                 <div class="header_allmenu">
@@ -149,6 +150,10 @@
                         </nav>
                         <div class="header_allmenu__contents02">
                             <div class="footer-contents__btn">
+                                <button class="reservation-btn" onclick="location.href='https://rosegarden-ch.official-wedding.net/fair/list'">
+                                    <h3>BRIDAL FAIR</h3>
+                                    <p>フェア一覧</p>
+                                </button>
                                 <button class="reservation-btn" onclick="location.href='rosegarden-ch.official-wedding.net/kengaku'">
                                     <h3>RESERVATION</h3>
                                     <p>見学予約</p>
@@ -178,10 +183,10 @@
                                             <p>資料請求</p>
                                         </div>
                                     </a>
-                                    <a href="https://rosegarden-ch.official-wedding.net/kengaku">
+                                    <a href="https://rosegarden-ch.official-wedding.net/fair/list">
                                         <div class="header_allmenu__cta__contents__right">
                                             <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/fair.png" alt="">
-                                            <p>フェア一覧<br>・見学予約</p>
+                                            <p>フェア一覧</p>
                                         </div>
                                     </a>
                                 </div>
@@ -199,16 +204,13 @@
                             </a>
                             <div class="header_allmenu__sns">
                                 <div class="header__sns">
-                                    <a href="https://www.instagram.com/rosegarden_christ_church">
-                                        <div class="home-sns">
-                
-                                            <div class="instagram_icon">
-                                                <a href="https://www.instagram.com/rosegarden_christ_church/">
-                                                    <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/instagram.png" alt="">
-                                                </a>
-                                            </div>
+                                    <div class="home-sns">
+                                        <div class="instagram_icon">
+                                            <a href="https://www.instagram.com/rosegarden_christ_church" target="_blank">
+                                                <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/instagram.png" alt="">
+                                            </a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="m24"></div>

@@ -654,14 +654,9 @@ if (!function_exists('custom_pagination')) {
 if (!function_exists('pastor_args')) {
     function pastor_args()
     {
-        // $posts_per_page = 10;
-        // $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $post_type = 'pastor';
         $args = array(
-            // 'posts_per_page' => $posts_per_page,
-            // 'paged' => $paged,
             'post_status' => 'publish',
-            'post_type' => $post_type,
+            'post_type' => PASTOR_POST_TYPE_NAME,
         );
 
         $year = get_query_var('year');
@@ -682,3 +677,24 @@ if (!function_exists('pastor_args')) {
     }
 }
 
+/**
+ * Custom post excerpt
+ */
+if (!function_exists('custom_post_excerpt')) {
+    function custom_post_excerpt()
+    {
+        $post_excerpt = get_the_excerpt(); // Get the post excerpt
+
+        if (empty($post_excerpt)) {
+            $post_content = get_the_content(); // Get the post content
+            $post_excerpt = wp_strip_all_tags($post_content); // Strip HTML tags from the post content
+        }
+
+        $excerpt_length = 20; // Set the desired length of the excerpt (in words)
+        $excerpt_more = '...'; // Set the desired "Read More" text
+
+        $trimmed_excerpt = wp_trim_words($post_excerpt, $excerpt_length, $excerpt_more); // Limit the excerpt length
+
+        return $trimmed_excerpt;
+    }
+}

@@ -6,10 +6,26 @@
         @include global.mb64;
         text-align: center;
         h2 {
-       @include global.mb16;
-        }
-        p {
-            
+            font-weight: bold;
+            @include global.mb16;
+      
+       @include global.tab{ 
+        text-align: start; 
+      } 
+    }
+      br {
+        @include global.tab{ 
+            display: none;
+          } 
+      }
+       
+        p {@include global.mb24;
+            &:last-child {
+                margin-bottom: 0px;
+            } 
+            @include global.tab{ 
+                text-align: start; 
+              } 
         }
     }
     &__anchor-link {

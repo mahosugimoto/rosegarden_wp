@@ -459,6 +459,7 @@
     }
     &__contents02 {
         &__btn {
+            max-width: 286px;
             @include global.mb40;
             @include global.tab {
                 display: block;

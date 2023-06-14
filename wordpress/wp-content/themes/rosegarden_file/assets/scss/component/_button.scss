@@ -277,11 +277,11 @@ p {
     display: flex;
     @include global.tab {
         display: block ;
-        padding: 0px;
+        padding: 0 24px;
     }  
     &__all {
         border-right: 1px solid global.$point-main;
-        margin: 0px 40px 0px 0px;
+        margin: 0px 40px 4px 0px;
         width: fit-content;
         padding-right:40px ;
         a {
@@ -337,7 +337,6 @@ p {
     &__child-btn_first {
         padding: 20px 94px;
         border: 1px solid global.$sub-color;
-        margin: 0px 8px 8px 0px;
         background-color: #fff;
         &:hover {
             @include global.main-hover;
@@ -351,8 +350,8 @@ p {
             padding: 16px 64px;
         }
         @include global.tab {
-            margin: 0px 4px 4px 0px;
-        }
+            margin: 0px;
+        } 
         &.active  {
             border:1px solid global.$main-color;
             background-color: global.$bg_main;

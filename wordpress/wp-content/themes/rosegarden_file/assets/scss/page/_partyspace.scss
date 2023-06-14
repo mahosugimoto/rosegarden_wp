@@ -76,9 +76,13 @@
             color: global.$point-main;
             @include global.mb40; 
         }
-        p {
-
+        br {
+            display: none;
+            @include global.sp {
+                display: block;
+             } 
         }
+       
     }
 }
 }
@@ -275,10 +279,9 @@
    border-bottom: 8px;
     p {
         text-align: center;
-        padding: 4px 16px;
+        padding: 0px 16px;
         color:global.$sub-color;
         border-bottom:1px solid global.$sub-color;
-        border-top:1px solid global.$sub-color ;
         font-size: 14px;
         @include global.tab {    
             padding: 0px 8px; 

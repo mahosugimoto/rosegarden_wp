@@ -699,6 +699,7 @@ p {
   }
 }
 .header_allmenu__contents02__btn {
+  max-width: 286px;
   margin-bottom: 40px;
 }
 @media only screen and (max-width:768px) {
@@ -3315,12 +3316,12 @@ footer {
   .ceremony__main, .after-ceremony__main {
     display: block;
     padding: 0px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
 }
 @media only screen and (max-width: 768px) and (max-width:768px) {
   .ceremony__main, .after-ceremony__main {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 .ceremony__main:nth-child(2n), .after-ceremony__main:nth-child(2n) {
@@ -3600,6 +3601,57 @@ footer {
   }
 }
 
+.guest {
+  margin: auto;
+  max-width: 1216px;
+}
+@media only screen and (max-width:1080px) {
+  .guest {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .guest {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .guest {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .guest {
+    padding: 0px;
+  }
+}
+.guest__anchor-link {
+  display: flex;
+  justify-content: space-between;
+  max-width: 720px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 480px) {
+  .guest__anchor-link a {
+    width: 50%;
+  }
+}
+@media only screen and (max-width:768px) {
+  .guest__anchor-link {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .guest__anchor-link {
+    padding: 0px 32px;
+    flex-wrap: wrap;
+  }
+}
+
 .guest-contents_cover {
   position: relative;
   background-color: #EBE8E3;
@@ -3753,6 +3805,11 @@ footer {
 @media only screen and (max-width:768px) {
   .guest-info h2 {
     margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .guest-info h2 {
+    text-align: start;
   }
 }
 @media screen and (max-width: 480px) {
@@ -4087,7 +4144,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .fv_slider-wrap {
-    margin-top: 50px;
+    margin-top: 96px;
     padding: 0px 24px 0px 0px;
     background-color: #EBE8E3;
   }
@@ -5580,7 +5637,7 @@ footer {
 @media screen and (max-width: 480px) {
   .voice__contents a {
     width: 100%;
-    margin: 0px 0px 16px 0px;
+    margin: 0px 0px 24px 0px;
   }
 }
 
@@ -6196,7 +6253,12 @@ footer {
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 
+.pastor_blog_wrap {
+  display: flex;
+}
+
 .pastor_blog {
+  width: 100%;
   max-width: 808px;
   margin-left: 112px;
 }
@@ -6213,6 +6275,22 @@ footer {
 @media screen and (max-width: 480px) {
   .pastor_blog {
     margin: 0px 16px;
+  }
+}
+
+.pastor-single_wrap {
+  display: flex;
+  padding: 0px 112px;
+}
+@media screen and (max-width: 1080px) {
+  .pastor-single_wrap {
+    padding: 0px 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pastor-single_wrap {
+    padding: 0px 24px;
+    display: block;
   }
 }
 
@@ -6491,7 +6569,7 @@ footer {
   }
 }
 .sanctuary__banner {
-  width: 380px;
+  width: 500px;
   margin: auto;
   margin-bottom: 80px;
 }
@@ -6502,7 +6580,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .sanctuary__banner {
-    width: 256px;
+    width: 299px;
   }
 }
 .sanctuary__banner img {
@@ -7100,9 +7178,9 @@ footer {
     margin-bottom: 16px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .pastor_blog__list {
-    padding: 24px;
+    padding: 0px;
   }
 }
 .pastor_blog__list__title {
@@ -7367,7 +7445,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .church_event {
-    padding: 40px 16px 8px;
+    padding: 40px 16px;
   }
 }
 .church_event__list {
@@ -7407,6 +7485,11 @@ footer {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 480px) {
+  .liststyle_church_event2 {
+    margin-bottom: 32px;
+  }
+}
 .liststyle_church_event2__block {
   display: flex;
   padding: 24px;
@@ -7442,7 +7525,8 @@ footer {
   .liststyle_church_event2__block__img {
     max-width: 98px;
     min-width: 98px;
-    height: 98px;
+    height: auto;
+    min-height: 98px;
   }
 }
 .liststyle_church_event2__block__text {
@@ -7481,6 +7565,11 @@ footer {
 @media only screen and (max-width:768px) {
   .liststyle_church_event2__block__text h3 {
     margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .liststyle_church_event2__block__text h3 {
+    margin-bottom: 4px;
   }
 }
 .liststyle_church_event2__block:hover {
@@ -7696,42 +7785,36 @@ footer {
 }
 
 .pastor_blog02 {
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.pastor_blog_innerwrap {
   margin: auto;
-  max-width: 1010px;
+  max-width: 850px;
 }
 @media only screen and (max-width:1080px) {
-  .pastor_blog02 {
+  .pastor_blog_innerwrap {
     padding-left: 64px;
     padding-right: 64px;
   }
 }
 @media only screen and (max-width:768px) {
-  .pastor_blog02 {
+  .pastor_blog_innerwrap {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 @media only screen and (max-width:400px) {
-  .pastor_blog02 {
+  .pastor_blog_innerwrap {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
-
-.pastor_flex {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
 @media screen and (max-width: 768px) {
-  .pastor_flex {
-    display: block;
+  .pastor_blog_innerwrap {
+    padding: 0px;
   }
-}
-
-.pastor_blogrmation {
-  width: 100%;
-  max-width: 850px;
 }
 
 .pastor_sidebar {
@@ -7740,6 +7823,11 @@ footer {
   padding-left: 24px;
   border-left: 1px solid #99762F;
   margin-left: 80px;
+}
+@media screen and (max-width: 768px) {
+  .pastor_sidebar {
+    margin-left: 40px;
+  }
 }
 @media screen and (max-width: 768px) {
   .pastor_sidebar {
@@ -8142,6 +8230,14 @@ footer {
     font-size: 20px;
   }
 }
+.qanda_block__title br {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .qanda_block__title br {
+    display: block;
+  }
+}
 
 .qanda_block > li {
   padding: 40px 104px;
@@ -8378,6 +8474,11 @@ footer {
     margin-bottom: 12px;
   }
 }
+@media screen and (max-width: 768px) {
+  .qanda-info h2 {
+    text-align: start;
+  }
+}
 @media screen and (max-width: 480px) {
   .qanda-info h2 {
     font-size: 14px;
@@ -8561,6 +8662,60 @@ footer {
   height: auto;
 }
 
+#yt-list {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 2rem;
+  height: auto;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  #yt-list {
+    display: block;
+  }
+}
+
+.yt-title {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.yt-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.yt-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.yt-box {
+  margin-right: 24px;
+  width: calc((100% - 24px) / 2);
+  background-position: center;
+  background-size: cover;
+}
+.yt-box:last-child {
+  margin-right: 0px;
+}
+@media screen and (max-width: 768px) {
+  .yt-box {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .yt-box:last-child {
+    margin-bottom: 0px;
+  }
+}
+
 .church__top {
   margin: auto;
   max-width: 1216px;
@@ -8686,6 +8841,11 @@ footer {
 @media only screen and (max-width:768px) {
   .church-info h2 {
     margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .church-info p {
+    text-align: start;
   }
 }
 .church-info__address span {
@@ -8908,8 +9068,33 @@ footer {
 }
 
 .schedule__notes {
+  margin: auto;
+  max-width: 1216px;
   text-align: center;
   margin-bottom: 40px;
+}
+@media only screen and (max-width:1080px) {
+  .schedule__notes {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .schedule__notes {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .schedule__notes {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .schedule__notes {
+    text-align: start;
+  }
 }
 .schedule__notes p {
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
@@ -9606,6 +9791,28 @@ footer {
     font-size: 20px;
   }
 }
+.propose__contact {
+  margin: auto;
+  max-width: 1010px;
+}
+@media only screen and (max-width:1080px) {
+  .propose__contact {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .propose__contact {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .propose__contact {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .propose__contact__title {
   margin-bottom: 32px;
 }
@@ -9616,6 +9823,12 @@ footer {
 }
 .propose__contact__title h2 {
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .propose__contact__title h2 {
+    text-align: start;
+    padding: 0px 16px;
+  }
 }
 
 .recommend_16 {
@@ -10028,6 +10241,15 @@ footer {
 @media screen and (max-width: 480px) {
   .recommended_point {
     padding: 0px 16px;
+  }
+}
+
+.propose-comment {
+  text-align: start;
+}
+@media screen and (max-width: 480px) {
+  .propose-comment {
+    font-size: 11px;
   }
 }
 
@@ -11107,6 +11329,15 @@ footer {
     margin-bottom: 20px;
   }
 }
+.partyspace__other__text br {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .partyspace__other__text br {
+    display: block;
+  }
+}
+
 .partyspace__other__block {
   margin: auto;
   max-width: 1100px;
@@ -11374,10 +11605,9 @@ footer {
 }
 .title_space p {
   text-align: center;
-  padding: 4px 16px;
+  padding: 0px 16px;
   color: #B24A54;
   border-bottom: 1px solid #B24A54;
-  border-top: 1px solid #B24A54;
   font-size: 14px;
 }
 @media screen and (max-width: 768px) {
@@ -11881,11 +12111,38 @@ footer {
   }
 }
 .dress__top h2 {
+  font-weight: bold;
   margin-bottom: 16px;
 }
 @media only screen and (max-width:768px) {
   .dress__top h2 {
     margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dress__top h2 {
+    text-align: start;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dress__top br {
+    display: none;
+  }
+}
+.dress__top p {
+  margin-bottom: 24px;
+}
+@media only screen and (max-width:768px) {
+  .dress__top p {
+    margin-bottom: 12px;
+  }
+}
+.dress__top p:last-child {
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 768px) {
+  .dress__top p {
+    text-align: start;
   }
 }
 .dress__anchor-link {
@@ -12505,14 +12762,21 @@ footer {
 }
 .resort__top h2 {
   margin-bottom: 32px;
+  font-weight: bold;
 }
 @media only screen and (max-width:768px) {
   .resort__top h2 {
     margin-bottom: 16px;
   }
 }
+@media screen and (max-width: 768px) {
+  .resort__top h2 {
+    text-align: start;
+  }
+}
 .resort__top p {
   margin-bottom: 24px;
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 @media only screen and (max-width:768px) {
   .resort__top p {
@@ -12521,6 +12785,11 @@ footer {
 }
 .resort__top p:last-child {
   margin-bottom: 0px;
+}
+@media screen and (max-width: 768px) {
+  .resort__top p {
+    text-align: start;
+  }
 }
 .resort__contact {
   margin-bottom: 80px;
@@ -12710,6 +12979,16 @@ footer {
     margin-bottom: 12px;
   }
 }
+@media screen and (max-width: 768px) {
+  .resort-info h2 {
+    text-align: start;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resort-info p {
+    text-align: start;
+  }
+}
 .resort-info br {
   display: none;
 }
@@ -12853,11 +13132,11 @@ footer {
   }
 }
 .resort__top h2 {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 @media only screen and (max-width:768px) {
   .resort__top h2 {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 }
 .resort__title {
@@ -13656,6 +13935,7 @@ footer {
   background-position: center;
   background-size: cover;
   margin-top: 100px;
+  margin-right: -112px;
 }
 @media screen and (max-width: 768px) {
   .resort_photo_dcr01 {
@@ -14061,12 +14341,12 @@ footer {
 @media screen and (max-width: 768px) {
   .ctg_btn {
     display: block;
-    padding: 0px;
+    padding: 0 24px;
   }
 }
 .ctg_btn__all {
   border-right: 1px solid #99762F;
-  margin: 0px 40px 0px 0px;
+  margin: 0px 40px 4px 0px;
   width: -moz-fit-content;
   width: fit-content;
   padding-right: 40px;
@@ -14128,7 +14408,6 @@ footer {
 .ctg_btn__child-btn_first {
   padding: 20px 94px;
   border: 1px solid #B24A54;
-  margin: 0px 8px 8px 0px;
   background-color: #fff;
 }
 .ctg_btn__child-btn_first:hover {
@@ -14147,7 +14426,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .ctg_btn__child-btn_first {
-    margin: 0px 4px 4px 0px;
+    margin: 0px;
   }
 }
 .ctg_btn__child-btn_first.active {

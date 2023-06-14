@@ -41,6 +41,12 @@
             @include global.fs-2xl;
             text-align: center;
         }
+        br {
+            display: none;
+            @include global.sp {
+                display: block;
+            }  
+        }
     }
 }
 .qanda_block > li {
@@ -188,12 +194,15 @@
     h2 {
         @include global.fs-2l;
         @include global.mb24;
+        @include global.tab {
+            text-align: start;
+        }    
         @include global.sp {
             font-size: 14px;
         }   
     }
     p {
-        
+          
     }
     br {
         display: none;

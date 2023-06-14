@@ -17,8 +17,8 @@
    &__list {
     padding: 40px 24px;
     @include global.mb32;
-    @include global.tab {
-        padding: 24px;
+    @include global.sp {
+        padding: 0px;
     }
     &__title {
         margin: auto;

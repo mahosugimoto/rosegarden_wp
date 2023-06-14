@@ -48,6 +48,12 @@
     h2 {
         @include global.fs-2l;
         @include global.mb24; 
+        
+    }
+    p {
+        @include global.tab {
+            text-align: start;
+        } 
     }
     &__address {
         @include global.sp {

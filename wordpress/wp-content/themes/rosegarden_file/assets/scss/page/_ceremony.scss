@@ -1,7 +1,9 @@
 @use "../global" as global; 
 
 .ceremony,.after-ceremony {
+
     @include global.mw1216;
+  
     &__anchor-link {
         display: flex;
         justify-content: space-between;
@@ -53,7 +55,7 @@
         @include global.tab {
            display: block;
            padding: 0px;
-           @include global.mb40;
+           @include global.mb80;
         } 
         &:nth-child(2n) {
             flex-direction: row-reverse;

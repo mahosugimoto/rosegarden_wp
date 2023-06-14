@@ -2,7 +2,11 @@
 
 .schedule {
     &__notes {
+        @include global.mw1216;
         text-align: center;
+        @include global.tab {
+            text-align: start;
+        }  
         p {
             font-family: global.$font-ym;
         }

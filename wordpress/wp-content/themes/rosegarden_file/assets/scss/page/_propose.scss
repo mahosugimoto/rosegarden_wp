@@ -56,11 +56,15 @@
         }
     }
     &__contact {
+        @include global.mw1010;
         &__title {
             @include global.mb32;  
             h2 {
                 text-align: center;
-
+                @include global.tab {
+                    text-align: start;
+                    padding: 0px 16px;
+                }   
             }
         }
     }
@@ -291,4 +295,11 @@
     @include global.sp {
        padding: 0px 16px;
     }   
+}
+
+.propose-comment {
+    text-align: start;
+    @include global.sp {
+       font-size: 11px;
+     }   
 }

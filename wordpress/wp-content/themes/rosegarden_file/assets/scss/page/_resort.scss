@@ -7,12 +7,20 @@
         text-align: center;
         h2 {
        @include global.mb32;
+        font-weight: bold;
+        @include global.tab{ 
+           text-align: start; 
+         } 
         }
         p {
             @include global.mb24;
+            font-family: global.$font-ym;
             &:last-child {
                 margin-bottom: 0px;
             } 
+            @include global.tab{ 
+                text-align: start; 
+              } 
         }
     }
     &__contact {
@@ -109,8 +117,16 @@
     @include global.tab {
         padding: 0px 16px;
     } 
-    h2 {
+    h2 { 
         @include global.mb24; 
+        @include global.tab {
+            text-align: start;
+          }  
+    }
+    p {
+        @include global.tab {
+            text-align: start;
+          }  
     }
     br {
         display: none;
@@ -191,7 +207,8 @@
         @include global.mb64;
         text-align: center;
         h2 {
-       @include global.mb16;
+       @include global.mb32;
+
         }
         p {
             
@@ -201,7 +218,6 @@
        position: relative;
        @include global.mb160; 
         @include global.mw1216;
-
         @include global.tab{ 
             margin-bottom: 0px; 
          } 
@@ -715,6 +731,7 @@
         background-position: center;
         background-size: cover;
         margin-top: 100px;
+        margin-right: -112px;
         @include global.tab {
             height: 160px;
             margin-right: -40px;

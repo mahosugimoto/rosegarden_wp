@@ -4,7 +4,7 @@
 .church_event {
     position: relative;
     @include global.sp {
-        padding:40px 16px 8px ;
+        padding:40px 16px ;
     } 
    &__list {
     background-color: global.$bg-main;
@@ -27,6 +27,9 @@
 }
 .liststyle_church_event2 {
     @include global.mb40;
+    @include global.sp {
+        margin-bottom: 32px;
+    }
     &__block {
         display: flex; 
         padding: 24px;
@@ -50,7 +53,8 @@
             @include global.sp {
                 max-width: 98px;
                 min-width: 98px;
-                height:98px;
+                height: auto;
+                min-height:98px;
             } 
         }
         &__text {
@@ -70,7 +74,9 @@
                 -webkit-box-orient: vertical;
                 -webkit-line-clamp: 2;
                 @include global.mb24; 
-               
+                @include global.sp {
+                    margin-bottom: 4px;
+                }  
             }
         }
         &:hover {

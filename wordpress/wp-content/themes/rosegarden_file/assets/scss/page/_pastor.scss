@@ -130,19 +130,17 @@
    } 
 }
 .pastor_blog02 {
-    @include global.mw1010; 
-}
-.pastor_flex {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    @include global.tab {
-        display: block;
-    }
-}
-.pastor_blogrmation {
     width: 100%;
-    max-width: 850px;
+    margin: 0px 0px 0px 0px;
+}
+.pastor_blog_wrapper {
+  
+}
+.pastor_blog_innerwrap {
+    @include global.mw850;
+    @include global.tab {
+        padding: 0px;
+    } 
 }
 .pastor_sidebar {
     width: 100%;
@@ -150,6 +148,9 @@
     padding-left: 24px;
     border-left: 1px solid global.$point-main;
     margin-left: 80px;
+    @include global.tab {
+        margin-left: 40px;  
+    }
     @include global.tab {
         margin: auto;
         margin-top: 80px;
@@ -175,6 +176,7 @@
         }    
     }
 }
+//ウィジェットカスタマイズ
 .widget-widget_archive {
     a {
         @include global.fs-s; 
@@ -206,4 +208,5 @@
     @include global.fs-xxs;
     @include global.mb16;
 }
+
 

@@ -113,8 +113,7 @@ Template Name: トップ
                         <br>信仰や夫婦の愛が時と共に色褪せることのないように、
                         <br>教会はその象徴であってほしい。
                     </p>
-                    <p>そんな想いが込められたローズガーデンクライスト教会
-                        <br>には数々のこだわりに満ちています。
+                    <p>そんな想いが込められたローズガーデンクライスト教会<br>は数々のこだわりに満ちています。
                     </p>
                 </div>
                 <div class="blockstyle01_text__contents__btn">
@@ -148,14 +147,14 @@ $topAdvs = topAdvertisements();
 
 
 <!-- ブライダルフェア -->
-<div class="iframe-wrapper1">
-  <iframe src="https://rosegarden-ch.official-wedding.net/fair/parts/release2/recommend_and_calendar_side_by_side" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<iframe id="connect-parts2" src="https://rosegarden-ch.official-wedding.net/fair/parts/release2/reco_and_cal_and_content?parts_id=connect-parts2" width="100%" frameborder="0" scrolling="no" style="margin-top:0px;"></iframe>
+<script type="text/javascript" src="https://rosegarden-ch.official-wedding.net/release2/asset/js/parts-util.js"></script>
 
-<!-- プラン-->
-<div class="iframe-wrapper2">
-  <iframe src="https://rosegarden-ch.official-wedding.net/plan/parts/recommend" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<!-- プラン -->
+<iframe id="connect-parts1" src="https://rosegarden-ch.official-wedding.net/plan/parts/recommend?parts_id=connect-parts1" width="100%" frameborder="0" scrolling="no" style="margin-top:0px;"></iframe>
+<script type="text/javascript" src="https://rosegarden-ch.official-wedding.net/release2/asset/js/parts-util.js"></script>
+
+<div class="m80"></div>
 
 <!-- customer voice -->
 <div class="top_cv">
@@ -445,7 +444,7 @@ $topAdvs = topAdvertisements();
     <div class="top_info__other">
         <!-- 他のページの写し -->
         <div class="top_other_page__wrap2">
-            <a href="#">
+            <a href="<?php echo get_page_link(36); ?>">
                 <div class="top_other_page__block2">
                     <div class="top_other_page__dcr-left">
                         <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/qa_btn-dcr_left.png)" alt="">
@@ -466,9 +465,8 @@ $topAdvs = topAdvertisements();
                 </div>
             </a>
         </div>
-
         <div class="top_other_page__wrap">
-            <a href="#">
+            <a href="<?php echo get_page_link(38); ?>">
                 <div class="top_other_page__block">
                     <div class="top_other_page__block__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/top_guest.jpg)">
                     </div>
@@ -484,7 +482,7 @@ $topAdvs = topAdvertisements();
                     </div>
                 </div>
             </a>
-            <a href="#">
+            <a href="<?php echo get_page_link(40); ?>">
                 <div class="top_other_page__block">
                     <div class="top_other_page__block__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/top_floorguide.jpg)">
                     </div>

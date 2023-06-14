@@ -4,7 +4,7 @@ Template Name: 牧師ブログ
 */
 get_header();
 ?><?php include('header_icon.php'); ?>
-<?php $pastoBlogId = 48;?>
+<?php $pastoBlogId = 48; ?>
 
 <!-- パンクズ_sp -->
 <?php custom_breadcrumbs('sp'); ?>
@@ -25,10 +25,10 @@ get_header();
 <!-- パンクズ_pc -->
 <?php custom_breadcrumbs('pc'); ?>
 
-<!-- お知らせコンテンツ -->
-<div class="pastor_flex">
-    <div class="pastor_blogrmation">
-        <!-- pastor_blogrmation -->
+
+<!-- テスト -->
+<div class="pastor_blog_wrapper">
+    <div class="pastor_blog_innerwrap">
         <div class="pastor_blog">
             <div class="pastor_blog__list">
                 <div class="lace-dcr_top">
@@ -70,34 +70,29 @@ get_header();
                 </div>
             </div>
         </div>
-        <!-- ページネーション -->
-        <?php
-        wp_reset_postdata();
-        $commonArgs['posts_per_page'] = -1;
-        $query = new WP_Query($commonArgs);
+        <div class="pastor_blog_pagenation">
+            <!-- ページネーション -->
+            <?php
+            wp_reset_postdata();
+            $commonArgs['posts_per_page'] = -1;
+            $query = new WP_Query($commonArgs);
 
-        // Get the count of posts that match the query
-        $total_post = $query->found_posts;
-        $num_pages = ceil($total_post / $posts_per_page);
+            // Get the count of posts that match the query
+            $total_post = $query->found_posts;
+            $num_pages = ceil($total_post / $posts_per_page);
 
-        $args = array(
-            'total' => $num_pages,
-            'found_posts' => $total_post
-        );
-        echo custom_pagination($args);
-        ?>
-          <div class="pastor_sidebar">
-        <div class="pastor_sidebar__block">
-            <?php get_template_part('pastor', 'sidebar'); ?>
-        </div>
-        <div class="pastor_sidebar__block">
-            <?php get_template_part('pastor', 'sidebar'); ?>
-        </div>
-        <div class="pastor_sidebar__block">
-            <?php get_template_part('pastor', 'sidebar'); ?>
+            $args = array(
+                'total' => $num_pages,
+                'found_posts' => $total_post
+            );
+            echo custom_pagination($args);
+            ?>
         </div>
     </div>
+    <div class="pastor_sidebar">
+        <?php get_template_part('pastor', 'sidebar'); ?>
     </div>
 </div>
+
 <div class="m80"></div>
 <?php get_footer(); ?>

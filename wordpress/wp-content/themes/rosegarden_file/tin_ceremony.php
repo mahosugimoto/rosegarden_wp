@@ -7,6 +7,7 @@ get_header();
 
 <?php require_once('breadcrumb.php');?>
 
+
 <!-- 錫婚式コンテンツ -->
 
 <!-- 錫婚式スケジュール -->

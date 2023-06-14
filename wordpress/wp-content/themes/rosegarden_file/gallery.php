@@ -30,10 +30,21 @@ $img = get_post_meta($galleryPostId, 'image_pc', true);
 
 <?php require_once('breadcrumb_other.php'); ?>
 
+<?php
+$current_category = get_queried_object();
+$category_slug = '';
+$category_id = '';
+
+if ($current_category instanceof WP_Term) {
+    $category_slug = $current_category->slug;
+    $category_id = $current_category->term_id;
+}
+?>
+
 
 <?php
 // SCF::get_post_meta($post->ID, '設定した名前', 画像サイズ)
-$img = get_post_meta($post->ID, 'image_pc', true);
+$img = get_post_meta($galleryPostId, 'image_pc', true);
 ?>
 <!-- SP BG -->
 <div class="page-background_sp" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php echo wp_get_attachment_url($img) ?>)">
@@ -51,16 +62,6 @@ $img = get_post_meta($post->ID, 'image_pc', true);
     </div>
 </div>
 
-<?php
-$current_category = get_queried_object();
-$category_slug = '';
-$category_id = '';
-
-if ($current_category instanceof WP_Term) {
-    $category_slug = $current_category->slug;
-    $category_id = $current_category->term_id;
-}
-?>
 
 <!-- ギャラリー -->
 <!-- カテゴリボタン -->
@@ -69,7 +70,7 @@ if ($current_category instanceof WP_Term) {
         <div class="ctg_btn">
             <div class="ctg_btn__all">
                 <a href="<?php echo the_permalink($galleryPostId); ?>">
-                    <button class="ctg_btn__child-btn <?php echo (empty($category_id)) ? 'active' : ''; ?>" data-category="all">
+                    <button class="ctg_btn__child-btn_first <?php echo (empty($category_id)) ? 'active' : ''; ?>" data-category="all">
                         <p>ALL</p>
                     </button>
                 </a>
@@ -153,19 +154,41 @@ if ($current_category instanceof WP_Term) {
     </div>
 </div>
 
-<!-- wp_カスタムhtml-->
+<!-- Youtube -->
 
-<?php while (have_posts()) : the_post(); ?>
-    <?= get_the_content(); ?>
-    <!-- wp_カスタムhtml-->
+<div class="gallery__movie">
+    <div class="gallery__movie__title">
+        <div class="page-title_02">
+            <div class="page-title_02__eng">
+                <p>MOVIE GALLERY</p>
+            </div>
+            <div class="page-title_02__jp">
+                <p>動画ギャラリー</p>
+            </div>
+        </div>
+    </div>
+    <a name="movie"></a>
+    <section id="yt-list">
+        <?php
+        $ytfield = scf::get_option_meta('youtube_posts', 'youtube_links');
+        foreach ($ytfield as $fields) {
+            $ytURL = $fields['youtube_link'];
+            $ytID = mb_substr($ytURL, mb_strrpos($ytURL, '/') + 1);
+        ?>
 
-<?php endwhile; ?>
+            <div class="yt-box">
+                <div class="yt-wrapper">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/<?php echo $ytID; ?>?playsinline=1&loop=1&enablejsapi=1&playlist=<?php echo $ytID; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="yt-title"><?php echo $fields['youtube_post_title']; ?></p>
+            </div>
 
+        <?php } ?>
 
-<div class="m80"></div>
+    </section>
+</div>
 
 <!-- Instagram feed -->
-<!-- 動画ギャラリー -->
 <div class="gallery">
     <div class="gallery__movie">
         <div class="gallery__movie__title">

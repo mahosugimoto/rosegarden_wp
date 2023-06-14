@@ -138,11 +138,11 @@
         } 
     }
     &__banner {
-        width: 380px; 
+        width: 500px; 
         margin: auto;
         @include global.mb80;
         @include global.sp {
-            width: 256px;
+            width: 299px;
         } 
         img {
             width: 100%;

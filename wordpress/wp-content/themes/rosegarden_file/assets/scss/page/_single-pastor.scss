@@ -1,9 +1,11 @@
 @use "../global" as global; 
 
 .pastor_blog_wrap {
+    display: flex;
  }
 
 .pastor_blog {
+    width: 100%;
     max-width: 808px;
     margin-left: 112px;
     &__btn {
@@ -19,4 +21,14 @@
     }
 }
 
-
+.pastor-single_wrap {
+    display: flex;
+    padding: 0px 112px;
+    @include global.pc {
+        padding: 0px 40px;
+    } 
+    @include global.tab {
+        padding: 0px 24px;
+        display: block;
+    } 
+}

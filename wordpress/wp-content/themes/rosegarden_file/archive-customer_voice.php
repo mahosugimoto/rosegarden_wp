@@ -72,7 +72,7 @@ $img = get_post_meta($voicePostID, 'image_sp', true);
     </div>
 </div>
 
-<!-- voice カテゴリ絞り込み-->
+<!-- カテゴリボタン-->
 <div class="church__ctg">
     <div class="ctg_btn">
         <div class="ctg_btn__all">

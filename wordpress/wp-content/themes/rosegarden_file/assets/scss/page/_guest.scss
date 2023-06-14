@@ -18,6 +18,29 @@
     }
 }
 
+.guest {
+    @include global.mw1216; 
+        @include global.tab {
+            padding: 0px;
+        } 
+    &__anchor-link {
+        display: flex;
+        justify-content: space-between;
+        max-width: 720px;
+        margin: auto;
+        a {
+            @include global.sp {
+                width: 50%
+            }  
+        }
+        @include global.mb40;
+        @include global.tab {
+            padding: 0px 32px;
+            flex-wrap: wrap;
+        } 
+    }
+}
+
 .guest-contents_cover {
     position: relative;
     background-color: global.$bg-main;
@@ -98,6 +121,9 @@
     h2 {
         @include global.fs-2l;
         @include global.mb24; 
+        @include global.tab {
+           text-align: start;
+        }   
     }
     &__address {
         @include global.sp {

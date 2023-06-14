@@ -7200,6 +7200,7 @@ footer {
 }
 .liststyle_pastor_blog2__block {
   padding: 24px;
+  overflow: hidden;
   background-color: #fff;
   margin-bottom: 24px;
 }
@@ -7208,17 +7209,27 @@ footer {
     margin-bottom: 12px;
   }
 }
-@media screen and (max-width: 480px) {
-  .liststyle_pastor_blog2__block {
-    padding: 16px;
-  }
-}
 .liststyle_pastor_blog2__block__text {
   padding-left: 24px;
 }
 @media screen and (max-width: 480px) {
   .liststyle_pastor_blog2__block__text {
-    padding-left: 16px;
+    padding-left: 0px;
+  }
+}
+.liststyle_pastor_blog2__block__text pre {
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  margin-right: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+@media only screen and (max-width:768px) {
+  .liststyle_pastor_blog2__block__text pre {
+    font-size: 12px;
   }
 }
 .liststyle_pastor_blog2__block__text p {

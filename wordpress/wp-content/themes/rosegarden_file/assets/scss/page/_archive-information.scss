@@ -30,18 +30,24 @@
     &:last-child {
         margin-bottom: 0px;
     }
-    &__block {
+    &__block { 
         padding: 24px;
+        overflow: hidden;
         background-color: #fff;
         @include global.mb24;
-        @include global.sp {
-            padding: 16px;
-        }
         &__text {
             padding-left:24px;
             @include global.sp {
-                padding-left:16px;
+                padding-left:0px;
             } 
+            pre {
+                @include global.fs-s;
+                margin-right: 8px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
             p {
                 @include global.fs-s;
                 margin-right: 8px;
@@ -83,11 +89,9 @@
 }
 
 //教会ブログ持ち出し分
-
 .moz-quote-pre {
     @include global.fs-m; 
 }
-
 
 
 .info {

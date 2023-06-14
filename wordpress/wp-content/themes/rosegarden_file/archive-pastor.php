@@ -55,7 +55,7 @@ get_header();
                                         <p><?= get_the_date() ?></p>
                                     </div>
                                     <h3><?= get_the_title() ?></h3>
-                                    <p><?= get_the_content() ?></p>
+                                    <p><?= custom_post_excerpt() ?></p>
                                 </div>
                             </div>
                         </a>

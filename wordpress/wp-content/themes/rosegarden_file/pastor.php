@@ -69,7 +69,7 @@ get_header();
                             </div>
                             <h3><?= get_the_title() ?></h3>
                             <div class="liststyle_pastor_blog2__block__text__content">
-                                <?= get_the_content() ?>
+                                <?= custom_post_excerpt() ?>
                             </div>
                         </div>
                     </div>

@@ -479,7 +479,7 @@ if (!function_exists('custom_pagination')) {
             'prev_text'          => __('<button class="page-btn_pre"><img src="' . get_template_directory_uri() . 'assets/img/dcr/arrow_prev.png" alt="prev"><p>前のページ</p></button>'),
             'next_text'          => __('<button class="page-btn_next"><p>次のページ</p><img src="' . get_template_directory_uri() . 'assets/img/dcr/arrow_next.png" alt="next"></button>'),
             'end_size'           => 1,
-            'mid_size'           => 5,
+            'mid_size'           => wp_is_mobile() ? 1 : 3,
             'type'               => 'plain',
             'add_args'           => array(), // Array of query args to add.
             'add_fragment'       => '',

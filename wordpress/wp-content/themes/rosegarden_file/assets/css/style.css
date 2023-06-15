@@ -1315,19 +1315,40 @@ p {
     margin-bottom: 4px;
   }
 }
-.article-details__contents h3 {
+.article-details__contents h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
   padding: 10px;
   background-color: #EBE8E3;
-  margin-bottom: 24px;
+}
+@media only screen and (max-width:768px) {
+  .article-details__contents h2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .article-details__contents h2 {
+    margin-bottom: 8px;
+  }
+}
+.article-details__contents h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 @media only screen and (max-width:768px) {
   .article-details__contents h3 {
-    margin-bottom: 12px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .article-details__contents h3 {
+    margin-bottom: 8px;
   }
 }
 .article-details__contents h4 {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   margin-bottom: 24px;
-  font-size: 18px;
+  font-size: 20px;
 }
 @media only screen and (max-width:768px) {
   .article-details__contents h4 {
@@ -1336,7 +1357,7 @@ p {
 }
 @media only screen and (max-width:768px) {
   .article-details__contents h4 {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .article-details__contents p {
@@ -1355,7 +1376,8 @@ p {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 .article-details__contents img {
-  width: 100%;
+  text-align: center;
+  margin: auto;
   margin-bottom: 24px;
 }
 @media only screen and (max-width:768px) {
@@ -1948,6 +1970,11 @@ p {
 
 .other_box_link a {
   display: block;
+}
+
+.wp-block-image {
+  margin: auto;
+  text-align: center;
 }
 
 footer {
@@ -7626,6 +7653,17 @@ footer {
     margin-bottom: 4px;
   }
 }
+.liststyle_church_event2__block__text h4 {
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  margin-right: 8px;
+}
+@media only screen and (max-width:768px) {
+  .liststyle_church_event2__block__text h4 {
+    font-size: 12px;
+  }
+}
 .liststyle_church_event2__block:hover {
   opacity: 0.5;
   transition: 0.5s;
@@ -7648,6 +7686,13 @@ footer {
 .liststyle_church_event2__btn {
   display: flex;
   justify-content: center;
+}
+
+.church_event_comment {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .pastor_intro__block {
@@ -11357,6 +11402,9 @@ footer {
     display: block;
   }
 }
+.partyspace__contents__photo__slider {
+  position: relative;
+}
 .partyspace__contents__item {
   width: calc((100% - 48px) / 3);
   height: 300px;
@@ -11778,6 +11826,10 @@ footer {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+
+.partyspace_photo.slick-track {
+  height: 300px;
 }
 
 .photo_wedding {
@@ -12248,8 +12300,13 @@ footer {
   }
 }
 .dress__top h2 {
-  font-weight: bold;
+  font-size: 28px;
   margin-bottom: 16px;
+}
+@media only screen and (max-width:768px) {
+  .dress__top h2 {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width:768px) {
   .dress__top h2 {
@@ -12258,12 +12315,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .dress__top h2 {
-    text-align: start;
-  }
-}
-@media screen and (max-width: 768px) {
-  .dress__top br {
-    display: none;
+    font-weight: bold;
   }
 }
 .dress__top p {
@@ -14619,6 +14671,12 @@ footer {
   text-align: center;
   display: flex;
 }
+.pagination a {
+  margin-right: 8px;
+}
+.pagination a:last-child {
+  margin-right: 0px;
+}
 
 .pagination-list {
   display: inline-block;
@@ -14669,19 +14727,21 @@ footer {
 }
 
 .page-item {
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 48px;
   height: 48px;
   border: 1px solid #99762F;
-  margin-right: 8px;
 }
-.page-item:last-child {
-  margin-right: 0px;
-}
+
 .page-item.number {
   background-color: #fff;
+  margin-right: 8px;
+}
+.page-item.number:last-child {
+  margin-right: 0px;
 }
 
 .page-item.number.navi-active {

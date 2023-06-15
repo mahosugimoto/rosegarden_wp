@@ -401,6 +401,12 @@ p {
     margin-top: 20px;
     text-align: center;
     display: flex;
+    a {
+        margin-right:8px ;
+        &:last-child {
+            margin-right:0px ;
+        }
+    }
 }
 
 .pagination-list {
@@ -450,21 +456,22 @@ p {
    justify-content: center;
 }
 .page-item {
+    background-color:#fff;
     display: flex;
     justify-content: center;
     align-items: center;
    width: 48px;
    height: 48px;
     border: 1px solid global.$point-main;
+   
+  
+}
+.page-item.number {
+    background-color:#fff;
     margin-right:8px ;
     &:last-child {
         margin-right:0px ;
     }
-    a {
-    }
-}
-.page-item.number {
-    background-color: #fff;
 }
 .page-item.number.navi-active {
     background-color: global.$point-main;

@@ -78,6 +78,10 @@
                     margin-bottom: 4px;
                 }  
             }
+            h4 {
+                @include global.fs-s;
+                margin-right: 8px; 
+            }
         }
         &:hover {
             @include global.main-hover;
@@ -96,4 +100,10 @@
         display: flex;
         justify-content: center;
     }
+}
+.church_event_comment {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    align-items: center;
 }

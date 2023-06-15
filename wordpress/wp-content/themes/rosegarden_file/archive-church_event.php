@@ -40,8 +40,8 @@ if ($current_category instanceof WP_Term) {
 <div class="church__ctg">
     <div class="ctg_btn">
         <div class="ctg_btn__all">
-            <a href="<?php echo the_permalink($eventPostId);?>">
-                <button class="ctg_btn__child-btn_first <?php echo (empty($category_id)) ? 'active' : '';?>" data-category="all">
+            <a href="<?php echo the_permalink($eventPostId); ?>">
+                <button class="ctg_btn__child-btn_first <?php echo (empty($category_id)) ? 'active' : ''; ?>" data-category="all">
                     <p>ALL</p>
                 </button>
             </a>
@@ -52,10 +52,10 @@ if ($current_category instanceof WP_Term) {
             $terms = get_terms($taxonomy_name);
             foreach ($terms as $term) :
             ?>
-            <a href="<?php echo get_term_link($term, $taxonomy_name)?>">
-            <button class="ctg_btn__child-btn <?php echo ($category_id == $term->term_id) ? 'active' : '';?>" data-category="<?php echo esc_attr($term->slug);?>"><?php echo $term->name;?></button>
-            </a>
-            <?php endforeach;?>
+                <a href="<?php echo get_term_link($term, $taxonomy_name) ?>">
+                    <button class="ctg_btn__child-btn <?php echo ($category_id == $term->term_id) ? 'active' : ''; ?>" data-category="<?php echo esc_attr($term->slug); ?>"><?php echo $term->name; ?></button>
+                </a>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
@@ -117,8 +117,10 @@ if ($current_category instanceof WP_Term) {
                                 ?>
                             </div>
                             <h3><?= get_the_title() ?></h3>
-                            <p><?php echo SCF::get('church_event_title'); ?></p>
-                            <p><?php echo SCF::get('church_event_text'); ?></p>
+                            <div class="church_event_comment">
+                                <p><?php echo SCF::get('church_event_title'); ?></p>
+                                <p><?php echo SCF::get('church_event_text'); ?></p>
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -128,19 +130,19 @@ if ($current_category instanceof WP_Term) {
             ?>
         </div>
         <!-- ページネーション -->
-        <?php 
+        <?php
         if (empty($category_slug)) {
             $total_post = wp_count_posts($post_type)->publish;
         } else {
             $total_post = get_term($category_id)->count;
         }
         $num_pages = ceil($total_post / $posts_per_page);
-        
+
         $args = array(
             'total' => $num_pages,
             'found_posts' => $total_post
         );
-        echo custom_pagination($args); 
+        echo custom_pagination($args);
         ?>
         <div class="lace-dcr_bottom">
             <div class="lace-dcr_bottom__img">

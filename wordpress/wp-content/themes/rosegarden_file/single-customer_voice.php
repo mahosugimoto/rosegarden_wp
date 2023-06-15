@@ -47,7 +47,7 @@
                     ?>
                 </div>
                 <div class="cv-details__category__season">
-                    <p>季節：</p>
+                    <p>季節</p>
                     <?php
                     $taxonomy_name = "customer_voice-tag";
                     $this_terms = get_the_terms($post->ID, $taxonomy_name);

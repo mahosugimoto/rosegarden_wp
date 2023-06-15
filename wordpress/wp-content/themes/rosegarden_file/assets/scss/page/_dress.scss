@@ -6,17 +6,14 @@
         @include global.mb64;
         text-align: center;
         h2 {
-            font-weight: bold;
+            @include global.fs-2xl;    
             @include global.mb16;
-      
-       @include global.tab{ 
-        text-align: start; 
+            @include global.tab{  
+            font-weight: bold;
       } 
     }
       br {
-        @include global.tab{ 
-            display: none;
-          } 
+      
       }
        
         p {@include global.mb24;

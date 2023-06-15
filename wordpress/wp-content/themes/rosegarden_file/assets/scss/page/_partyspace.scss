@@ -19,6 +19,9 @@
             justify-content: center;
             @include global.sp {
                 display: block;
+            } 
+            &__slider {
+                position: relative;
             }
         }
         &__item {
@@ -311,4 +314,8 @@
 }
 .partyspace__other__notes {
     @include global.mw1216;  
+}
+
+.partyspace_photo.slick-track {
+    height: 300px;
 }

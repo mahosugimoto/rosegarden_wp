@@ -564,7 +564,7 @@ if (!function_exists('custom_pagination')) {
         for ($n = 1; $n <= $total; $n++) :
             if ($n == $current) :
                 $page_links[] = sprintf(
-                    '<li class="page-item number navi-active"><a href="javascript:void(0)" class="page-link">%s</a></li>',
+                    '<a href="javascript:void(0)" class="page-link"><li class="page-item number navi-active">%s</li></a>',
                     $args['before_page_number'] . number_format_i18n($n) . $args['after_page_number']
                 );
 
@@ -579,7 +579,7 @@ if (!function_exists('custom_pagination')) {
                     $link .= $args['add_fragment'];
 
                     $page_links[] = sprintf(
-                        '<li class="page-item number"><a href="%s">%s</a></li>',
+                        '<a href="%s"><li class="page-item number">%s</li></a>',
                         /** This filter is documented in wp-includes/general-template.php */
                         esc_url(apply_filters('paginate_links', $link)),
                         $args['before_page_number'] . number_format_i18n($n) . $args['after_page_number']

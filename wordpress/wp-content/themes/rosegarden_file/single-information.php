@@ -2,7 +2,7 @@
 <?php include('header_icon.php'); ?>
 
 <!-- パンクズ_sp -->
-<?php custom_breadcrumbs('sp');?>
+<?php custom_breadcrumbs('sp'); ?>
 
 <!-- タイトル -->
 <div class="page-title_03">
@@ -18,7 +18,7 @@
 </div>
 
 <!-- パンクズ_pc -->
-<?php custom_breadcrumbs('pc');?>
+<?php custom_breadcrumbs('pc'); ?>
 
 <?php while (have_posts()) : the_post(); ?>
 
@@ -42,13 +42,13 @@
             <div class=info_post-details__title>
                 <h2><?= get_the_title() ?></h2>
             </div>
-            <?php 
-            if(has_post_thumbnail()): 
+            <?php
+            if (has_post_thumbnail()) :
                 $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'full');
             ?>
-            <div class="info_post-details__thumbnail" style="background-image: url(<?php echo $thumbnail;?>);">
-            </div>
-            <?php endif;?>
+                <div class="info_post-details__thumbnail" style="background-image: url(<?php echo $thumbnail; ?>);">
+                </div>
+            <?php endif; ?>
         </div>
         <!-- 記事詳細__本文 -->
         <div class="article-details">
@@ -56,6 +56,14 @@
                 <?= get_the_content(); ?>
             </div>
         </div>
+    </div>
+    <div class="m80"></div>
+    <div class="info_post_btn">
+        <a href="<?php echo get_permalink(7783); ?>">
+            <button class="page-btn">
+                <p>一覧に戻る</p>
+            </button>
+        </a>
     </div>
     <div class="m80"></div>
 <?php endwhile; ?>

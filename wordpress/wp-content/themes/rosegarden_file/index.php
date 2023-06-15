@@ -46,6 +46,33 @@ Template Name: トップ
 </script>
 <div class="fv">
     <div class="fv_slider-wrap">
+        <div class="scroll-dcr">
+            <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/scroll.png" alt="">
+        </div>
+        <div class="fv_slider">
+            <?php
+            $repeat_group = SCF::get('top-fv');
+            foreach ($repeat_group as $fields) {
+                $text_id = $fields['top-fv_title'];
+                $image_id = $fields['top-fv_image']; // フィールドの値を取得
+                $image_url = wp_get_attachment_image_url($image_id, 'full'); // 添付ファイルの画像のURLを取得
+            ?>
+                <div class="fv_slide1" style="background-image: url('<?php echo esc_url($image_url); ?>');">
+                    <div class="fv_catch-copy">
+                        <h1><?php echo esc_html($text_id); ?></h1>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+        <div class="slick-next"></div>
+    </div>
+</div>
+
+<!-- FV slider 
+<div class="fv">
+    <div class="fv_slider-wrap">
         <div class="fv_catch-copy">
             <h1>札幌市を一望できる<br>伏見の丘の上の結婚式場</h1>
             <h1>本物の教会で行う<br>最高のウェディング</h1>
@@ -61,6 +88,7 @@ Template Name: トップ
         <div class="slick-next"></div>
     </div>
 </div>
+-->
 
 <!-- concept -->
 <div class="top_concept">
@@ -238,74 +266,26 @@ $topAdvs = topAdvertisements();
 <!-- other page -->
 
 <div class="top_other-page">
-    <div class="other-page-wrap1">
-        <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/top_weddingparty.jpg);">
-            <a href="<?php echo get_page_link(56); ?>" class="link">
-                <div class="other-page__title">
-                    <div class="page-title_07">
-                        <div class="page-title_07__eng">
-                            <p>WEDDING <br>PARTY</p>
-                        </div>
-                        <div class="page-title_07__jp">
-                            <p>披露宴</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="other-page__arrow">
-                    <div class="arrow_icon">
-                        <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/top_dress.jpg);">
-            <a href="<?php echo get_page_link(26); ?>" class="link">
-                <div class="other-page__title">
-                    <div class="page-title_07">
-                        <div class="page-title_07__eng">
-                            <p>WEDDING DRESS</p>
-                        </div>
-                        <div class="page-title_07__jp">
-                            <p>ウエディングドレス</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="other-page__arrow">
-                    <div class="arrow_icon">
-                        <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/top_resortwedding.jpg);">
-            <a href="<?php echo get_page_link(30); ?>" class="link">
-                <div class="other-page__title">
-                    <div class="page-title_07">
-                        <div class="page-title_07__eng">
-                            <p>RESORT<br> WEDDING</p>
-                        </div>
-                        <div class="page-title_07__jp">
-                            <p>リゾート ウエディング</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="other-page__arrow">
-                    <div class="arrow_icon">
-                        <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
-                    </div>
-                </div>
-            </a>
-        </div>
 
-        <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/top_ceremony.jpg);">
-            <a href="<?php echo get_page_link(28); ?>" class="link">
+    <div class="other-page-wrap1">
+    <?php
+$repeat_group = SCF::get('other-page');
+foreach ($repeat_group as $fields) {
+    $text1_id = $fields['other-page_en-title']; // フィールドの値を取得
+    $text2_id = $fields['other-page_jp-title']; // フィールドの値を取得
+    $text3_id = $fields['other-page_link']; // フィールドの値を取得
+    $image_id2 = $fields['other-page_img']; // フィールドの値を取得
+    $image_url2 = wp_get_attachment_image_url($image_id2, 'full'); // 添付ファイルの画像のURLを取得
+    ?>
+        <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<?php echo esc_url($image_url2); ?>');">
+            <a href="<?php echo esc_html($text3_id); ?>" class="link">
                 <div class="other-page__title">
                     <div class="page-title_07">
                         <div class="page-title_07__eng">
-                            <p>CEREMONY</p>
+                            <p><?php echo esc_html($text1_id); ?></p>
                         </div>
                         <div class="page-title_07__jp">
-                            <p>挙式</p>
+                            <p><?php echo esc_html($text2_id); ?></p>
                         </div>
                     </div>
                 </div>
@@ -316,26 +296,92 @@ $topAdvs = topAdvertisements();
                 </div>
             </a>
         </div>
-        <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/top_gallery.jpg);">
-            <a href="<?php echo get_page_link(8189); ?>" class="link">
-                <div class="other-page__title">
-                    <div class="page-title_07">
-                        <div class="page-title_07__eng">
-                            <p>GALLERY</p>
-                        </div>
-                        <div class="page-title_07__jp">
-                            <p>ギャラリー</p>
-                        </div>
-                    </div>
+        <?php
+}
+?>
+
+</div>
+<!--  
+<div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/top_dress.jpg);">
+    <a href="<?php echo get_page_link(26); ?>" class="link">
+        <div class="other-page__title">
+            <div class="page-title_07">
+                <div class="page-title_07__eng">
+                    <p>WEDDING DRESS</p>
                 </div>
-                <div class="other-page__arrow">
-                    <div class="arrow_icon">
-                        <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
-                    </div>
+                <div class="page-title_07__jp">
+                    <p>ウエディングドレス</p>
                 </div>
-            </a>
+            </div>
         </div>
-    </div>
+        <div class="other-page__arrow">
+            <div class="arrow_icon">
+                <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
+            </div>
+        </div>
+    </a>
+</div>
+<div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/top_resortwedding.jpg);">
+    <a href="<?php echo get_page_link(30); ?>" class="link">
+        <div class="other-page__title">
+            <div class="page-title_07">
+                <div class="page-title_07__eng">
+                    <p>RESORT<br> WEDDING</p>
+                </div>
+                <div class="page-title_07__jp">
+                    <p>リゾート ウエディング</p>
+                </div>
+            </div>
+        </div>
+        <div class="other-page__arrow">
+            <div class="arrow_icon">
+                <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/top_ceremony.jpg);">
+    <a href="<?php echo get_page_link(28); ?>" class="link">
+        <div class="other-page__title">
+            <div class="page-title_07">
+                <div class="page-title_07__eng">
+                    <p>CEREMONY</p>
+                </div>
+                <div class="page-title_07__jp">
+                    <p>挙式</p>
+                </div>
+            </div>
+        </div>
+        <div class="other-page__arrow">
+            <div class="arrow_icon">
+                <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
+            </div>
+        </div>
+    </a>
+</div>
+<div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/top_gallery.jpg);">
+    <a href="<?php echo get_page_link(8189); ?>" class="link">
+        <div class="other-page__title">
+            <div class="page-title_07">
+                <div class="page-title_07__eng">
+                    <p>GALLERY</p>
+                </div>
+                <div class="page-title_07__jp">
+                    <p>ギャラリー</p>
+                </div>
+            </div>
+        </div>
+        <div class="other-page__arrow">
+            <div class="arrow_icon">
+                <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
+            </div>
+        </div>
+    </a>
+</div>
+</div>
+-->
+
 </div>
 
 <!-- about church -->

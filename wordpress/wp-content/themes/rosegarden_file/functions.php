@@ -1,5 +1,5 @@
 <?php
-define('PASTOR_SLUG', 'pastor/blog');
+define('PASTOR_SLUG', 'church/pastor/blog');
 define('PASTOR_POST_TYPE_NAME', 'pastor');
 
 add_theme_support('post-thumbnails');

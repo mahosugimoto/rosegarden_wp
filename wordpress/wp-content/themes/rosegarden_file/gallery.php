@@ -127,31 +127,33 @@ $img = get_post_meta($galleryPostId, 'image_pc', true);
         foreach ($myposts as $post) : setup_postdata($post);
             $post_categories = wp_get_post_terms($post->ID, $taxonomy_name, array('fields' => 'slugs'));
         ?>
-            <div class="gallery__photo__item" data-categories="<?= implode(' ', $post_categories); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+            <a href="<?php the_post_thumbnail_url(); ?>" rel="lightbox" data-categories="<?= implode(' ', $post_categories); ?>">
+                <div class="gallery__photo__item" data-categories="<?= implode(' ', $post_categories); ?>" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
+            </a>
         <?php
         endforeach;
         wp_reset_postdata();
         ?>
-
-        <!-- ページネーション -->
-        <div style="width: 100%;">
-            <?php
-            if (empty($category_slug)) {
-                $total_post = wp_count_posts($post_type)->publish;
-            } else {
-                $total_post = get_term($category_id)->count;
-            }
-
-            $num_pages = ceil($total_post / $posts_per_page);
-
-            $args = array(
-                'total' => $num_pages,
-                'found_posts' => $total_post
-            );
-            echo custom_pagination($args);
-            ?>
-        </div>
     </div>
+    <!-- ページネーション -->
+    <div style="width: 100%;">
+        <?php
+        if (empty($category_slug)) {
+            $total_post = wp_count_posts($post_type)->publish;
+        } else {
+            $total_post = get_term($category_id)->count;
+        }
+
+        $num_pages = ceil($total_post / $posts_per_page);
+
+        $args = array(
+            'total' => $num_pages,
+            'found_posts' => $total_post
+        );
+        echo custom_pagination($args);
+        ?>
+    </div>
+
 </div>
 
 <!-- Youtube -->

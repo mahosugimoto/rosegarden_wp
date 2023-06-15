@@ -46,6 +46,8 @@
         gtag('config', 'G-M4LT0LGN6G');
         gtag('config', 'UA-22267949-16');
     </script>-->
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/lightbox.css">
+   
 </head>
 <style>
     body {
@@ -362,5 +364,5 @@
 </div>
 -->
     </div>
-
+    <script src="<?= get_template_directory_uri(); ?>/assets/js/lightbox.js" type="text/javascript"></script>
     <body>

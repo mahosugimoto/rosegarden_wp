@@ -1450,6 +1450,49 @@ p {
   }
 }
 
+.mokuji {
+  margin-bottom: 16px;
+  padding: 24px;
+  border: 1px solid #99762F;
+}
+@media only screen and (max-width:768px) {
+  .mokuji {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mokuji {
+    padding: 16px;
+  }
+}
+.mokuji h4 {
+  font-weight: 900;
+  text-align: center;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+.mokuji a {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  text-decoration: none;
+  color: #333;
+}
+.mokuji ol li {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width:768px) {
+  .mokuji ol li {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .mokuji ol li {
+    margin-bottom: 8px;
+  }
+}
+.mokuji ol li:last-child {
+  margin-bottom: 0px;
+}
+
 .tag-style {
   padding: 0px 16px;
   background-color: #EBE8E3;
@@ -8551,6 +8594,7 @@ footer {
 .gallery {
   margin: auto;
   max-width: 1216px;
+  margin-bottom: 80px;
 }
 @media only screen and (max-width:1080px) {
   .gallery {
@@ -8570,6 +8614,11 @@ footer {
     padding-right: 16px;
   }
 }
+@media only screen and (max-width:768px) {
+  .gallery {
+    margin-bottom: 40px;
+  }
+}
 @media screen and (max-width: 480px) {
   .gallery {
     padding-left: 16px;
@@ -8577,7 +8626,7 @@ footer {
   }
 }
 .gallery__photo {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -8585,25 +8634,39 @@ footer {
 }
 @media only screen and (max-width:768px) {
   .gallery__photo {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+}
+.gallery__photo a {
+  height: 200px;
+  margin-bottom: 24px;
+  width: calc((100% - 48px) / 3);
+}
+.gallery__photo a:nth-last-of-type(-n+2) {
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 768px) {
+  .gallery__photo a {
+    width: calc((100% - 16px) / 2);
+    height: 160px;
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .gallery__photo a {
+    height: 88px;
   }
 }
 .gallery__photo__item {
-  margin-bottom: 24px;
-  width: calc((100% - 48px) / 3);
+  width: 100%;
   height: 200px;
   background-position: center;
   background-size: cover;
   float: left;
 }
-.gallery__photo__item:nth-last-of-type(-n+2) {
-  margin-bottom: 0px;
-}
 @media screen and (max-width: 768px) {
   .gallery__photo__item {
-    width: calc((100% - 16px) / 2);
     height: 160px;
-    margin-bottom: 16px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -8723,6 +8786,50 @@ footer {
     margin-bottom: 16px;
   }
   .yt-box:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.property_gr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .property_gr {
+    display: block;
+  }
+}
+
+.property_photo {
+  width: calc((100% - 48px) / 3);
+  height: 220px;
+  background-position: center;
+  background-size: cover;
+  margin-right: 24px;
+}
+.property_photo:last-child {
+  margin-right: 0px;
+}
+@media screen and (max-width: 1080px) {
+  .property_photo {
+    margin-right: 16px;
+    height: 180px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .property_photo {
+    height: 160px;
+    margin-right: 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .property_photo {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 8px;
+  }
+  .property_photo:last-child {
     margin-bottom: 0px;
   }
 }
@@ -12063,9 +12170,33 @@ footer {
     margin-bottom: 40px;
   }
 }
-.photo_wedding__gallery__photo__item {
+.photo_wedding__gallery__photo a {
   margin-bottom: 24px;
   width: calc((100% - 48px) / 4);
+  height: 286px;
+}
+@media screen and (max-width: 1080px) {
+  .photo_wedding__gallery__photo a {
+    width: 33.3333333333%;
+    height: 280px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .photo_wedding__gallery__photo a {
+    width: 33.3333333333%;
+    height: 160px;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .photo_wedding__gallery__photo a {
+    width: 50%;
+    height: 171px;
+  }
+}
+.photo_wedding__gallery__photo__item {
+  width: 100%;
   height: 286px;
   background-position: center;
   background-size: cover;
@@ -12073,21 +12204,16 @@ footer {
 }
 @media screen and (max-width: 1080px) {
   .photo_wedding__gallery__photo__item {
-    width: 33.3333333333%;
     height: 280px;
-    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 768px) {
   .photo_wedding__gallery__photo__item {
-    width: 33.3333333333%;
     height: 160px;
-    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 480px) {
   .photo_wedding__gallery__photo__item {
-    width: 50%;
     height: 171px;
   }
 }

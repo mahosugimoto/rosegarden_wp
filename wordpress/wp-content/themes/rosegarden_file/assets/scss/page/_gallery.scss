@@ -2,23 +2,21 @@
 
 .gallery {
     @include global.mw1216;
+    @include global.mb80; 
     @include global.sp {
         padding-left: 16px;
         padding-right: 16px;
     }   
     &__photo {
-        @include global.mb80;
+        @include global.mb40;
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        &__item {
+        a {
+            height: 200px;
             margin-bottom: 24px;
             width: calc((100% - 48px) / 3);
-            height: 200px;
-            background-position: center;
-            background-size: cover; 
-            float: left;
             &:nth-last-of-type(-n+2) {
                 margin-bottom: 0px;
             }
@@ -26,6 +24,19 @@
                 width: calc((100% - 16px) / 2); 
                 height: 160px;
                 margin-bottom: 16px;
+            } 
+            @include global.sp {
+                height: 88px;        
+            }   
+    }
+        &__item {
+           width: 100%;
+            height: 200px;
+            background-position: center;
+            background-size: cover; 
+            float: left;
+            @include global.tab {
+                height: 160px;
             }
             @include global.sp {
                 height: 88px;        
@@ -134,3 +145,38 @@
                 }
             }  
   }
+  .property_gr {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    @include global.sp {
+        display: block;
+    } 
+  }
+
+  .property_photo {
+    width: calc((100% - 48px) / 3);
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+    margin-right: 24px;
+    &:last-child {
+        margin-right: 0px;
+    }
+    @include global.pc {
+        margin-right: 16px;
+        height: 180px;
+    }
+    @include global.tab {
+        height: 160px;
+        margin-right: 8px;
+    }
+    @include global.sp {
+       width: 100%;
+       height: 180px;
+       margin-bottom: 8px;
+       &:last-child {
+        margin-bottom: 0px;
+    } 
+  }
+}

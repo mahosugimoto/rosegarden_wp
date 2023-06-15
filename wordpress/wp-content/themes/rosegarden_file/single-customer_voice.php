@@ -2,7 +2,7 @@
 <?php include('header_icon.php'); ?>
 
 <!-- パンクズ_sp -->
-<?php custom_breadcrumbs('sp');?>
+<?php custom_breadcrumbs('sp'); ?>
 
 <!-- タイトル -->
 <div class="page-title_03">
@@ -18,7 +18,7 @@
 </div>
 
 <!-- パンクズ_pc -->
-<?php custom_breadcrumbs('pc');?>
+<?php custom_breadcrumbs('pc'); ?>
 
 <!-- wp_カスタムhtml-->
 
@@ -47,7 +47,7 @@
                     ?>
                 </div>
                 <div class="cv-details__category__season">
-                    <p>スタイル：</p>
+                    <p>季節：</p>
                     <?php
                     $taxonomy_name = "customer_voice-tag";
                     $this_terms = get_the_terms($post->ID, $taxonomy_name);
@@ -77,14 +77,26 @@
         <!-- 記事詳細__本文 -->
         <div class="article-details">
             <div class="article-details__contents">
-                <?= get_the_content(); ?>
-                <?php 
-                if(has_post_thumbnail()): 
+                <?php
+                if (has_post_thumbnail()) :
                     $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'full');
                 ?>
-                <div class="article-details__contents__img" style="background-image: url(<?php echo $thumbnail;?>);">
+                    <div class="article-details__contents__img" style="background-image: url(<?php echo $thumbnail; ?>);">
+                    </div>
+                <?php endif; ?>
+                <?= get_the_content(); ?>
+                <div class="property_gr">
+                <?php
+$repeat_group = SCF::get('property');
+foreach ($repeat_group as $fields) {
+    $image_id = $fields['property_image1']; // フィールドの値を取得
+    $image_url = wp_get_attachment_image_url($image_id, 'full'); // 添付ファイルの画像のURLを取得
+    ?>
+    <div class="property_photo" style="background-image: url('<?php echo $image_url; ?>');"></div>
+    <?php
+}
+?>
                 </div>
-                <?php endif;?>
             </div>
         </div>
     </div>

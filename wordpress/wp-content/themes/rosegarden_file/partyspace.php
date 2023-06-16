@@ -3,7 +3,21 @@
 Template Name: Wedding Partyウエディング(披露宴)
 */
 get_header();
-?><?php include('header_icon.php'); ?>
+?>
+
+<style>
+    .slick-track {
+        height: 300px;
+    }
+    .slick-next.slick-arrow {
+        display: none;
+    }
+    .partyspace__contents__item.slick-slide.slick-current.slick-active {
+        width: 200px;
+}
+</style>
+
+<?php include('header_icon.php'); ?>
 <?php include('cta.php'); ?>
 <!-- FV BGあり -->
 <!-- PC BG -->
@@ -51,18 +65,48 @@ get_header();
 
 
 <script>
+      
     $(function() {
         $('.partyspace__other__block-content:not(:first-of-type)').css('display', 'none');
         $('.partyspace__other__block-label').click(function() {
             $(this).next('div').slideToggle();
             $(this).find(".partyspace__other__block-icon").toggleClass('open');
         });
-    });
+ 
+    $('.partyspace__contents__photo').slick({
+            dots: false,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            accessibility: true,
+            autoplay: true,
+            arrow: false,
+            prevArrow: false,
+            nextArrow: false,
+            autoplaySpeed: 1000,
+            speed: 1000,
+            responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+});
+});
 </script>
+
 
 <?php while (have_posts()) : the_post(); ?>
 <?= get_the_content(); ?>
 <?php endwhile; ?>
+
 
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>z

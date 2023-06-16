@@ -1317,7 +1317,7 @@ p {
 }
 .article-details__contents h2 {
   font-size: 28px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   padding: 10px;
   background-color: #EBE8E3;
 }
@@ -1328,7 +1328,7 @@ p {
 }
 @media only screen and (max-width:768px) {
   .article-details__contents h2 {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 }
 .article-details__contents h3 {
@@ -11402,11 +11402,7 @@ footer {
     display: block;
   }
 }
-.partyspace__contents__photo__slider {
-  position: relative;
-}
 .partyspace__contents__item {
-  width: calc((100% - 48px) / 3);
   height: 300px;
   background-position: center;
   background-size: cover;
@@ -11803,33 +11799,6 @@ footer {
     width: 18px;
     margin-top: 8px;
   }
-}
-
-.partyspace__other__notes {
-  margin: auto;
-  max-width: 1216px;
-}
-@media only screen and (max-width:1080px) {
-  .partyspace__other__notes {
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-}
-@media only screen and (max-width:768px) {
-  .partyspace__other__notes {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media only screen and (max-width:400px) {
-  .partyspace__other__notes {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-.partyspace_photo.slick-track {
-  height: 300px;
 }
 
 .photo_wedding {
@@ -12273,7 +12242,7 @@ footer {
 .dress__top {
   margin: auto;
   max-width: 1216px;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
   text-align: center;
 }
 @media only screen and (max-width:1080px) {
@@ -12296,7 +12265,7 @@ footer {
 }
 @media only screen and (max-width:768px) {
   .dress__top {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 }
 .dress__top h2 {
@@ -12920,6 +12889,15 @@ footer {
   display: block;
 }
 
+.dress_br {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .dress_br {
+    display: block;
+  }
+}
+
 .resort__top {
   margin: auto;
   max-width: 1216px;
@@ -12950,17 +12928,31 @@ footer {
   }
 }
 .resort__top h2 {
-  margin-bottom: 32px;
-  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 28px;
 }
 @media only screen and (max-width:768px) {
   .resort__top h2 {
+    margin-bottom: 8px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .resort__top h2 {
+    font-size: 20px;
+  }
+}
+.resort__top h2:last-child {
+  margin-bottom: 32px;
+}
+@media only screen and (max-width:768px) {
+  .resort__top h2:last-child {
     margin-bottom: 16px;
   }
 }
 @media screen and (max-width: 768px) {
   .resort__top h2 {
-    text-align: start;
+    text-align: center;
+    font-weight: bold;
   }
 }
 .resort__top p {
@@ -12978,6 +12970,14 @@ footer {
 @media screen and (max-width: 768px) {
   .resort__top p {
     text-align: start;
+  }
+}
+.resort__top br {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .resort__top br {
+    display: block;
   }
 }
 .resort__contact {
@@ -13291,43 +13291,6 @@ footer {
   height: auto !important;
 }
 
-.resort__top {
-  margin: auto;
-  max-width: 1216px;
-  margin-bottom: 64px;
-  text-align: center;
-}
-@media only screen and (max-width:1080px) {
-  .resort__top {
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-}
-@media only screen and (max-width:768px) {
-  .resort__top {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media only screen and (max-width:400px) {
-  .resort__top {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-@media only screen and (max-width:768px) {
-  .resort__top {
-    margin-bottom: 32px;
-  }
-}
-.resort__top h2 {
-  margin-bottom: 32px;
-}
-@media only screen and (max-width:768px) {
-  .resort__top h2 {
-    margin-bottom: 16px;
-  }
-}
 .resort__title {
   position: relative;
   margin-bottom: 160px;
@@ -13355,11 +13318,6 @@ footer {
   .resort__title {
     padding-left: 16px;
     padding-right: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .resort__title {
-    margin-bottom: 0px;
   }
 }
 .resort__title__dcr {

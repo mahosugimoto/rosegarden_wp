@@ -3,7 +3,7 @@
 .dress {
     &__top {
         @include global.mw1216;
-        @include global.mb64;
+        @include global.mb80; 
         text-align: center;
         h2 {
             @include global.fs-2xl;    
@@ -429,4 +429,11 @@
 }
 #primavera.show {   
     display: block;
+}
+
+.dress_br {
+    display: none;
+    @include global.sp {
+        display: block;
+    }   
 }

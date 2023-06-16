@@ -144,7 +144,7 @@
         }
         h2 {
             @include global.fs-2xl;
-            @include global.mb16; 
+            @include global.mb24; 
             padding: 10px;
             background-color: global.$bg_main;
         }

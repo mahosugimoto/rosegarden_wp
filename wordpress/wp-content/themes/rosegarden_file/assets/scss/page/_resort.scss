@@ -6,10 +6,14 @@
         @include global.mb80; 
         text-align: center;
         h2 {
-       @include global.mb32;
-        font-weight: bold;
+       @include global.mb16;
+       @include global.fs-2xl; 
+       &:last-child {
+        @include global.mb32;     
+       }
         @include global.tab{ 
-           text-align: start; 
+           text-align: center; 
+           font-weight: bold;
          } 
         }
         p {
@@ -21,6 +25,12 @@
             @include global.tab{ 
                 text-align: start; 
               } 
+        }
+        br {
+            display: none;
+            @include global.tab{ 
+                display: block;
+              }  
         }
     }
     &__contact {
@@ -202,24 +212,12 @@
   }
 
   .resort {
-    &__top {
-        @include global.mw1216;
-        @include global.mb64;
-        text-align: center;
-        h2 {
-       @include global.mb32;
-
-        }
-        p {
-            
-        }
-    }
     &__title {
        position: relative;
        @include global.mb160; 
         @include global.mw1216;
         @include global.tab{ 
-            margin-bottom: 0px; 
+           
          } 
         h2 {
           

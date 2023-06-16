@@ -1,0 +1,52 @@
+.event_calendar {
+    padding: 20px;
+    background-color: #E8E5DC;
+}
+
+.event_calendar caption {
+    color: #4B3434;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.event_calendar th {
+    background-color: #666666;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.event_calendar td {
+    background-color: #FFFFFF;
+    color: #4B3434;
+    text-align: center;
+    padding: 5px;
+}
+
+.event_calendar td:empty {
+    background-color: #E8E5DC;
+}
+
+.event_calendar table th, .event_calendar table td {
+    border: 1px solid #E8E5DC;
+}
+
+.event_calendar table th.sun {
+    background: #D57D76;
+}
+
+.event_calendar table th.sat {
+    background: #00A0C6;
+}
+
+.event_calendar table td.sun {
+    background: #E9CED1;
+}
+
+.event_calendar table td.sat {
+    background: #C5DFF3;
+}
+
+.event_calendar td.past {
+    color: #9E9080;
+}

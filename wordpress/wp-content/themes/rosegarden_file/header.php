@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/slick.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/slick-theme.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/custom.css" type="text/css" />
     <!-- js stylesheet-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/assets/js/paginathing.min.js"></script>

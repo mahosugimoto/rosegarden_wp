@@ -6,6 +6,8 @@ add_theme_support('post-thumbnails');
 add_action('init', 'create_post_type');
 add_theme_support('menus');
 
+require_once('events/functions.php');
+
 function create_post_type()
 {
 

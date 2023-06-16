@@ -1548,6 +1548,30 @@ p {
     margin-top: 48px;
   }
 }
+.page-title_01__eng h1, .page-title_02__eng h1 {
+  font-size: 40px;
+  color: #99762F;
+  font-family: "Cinzel", serif;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+}
+@media only screen and (max-width:768px) {
+  .page-title_01__eng h1, .page-title_02__eng h1 {
+    font-size: 28px;
+  }
+}
+.page-title_01__eng h2, .page-title_02__eng h2 {
+  font-size: 40px;
+  color: #99762F;
+  font-family: "Cinzel", serif;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+}
+@media only screen and (max-width:768px) {
+  .page-title_01__eng h2, .page-title_02__eng h2 {
+    font-size: 28px;
+  }
+}
 .page-title_01__eng p, .page-title_02__eng p {
   font-size: 40px;
   color: #99762F;
@@ -1624,6 +1648,30 @@ p {
     padding-top: 40px;
   }
 }
+.page-title_03__eng h1 {
+  font-size: 40px;
+  color: #99762F;
+  font-family: "Cinzel", serif;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+}
+@media only screen and (max-width:768px) {
+  .page-title_03__eng h1 {
+    font-size: 28px;
+  }
+}
+.page-title_03__eng h2 {
+  font-size: 40px;
+  color: #99762F;
+  font-family: "Cinzel", serif;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+}
+@media only screen and (max-width:768px) {
+  .page-title_03__eng h2 {
+    font-size: 28px;
+  }
+}
 .page-title_03__eng p {
   font-size: 40px;
   color: #99762F;
@@ -1680,6 +1728,30 @@ p {
   text-align: start;
   white-space: nowrap;
 }
+.page-title_04__eng h1, .page-title_05__eng h1, .page-title_06__eng h1, .page-title_07__eng h1, .page-title_08__eng h1, .page-title_09__eng h1, .page-title_10__eng h1, .page-title_11__eng h1, .page-title_12__eng h1 {
+  font-size: 32px;
+  color: #99762F;
+  font-family: "Cinzel", serif;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+}
+@media only screen and (max-width:768px) {
+  .page-title_04__eng h1, .page-title_05__eng h1, .page-title_06__eng h1, .page-title_07__eng h1, .page-title_08__eng h1, .page-title_09__eng h1, .page-title_10__eng h1, .page-title_11__eng h1, .page-title_12__eng h1 {
+    font-size: 24px;
+  }
+}
+.page-title_04__eng h2, .page-title_05__eng h2, .page-title_06__eng h2, .page-title_07__eng h2, .page-title_08__eng h2, .page-title_09__eng h2, .page-title_10__eng h2, .page-title_11__eng h2, .page-title_12__eng h2 {
+  font-size: 32px;
+  color: #99762F;
+  font-family: "Cinzel", serif;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+}
+@media only screen and (max-width:768px) {
+  .page-title_04__eng h2, .page-title_05__eng h2, .page-title_06__eng h2, .page-title_07__eng h2, .page-title_08__eng h2, .page-title_09__eng h2, .page-title_10__eng h2, .page-title_11__eng h2, .page-title_12__eng h2 {
+    font-size: 24px;
+  }
+}
 .page-title_04__eng p, .page-title_05__eng p, .page-title_06__eng p, .page-title_07__eng p, .page-title_08__eng p, .page-title_09__eng p, .page-title_10__eng p, .page-title_11__eng p, .page-title_12__eng p {
   font-size: 32px;
   color: #99762F;
@@ -1703,6 +1775,24 @@ p {
   padding-top: 200px;
   padding-left: 215px;
   padding-right: 215px;
+}
+.page-title_05__eng h1 {
+  font-size: 42px;
+  color: #fff;
+}
+@media only screen and (max-width:768px) {
+  .page-title_05__eng h1 {
+    font-size: 32px;
+  }
+}
+.page-title_05__eng h2 {
+  font-size: 42px;
+  color: #fff;
+}
+@media only screen and (max-width:768px) {
+  .page-title_05__eng h2 {
+    font-size: 32px;
+  }
 }
 .page-title_05__eng p {
   font-size: 42px;
@@ -1804,6 +1894,12 @@ p {
 .page-title_07 {
   text-align: center;
 }
+.page-title_07__eng h1 {
+  color: #fff;
+}
+.page-title_07__eng h2 {
+  color: #fff;
+}
 .page-title_07__eng p {
   color: #fff;
 }
@@ -1822,6 +1918,22 @@ p {
 .page-title_08 {
   text-align: center;
 }
+.page-title_08__eng h1 {
+  font-size: 28px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_08__eng h1 {
+    font-size: 20px;
+  }
+}
+.page-title_08__eng h2 {
+  font-size: 28px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_08__eng h2 {
+    font-size: 20px;
+  }
+}
 .page-title_08__eng p {
   font-size: 28px;
 }
@@ -1833,6 +1945,22 @@ p {
 
 .page-title_09 {
   text-align: start;
+}
+.page-title_09__eng h1 {
+  font-size: 28px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_09__eng h1 {
+    font-size: 20px;
+  }
+}
+.page-title_09__eng h2 {
+  font-size: 28px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_09__eng h2 {
+    font-size: 20px;
+  }
 }
 .page-title_09__eng p {
   font-size: 28px;
@@ -1848,6 +1976,22 @@ p {
     text-align: center;
   }
 }
+.page-title_10__eng h1 {
+  font-size: 28px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_10__eng h1 {
+    font-size: 20px;
+  }
+}
+.page-title_10__eng h2 {
+  font-size: 28px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_10__eng h2 {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .page-title_10__eng p {
     font-size: 20px;
@@ -1856,6 +2000,22 @@ p {
 
 .page-title_11 {
   text-align: start;
+}
+.page-title_11__eng h1 {
+  font-size: 24px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_11__eng h1 {
+    font-size: 18px;
+  }
+}
+.page-title_11__eng h2 {
+  font-size: 24px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_11__eng h2 {
+    font-size: 18px;
+  }
 }
 .page-title_11__eng p {
   font-size: 24px;
@@ -1869,6 +2029,12 @@ p {
   font-size: 12px;
 }
 
+.page-title_12__eng h1 {
+  text-align: center;
+}
+.page-title_12__eng h2 {
+  text-align: center;
+}
 .page-title_12__eng p {
   text-align: center;
 }
@@ -2233,6 +2399,36 @@ footer {
 .footer-copyright {
   text-align: center;
   padding: 24px 0px;
+}
+
+.footer-top__address__phone p {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 1080px) {
+  .footer-top__address__phone p {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 1080px) and (max-width:768px) {
+  .footer-top__address__phone p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .footer-top__address__phone p {
+    margin-bottom: 4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-top__address__phone p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer-top__address__phone p {
+    text-align: center;
+  }
 }
 
 .breadcrumb, .breadcrumb_sp {
@@ -4557,12 +4753,23 @@ footer {
     white-space: normal;
   }
 }
-.blockstyle01_text__contents__top h2, .blockstyle02_text__contents__top h2 {
+.blockstyle01_text__contents__top h3, .blockstyle02_text__contents__top h3 {
+  font-size: 32px;
   margin-bottom: 24px;
 }
 @media only screen and (max-width:768px) {
-  .blockstyle01_text__contents__top h2, .blockstyle02_text__contents__top h2 {
+  .blockstyle01_text__contents__top h3, .blockstyle02_text__contents__top h3 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .blockstyle01_text__contents__top h3, .blockstyle02_text__contents__top h3 {
     margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blockstyle01_text__contents__top h3, .blockstyle02_text__contents__top h3 {
+    font-size: 22px;
   }
 }
 .blockstyle01_text__contents__top span, .blockstyle02_text__contents__top span {
@@ -6845,6 +7052,7 @@ footer {
 .sanctuary__event__block2__calender {
   display: flex;
   justify-content: space-around;
+  background-color: #E8E5DC;
   align-items: center;
   margin-bottom: 24px;
 }
@@ -6856,13 +7064,8 @@ footer {
 @media screen and (max-width: 768px) {
   .sanctuary__event__block2__calender {
     display: block;
-    margin: 34px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .sanctuary__event__block2__calender {
-    display: block;
-    margin: 0px 34px 16px 34px;
+    margin: auto;
+    background-color: #fff;
   }
 }
 .sanctuary__event__block2__calender img {

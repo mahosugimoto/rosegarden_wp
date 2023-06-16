@@ -12,7 +12,7 @@ get_header();
 <!-- タイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
-        <p><?php echo SCF::get('title_en', $pastoBlogId); ?></p>
+        <h1><?php echo SCF::get('title_en', $pastoBlogId); ?></h1>
     </div>
     <div class="page-title_03__jp">
         <p><?= get_the_title($pastoBlogId) ?></p>

@@ -50,3 +50,17 @@
 .event_calendar td.past {
     color: #9E9080;
 }
+
+.event_calendar {
+    margin: auto;
+}
+
+.event_calendar table {
+    margin: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .event_calendar {
+        margin-bottom: 16px;
+      }
+  }

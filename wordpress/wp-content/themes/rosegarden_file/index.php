@@ -124,7 +124,7 @@ Template Name: トップ
             <div class="blockstyle01_text__title">
                 <div class="page-title_02">
                     <div class="page-title_02__eng">
-                        <p>CONCEPT</p>
+                        <h2>CONCEPT</h2>
                     </div>
                     <div class="page-title_02__jp">
                         <p>コンセプト</p>
@@ -133,9 +133,9 @@ Template Name: トップ
             </div>
             <div class="blockstyle01_text__contents">
                 <div class="blockstyle01_text__contents__top">
-                    <h2>永い歴史を刻んでゆく大聖堂
+                    <h3>永い歴史を刻んでゆく大聖堂
                         <span>厳かにはじまる聖霊と大自然の祝福
-                    </h2>
+                    </h3>
                     <p>ヨーロッパの教会が皆そうであるように、その教会は
                         <br>何百年もそこに変わることなくあり続けてほしい、
                         <br>信仰や夫婦の愛が時と共に色褪せることのないように、
@@ -188,7 +188,7 @@ $topAdvs = topAdvertisements();
 <div class="top_cv">
     <div class="page-title_02">
         <div class="page-title_02__eng">
-            <p>CUSTOMER VOICE</p>
+            <h2>CUSTOMER VOICE</h2>
         </div>
         <div class="page-title_02__jp">
             <p>お客様の声</p>
@@ -282,7 +282,7 @@ foreach ($repeat_group as $fields) {
                 <div class="other-page__title">
                     <div class="page-title_07">
                         <div class="page-title_07__eng">
-                            <p><?php echo ($text1_id); ?></p>
+                            <h2><?php echo ($text1_id); ?></h2>
                         </div>
                         <div class="page-title_07__jp">
                             <p><?php echo ($text2_id); ?></p>
@@ -398,7 +398,7 @@ foreach ($repeat_group as $fields) {
             <div class="blockstyle02_text__title">
                 <div class="page-title_02">
                     <div class="page-title_02__eng">
-                        <p>ABOUT CHURCH</p>
+                        <h2>ABOUT CHURCH</h2>
                     </div>
                     <div class="page-title_02__jp">
                         <p>教会</p>
@@ -407,9 +407,9 @@ foreach ($repeat_group as $fields) {
             </div>
             <div class="blockstyle02_text__contents">
                 <div class="blockstyle02_text__contents__top">
-                    <h2>見守り続けてくれる
+                    <h3>見守り続けてくれる
                         <span>暖かな教会
-                    </h2>
+                    </h3>
                     <p>日々の礼拝が絶える事のない
                         <br>何百年もそこに変わることなくあり続けてほしい、
                         <br>正式なキリスト教会の牧師からのメッセージは、
@@ -436,7 +436,7 @@ foreach ($repeat_group as $fields) {
         <div class="top_info__list__title">
             <div class="page-title_02">
                 <div class="page-title_02__eng">
-                    <p>INFORMATION</p>
+                    <h2>INFORMATION</h2>
                 </div>
                 <div class="page-title_02__jp">
                     <p>お知らせ</p>
@@ -498,7 +498,7 @@ foreach ($repeat_group as $fields) {
                     <div class="top_other_page__block2__title">
                         <div class="page-title_08">
                             <div class="page-title_08__eng">
-                                <p>Q&A</p>
+                                <h2>Q&A</h2>
                             </div>
                             <div class="page-title_08__jp">
                                 <p>よくあるご質問</p>
@@ -519,7 +519,7 @@ foreach ($repeat_group as $fields) {
                     <div class="top_other_page__block__title">
                         <div class="page-title_08">
                             <div class="page-title_08__eng">
-                                <p>GUEST</p>
+                                <h2>GUEST</h2>
                             </div>
                             <div class="page-title_08__jp">
                                 <p>ご招待された方へ</p>
@@ -535,7 +535,7 @@ foreach ($repeat_group as $fields) {
                     <div class="top_other_page__block__title">
                         <div class="page-title_08">
                             <div class="page-title_08__eng">
-                                <p>FLOOR <br>GUIDE</p>
+                                <h2>FLOOR <br>GUIDE</h2>
                             </div>
                             <div class="page-title_08__jp">
                                 <p>フロアガイド</p>

@@ -33,7 +33,7 @@ get_header();
 <!-- 牧師ブログタイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
-        <p>PASTOR BLOG</p>
+        <h2>PASTOR BLOG</h2>
     </div>
     <div class="page-title_03__jp">
         <p>牧師のブログ</p>

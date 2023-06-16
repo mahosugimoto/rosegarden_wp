@@ -29,7 +29,7 @@ $img = get_post_meta($voicePostID, 'image_pc', true);
 <img src="<p><?php echo SCF::get('image_pc'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
-            <p><?php echo SCF::get('title_en', $voicePostID); ?></p>
+            <h1><?php echo SCF::get('title_en', $voicePostID); ?></h1>
         </div>
         <div class="page-title_05__jp">
             <p><?= get_the_title($voicePostID) ?></p>

@@ -291,6 +291,20 @@
         margin-top: 48px;
     }  
     &__eng {
+        h1 {
+            @include global.fs-4xl;
+            color: global.$point_main;
+            font-family: 'Cinzel', serif; 
+            line-height: 150%;
+            letter-spacing: 0.1em; 
+        }
+        h2 {
+            @include global.fs-4xl;
+            color: global.$point_main;
+            font-family: 'Cinzel', serif; 
+            line-height: 150%;
+            letter-spacing: 0.1em; 
+        }
         p {
             @include global.fs-4xl;
             color: global.$point_main;
@@ -338,6 +352,20 @@
         padding-top: 40px;
     }
     &__eng {
+        h1 {
+            @include global.fs-4xl;
+            color: global.$point_main;
+            font-family: 'Cinzel', serif; 
+            line-height: 150%;
+            letter-spacing: 0.1em; 
+        }
+        h2 {
+            @include global.fs-4xl;
+            color: global.$point_main;
+            font-family: 'Cinzel', serif; 
+            line-height: 150%;
+            letter-spacing: 0.1em; 
+        }
         p {
             @include global.fs-4xl;
             color: global.$point_main;
@@ -382,6 +410,21 @@
     text-align: start;
     white-space: nowrap;
     &__eng {
+        h1 {
+            @include global.fs-3xl;
+            color: global.$point_main;
+            font-family: 'Cinzel', serif; 
+            line-height: 150%;
+            letter-spacing: 0.1em; 
+        }
+        h2 {
+            @include global.fs-3xl;
+            color: global.$point_main;
+            font-family: 'Cinzel', serif; 
+            line-height: 150%;
+            letter-spacing: 0.1em; 
+        }
+       
         p {
             @include global.fs-3xl;
             color: global.$point_main;
@@ -389,6 +432,7 @@
             line-height: 150%;
             letter-spacing: 0.1em; 
         }
+
     }
     &__jp {
         p { 
@@ -407,10 +451,18 @@
     padding-right: 215px;
 
     &__eng {
-        p {
+        h1 {
             @include global.fs-5xl; 
             color: #fff;
-        } 
+        }
+        h2 {
+            @include global.fs-5xl; 
+            color: #fff;
+        }
+       p {
+        @include global.fs-5xl; 
+        color: #fff;
+       }
     } 
     &__jp {
         @include global.mb32;
@@ -481,6 +533,12 @@
 .page-title_07 {
    text-align: center;
     &__eng {
+        h1 {
+            color: #fff;
+         }
+         h2 {
+            color: #fff;
+         }
         p {
            color: #fff;
         }
@@ -500,6 +558,12 @@
 .page-title_08 {
     text-align: center;
     &__eng {
+        h1 {
+            @include global.fs-2xl;
+        }
+        h2 {
+            @include global.fs-2xl;
+        }
         p {
             @include global.fs-2xl;
         }
@@ -507,7 +571,14 @@
 }
 .page-title_09{
     text-align: start;
+    
     &__eng {
+        h1 {
+            @include global.fs-2xl;
+        }
+        h2 {
+            @include global.fs-2xl;
+        }
         p {
             @include global.fs-2xl;
         }
@@ -519,6 +590,12 @@
         text-align: center;
     }  
     &__eng {
+        h1 {
+            @include global.fs-2xl;
+        }
+        h2 {
+            @include global.fs-2xl;
+        }
         p {
             @include global.tab {
                 font-size: 20px; 
@@ -531,6 +608,12 @@
 .page-title_11{
     text-align: start;
     &__eng {
+        h1 {
+            @include global.fs-xl;
+        }
+        h2 {
+            @include global.fs-xl;
+        }
         p {
             @include global.fs-xl;
         }
@@ -545,6 +628,12 @@
 //プロポーズのrecommend title
 .page-title_12 {
     &__eng {
+        h1 {
+            text-align: center;
+         }
+         h2 {
+            text-align: center;
+         }
         p {
            text-align: center;
         }

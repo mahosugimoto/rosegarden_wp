@@ -248,16 +248,14 @@
         &__calender {
             display: flex;
             justify-content:space-around;
+            background-color: #E8E5DC;
             align-items: center;
             @include global.mb24;
             @include global.tab {
                 display: block;
-                margin: 34px;
+                margin: auto;
+                background-color:#fff;
             }
-            @include global.tab {
-                display: block;
-                margin: 0px 34px 16px 34px;
-            }    
             img {
                 width: 100%;
                 padding: 24px 24px 0px;

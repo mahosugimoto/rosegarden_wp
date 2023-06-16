@@ -6,7 +6,9 @@
                 <img src="/wp-content/themes/rosegarden_file/assets/img/logo/rg-logo.png" alt="">
             </div>
             <div class="footer-top__address">
-                <h2><span>TEL.</span><a href="tel:011-522-0151">011-522-0151</a></h2>
+                <div class="footer-top__address__phone">
+                <p><span>TEL.</span><a href="tel:011-522-0151">011-522-0151</a></p>
+                </div>
                 <p>営業時間: 平日 11:00 〜 19:00 <br class="new-line">/ 土日祝 9:00 〜 19:00</p>
             </div>
         </div>

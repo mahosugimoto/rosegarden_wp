@@ -203,3 +203,22 @@ footer {
     text-align: center;
     padding: 24px 0px;
 }
+
+
+
+.footer-top__address__phone{
+    p {
+        font-size: 30px;
+        @include global.pc {
+            @include global.fs-2xl;
+        } 
+        @include global.mb8;
+        @include global.tab {
+            text-align: center;
+        }
+        @include global.sp {
+            text-align: center;
+        }    
+    }
+   
+}

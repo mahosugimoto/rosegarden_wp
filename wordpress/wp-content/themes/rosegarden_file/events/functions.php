@@ -192,8 +192,12 @@ function getEventsByMonth($events, $month)
 {
     $month = sprintf('%02d', $month);
     $filteredEvents = array_filter($events, function ($event) use ($month) {
-        $eventDate = DateTime::createFromFormat('Y.m.d', $event['event_date']);
-        return $eventDate->format('m') === $month;
+        if (!empty($event['event_date'])) {
+            $arr = explode('.', $event['event_date']);
+            $searchDate = $arr[0] . '-' . $arr[1] . '-' . $arr[2];
+            $eventMonth = date('m', strtotime($searchDate));
+            return $eventMonth === $month;
+        }
     });
 
     return $filteredEvents;

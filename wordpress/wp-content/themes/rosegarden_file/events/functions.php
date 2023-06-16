@@ -30,9 +30,14 @@ function getEvents()
     $posts = get_posts($args);
     foreach ($posts as $post) {
         setup_postdata($post);
+        $eventDate = SCF::get('event_date', $post->ID);
+        if (!empty($eventDate)) {
+            $eventDate = str_replace(['.', '-', '/'], ['-', '-', '-'], $eventDate);
+            $eventDate = date('Y-m-d', strtotime($eventDate));
+        }
         $events[] = [
             'title' => $post->post_title,
-            'event_date' => SCF::get('event_date', $post->ID),
+            'event_date' => $eventDate,
             'background_color' => SCF::get('background_color', $post->ID),
         ];
     }
@@ -151,14 +156,14 @@ function generateCalendar($year, $month, $events) {
 }
 
 function isSaturday($month, $day, $year) {
-    $dateString = $year . '-' . $month . '-' . $day;
+    $dateString = sprintf('%04d-%02d-%02d', $year, $month, $day);
     $timestamp = strtotime($dateString);
     $dayOfWeek = date('N', $timestamp);
     return ($dayOfWeek == 6);
 }
 
 function isSunday($month, $day, $year) {
-    $dateString = $year . '-' . $month . '-' . $day;
+    $dateString = sprintf('%04d-%02d-%02d', $year, $month, $day);
     $timestamp = strtotime($dateString);
     $dayOfWeek = date('N', $timestamp);
     return ($dayOfWeek == 7);
@@ -176,8 +181,8 @@ function selectedEvent($events, $month, $day, $year)
     if (empty($events)) {
         return false;
     }
-    $month = sprintf('%02d', $month);
-    $searchDate = $year . '.' . $month . '.' . $day;
+    
+    $searchDate = sprintf('%04d-%02d-%02d', $year, $month, $day);
 
     foreach ($events as $event) {
         if ($event['event_date'] === $searchDate) {
@@ -193,9 +198,7 @@ function getEventsByMonth($events, $month)
     $month = sprintf('%02d', $month);
     $filteredEvents = array_filter($events, function ($event) use ($month) {
         if (!empty($event['event_date'])) {
-            $arr = explode('.', $event['event_date']);
-            $searchDate = $arr[0] . '-' . $arr[1] . '-' . $arr[2];
-            $eventMonth = date('m', strtotime($searchDate));
+            $eventMonth = date('m', strtotime($event['event_date']));
             return $eventMonth === $month;
         }
     });

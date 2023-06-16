@@ -59,14 +59,14 @@ Template Name: トップ
             ?>
                 <div class="fv_slide1" style="background-image: url('<?php echo esc_url($image_url); ?>');">
                     <div class="fv_catch-copy">
-                        <h1><?php echo esc_html($text_id); ?></h1>
+                        <h1><?php echo ($text_id); ?></h1>
                     </div>
                 </div>
             <?php
             }
             ?>
         </div>
-        <div class="slick-next"></div>
+       
     </div>
 </div>
 
@@ -282,10 +282,10 @@ foreach ($repeat_group as $fields) {
                 <div class="other-page__title">
                     <div class="page-title_07">
                         <div class="page-title_07__eng">
-                            <p><?php echo esc_html($text1_id); ?></p>
+                            <p><?php echo ($text1_id); ?></p>
                         </div>
                         <div class="page-title_07__jp">
-                            <p><?php echo esc_html($text2_id); ?></p>
+                            <p><?php echo ($text2_id); ?></p>
                         </div>
                     </div>
                 </div>

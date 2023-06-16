@@ -12,9 +12,10 @@
     }
 }
 .fv_catch-copy {
+    padding: 16px;
     z-index: 200;
     position: absolute;
-    top: 56px;
+    top:56px;
     right: 56px;
     text-align:end;
     h1 {
@@ -29,8 +30,9 @@
          } 
     }
     @include global.sp {
-        top: 24px;
+        top:48px;
         right: 48px;
+        padding: 16px;
      }  
 }
 // .slick-list.draggable {
@@ -67,6 +69,7 @@
         height: 690px;
      }  
   }
+ 
 
   .top_banner {
     @include global.mb80;
@@ -1043,10 +1046,14 @@
 }
 .fv_slider div {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
+  @include global.sp {
+    top: 0px; 
+    right: 0px;
+}  
 }

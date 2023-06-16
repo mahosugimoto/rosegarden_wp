@@ -211,6 +211,9 @@
             text-align: center;
             @include global.mb24; 
             font-weight: 600;
+            @include global.tab {
+                font-weight: 900; 
+            } 
         }
         p {
             text-align: center;

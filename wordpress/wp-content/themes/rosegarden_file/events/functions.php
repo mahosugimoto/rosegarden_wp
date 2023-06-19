@@ -135,7 +135,7 @@ function generateCalendar($year, $month, $events) {
                 $style = '';
                 $event = selectedEvent($events, $month, $currentDay, $year);
                 if (!empty($event)) {
-                    $style = 'style="background-color: '. $event['background_color'] .'"';
+                    $style = 'style="background-color: '. $event['background_color'] .'; color: #fff"';
                 }
 
                 $content .= '<td class="' . $cellClass . '" '. $style .'>' . $currentDay . '</td>';

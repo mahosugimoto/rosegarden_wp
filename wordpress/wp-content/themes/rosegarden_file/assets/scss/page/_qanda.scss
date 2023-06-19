@@ -37,7 +37,7 @@
     }     
     &__title {
         @include global.mb24; 
-        h3 {
+        h2 {
             @include global.fs-2xl;
             text-align: center;
         }
@@ -238,6 +238,16 @@
         display: flex;
         justify-content: center;
         
+    } 
+}
+.address__phone {
+    p {
+        text-align: center;
+        @include global.mb8;
+        font-size: 30px;
+        @include global.sp {
+            font-size: 20px;
+        }  
     } 
 }
 

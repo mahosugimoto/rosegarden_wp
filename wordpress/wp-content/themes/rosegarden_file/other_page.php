@@ -16,7 +16,7 @@ if (!empty($otherBanners)):
                 <div class="other_page__block__title">
                     <div class="page-title_08">
                         <div class="page-title_08__eng">
-                            <p><?php echo $banner['title'];?></p>
+                            <h2><?php echo $banner['title'];?></h2>
                         </div>
                         <?php if(!empty($banner['sub_title'])): ?>
                         <div class="page-title_08__jp">

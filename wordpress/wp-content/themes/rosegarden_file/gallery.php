@@ -162,7 +162,7 @@ $img = get_post_meta($galleryPostId, 'image_pc', true);
     <div class="gallery__movie__title">
         <div class="page-title_02">
             <div class="page-title_02__eng">
-                <p>MOVIE GALLERY</p>
+                <h2>MOVIE GALLERY</h2>
             </div>
             <div class="page-title_02__jp">
                 <p>動画ギャラリー</p>
@@ -196,7 +196,7 @@ $img = get_post_meta($galleryPostId, 'image_pc', true);
         <div class="gallery__movie__title">
             <div class="page-title_02">
                 <div class="page-title_02__eng">
-                    <p>INSTAGRAM</p>
+                    <h2>INSTAGRAM</h2>
                 </div>
                 <div class="page-title_02__jp">
                     <p>インスタグラム</p>

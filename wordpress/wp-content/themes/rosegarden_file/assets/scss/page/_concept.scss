@@ -70,9 +70,10 @@
                 width: 100%;
                 padding: 0px;
             }
-            h3 {
+            h4 {
+                @include global.fs-xl; 
                 flex-wrap: wrap;
-                @include global.mb32;
+                @include global.mb16;
             }
             p {
                 flex-wrap: wrap;

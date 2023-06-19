@@ -31,8 +31,13 @@
         }
         &__text {
             text-align: center;
-            h2 {
+            h3 {
+                @include global.fs-3xl; 
                 @include global.mb32;
+                @include global.tab {
+                    font-size: 20px;
+                    font-weight: bold;
+                 }  
             }
             p {
                 @include global.fs-l;

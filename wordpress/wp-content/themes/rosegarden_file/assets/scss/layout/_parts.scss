@@ -424,7 +424,13 @@
             line-height: 150%;
             letter-spacing: 0.1em; 
         }
-       
+        h3 {
+            @include global.fs-3xl;
+            color: global.$point_main;
+            font-family: 'Cinzel', serif; 
+            line-height: 150%;
+            letter-spacing: 0.1em; 
+        } 
         p {
             @include global.fs-3xl;
             color: global.$point_main;
@@ -571,12 +577,14 @@
 }
 .page-title_09{
     text-align: start;
-    
     &__eng {
         h1 {
             @include global.fs-2xl;
         }
         h2 {
+            @include global.fs-2xl;
+        }
+        h3 {
             @include global.fs-2xl;
         }
         p {

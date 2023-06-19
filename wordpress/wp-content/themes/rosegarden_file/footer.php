@@ -76,7 +76,7 @@
                 <div class="footer-map__text__contents">
                     <div class="page-title_02">
                         <div class="page-title_02__eng">
-                            <p>ACCESS</p>
+                            <h2>ACCESS</h2>
                         </div>
                         <div class="page-title_02__jp">
                             <p>アクセス</p>

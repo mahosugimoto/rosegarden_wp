@@ -144,7 +144,7 @@
         @include global.mw1216;
         text-align: center;
         @include global.mb24;
-        h3 {
+        h2 {
             color: global.$point-main;
             @include global.mb16;
         }
@@ -190,11 +190,11 @@
             @include global.sp {
                 padding: 0px 0px 0px 8px;
             }  
-            h2 {
+            h3 {
                 @include global.fs-2l;
                 @include global.mb8; 
             }
-            h3 {
+            h4 {
                 @include global.fs-3xl;
                 color:global.$price-color;
             }

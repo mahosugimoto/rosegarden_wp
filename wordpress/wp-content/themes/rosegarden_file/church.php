@@ -79,14 +79,14 @@ get_header();
                 <div class="point__main__text">
                     <div class="page-title_11">
                         <div class="page-title_11__eng">
-                            <p>WORSHIP</p>
+                            <h3>WORSHIP</h3>
                         </div>
                         <div class="page-title_11__jp">
                             <p>礼拝・集会</p>
                         </div>
                     </div>
                     <div class="m16"></div>
-                    <h3>教会で癒しの時間を。<br>礼拝・集会</h3>
+                    <h4>教会で癒しの時間を。<br>礼拝・集会</h4>
                     <p>毎週日曜日/10：40〜　※ユース礼拝堂
                         <br>祈りと黙想の時　※随時
                         <br>Zoomにて礼拝に参加できます。詳しくは牧師にお尋ねください。
@@ -103,14 +103,14 @@ get_header();
                     <a name="entrance-hall"></a>
                     <div class="page-title_11">
                         <div class="page-title_11__eng">
-                            <p>MUSIC</p>
+                            <h3>MUSIC</h3>
                         </div>
                         <div class="page-title_11__jp">
                             <p>音楽イベント</p>
                         </div>
                     </div>
                     <div class="m16"></div>
-                    <h3>音楽に関わるイベント</h3>
+                    <h4>音楽に関わるイベント</h4>
                     <p>パイプオルガン演奏会、講習会・パーカッション ・賛美歌 ・ヴァイオリン・フルート ・ピアノ ・子供音楽クラスなど様々な音楽イベントを行なっております。</p>
                 </div>
             </div>
@@ -123,34 +123,34 @@ get_header();
                 <div class="point__main__text">
                     <div class="page-title_11">
                         <div class="page-title_11__eng">
-                            <p>LIFE COUNSELING</p>
+                            <h3>LIFE COUNSELING</h3>
                         </div>
                         <div class="page-title_11__jp">
                             <p>人生相談</p>
                         </div>
                     </div>
                     <div class="m16"></div>
-                    <h3>皆様の幸せを願う牧師の人生相談</h3>
+                    <h4>皆様の幸せを願う牧師の人生相談</h4>
                     <p>今、苦しみと悲しみの中にある方は遠慮なくご連絡ください。</p>
                 </div>
             </div>
             <div class="point__main">
                 <div class="point__main__img" style="background-image:url(/wp-content/themes/rosegarden_file/assets/img/church04.jpg)">
                     <div class="image-dcr4 ">
-                        <p>Chapel</p>
+                        <p>Ceremony</p>
                     </div>
                 </div>
                 <div class="point__main__text">
                     <div class="page-title_11">
                         <div class="page-title_11__eng">
-                            <p>CEREMONY</p>
+                            <h3>CEREMONY</h3>
                         </div>
                         <div class="page-title_11__jp">
                             <p>チャペル</p>
                         </div>
                     </div>
                     <div class="m16"></div>
-                    <h3>人生の節目におけるセレモニーの実施</h3>
+                    <h4>人生の節目におけるセレモニーの実施</h4>
                     <p>婚約式･結婚式･子ども誕生祝福式
                         <br>アニバーサリー（錫婚・銀婚･金婚）祝福式 など
                     </p>
@@ -165,16 +165,16 @@ get_header();
                 <div class="point__main__text">
                     <div class="page-title_11">
                         <div class="page-title_11__eng">
-                            <p>OTHER</p>
+                            <h3>OTHER</h3>
                         </div>
                         <div class="page-title_11__jp">
                             <p>チャペル</p>
                         </div>
                     </div>
                     <div class="m16"></div>
-                    <h3>その他さまざまな取り組みを
+                    <h4>その他さまざまな取り組みを
                         <br>行っています
-                    </h3>
+                    </h4>
                     <p>結婚準備セミナー
                         <br>｢家族のために｣学び会 ※幸せな家庭作りの学び
                         <br>リングピローを作る会
@@ -195,7 +195,7 @@ get_header();
                         <div class="other-page__title">
                             <div class="page-title_07">
                                 <div class="page-title_07__eng">
-                                    <p>PROPOSE</p>
+                                    <h2>PROPOSE</h2>
                                 </div>
                                 <div class="page-title_07__jp">
                                     <p>プロポーズ</p>
@@ -214,7 +214,7 @@ get_header();
                         <div class="other-page__title">
                             <div class="page-title_07">
                                 <div class="page-title_07__eng">
-                                    <p>10th CEREMONY</p>
+                                    <h2>10th CEREMONY</h2>
                                 </div>
                                 <div class="page-title_07__jp">
                                     <p>結婚10周年を祝う「錫婚式」</p>
@@ -233,7 +233,7 @@ get_header();
                         <div class="other-page__title">
                             <div class="page-title_07">
                                 <div class="page-title_07__eng">
-                                    <p>YEAR SCHEDULE</p>
+                                    <h2>YEAR SCHEDULE</h2>
                                 </div>
                                 <div class="page-title_07__jp">
                                     <p>年間スケジュール</p>
@@ -326,7 +326,9 @@ get_header();
         <div class="m40"></div>
         <div class="church-info__address">
             <h2>教会に関するご予約・お問合わせ</h2>
-            <h3><span><a href="tel:011-522-0151">TEL.</span>011-522-0151</a></h3>
+            <div class="address__phone">
+            <p><span><a href="tel:011-522-0151">TEL.</span>011-522-0151</a></p>
+        </div>
         </div>
     </div>
     <div class="church__pastor">
@@ -372,10 +374,10 @@ get_header();
                         <div class="other-page__title">
                             <div class="page-title_07">
                                 <div class="page-title_07__eng">
-                                    <p>ACCRSS</p>
+                                    <h2>ACCRSS</h2>
                                 </div>
                                 <div class="page-title_07__jp">
-                                    <p>アクセス</p>
+                                    <h2>アクセス</h2>
                                 </div>
                             </div>
                         </div>
@@ -391,7 +393,7 @@ get_header();
                         <div class="other-page__title">
                             <div class="page-title_07">
                                 <div class="page-title_07__eng">
-                                    <p>FLOOR GIDE</p>
+                                    <h2>FLOOR GIDE</h2>
                                 </div>
                                 <div class="page-title_07__jp">
                                     <p>フロアガイド</p>

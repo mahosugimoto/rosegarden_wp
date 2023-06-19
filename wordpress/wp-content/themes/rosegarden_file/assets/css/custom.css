@@ -1,6 +1,7 @@
 .event_calendar {
-    padding: 20px;
+    padding: 20px 0px;
     background-color: #E8E5DC;
+
 }
 
 .event_calendar caption {
@@ -62,5 +63,10 @@
   @media screen and (max-width: 768px) {
     .event_calendar {
         margin-bottom: 16px;
+      }
+  }
+  @media screen and (max-width: 480px) {
+    .event_calendar {
+       padding: 10px;
       }
   }

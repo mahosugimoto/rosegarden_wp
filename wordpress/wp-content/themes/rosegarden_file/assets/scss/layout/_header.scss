@@ -752,3 +752,14 @@
         }  
     }
 }
+
+.header-top__address__phone {
+    p {
+        @include global.fs-3xl; 
+        @include global.mb8;
+        @include global.tab {
+            text-align: center;
+            font-size: 22px;
+        }   
+    }
+}

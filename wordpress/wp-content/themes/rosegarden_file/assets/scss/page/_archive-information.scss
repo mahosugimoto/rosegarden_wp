@@ -180,6 +180,8 @@
 }
 
 .info_archive {
+   align-items: center;
+        @include global.mw1216; 
     position: relative;
     padding: 80px; 
     background-color: global.$bg-main;
@@ -197,7 +199,7 @@
    &__list {
     @include global.mb32;
     @include global.pc {
-        padding: 40px 64px;
+       
     }
     @include global.tab {
     

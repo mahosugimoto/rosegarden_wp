@@ -7,10 +7,8 @@
 <!-- タイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
-        <p><?php echo SCF::get('title_en', 7783); ?></p>
-    </div>
-    <div class="page-title_03__jp">
-        <p><?= get_the_title(7783) ?></p>
+        <h2><?php echo SCF::get('title_en', 7783); ?>
+        <span><?= get_the_title(7783) ?></span></h2>
     </div>
     <div class="page-title_03__contents">
         <p><?php echo SCF::get('fv_text', 7783); ?></p>
@@ -40,7 +38,7 @@
                 <p><?= get_the_date() ?></p>
             </div>
             <div class=info_post-details__title>
-                <h2><?= get_the_title() ?></h2>
+                <h1><?= get_the_title() ?></h1>
             </div>
             <?php
             if (has_post_thumbnail()) :

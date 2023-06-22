@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon-precomposed" href="<?= get_template_directory_uri(); ?>/assets/img/rg_apple-touch-icon.jpg">
     <!-- icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <!-- <meta property="og:image" content=""> -->
@@ -366,115 +367,6 @@
     </div>
 </div>
 
-<!-- header_allmenu -->
-<!--  
-<div class="header_allmenu">
-    <div class="header_allmenu__logo">
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/logo/rg-logo.png" alt="">
-    </div>
-    <div class="header_allmenu__wrap">
-        <nav class="header_allmenu__contents">
-            <ul>
-                <li><a href="<?php echo get_page_link(22); ?>">コンセプト</a></li>
-                <li><a href="<?php echo get_page_link(28); ?>">挙式</a></li>
-                <li><a href="<?php echo get_page_link(56); ?>">ウエディングパーティー/披露宴</a></li>
-                <li><a href="<?php echo get_page_link(15); ?>">ブライダルフェア</a></li>
-                <li><a href="#"></a>ウエディングプラン</a></li>
-                <li><a href="<?php echo get_page_link(24); ?>">お客様の声</a></li>
-                <li><a href="<?php echo get_page_link(32); ?>">ギャラリー</a></li>
-                <li><a href="<?php echo get_page_link(52); ?>">フォトウェディング</a></li>
-                <li><a href="<?php echo get_page_link(30); ?>">リゾートウェディング</a></li>
-                <li><a href="<?php echo get_page_link(26); ?>">ウェディングドレス</a></li>
-                <li><a href="<?php echo get_page_link(36); ?>">よくあるご質問</a></li>
-                <li><a href="<?php echo get_page_link(38); ?>">招待されたお客様へ</a></li>
-                <li><a href="<?php echo get_page_link(59); ?>">「恋人の聖地」について</a></li>
-                <li><a href="<?php echo get_page_link(42); ?>">プロポーズ</a></li>
-                <li><a href="<?php echo get_page_link(34); ?>">お知らせ</a></li>
-                <li><a href="<?php echo get_page_link(59); ?>">「恋人の聖地」について</a></li>
-            </ul>
-            <div class="m8"></div>
-            <div class="header_allmenu__menu-s">
-                <p><a href="<?php echo get_page_link(20); ?>">アクセス<span>/</span></a></p>
-                <p><a href="<?php echo get_page_link(40); ?>">フロアガイド<span>/</span></a></p>
-                <p><a href="<?php echo get_page_link(54); ?>">挙式スケジュール <span>/</span></a></p>
-                <p><a href="<?php echo get_page_link(44); ?>">イベントスケジュール</a></p>
-            </div>
-        </nav>
-        <div class="header_allmenu__contents02">
-            <div class="footer-contents__btn">
-                <button class="reservation-btn">
-                    <h3>RESERVATION</h3>
-                    <p>フェア予約/見学予約</p>
-                </button>
-                <button class="contact-btn">
-                    <h3>CONTACT</h3>
-                    <p>資料請求/お問い合わせ</p>
-                </button>
-            </div>
-            <div class="m40"></div>
-            <div class="footer-top__address">
-                <h2><span>TEL.</span>011-522-0151</h2>
-                <p>営業時間: 平日 11:00 〜 19:00 <br class="new-line">/ 土日祝 9:00 〜 19:00</p>
-            </div>
-            <div class="m40"></div>
-            <div class="header_allmenu__cta">
-                <div class="header_allmenu__cta__contents">
-                    <a href="#">
-                        <div class="header_allmenu__cta__contents__left">
-                            <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/phone.png" alt="">
-                            <p>電話問合せ<br>011-522-0151</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="header_allmenu__cta__contents__middle">
-                            <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/paper.png" alt="">
-                            <p>資料請求</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="header_allmenu__cta__contents__right">
-                            <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/fair.png" alt="">
-                            <p>フェア一覧<br>・見学予約</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <a href="#">
-                <div class="header_allmenu__church" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/header_church.jpg);">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/cross_icon.png" alt="">
-                    <p>教会について</p>
-                </div>
-            </a>
-            <div class="header_allmenu__sns">
-                <div class="header__sns">
-                    <a href="#">
-                        <div class="home-sns">
-                            <p><a href="<?php
-                                        echo home_url('/');
-                                        ?>">HOME</a></p>
-                            <div class="instagram_icon">
-                                <img src="<?= get_template_directory_uri(); ?>/assets/img/icon/instagram.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="m24"></div>
-        </div>
-    </div>
-
-   sowa weddings 
-    <div class="sowa-weddings">
-        <p>SOWA WEDDINGS</p>
-        <div class="header_allmenu__menu-s">
-            <p><a href="<?php echo get_page_link(20); ?>">アクセス<span>/</span></a></p>
-            <p><a href="<?php echo get_page_link(40); ?>">フロアガイド<span>/</span></a></p>
-            <p><a href="<?php echo get_page_link(54); ?>">挙式スケジュール <span>/</span></a></p>
-            <p><a href="<?php echo get_page_link(44); ?>">イベントスケジュール<span>/</span></a></p>
-        </div>
-    </div>
-</div>
--->
 </div>
 
 <body>

@@ -16,8 +16,16 @@ Template Name: トップ
             dots: true,
             accessibility: true,
             autoplay: true,
-            autoplaySpeed: 1000,
-            speed: 1000,
+            autoplaySpeed: 3000,
+            fade: true,
+            arrows: false,
+        });
+        $('.fv_slider2').slick({
+            dots: true,
+            accessibility: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+
             fade: true,
             arrows: false,
         });
@@ -54,7 +62,7 @@ Template Name: トップ
             $repeat_group = SCF::get('top-fv');
             foreach ($repeat_group as $fields) {
                 $text_id = $fields['top-fv_title'];
-                $image_id = $fields['top-fv_image']; // フィールドの値を取得
+                $image_id = $fields['top-fv_image']; 
                 $image_url = wp_get_attachment_image_url($image_id, 'full'); // 添付ファイルの画像のURLを取得
             ?>
                 <div class="fv_slide1" style="background-image: url('<?php echo esc_url($image_url); ?>');">
@@ -66,7 +74,23 @@ Template Name: トップ
             }
             ?>
         </div>
-       
+        <div class="fv_slider2">
+            <?php
+            $repeat_group = SCF::get('top-fv');
+            foreach ($repeat_group as $fields) {
+                $text_id = $fields['top-fv_title'];
+                $image_id_sp = $fields['top-fv_image_sp'];
+                $image_url_sp = wp_get_attachment_image_url($image_id_sp, 'full'); // 添付ファイルの画像のURLを取得
+            ?>
+                <div class="fv_slide2" style="background-image: url('<?php echo esc_url($image_url_sp); ?>');">
+                    <div class="fv_catch-copy">
+                        <h1><?php echo ($text_id); ?></h1>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
     </div>
 </div>
 

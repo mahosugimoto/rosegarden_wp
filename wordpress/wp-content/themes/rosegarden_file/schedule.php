@@ -17,10 +17,8 @@ $img = get_post_meta($post->ID, 'image_pc', true);
 <img src="<p><?php echo SCF::get('image_pc'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
-            <h1><?php echo SCF::get('title_en'); ?></h1>
-        </div>
-        <div class="page-title_05__jp">
-            <p><?= get_the_title() ?></p>
+            <h1><?php echo SCF::get('title_en'); ?>
+            <span><?= get_the_title() ?></span></h1>
         </div>
         <div class="page-title_05__contents">
             <p><?php echo SCF::get('fv_text'); ?></p>
@@ -39,10 +37,8 @@ $img = get_post_meta($post->ID, 'image_sp', true);
 <img src="<p><?php echo SCF::get('image_sp'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
-            <h1><?php echo SCF::get('title_en'); ?></h1>
-        </div>
-        <div class="page-title_05__jp">
-            <p><?= get_the_title() ?></p>
+            <h1><?php echo SCF::get('title_en'); ?>
+            <span><?= get_the_title() ?></span></h1>
         </div>
         <div class="page-title_05__contents">
             <p><?php echo SCF::get('fv_text'); ?></p>

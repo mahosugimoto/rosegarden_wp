@@ -1669,6 +1669,14 @@ p {
     padding-top: 40px;
   }
 }
+.page-title_03__eng {
+  margin-bottom: 32px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_03__eng {
+    margin-bottom: 16px;
+  }
+}
 .page-title_03__eng h1 {
   font-size: 40px;
   color: #99762F;
@@ -1711,6 +1719,20 @@ p {
 @media screen and (max-width: 480px) {
   .page-title_03__eng br {
     display: block;
+  }
+}
+.page-title_03__eng span {
+  display: block;
+  font-size: 16px;
+  line-height: 180%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  white-space: wrap;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  color: #99762F;
+}
+@media only screen and (max-width:768px) {
+  .page-title_03__eng span {
+    font-size: 13px;
   }
 }
 .page-title_03__jp {
@@ -1797,6 +1819,20 @@ p {
     font-size: 24px;
   }
 }
+.page-title_04__eng span, .page-title_05__eng span, .page-title_06__eng span, .page-title_07__eng span, .page-title_08__eng span, .page-title_09__eng span, .page-title_10__eng span, .page-title_11__eng span, .page-title_12__eng span {
+  display: block;
+  font-size: 16px;
+  line-height: 180%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  white-space: wrap;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  color: #99762F;
+}
+@media only screen and (max-width:768px) {
+  .page-title_04__eng span, .page-title_05__eng span, .page-title_06__eng span, .page-title_07__eng span, .page-title_08__eng span, .page-title_09__eng span, .page-title_10__eng span, .page-title_11__eng span, .page-title_12__eng span {
+    font-size: 13px;
+  }
+}
 .page-title_04__jp p, .page-title_05__jp p, .page-title_06__jp p, .page-title_07__jp p, .page-title_08__jp p, .page-title_09__jp p, .page-title_10__jp p, .page-title_11__jp p, .page-title_12__jp p {
   white-space: wrap;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
@@ -1808,6 +1844,14 @@ p {
   padding-top: 200px;
   padding-left: 215px;
   padding-right: 215px;
+}
+.page-title_05__eng {
+  margin-bottom: 32px;
+}
+@media only screen and (max-width:768px) {
+  .page-title_05__eng {
+    margin-bottom: 16px;
+  }
 }
 .page-title_05__eng h1 {
   font-size: 42px;
@@ -1834,6 +1878,25 @@ p {
 @media only screen and (max-width:768px) {
   .page-title_05__eng p {
     font-size: 32px;
+  }
+}
+.page-title_05__eng span {
+  display: block;
+  font-size: 16px;
+  line-height: 180%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  margin-bottom: 32px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  color: #fff;
+}
+@media only screen and (max-width:768px) {
+  .page-title_05__eng span {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .page-title_05__eng span {
+    margin-bottom: 16px;
   }
 }
 .page-title_05__jp {
@@ -2182,6 +2245,34 @@ p {
 .wp-block-image {
   margin: auto;
   text-align: center;
+}
+
+.wrap_404 {
+  margin: auto;
+  max-width: 1216px;
+}
+@media only screen and (max-width:1080px) {
+  .wrap_404 {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .wrap_404 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .wrap_404 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrap_404 {
+    margin-top: 96px;
+  }
 }
 
 footer {
@@ -2593,9 +2684,15 @@ footer {
   }
 }
 .info-details__title {
+  font-size: 32px;
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid #333;
+}
+@media only screen and (max-width:768px) {
+  .info-details__title {
+    font-size: 24px;
+  }
 }
 @media only screen and (max-width:768px) {
   .info-details__title {
@@ -2677,9 +2774,15 @@ footer {
   }
 }
 .info_post-details__title {
+  font-size: 32px;
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid #333;
+}
+@media only screen and (max-width:768px) {
+  .info_post-details__title {
+    font-size: 24px;
+  }
 }
 @media only screen and (max-width:768px) {
   .info_post-details__title {
@@ -2792,6 +2895,14 @@ footer {
   padding-bottom: 16px;
   border-bottom: 1px solid #333;
 }
+.church_event__top-details__title h1 {
+  font-size: 32px;
+}
+@media only screen and (max-width:768px) {
+  .church_event__top-details__title h1 {
+    font-size: 24px;
+  }
+}
 @media only screen and (max-width:768px) {
   .church_event__top-details__title {
     margin-bottom: 12px;
@@ -2853,6 +2964,14 @@ footer {
 }
 .cv-details__title {
   margin-bottom: 24px;
+}
+.cv-details__title h1 {
+  font-size: 32px;
+}
+@media only screen and (max-width:768px) {
+  .cv-details__title h1 {
+    font-size: 24px;
+  }
 }
 @media only screen and (max-width:768px) {
   .cv-details__title {
@@ -3904,59 +4023,40 @@ footer {
 .guest__anchor-link {
   display: flex;
   justify-content: space-between;
-  max-width: 720px;
   margin: auto;
+  max-width: 800px;
+  margin: auto;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
-@media only screen and (max-width:768px) {
-  .guest__anchor-link {
-    margin-bottom: 20px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .guest__anchor-link {
-    width: 338px;
-    flex-wrap: wrap;
-  }
-}
-
-.guest {
-  margin: auto;
-  max-width: 1216px;
-}
 @media only screen and (max-width:1080px) {
-  .guest {
+  .guest__anchor-link {
     padding-left: 64px;
     padding-right: 64px;
   }
 }
 @media only screen and (max-width:768px) {
-  .guest {
+  .guest__anchor-link {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 @media only screen and (max-width:400px) {
-  .guest {
+  .guest__anchor-link {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
 @media screen and (max-width: 768px) {
-  .guest {
-    padding: 0px;
+  .guest__anchor-link a {
+    margin-right: 8px;
+    width: calc((100% - 32px) / 2);
   }
-}
-.guest__anchor-link {
-  display: flex;
-  justify-content: space-between;
-  max-width: 720px;
-  margin: auto;
-  margin-bottom: 40px;
 }
 @media screen and (max-width: 480px) {
   .guest__anchor-link a {
-    width: 50%;
+    width: calc((100% - 16px) / 2);
+    width: auto;
   }
 }
 @media only screen and (max-width:768px) {
@@ -3967,7 +4067,11 @@ footer {
 @media screen and (max-width: 768px) {
   .guest__anchor-link {
     padding: 0px 32px;
-    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 480px) {
+  .guest__anchor-link {
+    justify-content: start;
   }
 }
 
@@ -4470,7 +4574,7 @@ footer {
 }
 
 .fv_catch-copy {
-  padding: 16px;
+  padding: 24px;
   z-index: 200;
   position: absolute;
   top: 56px;
@@ -4526,16 +4630,17 @@ footer {
   background-color: #fff;
 }
 
+.fv_slider2 {
+  width: 100%;
+  height: 700px;
+  background-color: #fff;
+}
+
 .fv_slide1, .fv_slide2, .fv_slide3 {
   width: 100%;
   height: 700px;
   background-size: cover;
   background-position: center center;
-}
-@media screen and (max-width: 480px) {
-  .fv_slide1, .fv_slide2, .fv_slide3 {
-    height: 690px;
-  }
 }
 
 .top_banner {
@@ -4588,6 +4693,24 @@ footer {
   .top_banner-wrap__img {
     width: 299px;
     height: 106px;
+  }
+}
+
+.fv_slider {
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  .fv_slider {
+    display: none;
+  }
+}
+
+.fv_slider2 {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .fv_slider2 {
+    display: block;
   }
 }
 
@@ -5912,6 +6035,27 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .fv_slider div {
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.fv_slider2 {
+  position: relative;
+  z-index: 1;
+}
+
+.fv_slider2 div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 480px) {
+  .fv_slider2 div {
     top: 0px;
     right: 0px;
   }
@@ -8230,11 +8374,13 @@ footer {
     margin-top: 80px;
     padding-left: 0px;
     border: 0px;
+    max-width: 100%;
+    padding: 0px 24px;
   }
 }
 @media screen and (max-width: 480px) {
   .pastor_sidebar {
-    margin-top: 40px;
+    margin-top: 0px 40px;
   }
 }
 .pastor_sidebar__block {
@@ -8301,29 +8447,47 @@ footer {
 }
 
 .widget-title {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Cinzel", serif;
+  margin-bottom: 16px;
 }
 @media only screen and (max-width:768px) {
   .widget-title {
-    font-size: 14px;
+    margin-bottom: 8px;
   }
+}
+.widget-title span {
+  display: block;
 }
 
 .sub-widget-title {
   font-size: 10px;
   line-height: 150%;
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-  margin-bottom: 16px;
 }
 @media only screen and (max-width:768px) {
   .sub-widget-title {
     font-size: 8px;
   }
 }
+
+.caption {
+  text-align: center;
+  font-size: 12px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.thead tr td {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.calendar_wrap {
+  margin-bottom: 80px;
+  border-bottom: 1px solid #99762F;
+}
 @media only screen and (max-width:768px) {
-  .sub-widget-title {
-    margin-bottom: 8px;
+  .calendar_wrap {
+    margin-bottom: 40px;
   }
 }
 
@@ -10728,6 +10892,15 @@ footer {
   }
 }
 
+.plan__box__contents p {
+  font-size: 14px;
+}
+@media screen and (max-width: 480px) {
+  .plan__box__contents p {
+    font-size: 12px;
+  }
+}
+
 .tin_ceremony__point {
   margin-bottom: 80px;
 }
@@ -11720,6 +11893,7 @@ footer {
   }
 }
 .partyspace__contents__item {
+  width: calc((100% - 48px) / 3);
   height: 300px;
   background-position: center;
   background-size: cover;
@@ -11939,6 +12113,11 @@ footer {
 }
 .partyspace__other__block-label__flex02__text__name {
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .partyspace__other__block-label__flex02__text__name {
+    width: 100%;
+  }
 }
 
 .partyspace__other__block-icon-wrap {
@@ -13113,12 +13292,22 @@ footer {
 
 .blue_line {
   padding-bottom: 0px;
-  border-bottom: 6px solid #37384B;
+  border-bottom: 5px solid #37384B;
+}
+@media screen and (max-width: 480px) {
+  .blue_line {
+    border-bottom: 3px solid #37384B;
+  }
 }
 
 .red_line {
   padding-bottom: 0px;
-  border-bottom: 6px solid #AF7566;
+  border-bottom: 5px solid #AF7566;
+}
+@media screen and (max-width: 480px) {
+  .red_line {
+    border-bottom: 3px solid #AF7566;
+  }
 }
 
 .dress_name {
@@ -14404,6 +14593,118 @@ footer {
   text-decoration: underline;
 }
 
+.resort_photo_slider1.slick-initialized.slick-slider {
+  width: 620px;
+}
+@media screen and (max-width: 768px) {
+  .resort_photo_slider1.slick-initialized.slick-slider {
+    width: 100%;
+  }
+}
+
+.resort_photo_slider1 .slick-track {
+  height: 440px;
+}
+@media screen and (max-width: 1080px) {
+  .resort_photo_slider1 .slick-track {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resort_photo_slider1 .slick-track {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .resort_photo_slider1 .slick-track {
+    height: 250px;
+  }
+}
+
+.resort_photo_slider2.slick-initialized.slick-slider {
+  width: 620px;
+}
+@media screen and (max-width: 768px) {
+  .resort_photo_slider2.slick-initialized.slick-slider {
+    width: 100%;
+  }
+}
+
+.resort_photo_slider2 .slick-track {
+  height: 440px;
+}
+@media screen and (max-width: 1080px) {
+  .resort_photo_slider2 .slick-track {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resort_photo_slider2 .slick-track {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .resort_photo_slider2 .slick-track {
+    height: 250px;
+  }
+}
+
+.resort_photo_slider3.slick-initialized.slick-slider {
+  width: 620px;
+}
+@media screen and (max-width: 768px) {
+  .resort_photo_slider3.slick-initialized.slick-slider {
+    width: 100%;
+  }
+}
+
+.resort_photo_slider3 .slick-track {
+  height: 440px;
+}
+@media screen and (max-width: 1080px) {
+  .resort_photo_slider3 .slick-track {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resort_photo_slider3 .slick-track {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .resort_photo_slider3 .slick-track {
+    height: 250px;
+  }
+}
+
+.resort_photo_slider4.slick-initialized.slick-slider {
+  width: 620px;
+}
+@media screen and (max-width: 768px) {
+  .resort_photo_slider4.slick-initialized.slick-slider {
+    width: 100%;
+  }
+}
+
+.resort_photo_slider4 .slick-track {
+  height: 440px;
+}
+@media screen and (max-width: 1080px) {
+  .resort_photo_slider4 .slick-track {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .resort_photo_slider4 .slick-track {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .resort_photo_slider4 .slick-track {
+    height: 250px;
+  }
+}
+
 .resort_photo_dcr {
   display: flex;
   justify-content: center;
@@ -14699,7 +15000,7 @@ footer {
 }
 
 .anchor-link {
-  margin-right: 8px;
+  margin-right: 16px;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -14707,6 +15008,11 @@ footer {
 @media only screen and (max-width:768px) {
   .anchor-link {
     margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .anchor-link {
+    margin-right: 8px;
   }
 }
 .anchor-link:hover {

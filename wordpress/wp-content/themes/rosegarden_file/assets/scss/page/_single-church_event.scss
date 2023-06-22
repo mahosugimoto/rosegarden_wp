@@ -29,6 +29,9 @@
          @include global.mb16; 
      }
      &__title {
+        h1 {
+            @include global.fs-3xl;  
+        }
          @include global.mb24;
          @include global.pb16; 
          border-bottom: 1px solid global.$text_main ;

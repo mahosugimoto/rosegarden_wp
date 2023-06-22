@@ -13,10 +13,8 @@ get_header();
 <!-- タイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
-        <h1><?php echo SCF::get('title_en', $infoPostId); ?></h1>
-    </div>
-    <div class="page-title_03__jp">
-        <p><?= get_the_title($infoPostId) ?></p>
+        <h1><?php echo SCF::get('title_en', $infoPostId); ?>
+        <span><?= get_the_title($infoPostId) ?></span></h1>
     </div>
     <div class="page-title_03__contents">
         <p><?php echo SCF::get('fv_text', $infoPostId); ?></p>
@@ -41,7 +39,7 @@ if ($current_category instanceof WP_Term) {
     <div class="ctg_btn">
         <div class="ctg_btn__all">
             <a href="<?php echo the_permalink($infoPostId);?>">
-                <button class="ctg_btn__child-btn <?php echo (empty($category_id)) ? 'active' : '';?>" data-category="all">
+                <button class="ctg_btn__child-btn_first <?php echo (empty($category_id)) ? 'active' : '';?>" data-category="all">
                     <p>ALL</p>
                 </button>
             </a>

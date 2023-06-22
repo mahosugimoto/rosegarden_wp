@@ -60,7 +60,6 @@ get_header();
             foreach ($myposts as $post) : setup_postdata($post);
                 $post_categories = wp_get_post_terms($post->ID, 'category', array('fields' => 'slugs'));
             ?>
-
                 <a href="<?= the_permalink(); ?>">
                     <div class="liststyle_pastor_blog2__block">
                         <div class="liststyle_pastor_blog2__block__text">
@@ -95,7 +94,5 @@ get_header();
         <p>牧師ブログ一覧へ</p>
     </button>
 </div>
-
-
 <div class="m80"></div>
 <?php get_footer(); ?>

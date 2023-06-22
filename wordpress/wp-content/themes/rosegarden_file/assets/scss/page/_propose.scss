@@ -243,7 +243,9 @@
                         height: 6px;
                     }   
                 }
+              
             }
+           
         }
     }
     &__option {
@@ -302,4 +304,13 @@
     @include global.sp {
        font-size: 11px;
      }   
+}
+
+.plan__box__contents{
+    p {
+        font-size: 14px;
+        @include global.sp {
+          font-size: 12px;
+        }   
+    }
 }

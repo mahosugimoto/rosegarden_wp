@@ -186,12 +186,16 @@
 // アンカーリンク
 
 .anchor-link {
-    margin-right: 8px;
+    margin-right: 16px;
     @include global.mb16;
     display: flex;
     align-items: center;
+    @include global.sp {
+        margin-right: 8px;
+    } 
     &:hover {
         @include global.main-hover;
+
     }
 p {
     text-decoration: underline;

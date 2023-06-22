@@ -340,7 +340,6 @@
 .page-title_02 {
     margin-top: 0px; 
 }
-
 // __各所タイトル
 .page-title_03 {
     white-space: nowrap;
@@ -348,10 +347,11 @@
     text-align: center;
     @include global.mw1100;
     @include global.mb80;
-   @include global.sp {
+    @include global.sp {
         padding-top: 40px;
     }
     &__eng {
+        @include global.mb32;
         h1 {
             @include global.fs-4xl;
             color: global.$point_main;
@@ -378,6 +378,13 @@
             @include global.sp {
                display: block; 
             }  
+        }
+        span {
+            display: block;
+            @include global.fs-m; 
+            white-space: wrap;
+            font-family:global.$font-yg;
+            color: global.$point_main;
         }
       
     }
@@ -438,6 +445,13 @@
             line-height: 150%;
             letter-spacing: 0.1em; 
         }
+        span {
+            display: block;
+            @include global.fs-m; 
+            white-space: wrap;
+            font-family:global.$font-yg;
+            color: global.$point_main;
+        }
 
     }
     &__jp {
@@ -455,8 +469,8 @@
     padding-top: 200px; 
     padding-left: 215px;
     padding-right: 215px;
-
     &__eng {
+        @include global.mb32;
         h1 {
             @include global.fs-5xl; 
             color: #fff;
@@ -468,6 +482,13 @@
        p {
         @include global.fs-5xl; 
         color: #fff;
+       }
+       span {
+        display: block;
+        @include global.fs-m; 
+        @include global.mb32;
+        font-family:global.$font-yg;
+            color: #fff;
        }
     } 
     &__jp {
@@ -720,7 +741,6 @@
         }
     }
 }
-
 .other_box_link {
     a {
         display: block;
@@ -731,4 +751,13 @@
 .wp-block-image {
     margin: auto;
     text-align: center;
+}
+
+// 404ページ
+.wrap_404 {
+   
+    @include global.mw1216;
+    @include global.sp {
+        margin-top: 96px;
+    }   
 }

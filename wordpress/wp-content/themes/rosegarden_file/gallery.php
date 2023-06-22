@@ -17,10 +17,8 @@ $img = get_post_meta($galleryPostId, 'image_pc', true);
     <img src="<p><?php echo SCF::get('image_pc'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
-            <h1><?php echo SCF::get('title_en', $galleryPostId); ?></h1>
-        </div>
-        <div class="page-title_05__jp">
-            <p><?= get_the_title($galleryPostId) ?></p>
+            <h1><?php echo SCF::get('title_en', $galleryPostId); ?>
+            <span><?= get_the_title($galleryPostId) ?></span></h1>
         </div>
         <div class="page-title_05__contents">
             <p><?php echo SCF::get('fv_text', $galleryPostId); ?></p>
@@ -51,10 +49,8 @@ $img = get_post_meta($galleryPostId, 'image_pc', true);
     <img src="<p><?php echo SCF::get('image_sp'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
-            <p><?php echo SCF::get('title_en', $galleryPostId); ?></p>
-        </div>
-        <div class="page-title_05__jp">
-            <p><?= get_the_title($galleryPostId) ?></p>
+            <h1><?php echo SCF::get('title_en', $galleryPostId); ?>
+            <span><?= get_the_title($galleryPostId) ?></span></h1>
         </div>
         <div class="page-title_05__contents">
             <p><?php echo SCF::get('fv_text', $galleryPostId); ?></p>

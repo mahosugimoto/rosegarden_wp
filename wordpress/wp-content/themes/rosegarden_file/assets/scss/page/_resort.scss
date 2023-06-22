@@ -325,7 +325,6 @@
             }
         }
 // ２番目
-
         &__img02 {
             position: relative;
             background-position: center;
@@ -711,6 +710,82 @@
         }
     }
 }
+  
+.resort_photo_slider1.slick-initialized.slick-slider {
+    width: 620px;
+     @include global.tab {
+        width: 100%;
+     }
+}
+.resort_photo_slider1 .slick-track {
+    height: 440px;
+    @include global.pc {
+        height: 320px;
+     }
+     @include global.tab {
+        height: 400px; 
+     }
+     @include global.sp {
+        height: 250px;
+     } 
+}
+
+.resort_photo_slider2.slick-initialized.slick-slider {
+    width: 620px;
+    @include global.tab {
+        width: 100%;
+     }
+}
+.resort_photo_slider2 .slick-track {
+    height: 440px;
+    @include global.pc {
+        height: 320px;
+     }
+     @include global.tab {
+        height: 400px; 
+     }
+     @include global.sp {
+        height: 250px;
+     }   
+}
+.resort_photo_slider3.slick-initialized.slick-slider {
+    width: 620px;
+    @include global.tab {
+        width: 100%;
+    }
+}
+
+.resort_photo_slider3 .slick-track {
+    height: 440px;
+    @include global.pc {
+        height: 320px;
+    }
+    @include global.tab {
+        height: 400px;
+    }
+    @include global.sp {
+        height: 250px;
+    }  
+}
+ 
+.resort_photo_slider4.slick-initialized.slick-slider {
+    width: 620px;
+    @include global.tab {
+        width: 100%;
+     }
+}
+.resort_photo_slider4 .slick-track {
+    height: 440px;
+    @include global.pc {
+        height: 320px;
+     }
+     @include global.tab {
+        height: 400px;
+     }
+     @include global.sp {
+        height: 250px;
+     }   
+}
 
 
 // 写真の装飾
@@ -769,3 +844,7 @@
         width: 100%;
     }  
 }
+
+
+
+  

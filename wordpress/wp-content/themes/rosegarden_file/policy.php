@@ -10,7 +10,7 @@ get_header();
 <meta name=”robots” content=”noindex”/>
 </head>
 
-<?php require_once('breadcrumb_other.php');?>
+<?php require_once('breadcrumb.php');?>
 
 <!-- wp_カスタムhtml-->
 

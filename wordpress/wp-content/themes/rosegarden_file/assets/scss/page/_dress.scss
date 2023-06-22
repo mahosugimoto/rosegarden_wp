@@ -333,11 +333,17 @@
 }
 .blue_line {
     padding-bottom: 0px;
-    border-bottom:6px solid global.$granmanie; 
+    border-bottom:5px solid global.$granmanie;
+    @include global.sp {
+        border-bottom:3px solid global.$granmanie;
+    }   
 }
 .red_line {
     padding-bottom: 0px;
-    border-bottom:6px solid global.$primavera; 
+    border-bottom:5px solid global.$primavera;
+    @include global.sp {
+        border-bottom:3px solid global.$primavera;
+    }   
 }
 .dress_name {
     @include global.fs-xs;

@@ -10,6 +10,9 @@
 .cv-details {
     @include global.mb40;
     &__title {
+        h1 {
+            @include global.fs-3xl;  
+        }
         @include global.mb24;
     }
     &__thumbnail {

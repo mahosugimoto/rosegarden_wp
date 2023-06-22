@@ -14,10 +14,8 @@ Template Name: 牧師のブログ詳細
 <!-- タイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
-        <p><?php echo SCF::get('title_en', $pastoBlogId); ?></p>
-    </div>
-    <div class="page-title_03__jp">
-        <p><?= get_the_title($pastoBlogId) ?></p>
+        <h2><?php echo SCF::get('title_en', $pastoBlogId); ?>
+        <span><?= get_the_title($pastoBlogId) ?></span></h2>
     </div>
     <div class="page-title_03__contents">
         <p><?php echo SCF::get('fv_text', $pastoBlogId); ?></p>
@@ -45,7 +43,7 @@ Template Name: 牧師のブログ詳細
                     <p><?= get_the_date() ?></p>
                 </div>
                 <div class=info-details__title>
-                    <h2><?= get_the_title() ?></h2>
+                    <h1><?= get_the_title() ?></h1>
                 </div>
             </div>
         </div>

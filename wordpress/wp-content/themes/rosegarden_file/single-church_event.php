@@ -8,10 +8,8 @@
 <!-- タイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
-        <p><?php echo SCF::get('title_en', 46); ?></p>
-    </div>
-    <div class="page-title_03__jp">
-        <p><?= get_the_title(46) ?></p>
+        <h2><?php echo SCF::get('title_en', 46); ?>
+        <span><?= get_the_title(46) ?></span></h2>
     </div>
     <div class="page-title_03__contents">
         <p><?php echo SCF::get('fv_text', 46); ?></p>
@@ -39,7 +37,7 @@
                 ?>
             </div>
             <div class="church_event__top-details__title">
-                <h2><?= get_the_title(); ?></h2>
+                <h1><?= get_the_title(); ?></h1>
             </div>
             <?php
             if (has_post_thumbnail()) :

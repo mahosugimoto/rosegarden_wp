@@ -156,9 +156,12 @@
         margin-top: 80px;
         padding-left: 0px; 
         border: 0px;
+        max-width:100%; 
+        padding:0px 24px;
     }
     @include global.sp {
-        margin-top: 40px;
+        margin-top: 0px 40px;
+       
     }
     &__block {
         padding: 0px 0px 40px;
@@ -201,12 +204,28 @@
 }
 }
 .widget-title {
-    @include global.fs-l; 
+    font-size: 16px;
     font-family: global.$font-cz;
+    @include global.mb16;
+    span {
+        display: block;
+    } 
 }
 .sub-widget-title {
     @include global.fs-xxs;
-    @include global.mb16;
+   
+}
+.caption {
+    text-align: center;
+    font-size: 12px;
+    font-family: global.$font-yg;
+}
+.thead tr td {
+    font-family: global.$font-yg; 
+}
+.calendar_wrap {
+    @include global.mb80;
+    border-bottom: 1px solid global.$point-main;
 }
 
 

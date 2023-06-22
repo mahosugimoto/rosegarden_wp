@@ -7,10 +7,8 @@
 <!-- タイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
-        <p><?php echo SCF::get('title_en', 295); ?></p>
-    </div>
-    <div class="page-title_03__jp">
-        <p><?= get_the_title(295) ?></p>
+        <h2><?php echo SCF::get('title_en', 295); ?>
+        <span><?= get_the_title(295) ?></span></h2>
     </div>
     <div class="page-title_03__contents">
         <p><?php echo SCF::get('fv_text', 295); ?></p>
@@ -31,7 +29,7 @@
     <div class="cv">
         <div class="cv-details">
             <div class="cv-details__title">
-                <h2><?= get_the_title() ?></h2>
+                <h1><?= get_the_title() ?></h1>
             </div>
             <div class="cv-details__category">
                 <div class=cv-details__category__style>
@@ -47,7 +45,7 @@
                     ?>
                 </div>
                 <div class="cv-details__category__season">
-                    <p>季節</p>
+                    <p>季節：</p>
                     <?php
                     $taxonomy_name = "customer_voice-tag";
                     $this_terms = get_the_terms($post->ID, $taxonomy_name);

@@ -8,18 +8,16 @@ get_header();
 
 <!-- FV BGあり -->
 <!-- PC BG -->
-<?php 
+<?php
 // SCF::get_post_meta($post->ID, '設定した名前', 画像サイズ)
- $img = get_post_meta($post->ID, 'image_pc', true);
+$img = get_post_meta($post->ID, 'image_pc', true);
 ?>
 <div class="page-background" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php echo wp_get_attachment_url($img) ?>)">
-<img src="<p><?php echo SCF::get('image_pc'); ?></p>" alt="">
+    <img src="<p><?php echo SCF::get('image_pc'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
-            <h1><?php echo SCF::get('title_en'); ?></h1>
-        </div>
-        <div class="page-title_05__jp">
-            <p><?= get_the_title() ?></p>
+            <h1><?php echo SCF::get('title_en'); ?>
+            <span><?= get_the_title() ?></span></h1>
         </div>
         <div class="page-title_05__contents">
             <p><?php echo SCF::get('fv_text'); ?></p>
@@ -27,21 +25,19 @@ get_header();
     </div>
 </div>
 
-<?php require_once('breadcrumb_other.php');?>
+<?php require_once('breadcrumb_other.php'); ?>
 
-<?php 
+<?php
 // SCF::get_post_meta($post->ID, '設定した名前', 画像サイズ)
- $img = get_post_meta($post->ID, 'image_sp', true);
+$img = get_post_meta($post->ID, 'image_sp', true);
 ?>
 <!-- SP BG -->
 <div class="page-background_sp" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(<?php echo wp_get_attachment_url($img) ?>)">
-<img src="<p><?php echo SCF::get('image_sp'); ?></p>" alt="">
+    <img src="<p><?php echo SCF::get('image_sp'); ?></p>" alt="">
     <div class="page-title_05">
         <div class="page-title_05__eng">
-            <h1><?php echo SCF::get('title_en'); ?></h1>
-        </div>
-        <div class="page-title_05__jp">
-            <p><?= get_the_title() ?></p>
+            <h1><?php echo SCF::get('title_en'); ?>
+            <span><?= get_the_title() ?></span></h1>
         </div>
         <div class="page-title_05__contents">
             <p><?php echo SCF::get('fv_text'); ?></p>
@@ -190,63 +186,37 @@ get_header();
     <div class="church__other-page">
         <div class="top_other-page">
             <div class="other-page-wrap1">
-                <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/church06.jpg);">
-                    <a href="<?php echo get_page_link(42);?>" class="link">
-                        <div class="other-page__title">
-                            <div class="page-title_07">
-                                <div class="page-title_07__eng">
-                                    <h2>PROPOSE</h2>
-                                </div>
-                                <div class="page-title_07__jp">
-                                    <p>プロポーズ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="other-page__arrow">
-                            <div class="arrow_icon">
-                                <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/church07.jpg);">
-                    <a href="<?php echo get_page_link(203);?>" class="link">
-                        <div class="other-page__title">
-                            <div class="page-title_07">
-                                <div class="page-title_07__eng">
-                                    <h2>10th CEREMONY</h2>
-                                </div>
-                                <div class="page-title_07__jp">
-                                    <p>結婚10周年を祝う「錫婚式」</p>
+                <?php
+                $repeat_group = SCF::get('other-page');
+                foreach ($repeat_group as $fields) {
+                    $text1_id = $fields['other-page_en-title']; // フィールドの値を取得
+                    $text2_id = $fields['other-page_jp-title']; // フィールドの値を取得
+                    $text3_id = $fields['other-page_link']; // フィールドの値を取得
+                    $image_id2 = $fields['other-page_img']; // フィールドの値を取得
+                    $image_url2 = wp_get_attachment_image_url($image_id2, 'full'); // 添付ファイルの画像のURLを取得
+                ?>
+                    <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<?php echo esc_url($image_url2); ?>');">
+                        <a href="<? echo esc_html($text3_id); ?>" class="link">
+                            <div class="other-page__title">
+                                <div class="page-title_07">
+                                    <div class="page-title_07__eng">
+                                        <h2><?php echo ($text1_id); ?></h2>
+                                    </div>
+                                    <div class="page-title_07__jp">
+                                        <p><?php echo ($text2_id); ?></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="other-page__arrow">
-                            <div class="arrow_icon">
-                                <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/church08.jpg);">
-                    <a href="<?php echo get_page_link(44);?>" class="link">
-                        <div class="other-page__title">
-                            <div class="page-title_07">
-                                <div class="page-title_07__eng">
-                                    <h2>YEAR SCHEDULE</h2>
-                                </div>
-                                <div class="page-title_07__jp">
-                                    <p>年間スケジュール</p>
+                            <div class="other-page__arrow">
+                                <div class="arrow_icon">
+                                    <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
                                 </div>
                             </div>
-                        </div>
-                        <div class="other-page__arrow">
-                            <div class="arrow_icon">
-                                <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -263,46 +233,46 @@ get_header();
                     </div>
                 </div>
                 <div class="liststyle_church_event2">
-                <?php
-                $taxonomy_name = 'church_event-cat';
-            $args = array(
-                'posts_per_page' => 3,
-                'post_status' => 'publish',
-                'post_type' => 'church_event',
-            );
+                    <?php
+                    $taxonomy_name = 'church_event-cat';
+                    $args = array(
+                        'posts_per_page' => 3,
+                        'post_status' => 'publish',
+                        'post_type' => 'church_event',
+                    );
 
-            $myposts = get_posts($args);
-            foreach ($myposts as $post) : setup_postdata($post);
-                $post_categories = wp_get_post_terms($post->ID, $taxonomy_name, array('fields' => 'slugs'));
-            ?>
-                <a href="<?= the_permalink(); ?>">
-                    <div class="liststyle_church_event2__block" data-categories="<?= implode(' ', $post_categories); ?>">
-                        <div class="liststyle_church_event2__block__img" style="background-image:url(<?php the_post_thumbnail_url(); ?>)">
-                        </div>
-                        <div class="liststyle_church_event2__block__text">
-                            <div class="liststyle_church_event2__ctg">
-                                <?php
-                                foreach ($post_categories as $category_slug) {
-                                    $term = get_term_by('slug', $category_slug, $taxonomy_name);
-                                    if ($term) {
-                                        echo '<p class="ctg_style02">' . $term->name . '</p>';
-                                    }
-                                }
-                                ?>
+                    $myposts = get_posts($args);
+                    foreach ($myposts as $post) : setup_postdata($post);
+                        $post_categories = wp_get_post_terms($post->ID, $taxonomy_name, array('fields' => 'slugs'));
+                    ?>
+                        <a href="<?= the_permalink(); ?>">
+                            <div class="liststyle_church_event2__block" data-categories="<?= implode(' ', $post_categories); ?>">
+                                <div class="liststyle_church_event2__block__img" style="background-image:url(<?php the_post_thumbnail_url(); ?>)">
+                                </div>
+                                <div class="liststyle_church_event2__block__text">
+                                    <div class="liststyle_church_event2__ctg">
+                                        <?php
+                                        foreach ($post_categories as $category_slug) {
+                                            $term = get_term_by('slug', $category_slug, $taxonomy_name);
+                                            if ($term) {
+                                                echo '<p class="ctg_style02">' . $term->name . '</p>';
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                    <h3><?= get_the_title() ?></h3>
+                                    <p><?php echo SCF::get('church_event_title'); ?></p>
+                                    <p><?php echo SCF::get('church_event_text'); ?></p>
+                                </div>
                             </div>
-                            <h3><?= get_the_title() ?></h3>
-                            <p><?php echo SCF::get('church_event_title'); ?></p>
-                            <p><?php echo SCF::get('church_event_text'); ?></p>
-                        </div>
-                    </div>
-                </a>
-            <?php
-            endforeach;
-            wp_reset_postdata();
-            ?>
+                        </a>
+                    <?php
+                    endforeach;
+                    wp_reset_postdata();
+                    ?>
                     <div class="m16"></div>
                     <div class="church_event__list__title">
-                        <button class="page-btn" onclick="location.href='<?php echo get_page_link(46);?>'">
+                        <button class="page-btn" onclick="location.href='<?php echo get_page_link(46); ?>'">
                             <p>イベントをもっと見る</p>
                         </button>
                     </div>
@@ -327,8 +297,8 @@ get_header();
         <div class="church-info__address">
             <h2>教会に関するご予約・お問合わせ</h2>
             <div class="address__phone">
-            <p><span><a href="tel:011-522-0151">TEL.</span>011-522-0151</a></p>
-        </div>
+                <p><span><a href="tel:011-522-0151">TEL.</span>011-522-0151</a></p>
+            </div>
         </div>
     </div>
     <div class="church__pastor">
@@ -351,14 +321,14 @@ get_header();
                     <div class="m48"></div>
                     <div class="blockstyle05__imgblock__btn">
                         <div class="church__pastor__btn01">
-                        <button class="page-btn_pastor" onclick="location.href='<?php echo get_page_link(48);?>'">
-                            <p>牧師ブログを見る</p>
-                        </button>
+                            <button class="page-btn_pastor" onclick="location.href='<?php echo get_page_link(48); ?>'">
+                                <p>牧師ブログを見る</p>
+                            </button>
                         </div>
-                        <div class="church__pastor__btn02" onclick="location.href='<?php echo get_page_link(50);?>'">
-                        <button class="page-btn_pastor">
-                            <p>牧師についてもっと知る</p>
-                        </button>
+                        <div class="church__pastor__btn02" onclick="location.href='<?php echo get_page_link(50); ?>'">
+                            <button class="page-btn_pastor">
+                                <p>牧師についてもっと知る</p>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -368,49 +338,44 @@ get_header();
     <!-- 他のページ -->
     <div class="church__other-page">
         <div class="top_other-page">
-            <div class="other-page-wrap1">
-                <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/church_access.jpg);">
-                    <a href="<?php echo get_page_link(20);?>" class="link">
-                        <div class="other-page__title">
-                            <div class="page-title_07">
-                                <div class="page-title_07__eng">
-                                    <h2>ACCRSS</h2>
-                                </div>
-                                <div class="page-title_07__jp">
-                                    <h2>アクセス</h2>
+           
+                <div class="other-page-wrap1">
+                <?php
+            $repeat_group = SCF::get('other-page2');
+            foreach ($repeat_group as $fields) {
+                $text4_id = $fields['other-page2_en-title']; // フィールドの値を取得
+                $text5_id = $fields['other-page2_jp-title']; // フィールドの値を取得
+                $text6_id = $fields['other-page2_link']; // フィールドの値を取得
+                $image_id3 = $fields['other-page2_img']; // フィールドの値を取得
+                $image_url3 = wp_get_attachment_image_url($image_id3, 'full'); // 添付ファイルの画像のURLを取得
+            ?>
+                    <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<?php echo esc_url($image_url3); ?>');">
+                        <a href="<? echo ($text6_id); ?>" class="link">
+                            <div class="other-page__title">
+                                <div class="page-title_07">
+                                    <div class="page-title_07__eng">
+                                        <h2><?php echo ($text4_id); ?></h2>
+                                    </div>
+                                    <div class="page-title_07__jp">
+                                        <p><?php echo ($text5_id); ?></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="other-page__arrow">
-                            <div class="arrow_icon">
-                                <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
+                            <div class="other-page__arrow">
+                                <div class="arrow_icon">
+                                    <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <?php
+            }
+            ?>
                 </div>
-                <div class="other-page" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/wp-content/themes/rosegarden_file/assets/img/church_floor-guide.jpg);">
-                    <a href="<?php echo get_page_link(40);?>" class="link">
-                        <div class="other-page__title">
-                            <div class="page-title_07">
-                                <div class="page-title_07__eng">
-                                    <h2>FLOOR GIDE</h2>
-                                </div>
-                                <div class="page-title_07__jp">
-                                    <p>フロアガイド</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="other-page__arrow">
-                            <div class="arrow_icon">
-                                <img src="/wp-content/themes/rosegarden_file/assets/img/icon/arrow_icon_wh.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
 </div>
 
 <div class="m80"></div>
+<?php include('other_page.php'); ?>
 <?php get_footer(); ?>

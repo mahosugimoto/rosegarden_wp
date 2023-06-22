@@ -1,6 +1,8 @@
 <?php
 define('PASTOR_SLUG', 'church/pastor/blog');
 define('PASTOR_POST_TYPE_NAME', 'pastor');
+define('VOICE_SLUG', 'bridal/voice');
+define('VOICE_POST_TYPE_NAME', 'customer_voice');
 
 add_theme_support('post-thumbnails');
 add_action('init', 'create_post_type');
@@ -97,7 +99,7 @@ function create_post_type()
 
     // カスタマーボイス
     register_post_type(
-        'customer_voice',
+        VOICE_POST_TYPE_NAME,
         array(
             'label' => 'お客様の声',
             'public' => true,
@@ -111,6 +113,7 @@ function create_post_type()
                 'thumbnail',
                 'revisions',
             ),
+            'rewrite' => array('slug' => VOICE_SLUG),
         )
     );
 

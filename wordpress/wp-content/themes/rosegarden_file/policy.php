@@ -12,6 +12,7 @@ get_header();
 
 <?php require_once('breadcrumb.php');?>
 
+<div class="wrapper">
 <!-- wp_カスタムhtml-->
 
 <?php while (have_posts()) : the_post(); ?>
@@ -22,4 +23,5 @@ get_header();
 <!-- wp_カスタムhtml-->
 
 <div class="m80"></div>
+</div>
 <?php get_footer(); ?>

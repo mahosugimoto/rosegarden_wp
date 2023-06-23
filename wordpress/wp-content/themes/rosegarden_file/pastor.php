@@ -6,7 +6,7 @@ get_header();
 ?><?php include('header_icon.php'); ?>
 
 <?php require_once('breadcrumb.php');?>
-
+<div class="wrapper">
 <div class="m80"></div>
 <div class="pastor_intro">
     <div class="pastor_intro__block">
@@ -95,4 +95,5 @@ get_header();
     </button>
 </div>
 <div class="m80"></div>
+</div>
 <?php get_footer(); ?>

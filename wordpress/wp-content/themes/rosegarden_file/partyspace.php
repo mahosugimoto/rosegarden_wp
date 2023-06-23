@@ -98,11 +98,11 @@ get_header();
 });
 </script>
 
-
+<div class="wrapper">
 <?php while (have_posts()) : the_post(); ?>
 <?= get_the_content(); ?>
 <?php endwhile; ?>
-
+</div>
 
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>

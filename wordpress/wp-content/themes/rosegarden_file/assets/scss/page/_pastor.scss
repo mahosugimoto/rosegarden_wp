@@ -134,10 +134,13 @@
     margin: 0px 0px 0px 0px;
 }
 .pastor_blog_wrapper {
-  
+    @include global.mw1216; 
 }
 .pastor_blog_innerwrap {
-    @include global.mw850;
+    display: flex;
+    align-items: start;
+    @include global.mw1216;
+    margin: 0px auto; 
     @include global.tab {
         padding: 0px;
     } 
@@ -146,22 +149,25 @@
     width: 100%;
     max-width:276px ;
     padding-left: 24px;
-    border-left: 1px solid global.$point-main;
+    border-left: 1px solid global.$bg-main;
     margin-left: 80px;
+    @include global.pc {
+        border: 0px;  
+    }
     @include global.tab {
         margin-left: 40px;  
     }
+
     @include global.tab {
         margin: auto;
         margin-top: 80px;
         padding-left: 0px; 
         border: 0px;
         max-width:100%; 
-        padding:0px 24px;
+        padding:0px 40px;
     }
     @include global.sp {
         margin-top: 0px 40px;
-       
     }
     &__block {
         padding: 0px 0px 40px;
@@ -179,6 +185,8 @@
         }    
     }
 }
+
+
 //ウィジェットカスタマイズ
 .widget-widget_archive {
     a {
@@ -221,11 +229,138 @@
     font-family: global.$font-yg;
 }
 .thead tr td {
-    font-family: global.$font-yg; 
+    font-family: global.$font-yg;
+    a {
+        background-color: global.$bg-main;
+    } 
 }
 .calendar_wrap {
-    @include global.mb80;
-    border-bottom: 1px solid global.$point-main;
+    margin-bottom: 40px;
+    border-bottom: 1px solid global.$bg-main;
+    padding: 24px;
+}
+.wp-calendar {
+    margin-bottom: 16px;
+    a {
+        background-color: global.$bg-main;
+    }
+    @include global.tab {
+        margin: auto;
+        margin-bottom: 16px;  
+    } 
 }
 
+.widget_recent_entries {
+    margin-bottom: 40px;
+    border-bottom: 1px solid global.$bg-main; 
+    ul {
+        padding:24px;
+    }
+}
+.widget_archive {
+    margin-bottom: 40px;
+    border-bottom: 1px solid global.$bg-main; 
+    ul {
+        padding:24px;
+    } 
+}
+.wp-calendar-table {
+    caption {
+        text-align: center;
+        margin-bottom: 16px;
+        font-family: global.$font-yg;
+    }
+    thead {
+        tr {
+            font-family: global.$font-yg;
+            th {
+                padding: 6px;
+                font-family: global.$font-yg;
+            }
+        }
+    }
+    tbody {
+        tr {
+            font-family: global.$font-yg;
+            td {
+                font-family: global.$font-yg;
+                padding: 6px;
+                font-size: 14px;
+                a {
+                    background-color: global.$bg-main;
+                }
+            }
+        }
+    }
+}
+.sidebar.wp-calendar {
+    margin-bottom: 16px;
+    a {
+        background-color: global.$bg-main;
+    } 
+    td {
+        a {
 
+        }
+    }
+}
+.wp-calendar-nav-prev {
+    margin: 0px 70px 0px 24px;
+}
+.wp-calendar-nav {
+    @include global.tab {
+        text-align: center;
+    }  
+}
+.pastor-sidebar {
+    @include global.tab {
+        padding: 0px 40px;
+    }  
+    max-width: 300px;
+}
+
+.sidebar.wp-calendar.td {
+    padding: 8px;
+}
+.pastor_blog_wrapper {
+    display: flex;
+    margin: auto;
+    @include global.pc {
+        display: block;
+    } 
+    @include global.tab {
+        padding: 0px;
+    }   
+}
+.pastor_blog_innerwrap {
+    @include global.pc {
+        display: block;
+    }  
+}
+.moz-quote-pre {
+    white-space: break-spaces;
+}
+.widget-title {
+    h2 {
+        font-size: 18px;
+    }
+span {
+    font-family: global.$font-yg;
+    font-size: 12px;
+}
+}
+.wp-calendar-nav {
+    font-family: global.$font-yg; 
+}
+.wp-calendar-nav-prev {
+    a {
+        font-family: global.$font-yg;
+    }
+ 
+
+}
+.wp-calendar-nav-next {
+    a {
+        font-family: global.$font-yg; 
+    }
+}

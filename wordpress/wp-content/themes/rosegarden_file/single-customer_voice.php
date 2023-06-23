@@ -19,7 +19,7 @@
 <?php custom_breadcrumbs('pc'); ?>
 
 <!-- wp_カスタムhtml-->
-
+<div class="wrapper">
 <?php while (have_posts()) : the_post(); ?>
 
     <!-- wp_カスタムhtml-->
@@ -81,7 +81,7 @@
                 ?>
                     <div class="article-details__contents__img" style="background-image: url(<?php echo $thumbnail; ?>);">
                     </div>
-                <?php endif; ?>
+                <?php endif; ?>  
                 <?= get_the_content(); ?>
                 <div class="property_gr">
                 <?php
@@ -166,4 +166,5 @@ foreach ($repeat_group as $fields) {
 <?php endwhile; ?>
 
 <div class="m80"></div>
+</div>
 <?php get_footer() ?>

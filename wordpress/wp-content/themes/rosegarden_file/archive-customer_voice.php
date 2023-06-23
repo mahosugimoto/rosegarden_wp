@@ -68,6 +68,8 @@ $img = get_post_meta($voicePostID, 'image_sp', true);
     </div>
 </div>
 
+<div class="wrapper">
+
 <!-- カテゴリボタン-->
 <div class="church__ctg">
     <div class="ctg_btn">
@@ -182,5 +184,6 @@ echo custom_pagination($args);
 ?>
 
 <div class="m80"></div>
+</div>
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>

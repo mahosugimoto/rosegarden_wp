@@ -9,6 +9,7 @@ get_header();
 <!-- パンクズ_sp -->
 <?php custom_breadcrumbs('sp'); ?>
 
+
 <!-- タイトル -->
 <div class="page-title_03">
     <div class="page-title_03__eng">
@@ -57,6 +58,7 @@ if ($current_category instanceof WP_Term) {
         </div>
     </div>
 </div>
+<div class="wrapper">
 
 <!-- church_event-->
 <div class="church_event">
@@ -153,5 +155,6 @@ if ($current_category instanceof WP_Term) {
 </div>
 
 <div class="m80"></div>
+    </div>
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>

@@ -46,6 +46,8 @@ $img = get_post_meta($post->ID, 'image_sp', true);
     </div>
 </div>
 
+<div class="wrapper">
+
 <!-- wp_カスタムhtml-->
 
 <?php while (have_posts()) : the_post(); ?>
@@ -55,5 +57,6 @@ $img = get_post_meta($post->ID, 'image_sp', true);
 
 <!-- wp_カスタムhtml-->
 
+</div>
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>

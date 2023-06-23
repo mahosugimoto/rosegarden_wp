@@ -2,6 +2,7 @@
 get_header();
 ?>
 <?php include('header_icon.php'); ?>
+<div class="wrapper">
 <div class="wrap_404">
     <div class="page-title_03">
         <div class="page-title_03__eng">
@@ -25,4 +26,5 @@ get_header();
     </div>
 </div>
 <div class="m80"></div>
+</div>
 <?php get_footer(); ?>

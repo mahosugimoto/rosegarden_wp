@@ -60,8 +60,12 @@
 
     body {
         width: 100%;
-        max-width: 1440px;
         margin: auto;
+    }
+    .wrapper {
+        width: 100%;
+        margin: auto;
+        max-width: 1440px;
     }
 </style>
 <script>
@@ -136,7 +140,6 @@
             <span></span>
         </div>
     </div>
-
     <nav id="g-nav">
         <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
             <div id="g-nav-block">
@@ -370,3 +373,4 @@
 </div>
 
 <body>
+ 

@@ -1303,11 +1303,11 @@ p {
   height: 596px;
   background-position: center;
   background-size: cover;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
 }
 @media only screen and (max-width:768px) {
   .article-details__contents__img {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 1080px) {
@@ -7625,7 +7625,7 @@ footer {
   margin: auto;
   max-width: 850px;
   margin-bottom: 40px;
-  margin: auto;
+  margin: 0px auto;
   position: relative;
   background-color: #EBE8E3;
 }
@@ -7660,7 +7660,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .pastor_blog {
-    padding: 40px 16px 8px;
+    padding: 40px 16px 24px;
   }
 }
 .pastor_blog__list {
@@ -8328,9 +8328,35 @@ footer {
   margin: 0px 0px 0px 0px;
 }
 
-.pastor_blog_innerwrap {
+.pastor_blog_wrapper {
   margin: auto;
-  max-width: 850px;
+  max-width: 1216px;
+}
+@media only screen and (max-width:1080px) {
+  .pastor_blog_wrapper {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+@media only screen and (max-width:768px) {
+  .pastor_blog_wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .pastor_blog_wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.pastor_blog_innerwrap {
+  display: flex;
+  align-items: start;
+  margin: auto;
+  max-width: 1216px;
+  margin: 0px auto;
 }
 @media only screen and (max-width:1080px) {
   .pastor_blog_innerwrap {
@@ -8360,8 +8386,13 @@ footer {
   width: 100%;
   max-width: 276px;
   padding-left: 24px;
-  border-left: 1px solid #99762F;
+  border-left: 1px solid #EBE8E3;
   margin-left: 80px;
+}
+@media screen and (max-width: 1080px) {
+  .pastor_sidebar {
+    border: 0px;
+  }
 }
 @media screen and (max-width: 768px) {
   .pastor_sidebar {
@@ -8375,7 +8406,7 @@ footer {
     padding-left: 0px;
     border: 0px;
     max-width: 100%;
-    padding: 0px 24px;
+    padding: 0px 40px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -8480,15 +8511,141 @@ footer {
 .thead tr td {
   font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
+.thead tr td a {
+  background-color: #EBE8E3;
+}
 
 .calendar_wrap {
-  margin-bottom: 80px;
-  border-bottom: 1px solid #99762F;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #EBE8E3;
+  padding: 24px;
 }
-@media only screen and (max-width:768px) {
-  .calendar_wrap {
-    margin-bottom: 40px;
+
+.wp-calendar {
+  margin-bottom: 16px;
+}
+.wp-calendar a {
+  background-color: #EBE8E3;
+}
+@media screen and (max-width: 768px) {
+  .wp-calendar {
+    margin: auto;
+    margin-bottom: 16px;
   }
+}
+
+.widget_recent_entries {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #EBE8E3;
+}
+.widget_recent_entries ul {
+  padding: 24px;
+}
+
+.widget_archive {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #EBE8E3;
+}
+.widget_archive ul {
+  padding: 24px;
+}
+
+.wp-calendar-table caption {
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+.wp-calendar-table thead tr {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+.wp-calendar-table thead tr th {
+  padding: 6px;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+.wp-calendar-table tbody tr {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+.wp-calendar-table tbody tr td {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  padding: 6px;
+  font-size: 14px;
+}
+.wp-calendar-table tbody tr td a {
+  background-color: #EBE8E3;
+}
+
+.sidebar.wp-calendar {
+  margin-bottom: 16px;
+}
+.sidebar.wp-calendar a {
+  background-color: #EBE8E3;
+}
+.wp-calendar-nav-prev {
+  margin: 0px 70px 0px 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .wp-calendar-nav {
+    text-align: center;
+  }
+}
+
+.pastor-sidebar {
+  max-width: 300px;
+}
+@media screen and (max-width: 768px) {
+  .pastor-sidebar {
+    padding: 0px 40px;
+  }
+}
+
+.sidebar.wp-calendar.td {
+  padding: 8px;
+}
+
+.pastor_blog_wrapper {
+  display: flex;
+  margin: auto;
+}
+@media screen and (max-width: 1080px) {
+  .pastor_blog_wrapper {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pastor_blog_wrapper {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .pastor_blog_innerwrap {
+    display: block;
+  }
+}
+
+.moz-quote-pre {
+  white-space: break-spaces;
+}
+
+.widget-title h2 {
+  font-size: 18px;
+}
+.widget-title span {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 12px;
+}
+
+.wp-calendar-nav {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.wp-calendar-nav-prev a {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+.wp-calendar-nav-next a {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 .hymn {

@@ -26,7 +26,7 @@ Template Name: 牧師のブログ詳細
 <?php custom_breadcrumbs('pc'); ?>
 
 <!-- イベントタイトル-->
-
+<div class="wrapper">
 <div class="pastor-single_wrap">
 <?php while (have_posts()) : the_post();
     $post_type = get_post_type();
@@ -86,4 +86,5 @@ Template Name: 牧師のブログ詳細
 </div>
 </div>
 <div class="m80"></div>
+</div>
 <?php get_footer() ?>

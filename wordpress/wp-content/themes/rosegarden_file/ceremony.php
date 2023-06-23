@@ -42,13 +42,13 @@ get_header();
         </div>
     </div>
 </div>
-
+<div class="wrapper">
 <?php while (have_posts()) : the_post(); ?>
 
 <?= get_the_content(); ?>
 <?php endwhile; ?>
 
 <!-- wp_カスタムhtml-->
-
+</div>
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>

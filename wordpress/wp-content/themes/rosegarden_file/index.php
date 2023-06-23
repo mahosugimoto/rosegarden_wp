@@ -94,6 +94,7 @@ Template Name: トップ
     </div>
 </div>
 
+<div class="wrapper">
 <!-- FV slider 
 <div class="fv">
     <div class="fv_slider-wrap">
@@ -193,7 +194,6 @@ $topAdvs = topAdvertisements();
             <?php endif;
             endforeach; ?>
         </div>
-    </div>
     </div>
 <?php endif; ?>
 
@@ -574,6 +574,7 @@ foreach ($repeat_group as $fields) {
     <!-- 他のページの写し -->
 </div>
 <div class="m80"></div>
+</div>
 <?php include('footer.php'); ?>
 
 </html>

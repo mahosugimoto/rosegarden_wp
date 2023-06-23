@@ -58,7 +58,7 @@ $img = get_post_meta($galleryPostId, 'image_pc', true);
     </div>
 </div>
 
-
+<div class="wrapper">
 <!-- ギャラリー -->
 <!-- カテゴリボタン -->
 <div class="gallery">
@@ -211,5 +211,6 @@ $img = get_post_meta($galleryPostId, 'image_pc', true);
     </div>
 </div>
 
+</div>
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>

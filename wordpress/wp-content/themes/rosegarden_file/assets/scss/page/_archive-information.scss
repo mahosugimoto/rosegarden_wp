@@ -4,7 +4,7 @@
 .pastor_blog {
     @include global.mw850;
     @include global.mb40;
-    margin: auto;
+    margin: 0px auto;
     position: relative;
     background-color: global.$bg-main;
     @include global.pc{
@@ -12,7 +12,7 @@
         padding-right: 0px;
     } 
     @include global.sp {
-        padding:40px 16px 8px ;
+        padding:40px 16px 24px ;
     } 
    &__list {
     padding: 40px 24px;

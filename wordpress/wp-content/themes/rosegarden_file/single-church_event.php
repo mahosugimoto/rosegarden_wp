@@ -19,7 +19,7 @@
 <!-- パンクズ_pc -->
 <?php custom_breadcrumbs('pc'); ?>
 
-
+<div class="wrapper">
 <?php while (have_posts()) : the_post(); ?>
     <!-- イベントタイトル-->
     <div class="church_event__top">
@@ -71,6 +71,7 @@
     </div>
 <?php endwhile; ?>
 <div class="m80"></div>
+</div>
 <?php get_footer() ?>
 
 

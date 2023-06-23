@@ -45,6 +45,7 @@ $img = get_post_meta($post->ID, 'image_sp', true);
     </div>
 </div>
 
+<div class="wrapper">
 <!-- 教会紹介コンテンツ -->
 <div class="church">
     <div class="church__top">
@@ -377,5 +378,6 @@ $img = get_post_meta($post->ID, 'image_sp', true);
 </div>
 
 <div class="m80"></div>
+</div>
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>

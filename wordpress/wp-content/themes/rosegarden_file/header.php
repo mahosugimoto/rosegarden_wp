@@ -55,17 +55,15 @@
     body {
         width: 100%;
         margin: auto;
-        max-width: 1440px;
+        
     }
-
     html {
         margin-top: 0px;
     }
-
-    .wap {
+    .wrapper {
         width: 100%;
         margin: auto;
-
+        max-width: 1440px;
     }
 </style>
 <script>

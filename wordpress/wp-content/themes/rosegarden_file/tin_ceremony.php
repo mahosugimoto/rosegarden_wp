@@ -13,7 +13,7 @@ get_header();
 <!-- 錫婚式スケジュール -->
 
 <!-- wp_カスタムhtml-->
-
+<div class="wrapper">
 <?php while (have_posts()) : the_post(); ?>
 
 <?= get_the_content(); ?>
@@ -22,5 +22,6 @@ get_header();
 <!-- wp_カスタムhtml-->
 
 <div class="m80"></div>
+</div>
 <?php include('other_page.php'); ?>
 <?php get_footer(); ?>

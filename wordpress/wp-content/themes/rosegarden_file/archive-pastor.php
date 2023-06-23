@@ -3,7 +3,21 @@
 Template Name: 牧師ブログ
 */
 get_header();
-?><?php include('header_icon.php'); ?>
+?>
+<style>
+    .pastor_blog {
+        width: 800px;
+    }
+
+    @media only screen and (max-width:768px) {
+        .pastor_blog {
+            width: auto;
+            width: 100%;
+        }
+    }
+    
+</style>
+<?php include('header_icon.php'); ?>
 <?php $pastoBlogId = 48; ?>
 
 <!-- パンクズ_sp -->
@@ -13,7 +27,8 @@ get_header();
 <div class="page-title_03">
     <div class="page-title_03__eng">
         <h1><?php echo SCF::get('title_en', $pastoBlogId); ?>
-        <span><?= get_the_title($pastoBlogId) ?></span></h1>
+            <span><?= get_the_title($pastoBlogId) ?></span>
+        </h1>
     </div>
     <div class="page-title_03__contents">
         <p><?php echo SCF::get('fv_text', $pastoBlogId); ?></p>
@@ -23,74 +38,79 @@ get_header();
 <!-- パンクズ_pc -->
 <?php custom_breadcrumbs('pc'); ?>
 
+<div class="wrapper">
+    <!-- テスト -->
+    <div class="pastor_blog_wrapper">
+        <div class="pastor_blog_innerwrap">
+            <div class="pastor_blog_innerwrap2">
+                <div class="pastor_blog">
+                    <div class="pastor_blog__list">
+                        <div class="lace-dcr_top">
+                            <div class="lace-dcr_bottom__img">
+                                <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/lace.png" alt="">
+                            </div>
+                        </div>
+                        <div class="liststyle_pastor_blog2">
+                            <?php
+                            $args = $commonArgs = pastor_args();
+                            $posts_per_page = 10;
+                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                            $post_type = 'pastor';
+                            $args['posts_per_page'] = $posts_per_page;
+                            $args['paged'] = $paged;
 
-<!-- テスト -->
-<div class="pastor_blog_wrapper">
-    <div class="pastor_blog_innerwrap">
-        <div class="pastor_blog">
-            <div class="pastor_blog__list">
-                <div class="lace-dcr_top">
-                    <div class="lace-dcr_bottom__img">
-                        <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/lace.png" alt="">
-                    </div>
-                </div>
-                <div class="liststyle_pastor_blog2">
-                    <?php
-                    $args = $commonArgs = pastor_args();
-                    $posts_per_page = 10;
-                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $post_type = 'pastor';
-                    $args['posts_per_page'] = $posts_per_page;
-                    $args['paged'] = $paged;
-
-                    $myposts = get_posts($args);
-                    foreach ($myposts as $post) : setup_postdata($post);
-                    ?>
-                        <a href="<?= the_permalink(); ?>">
-                            <div class="liststyle_pastor_blog2__block">
-                                <div class="liststyle_pastor_blog2__block__text">
-                                    <div class="liststyle_pastor_blog2__ctg">
-                                        <p><?= get_the_date() ?></p>
+                            $myposts = get_posts($args);
+                            foreach ($myposts as $post) : setup_postdata($post);
+                            ?>
+                                <a href="<?= the_permalink(); ?>">
+                                    <div class="liststyle_pastor_blog2__block">
+                                        <div class="liststyle_pastor_blog2__block__text">
+                                            <div class="liststyle_pastor_blog2__ctg">
+                                                <p><?= get_the_date() ?></p>
+                                            </div>
+                                            <h3><?= get_the_title() ?></h3>
+                                            <p><?= custom_post_excerpt() ?></p>
+                                        </div>
                                     </div>
-                                    <h3><?= get_the_title() ?></h3>
-                                    <p><?= custom_post_excerpt() ?></p>
+                                </a>
+                            <?php endforeach; ?>
+                            <div class="liststyle_pastor_blog2__btn">
+                            </div>
+                            <div class="lace-dcr_bottom">
+                                <div class="lace-dcr_bottom__img">
+                                    <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/lace02.png" alt="">
                                 </div>
                             </div>
-                        </a>
-                    <?php endforeach; ?>
-                    <div class="liststyle_pastor_blog2__btn">
-                    </div>
-                    <div class="lace-dcr_bottom">
-                        <div class="lace-dcr_bottom__img">
-                            <img src="/wp-content/themes/rosegarden_file/assets/img/dcr/lace02.png" alt="">
                         </div>
                     </div>
+
+                </div>
+                <div class="pastor_blog_pagenation">
+                    <!-- ページネーション -->
+                    <?php
+                    wp_reset_postdata();
+                    $commonArgs['posts_per_page'] = -1;
+                    $query = new WP_Query($commonArgs);
+
+                    // Get the count of posts that match the query
+                    $total_post = $query->found_posts;
+                    $num_pages = ceil($total_post / $posts_per_page);
+
+                    $args = array(
+                        'total' => $num_pages,
+                        'found_posts' => $total_post
+                    );
+                    echo custom_pagination($args);
+                    ?>
                 </div>
             </div>
-        </div>
-        <div class="pastor_blog_pagenation">
-            <!-- ページネーション -->
-            <?php
-            wp_reset_postdata();
-            $commonArgs['posts_per_page'] = -1;
-            $query = new WP_Query($commonArgs);
 
-            // Get the count of posts that match the query
-            $total_post = $query->found_posts;
-            $num_pages = ceil($total_post / $posts_per_page);
-
-            $args = array(
-                'total' => $num_pages,
-                'found_posts' => $total_post
-            );
-            echo custom_pagination($args);
-            ?>
+            <div class="pastor_sidebar">
+                <?php get_template_part('pastor', 'sidebar'); ?>
+            </div>
         </div>
-    </div>
-    <div class="pastor_sidebar">
-        <?php get_template_part('pastor', 'sidebar'); ?>
+
     </div>
 </div>
-
 <div class="m80"></div>
 <?php get_footer(); ?>

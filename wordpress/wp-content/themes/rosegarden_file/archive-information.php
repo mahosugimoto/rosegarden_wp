@@ -34,7 +34,7 @@ if ($current_category instanceof WP_Term) {
     $category_id = $current_category->term_id;
 }
 ?>
-
+<div class="wrapper">
 <div class="church__ctg">
     <div class="ctg_btn">
         <div class="ctg_btn__all">
@@ -151,5 +151,5 @@ if ($current_category instanceof WP_Term) {
 
 
     <div class="m80"></div>
-
+</div>
     <?php get_footer(); ?>

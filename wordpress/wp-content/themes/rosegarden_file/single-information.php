@@ -17,7 +17,7 @@
 
 <!-- パンクズ_pc -->
 <?php custom_breadcrumbs('pc'); ?>
-
+<div class="wrapper">
 <?php while (have_posts()) : the_post(); ?>
 
     <!-- お知らせコンテンツ-->
@@ -65,4 +65,5 @@
     </div>
     <div class="m80"></div>
 <?php endwhile; ?>
+</div>
 <?php get_footer() ?>

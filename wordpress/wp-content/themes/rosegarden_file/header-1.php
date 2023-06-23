@@ -53,16 +53,10 @@
     html {
         margin-top: 0px;
     }
-
-    body {
+ .wrapper {
         width: 100%;
         margin: auto;
         max-width: 1440px;
-    }
-
-    .wap {
-        width: 100%;
-        margin: auto;
     }
 </style>
 <script>

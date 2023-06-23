@@ -5,8 +5,8 @@
         <?php endif; ?>
 
         <div class="widget widget_archive">
-            <h2 class="widget-title">ARCHIVES</h2>
-            <h4 class="sub-widget-title">過去記事一覧</h4>
+            <h2 class="widget-title">ARCHIVES
+            <span class="sub-widget-title">過去記事一覧</span></h2>
             <?php
             $args = array(
                 'post_type' => 'pastor', // Replace with your custom post type slug
@@ -26,13 +26,11 @@
 </div>
 <style type="text/css">
     .sidebar .wp-calendar a {
-        background-color: #99762F;
-        color: #fff;
-        padding: 2px;
+        background-color: #EBE8E3;
+        padding: 4px;
     }
-
     .sidebar .wp-calendar td {
-        padding: 2px;
+        padding:4px;
         text-align: center;
     }
 </style>

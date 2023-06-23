@@ -11,7 +11,18 @@ if ( !current_user_can('administrator') ) {
     echo 'Permission denied';
     exit;
 }
-global $wpdb;
+
+// Delete old post
+$args = array(
+    'post_type' => PASTOR_POST_TYPE_NAME,
+    'posts_per_page' => -1, // Retrieve all posts
+);
+$posts = get_posts($args);
+
+// Loop through the posts and delete each one
+foreach ($posts as $post) {
+    wp_delete_post($post->ID, true);
+}
 
 /**
  * Total: 32 pages
@@ -25,6 +36,7 @@ $totalPages = 32;
 
 // Destination folder to save downloaded images
 $baseDir = rtrim(ABSPATH, '/') . '/wp-content/uploads/';
+$index = 1;
 
 for ($i = 1; $i <= $totalPages; $i++) {
     $url = $rssUrl . '?paged=' . $i;
@@ -39,24 +51,6 @@ for ($i = 1; $i <= $totalPages; $i++) {
     foreach ($rss->channel->item as $item) {
         // Get the post title
         $postTitle = $item->title->__toString();
-        
-        echo '  + URL: ' . $item->link . '<br/>';
-        echo '  + Title: ' . $postTitle . '<br/>';
-
-        // Check if post with the same title already exists
-        $postID = $wpdb->get_var(
-            $wpdb->prepare(
-                "SELECT ID FROM {$wpdb->posts} WHERE post_title = %s AND post_type = %s",
-                $postTitle,
-                PASTOR_POST_TYPE_NAME
-            )
-        );
-
-        if ($postID) {
-            // Skip importing this post as it already exists
-            echo "  + Post with the title '$postTitle' already exists. Skipping import.<br>";
-            continue;
-        }
         
         // Extract the image URL from the content tag (adjust according to the feed structure)
         if ($item->children('content', true)->encoded) {
@@ -76,7 +70,7 @@ for ($i = 1; $i <= $totalPages; $i++) {
                 foreach ($imageUrls as $imageUrl) {
                     // Download the image if URL is found
                     if (strpos($imageUrl, 's.w.org') === false) {
-                        echo "  + Image URL: $imageUrl<br>";
+                        // echo "  + Image URL: $imageUrl<br>";
                         // Extract the image file information
                         $imageInfo = pathinfo($imageUrl);
                         if (empty($imageInfo['basename'])) {
@@ -86,7 +80,7 @@ for ($i = 1; $i <= $totalPages; $i++) {
                         $dirName = rtrim(str_replace($oldBaseDir, '', $imageInfo['dirname']), '/');
                         $imageFileName = $imageInfo['basename'];
                         $dirPath = $baseDir . $dirName;
-                        echo '  + Directory path: ' . $dirPath . '<br/>';
+                        // echo '  + Directory path: ' . $dirPath . '<br/>';
                         if (!file_exists($dirPath)) {
                             if (mkdir($dirPath, 0777, true)) {
                                 echo "  + The directory was created successfully.";
@@ -103,7 +97,7 @@ for ($i = 1; $i <= $totalPages; $i++) {
 
                         // // Replace the image URL in the post content
                         $newImageUrl = home_url() . '/wp-content/uploads/' . $dirName . '/' . $imageFileName;
-                        echo '  + New image URL: ' . $newImageUrl . '<br/>';
+                        // echo '  + New image URL: ' . $newImageUrl . '<br/>';
                         $postContent = str_replace($imageUrl, $newImageUrl, $postContent);
                     }
                 }
@@ -122,17 +116,13 @@ for ($i = 1; $i <= $totalPages; $i++) {
             // print_r($newPost);
             $postID = wp_insert_post($newPost, true);
             if (is_int($postID)) {
-                echo '  => Imported post ID: ' . $postID . '<br/>';
+                echo $index . '/ [OK] ' . $postTitle . '. New ID: '. $postID .'<br/>';
             } else {
-                echo '  => can not import<br/>';
+                echo $index . '/ [Failed] ' . $postTitle . '<br/>';
                 var_dump($postID);
             }
+            $index++;
         }
-        
-        echo "--------<br/>";
     }
 }
-
-
-
 ?>
